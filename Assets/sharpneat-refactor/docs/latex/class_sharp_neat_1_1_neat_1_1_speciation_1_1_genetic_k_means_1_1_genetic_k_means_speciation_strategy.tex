@@ -1,0 +1,107 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy}{}\doxysection{Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Genetic\+K\+Means\+Speciation\+Strategy$<$ T $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy}\index{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$}}
+
+
+A speciation strategy that assigns genomes to species using k-\/means clustering on the genes of each genome.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Genetic\+K\+Means\+Speciation\+Strategy$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_ae1a7e1e24fddda09da185d2c0a3cd9f2}{Genetic\+K\+Means\+Speciation\+Strategy}} (\mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}{I\+Distance\+Metric}}$<$ T $>$ distance\+Metric, int max\+K\+Means\+Iters)
+\begin{DoxyCompactList}\small\item\em Construct a new instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_species}{Species}}$<$ T $>$\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_adfb81489f0092d629d0b69f4e0b9a397}{Speciate\+All}} (I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$$>$ genome\+List, int species\+Count, I\+Random\+Source rng)
+\begin{DoxyCompactList}\small\item\em Initialise a new set of species based on the provided population of genomes and the speciation method in use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_a12584c29d104d9961a7173d0a8ed9bf5}{Speciate\+Add}} (I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$$>$ genome\+List, \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_species}{Species}}$<$ T $>$\mbox{[}$\,$\mbox{]} species\+Arr, I\+Random\+Source rng)
+\begin{DoxyCompactList}\small\item\em Merge new genomes into an existing set of species. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A speciation strategy that assigns genomes to species using k-\/means clustering on the genes of each genome. 
+
+This is the speciation scheme used in Sharp\+N\+E\+AT 2.\+x. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Neural net signal and weight data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_ae1a7e1e24fddda09da185d2c0a3cd9f2}\label{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_ae1a7e1e24fddda09da185d2c0a3cd9f2}} 
+\index{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$}!GeneticKMeansSpeciationStrategy@{GeneticKMeansSpeciationStrategy}}
+\index{GeneticKMeansSpeciationStrategy@{GeneticKMeansSpeciationStrategy}!SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GeneticKMeansSpeciationStrategy()}{GeneticKMeansSpeciationStrategy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy}{Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Genetic\+K\+Means\+Speciation\+Strategy}}$<$ T $>$.\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy}{Genetic\+K\+Means\+Speciation\+Strategy}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}{I\+Distance\+Metric}}$<$ T $>$}]{distance\+Metric,  }\item[{int}]{max\+K\+Means\+Iters }\end{DoxyParamCaption})}
+
+
+
+Construct a new instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance\+Metric} & Distance metric.\\
+\hline
+{\em max\+K\+Means\+Iters} & Maximum number of k-\/means iterations.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_a12584c29d104d9961a7173d0a8ed9bf5}\label{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_a12584c29d104d9961a7173d0a8ed9bf5}} 
+\index{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$}!SpeciateAdd@{SpeciateAdd}}
+\index{SpeciateAdd@{SpeciateAdd}!SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SpeciateAdd()}{SpeciateAdd()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy}{Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Genetic\+K\+Means\+Speciation\+Strategy}}$<$ T $>$.Speciate\+Add (\begin{DoxyParamCaption}\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$$>$}]{genome\+List,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_species}{Species}}$<$ T $>$\mbox{[}$\,$\mbox{]}}]{species\+Arr,  }\item[{I\+Random\+Source}]{rng }\end{DoxyParamCaption})}
+
+
+
+Merge new genomes into an existing set of species. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+List} & A list of genomes that have not yet been assigned a species.\\
+\hline
+{\em species\+Arr} & An array of pre-\/existing species\\
+\hline
+{\em rng} & Random source.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_adfb81489f0092d629d0b69f4e0b9a397}\label{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_adfb81489f0092d629d0b69f4e0b9a397}} 
+\index{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$}!SpeciateAll@{SpeciateAll}}
+\index{SpeciateAll@{SpeciateAll}!SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.GeneticKMeansSpeciationStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SpeciateAll()}{SpeciateAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_species}{Species}}$<$T$>$ \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy}{Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Genetic\+K\+Means\+Speciation\+Strategy}}$<$ T $>$.Speciate\+All (\begin{DoxyParamCaption}\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$$>$}]{genome\+List,  }\item[{int}]{species\+Count,  }\item[{I\+Random\+Source}]{rng }\end{DoxyParamCaption})}
+
+
+
+Initialise a new set of species based on the provided population of genomes and the speciation method in use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+List} & The genomes to speciate.\\
+\hline
+{\em species\+Count} & The number of required species.\\
+\hline
+{\em rng} & Random source.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new array of species.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Speciation/\+Genetic\+K\+Means/Genetic\+K\+Means\+Speciation\+Strategy.\+cs\end{DoxyCompactItemize}

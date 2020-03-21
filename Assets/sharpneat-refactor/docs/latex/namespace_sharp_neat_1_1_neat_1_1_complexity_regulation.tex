@@ -1,0 +1,47 @@
+\hypertarget{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation}{}\doxysection{Sharp\+Neat.\+Neat.\+Complexity\+Regulation Namespace Reference}
+\label{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation}\index{SharpNeat.Neat.ComplexityRegulation@{SharpNeat.Neat.ComplexityRegulation}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_absolute_complexity_regulation_strategy}{Absolute\+Complexity\+Regulation\+Strategy}}
+\begin{DoxyCompactList}\small\item\em A complexity regulation strategy that applies a fixed/absolute complexity ceiling. The strategy transitions from complexifying to simplifying when the fixed ceiling is reached. Transitioning from simplifying to complexifying occurs when complexity is no longer falling {\itshape and} complexity is below the ceiling. \end{DoxyCompactList}\item 
+class {\bfseries Complexity\+Regulation\+Strategy\+Json\+Reader}
+\begin{DoxyCompactList}\small\item\em Static utility methods for creating instances of \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}{I\+Complexity\+Regulation\+Strategy}} from json configuration. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}{I\+Complexity\+Regulation\+Strategy}}
+\begin{DoxyCompactList}\small\item\em Represents a complexity regulation strategy. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_null_complexity_regulation_strategy}{Null\+Complexity\+Regulation\+Strategy}}
+\begin{DoxyCompactList}\small\item\em A complexity regulation strategy that remains fixed in complexifying mode throughout the lifetime of the evolution algorithm. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy}{Relative\+Complexity\+Regulation\+Strategy}}
+\begin{DoxyCompactList}\small\item\em A complexity regulation strategy that applies a moving complexity ceiling that is relative to the population mean complexity each at the start of each transition to complexifying mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} \{ \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63ea0839c8f3dfc4a4256ae6ff9018158f7f}{Complexity\+Regulation\+Mode.\+Complexifying}} = 0, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63ea39aa18421beffd6b5028db3b66cfe370}{Complexity\+Regulation\+Mode.\+Simplifying}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Complexity regulation modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}\label{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}} 
+\index{SharpNeat.Neat.ComplexityRegulation@{SharpNeat.Neat.ComplexityRegulation}!ComplexityRegulationMode@{ComplexityRegulationMode}}
+\index{ComplexityRegulationMode@{ComplexityRegulationMode}!SharpNeat.Neat.ComplexityRegulation@{SharpNeat.Neat.ComplexityRegulation}}
+\doxysubsubsection{\texorpdfstring{ComplexityRegulationMode}{ComplexityRegulationMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+Complexity\+Regulation\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Complexity regulation modes. 
+
+Represents two variations in the overall search strategy -\/ complexifying and simplifying. That is, allowing genomes to complexify, and reducing their complexity to trim away excess and/or redundant structure in the population to reinvigorate a search.
+
+For more information see\+: Phased Searching with N\+E\+AT\+: Alternating Between Complexification And Simplification, Colin Green, 2004 (\href{http://sharpneat.sourceforge.net/phasedsearch.html}{\texttt{ http\+://sharpneat.\+sourceforge.\+net/phasedsearch.\+html}})\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Complexifying@{Complexifying}!SharpNeat.Neat.ComplexityRegulation@{SharpNeat.Neat.ComplexityRegulation}}\index{SharpNeat.Neat.ComplexityRegulation@{SharpNeat.Neat.ComplexityRegulation}!Complexifying@{Complexifying}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63ea0839c8f3dfc4a4256ae6ff9018158f7f}\label{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63ea0839c8f3dfc4a4256ae6ff9018158f7f}} 
+Complexifying&Search by allowing genomes to complexify (add new structure). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Simplifying@{Simplifying}!SharpNeat.Neat.ComplexityRegulation@{SharpNeat.Neat.ComplexityRegulation}}\index{SharpNeat.Neat.ComplexityRegulation@{SharpNeat.Neat.ComplexityRegulation}!Simplifying@{Simplifying}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63ea39aa18421beffd6b5028db3b66cfe370}\label{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63ea39aa18421beffd6b5028db3b66cfe370}} 
+Simplifying&Search by simplifying genomes (removing structure). \\
+\hline
+
+\end{DoxyEnumFields}

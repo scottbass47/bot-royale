@@ -1,0 +1,58 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_neat_population_factory}{}\doxysection{Sharp\+Neat.\+Neat.\+Neat\+Population\+Factory$<$ T $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_neat_1_1_neat_population_factory}\index{SharpNeat.Neat.NeatPopulationFactory$<$ T $>$@{SharpNeat.Neat.NeatPopulationFactory$<$ T $>$}}
+
+
+Factory class for creating new instances of Neat\+Population\+Factory$<$\+T$>$.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_neat_population}{Neat\+Population}}$<$ T $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_neat_population_factory_aab11e1073ea974f7ce084017579cc246}{Create\+Population}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_meta_neat_genome}{Meta\+Neat\+Genome}}$<$ T $>$ meta\+Neat\+Genome, double connections\+Proportion, int pop\+Size, I\+Random\+Source rng)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_neat_population}{Neat\+Population}} with randomly initialised genomes. Genomes are randomly initialised by giving each a random subset of all possible connections between the input and output layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class for creating new instances of Neat\+Population\+Factory$<$\+T$>$. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Connection weight data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_neat_population_factory_aab11e1073ea974f7ce084017579cc246}\label{class_sharp_neat_1_1_neat_1_1_neat_population_factory_aab11e1073ea974f7ce084017579cc246}} 
+\index{SharpNeat.Neat.NeatPopulationFactory$<$ T $>$@{SharpNeat.Neat.NeatPopulationFactory$<$ T $>$}!CreatePopulation@{CreatePopulation}}
+\index{CreatePopulation@{CreatePopulation}!SharpNeat.Neat.NeatPopulationFactory$<$ T $>$@{SharpNeat.Neat.NeatPopulationFactory$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreatePopulation()}{CreatePopulation()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_neat_population}{Neat\+Population}}$<$T$>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_neat_population_factory}{Sharp\+Neat.\+Neat.\+Neat\+Population\+Factory}}$<$ T $>$.Create\+Population (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_meta_neat_genome}{Meta\+Neat\+Genome}}$<$ T $>$}]{meta\+Neat\+Genome,  }\item[{double}]{connections\+Proportion,  }\item[{int}]{pop\+Size,  }\item[{I\+Random\+Source}]{rng }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_neat_population}{Neat\+Population}} with randomly initialised genomes. Genomes are randomly initialised by giving each a random subset of all possible connections between the input and output layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meta\+Neat\+Genome} & \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_genome}{Genome}} metadata, e.\+g. the number of input and output nodes that each genome should have.\\
+\hline
+{\em connections\+Proportion} & The proportion of possible connections between the input and output layers, to create in each new genome.\\
+\hline
+{\em pop\+Size} & Population size. The number of new genomes to create.\\
+\hline
+{\em rng} & Random source.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of Neat\+Population$<$\+T$>$.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/Neat\+Population\+Factory.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+var class_sharp_neat_1_1_tests_1_1_neat_1_1_reproduction_1_1_asexual_1_1_weight_mutation_1_1_reset_weight_mutation_strategy_tests =
+[
+    [ "TestGaussianReset", "class_sharp_neat_1_1_tests_1_1_neat_1_1_reproduction_1_1_asexual_1_1_weight_mutation_1_1_reset_weight_mutation_strategy_tests.html#ab1ebdda7ecdccfe62290abd822e0893c", null ],
+    [ "TestUniformReset", "class_sharp_neat_1_1_tests_1_1_neat_1_1_reproduction_1_1_asexual_1_1_weight_mutation_1_1_reset_weight_mutation_strategy_tests.html#aac03eced67d0b97b160df3023396e78e", null ]
+];

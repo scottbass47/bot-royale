@@ -1,0 +1,92 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy}{}\doxysection{Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+Delete\+Connection\+Strategy$<$ T $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy}\index{SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$}}
+
+
+A N\+E\+AT genome asexual reproduction strategy based on deletion of a single connection.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+Delete\+Connection\+Strategy$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy_af826496a6e34b0947c9a667814c7b78e}{Delete\+Connection\+Strategy}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_meta_neat_genome}{Meta\+Neat\+Genome}}$<$ T $>$ meta\+Neat\+Genome, \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_genome_1_1_i_neat_genome_builder}{I\+Neat\+Genome\+Builder}}$<$ T $>$ genome\+Builder, Int32\+Sequence genome\+Id\+Seq, Int32\+Sequence generation\+Seq)
+\begin{DoxyCompactList}\small\item\em Construct a new instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy_a2949c6b6385bf6783b6e8d496c77dab9}{Create\+Child\+Genome}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$ parent, I\+Random\+Source rng)
+\begin{DoxyCompactList}\small\item\em Create a new child genome from a given parent genome. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A N\+E\+AT genome asexual reproduction strategy based on deletion of a single connection. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Connection weight data type.\\
+\hline
+\end{DoxyTemplParams}
+
+
+Offspring genomes are created by taking a clone of a single parent genome and deleting a single connection, if possible. \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy_af826496a6e34b0947c9a667814c7b78e}\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy_af826496a6e34b0947c9a667814c7b78e}} 
+\index{SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$}!DeleteConnectionStrategy@{DeleteConnectionStrategy}}
+\index{DeleteConnectionStrategy@{DeleteConnectionStrategy}!SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteConnectionStrategy()}{DeleteConnectionStrategy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy}{Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+Delete\+Connection\+Strategy}}$<$ T $>$.\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy}{Delete\+Connection\+Strategy}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_meta_neat_genome}{Meta\+Neat\+Genome}}$<$ T $>$}]{meta\+Neat\+Genome,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_genome_1_1_i_neat_genome_builder}{I\+Neat\+Genome\+Builder}}$<$ T $>$}]{genome\+Builder,  }\item[{Int32\+Sequence}]{genome\+Id\+Seq,  }\item[{Int32\+Sequence}]{generation\+Seq }\end{DoxyParamCaption})}
+
+
+
+Construct a new instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meta\+Neat\+Genome} & N\+E\+AT genome metadata.\\
+\hline
+{\em genome\+Builder} & Neat\+Genome builder.\\
+\hline
+{\em genome\+Id\+Seq} & \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_genome}{Genome}} ID sequence; for obtaining new genome I\+Ds.\\
+\hline
+{\em generation\+Seq} & Generation sequence; for obtaining the current generation number.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy_a2949c6b6385bf6783b6e8d496c77dab9}\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy_a2949c6b6385bf6783b6e8d496c77dab9}} 
+\index{SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$}!CreateChildGenome@{CreateChildGenome}}
+\index{CreateChildGenome@{CreateChildGenome}!SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.DeleteConnectionStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateChildGenome()}{CreateChildGenome()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$T$>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_delete_connection_strategy}{Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+Delete\+Connection\+Strategy}}$<$ T $>$.Create\+Child\+Genome (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$}]{parent,  }\item[{I\+Random\+Source}]{rng }\end{DoxyParamCaption})}
+
+
+
+Create a new child genome from a given parent genome. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent genome.\\
+\hline
+{\em rng} & Random source.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new child genome.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_i_asexual_reproduction_strategy_a498702b959c0bdaac8fd4dfe8229306f}{Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+I\+Asexual\+Reproduction\+Strategy$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Reproduction/\+Asexual/\+Strategy/Delete\+Connection\+Strategy.\+cs\end{DoxyCompactItemize}

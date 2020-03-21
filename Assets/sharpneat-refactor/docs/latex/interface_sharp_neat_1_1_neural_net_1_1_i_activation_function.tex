@@ -1,0 +1,113 @@
+\hypertarget{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function}{}\doxysection{Sharp\+Neat.\+Neural\+Net.\+I\+Activation\+Function$<$ T $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function}\index{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$@{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$}}
+
+
+Neural net node activation function.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a5b7c985bdf05c027c9fbf3f47cac7b75}{Fn}} (T x)
+\begin{DoxyCompactList}\small\item\em The activation function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a745f193d0db5eb3d10da207393657a1e}{Fn}} (T\mbox{[}$\,$\mbox{]} v)
+\begin{DoxyCompactList}\small\item\em Vectorized activation function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a4acd0fbee54832452f8da72d189213c6}{Fn}} (T\mbox{[}$\,$\mbox{]} v, int start\+Idx, int end\+Idx)
+\begin{DoxyCompactList}\small\item\em Vectorized activation function with activity limited to a defined sub-\/range/segment of the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a3cc02a1c982993edd483f7dd11b0948d}{Fn}} (T\mbox{[}$\,$\mbox{]} v, T\mbox{[}$\,$\mbox{]} w, int start\+Idx, int end\+Idx)
+\begin{DoxyCompactList}\small\item\em Vectorized activation function with activity limited to a defined sub-\/range/segment of the vector, and post-\/activation levels stored in a separate supplied vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Neural net node activation function. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Neural net numeric data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a5b7c985bdf05c027c9fbf3f47cac7b75}\label{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a5b7c985bdf05c027c9fbf3f47cac7b75}} 
+\index{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$@{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$}!Fn@{Fn}}
+\index{Fn@{Fn}!SharpNeat.NeuralNet.IActivationFunction$<$ T $>$@{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Fn()}{Fn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function}{Sharp\+Neat.\+Neural\+Net.\+I\+Activation\+Function}}$<$ T $>$.Fn (\begin{DoxyParamCaption}\item[{T}]{x }\end{DoxyParamCaption})}
+
+
+
+The activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The single pre-\/activation level to pass through the function.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a745f193d0db5eb3d10da207393657a1e}\label{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a745f193d0db5eb3d10da207393657a1e}} 
+\index{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$@{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$}!Fn@{Fn}}
+\index{Fn@{Fn}!SharpNeat.NeuralNet.IActivationFunction$<$ T $>$@{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Fn()}{Fn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function}{Sharp\+Neat.\+Neural\+Net.\+I\+Activation\+Function}}$<$ T $>$.Fn (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{v }\end{DoxyParamCaption})}
+
+
+
+Vectorized activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A vector of pre-\/activation levels to pass through the function. The resulting post-\/activation levels are written back to this array/vector.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a4acd0fbee54832452f8da72d189213c6}\label{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a4acd0fbee54832452f8da72d189213c6}} 
+\index{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$@{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$}!Fn@{Fn}}
+\index{Fn@{Fn}!SharpNeat.NeuralNet.IActivationFunction$<$ T $>$@{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Fn()}{Fn()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function}{Sharp\+Neat.\+Neural\+Net.\+I\+Activation\+Function}}$<$ T $>$.Fn (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{v,  }\item[{int}]{start\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})}
+
+
+
+Vectorized activation function with activity limited to a defined sub-\/range/segment of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A vector of pre-\/activation levels to pass through the function. The resulting post-\/activation levels are written back to this array/vector.\\
+\hline
+{\em start\+Idx} & Start index.\\
+\hline
+{\em end\+Idx} & End index (exclusive).\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a3cc02a1c982993edd483f7dd11b0948d}\label{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_a3cc02a1c982993edd483f7dd11b0948d}} 
+\index{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$@{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$}!Fn@{Fn}}
+\index{Fn@{Fn}!SharpNeat.NeuralNet.IActivationFunction$<$ T $>$@{SharpNeat.NeuralNet.IActivationFunction$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Fn()}{Fn()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function}{Sharp\+Neat.\+Neural\+Net.\+I\+Activation\+Function}}$<$ T $>$.Fn (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{v,  }\item[{T\mbox{[}$\,$\mbox{]}}]{w,  }\item[{int}]{start\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})}
+
+
+
+Vectorized activation function with activity limited to a defined sub-\/range/segment of the vector, and post-\/activation levels stored in a separate supplied vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A vector of pre-\/activation levels to pass through the function. 
+\begin{DoxyParams}{Parameters}
+{\em w} & A vector in which the post activation levels are stored.\\
+\hline
+\end{DoxyParams}
+The resulting post-\/activation levels are written back to this array/vector.\\
+\hline
+{\em start\+Idx} & Start index.\\
+\hline
+{\em end\+Idx} & End index (exclusive).\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neural\+Net/I\+Activation\+Function.\+cs\end{DoxyCompactItemize}

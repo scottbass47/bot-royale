@@ -1,0 +1,37 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_acyclic_1_1_acyclic_graph_depth_analysis}{}\doxysection{Sharp\+Neat.\+Network.\+Acyclic.\+Acyclic\+Graph\+Depth\+Analysis Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_acyclic_1_1_acyclic_graph_depth_analysis}\index{SharpNeat.Network.Acyclic.AcyclicGraphDepthAnalysis@{SharpNeat.Network.Acyclic.AcyclicGraphDepthAnalysis}}
+
+
+An algorithm for calculating the depth of each node in an acyclic graph.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_graph_depth_info}{Graph\+Depth\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_acyclic_graph_depth_analysis_a1bb1e39d9f30d848c281b145a1bc97c6}{Calculate\+Node\+Depths}} (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_directed_graph}{Directed\+Graph}} digraph)
+\begin{DoxyCompactList}\small\item\em Calculate node depths in an acyclic network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An algorithm for calculating the depth of each node in an acyclic graph. 
+
+Input nodes are defined as being at depth 0, the depth of all other nodes is defined as the maximum number of hops to each node from a depth 0 node. I.\+e. where multiple paths exist to a node (potentially each with a different numbers of hops) the node\textquotesingle{}s depth is defined by the path with the most number of hops.
+
+The algorithm utilises a depth first traversal of the graph but using its own traversal stack data structure instead of relying on function recursion and the call stack. This is an optimisation, for more details see the comments on\+: \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test}{Sharp\+Neat.\+Neat.\+Reproduction.\+Sexual.\+Strategy.\+Uniform\+Crossover.\+Cyclic\+Connection\+Test}}. Also see\+: \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_cyclic_connection_test}{Cyclic\+Connection\+Test}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_cyclic_graph_analysis}{Cyclic\+Graph\+Analysis}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_acyclic_1_1_acyclic_graph_depth_analysis_a1bb1e39d9f30d848c281b145a1bc97c6}\label{class_sharp_neat_1_1_network_1_1_acyclic_1_1_acyclic_graph_depth_analysis_a1bb1e39d9f30d848c281b145a1bc97c6}} 
+\index{SharpNeat.Network.Acyclic.AcyclicGraphDepthAnalysis@{SharpNeat.Network.Acyclic.AcyclicGraphDepthAnalysis}!CalculateNodeDepths@{CalculateNodeDepths}}
+\index{CalculateNodeDepths@{CalculateNodeDepths}!SharpNeat.Network.Acyclic.AcyclicGraphDepthAnalysis@{SharpNeat.Network.Acyclic.AcyclicGraphDepthAnalysis}}
+\doxysubsubsection{\texorpdfstring{CalculateNodeDepths()}{CalculateNodeDepths()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_graph_depth_info}{Graph\+Depth\+Info}} Sharp\+Neat.\+Network.\+Acyclic.\+Acyclic\+Graph\+Depth\+Analysis.\+Calculate\+Node\+Depths (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_directed_graph}{Directed\+Graph}}}]{digraph }\end{DoxyParamCaption})}
+
+
+
+Calculate node depths in an acyclic network. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Acyclic/Acyclic\+Graph\+Depth\+Analysis.\+cs\end{DoxyCompactItemize}

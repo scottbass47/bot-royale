@@ -1,0 +1,4 @@
+var namespace_sharp_neat_1_1_tasks_1_1_tests_1_1_function_regression =
+[
+    [ "FuncRegressionUtilsTests", "class_sharp_neat_1_1_tasks_1_1_tests_1_1_function_regression_1_1_func_regression_utils_tests.html", "class_sharp_neat_1_1_tasks_1_1_tests_1_1_function_regression_1_1_func_regression_utils_tests" ]
+];

@@ -1,0 +1,70 @@
+\hypertarget{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}{}\doxysection{Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+I\+Distance\+Metric$<$ T $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}\index{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$@{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$}}
+
+
+Represents a metric for measuring the distance between two genome positions in an encoding space, and thus, in principle, the compatibility of the two genomes with respect to the probability of creating fit offspring.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric_a79165a383dacb92aef22391fb8d8a87f}{Calc\+Distance}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$ p1, \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$ p2)
+\begin{DoxyCompactList}\small\item\em Calculates the distance between two positions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric_a2afe8ac72ce8e892a3323a671eb97968}{Test\+Distance}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$ p1, \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$ p2, double threshold)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_sharp_neat_1_1_tests}{Tests}} if the distance between the two positions is greater than some threshold. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric_a52fd2040c22155f19623afc5616ff6b3}{Calculate\+Centroid}} (I\+Enumerable$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$$>$ coord\+List)
+\begin{DoxyCompactList}\small\item\em Calculates the centroid for the given set of points. The centroid is a central position within a set of points that minimizes the sum of the squared distance between each of those points and the centroid. As such it can also be thought of as being an exemplar for a set of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a metric for measuring the distance between two genome positions in an encoding space, and thus, in principle, the compatibility of the two genomes with respect to the probability of creating fit offspring. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Connection weight data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric_a79165a383dacb92aef22391fb8d8a87f}\label{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric_a79165a383dacb92aef22391fb8d8a87f}} 
+\index{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$@{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$}!CalcDistance@{CalcDistance}}
+\index{CalcDistance@{CalcDistance}!SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$@{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CalcDistance()}{CalcDistance()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}{Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+I\+Distance\+Metric}}$<$ T $>$.Calc\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$}]{p1,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Calculates the distance between two positions. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric_a52fd2040c22155f19623afc5616ff6b3}\label{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric_a52fd2040c22155f19623afc5616ff6b3}} 
+\index{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$@{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$}!CalculateCentroid@{CalculateCentroid}}
+\index{CalculateCentroid@{CalculateCentroid}!SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$@{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CalculateCentroid()}{CalculateCentroid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$T$>$ \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}{Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+I\+Distance\+Metric}}$<$ T $>$.Calculate\+Centroid (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$$>$}]{coord\+List }\end{DoxyParamCaption})}
+
+
+
+Calculates the centroid for the given set of points. The centroid is a central position within a set of points that minimizes the sum of the squared distance between each of those points and the centroid. As such it can also be thought of as being an exemplar for a set of points. 
+
+The centroid calculation is dependent on the distance metric, hence this method is defined on \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}{I\+Distance\+Metric}}. For some distance metrics the centroid may not be a unique point, in those cases one of the possible centroids is returned.
+
+A centroid is used in k-\/means clustering to define the centre of a cluster.\mbox{\Hypertarget{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric_a2afe8ac72ce8e892a3323a671eb97968}\label{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric_a2afe8ac72ce8e892a3323a671eb97968}} 
+\index{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$@{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$}!TestDistance@{TestDistance}}
+\index{TestDistance@{TestDistance}!SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$@{SharpNeat.Neat.DistanceMetrics.IDistanceMetric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TestDistance()}{TestDistance()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}{Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+I\+Distance\+Metric}}$<$ T $>$.Test\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$}]{p1,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ T $>$}]{p2,  }\item[{double}]{threshold }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{namespace_sharp_neat_1_1_tests}{Tests}} if the distance between the two positions is greater than some threshold. 
+
+A simple way of implementing this method would be to calculate the distance between the two genomes and test if it is over the threshold. That approach requires that the internal data of both positions be fully compared. However, it is faster to compare the contents of the two positions maintaining an accumulated distance value as we progress through the comparison, and to exit the method when and if the threshold is passed.
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Distance\+Metrics/I\+Distance\+Metric.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+var namespace_sharp_neat_1_1_neat_1_1_evolution_algorithm =
+[
+    [ "GenomeComparerDescending", "class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_genome_comparer_descending.html", "class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_genome_comparer_descending" ],
+    [ "NeatEvolutionAlgorithm", "class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm.html", "class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm" ],
+    [ "NeatEvolutionAlgorithmSettings", "class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings.html", "class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings" ]
+];

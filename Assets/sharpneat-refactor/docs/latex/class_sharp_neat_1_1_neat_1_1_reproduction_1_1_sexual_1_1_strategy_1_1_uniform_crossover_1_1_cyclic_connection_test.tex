@@ -1,0 +1,70 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test}{}\doxysection{Sharp\+Neat.\+Neat.\+Reproduction.\+Sexual.\+Strategy.\+Uniform\+Crossover.\+Cyclic\+Connection\+Test Class Reference}
+\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test}\index{SharpNeat.Neat.Reproduction.Sexual.Strategy.UniformCrossover.CyclicConnectionTest@{SharpNeat.Neat.Reproduction.Sexual.Strategy.UniformCrossover.CyclicConnectionTest}}
+
+
+For testing if a proposed new connection on a N\+E\+AT genome would form a connectivity cycle.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test_aa7e7d8bbc6a0ee3f2e8af383927226b8}{Is\+Connection\+Cyclic}} (I\+List$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_directed_connection}{Directed\+Connection}} $>$ conn\+List, in \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_directed_connection}{Directed\+Connection}} new\+Conn)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_sharp_neat_1_1_tests}{Tests}} if the proposed new connection new\+Conn would form a cycle if added to the existing directed acyclic graph described by conn\+Arr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For testing if a proposed new connection on a N\+E\+AT genome would form a connectivity cycle. 
+
+This class utilises a depth first graph traversal algorithm to check if a proposed new connection on a given graph would form a cycle, as such it is assumed that the graph as given is acyclic, if it isn\textquotesingle{}t then the graph traversal stack will grown to infinity, ultimately resulting in an Out\+Of\+Memory exception.
+
+The algorithm will perform a full depth first traversal of the graph starting at the proposed new connection\textquotesingle{}s target node, and if that connection\textquotesingle{}s source node is encountered then it would form a cycle if it were added to the graph.
+
+Each instance of this class allocates a stack and a hashset for use by the traversal algorithm, and these are cleared and re-\/used for each call to \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test_aa7e7d8bbc6a0ee3f2e8af383927226b8}{Is\+Connection\+Cyclic()}}. This avoids memory re-\/allocation and garbage collection overhead, but the side effect is that \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test_aa7e7d8bbc6a0ee3f2e8af383927226b8}{Is\+Connection\+Cyclic()}} is not reentrant, i.\+e. can only be in use by one execution thread at a given point in time. A reentrancy check will throw an exception if reentrancy is attempted.\hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test_autotoc_md0}{}\doxysubsubsection{Implementation Details / Notes}\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test_autotoc_md0}
+This class is optimized for speed and efficiency and as such is tightly coupled with the connection gene list data structure, and is perhaps not as easy to read/understand as a traditional depth first graph traversal algorithm using function recursion. However this is essentially a depth first graph traversal algorithm that utilises its own stack instead of using the call stack.
+
+The traversal stack is a stack of Int32(s), each of which is an index into conn\+List (the list of connections that make up the graph, ordered by source\+Id and then target\+Id). Thus, each stack entry points to a connection, and represents traversal of that connection\textquotesingle{}s source node and also which of that node\textquotesingle{}s child connections/nodes is the current traversal position/path from that node (note. this works because the connections are sorted by source\+Id first).
+
+As such this algorithm has a far more compact stack frame than the equivalent algorithm implemented as a recursive function, and avoids any other method call overhead as a further performance benefit (i.\+e. overhead other than stack frame initialisation).
+
+The main optimizations then are\+:
+
+
+\begin{DoxyItemize}
+\item No method call overhead from recursive method calls.
+\item Each stack frame is a single int32 and thus the stack as a whole is highly compact; this improves C\+PU cache locality and hit rate, and also keeps the max size of the stack for any given traversal at a minimum.
+\item The stack and a visited\+Nodes Hash\+Set are allocated for each class instance and are cleared and re-\/used for each call to \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test_aa7e7d8bbc6a0ee3f2e8af383927226b8}{Is\+Connection\+Cyclic()}}, therefore minimizing memory allocation and garbage collection overhead.
+\item Using a stack on the heap also avoids any potential for a stack overflow on very deep graphs, which could occur if using method call recursion.
+\end{DoxyItemize}
+
+Problems with the approach of this class are\+:
+
+
+\begin{DoxyItemize}
+\item The code is more complex than the same algorithm written as a recursive function; this makes the code harder to read, understand and maintain, thus increasing the probability of subtle defects.
+\end{DoxyItemize}
+
+Also see\+: \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_cyclic_connection_test}{Sharp\+Neat.\+Network.\+Acyclic.\+Cyclic\+Connection\+Test}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_acyclic_graph_depth_analysis}{Sharp\+Neat.\+Network.\+Acyclic.\+Acyclic\+Graph\+Depth\+Analysis}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_cyclic_graph_analysis}{Sharp\+Neat.\+Network.\+Cyclic\+Graph\+Analysis}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test_aa7e7d8bbc6a0ee3f2e8af383927226b8}\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test_aa7e7d8bbc6a0ee3f2e8af383927226b8}} 
+\index{SharpNeat.Neat.Reproduction.Sexual.Strategy.UniformCrossover.CyclicConnectionTest@{SharpNeat.Neat.Reproduction.Sexual.Strategy.UniformCrossover.CyclicConnectionTest}!IsConnectionCyclic@{IsConnectionCyclic}}
+\index{IsConnectionCyclic@{IsConnectionCyclic}!SharpNeat.Neat.Reproduction.Sexual.Strategy.UniformCrossover.CyclicConnectionTest@{SharpNeat.Neat.Reproduction.Sexual.Strategy.UniformCrossover.CyclicConnectionTest}}
+\doxysubsubsection{\texorpdfstring{IsConnectionCyclic()}{IsConnectionCyclic()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Neat.\+Reproduction.\+Sexual.\+Strategy.\+Uniform\+Crossover.\+Cyclic\+Connection\+Test.\+Is\+Connection\+Cyclic (\begin{DoxyParamCaption}\item[{I\+List$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_directed_connection}{Directed\+Connection}} $>$}]{conn\+List,  }\item[{in \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_directed_connection}{Directed\+Connection}}}]{new\+Conn }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{namespace_sharp_neat_1_1_tests}{Tests}} if the proposed new connection new\+Conn would form a cycle if added to the existing directed acyclic graph described by conn\+Arr. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn\+List} & A set of connections that describe a directed acyclic graph.\\
+\hline
+{\em new\+Conn} & A proposed new connection to add to the graph.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Reproduction/\+Sexual/\+Strategy/\+Uniform\+Crossover/Cyclic\+Connection\+Test.\+cs\end{DoxyCompactItemize}

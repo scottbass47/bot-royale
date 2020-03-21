@@ -1,0 +1,143 @@
+\hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme}{}\doxysection{Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme Class Reference}
+\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme}\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}}
+
+
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evaluation}{Evaluation}} scheme for the cart and pole balancing task, with a single pole.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$ double $>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_ad2d35d2f514423329f597d718157a36f}{Create\+Evaluator}} ()
+\begin{DoxyCompactList}\small\item\em Create a new evaluator object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a10a4faf6995c6bba1123d050f4ebe690}{Test\+For\+Stop\+Condition}} (\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} fitness\+Info)
+\begin{DoxyCompactList}\small\item\em Accepts a Fitness\+Info, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a0a78af720ff7a111d50413797cf8c748}{Input\+Count}} =$>$ 3
+\begin{DoxyCompactList}\small\item\em The number of black box inputs expected/required by the black box evaluation scheme. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a30d3c4791eb7998f917401b6b9f0fc9d}{Output\+Count}} =$>$ 1
+\begin{DoxyCompactList}\small\item\em The number of black box outputs expected/required by the black box evaluation scheme. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_affe1aa1947a4775d981a8449ddc7cf68}{Is\+Deterministic}} =$>$ true
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. \end{DoxyCompactList}\item 
+I\+Comparer$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a1d84640a0d17ce94722497b9f6126fdd}{Fitness\+Comparer}} =$>$ Primary\+Fitness\+Info\+Comparer.\+Singleton
+\begin{DoxyCompactList}\small\item\em Gets a fitness comparer for the scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a9b6c4d3ba90b957da6c4de69fe592db0}{Null\+Fitness}} =$>$ Fitness\+Info.\+Default\+Fitness\+Info
+\begin{DoxyCompactList}\small\item\em Represents the zero or null fitness for the task. I.\+e. e.\+g. for genomes that utterly fail at the task, or genomes that fail even to decode (not possible in N\+E\+AT). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_afd3a10e9d2b2e98ff41f071913cf5300}{Evaluators\+Have\+State}} =$>$ true
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluators created by \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_ad2d35d2f514423329f597d718157a36f}{Create\+Evaluator}} have state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evaluation}{Evaluation}} scheme for the cart and pole balancing task, with a single pole. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_ad2d35d2f514423329f597d718157a36f}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_ad2d35d2f514423329f597d718157a36f}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}!CreateEvaluator@{CreateEvaluator}}
+\index{CreateEvaluator@{CreateEvaluator}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{CreateEvaluator()}{CreateEvaluator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$double$>$ $>$ Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme.\+Create\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new evaluator object. 
+
+\begin{DoxyReturn}{Returns}
+A new instance of I\+Phenome\+Evaluator$<$\+T$>$.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a10a4faf6995c6bba1123d050f4ebe690}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a10a4faf6995c6bba1123d050f4ebe690}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}!TestForStopCondition@{TestForStopCondition}}
+\index{TestForStopCondition@{TestForStopCondition}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{TestForStopCondition()}{TestForStopCondition()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme.\+Test\+For\+Stop\+Condition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}}]{fitness\+Info }\end{DoxyParamCaption})}
+
+
+
+Accepts a Fitness\+Info, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness\+Info} & The fitness info object to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the fitness is good enough to signal the evolution algorithm to stop.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_afd3a10e9d2b2e98ff41f071913cf5300}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_afd3a10e9d2b2e98ff41f071913cf5300}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}!EvaluatorsHaveState@{EvaluatorsHaveState}}
+\index{EvaluatorsHaveState@{EvaluatorsHaveState}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{EvaluatorsHaveState}{EvaluatorsHaveState}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme.\+Evaluators\+Have\+State =$>$ true}
+
+
+
+Indicates if the evaluators created by \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_ad2d35d2f514423329f597d718157a36f}{Create\+Evaluator}} have state. 
+
+If an evaluator has no state then it is sufficient to create a single instance and to use that evaluator concurrently on multiple threads. If an evaluator has state then concurrent use requires the creation of one evaluator instance per thread. \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a1d84640a0d17ce94722497b9f6126fdd}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a1d84640a0d17ce94722497b9f6126fdd}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}!FitnessComparer@{FitnessComparer}}
+\index{FitnessComparer@{FitnessComparer}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{FitnessComparer}{FitnessComparer}}
+{\footnotesize\ttfamily I\+Comparer$<$\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}$>$ Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme.\+Fitness\+Comparer =$>$ Primary\+Fitness\+Info\+Comparer.\+Singleton}
+
+
+
+Gets a fitness comparer for the scheme. 
+
+Typically there is a single fitness score and a higher score is considered better/fitter. However, if there are multiple fitness values assigned to a genome (e.\+g. where multiple measures of fitness are in use) then we need a task specific comparer to determine the relative fitness between two instances of Fitness\+Info. \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a0a78af720ff7a111d50413797cf8c748}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a0a78af720ff7a111d50413797cf8c748}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}!InputCount@{InputCount}}
+\index{InputCount@{InputCount}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{InputCount}{InputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme.\+Input\+Count =$>$ 3}
+
+
+
+The number of black box inputs expected/required by the black box evaluation scheme. 
+
+The 2 inputs of the single pole balancing task, plus one bias input (input zero). \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_affe1aa1947a4775d981a8449ddc7cf68}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_affe1aa1947a4775d981a8449ddc7cf68}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}!IsDeterministic@{IsDeterministic}}
+\index{IsDeterministic@{IsDeterministic}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{IsDeterministic}{IsDeterministic}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme.\+Is\+Deterministic =$>$ true}
+
+
+
+Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. 
+
+An evaluation scheme that has some random/stochastic characteristics may give a different fitness score at each invocation for the same genome, such a scheme is non-\/deterministic. \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a9b6c4d3ba90b957da6c4de69fe592db0}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a9b6c4d3ba90b957da6c4de69fe592db0}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}!NullFitness@{NullFitness}}
+\index{NullFitness@{NullFitness}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{NullFitness}{NullFitness}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme.\+Null\+Fitness =$>$ Fitness\+Info.\+Default\+Fitness\+Info}
+
+
+
+Represents the zero or null fitness for the task. I.\+e. e.\+g. for genomes that utterly fail at the task, or genomes that fail even to decode (not possible in N\+E\+AT). 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a30d3c4791eb7998f917401b6b9f0fc9d}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_evaluation_scheme_a30d3c4791eb7998f917401b6b9f0fc9d}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}!OutputCount@{OutputCount}}
+\index{OutputCount@{OutputCount}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePoleEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{OutputCount}{OutputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Evaluation\+Scheme.\+Output\+Count =$>$ 1}
+
+
+
+The number of black box outputs expected/required by the black box evaluation scheme. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Tasks/\+Cart\+Pole/\+Single\+Pole/Cart\+Single\+Pole\+Evaluation\+Scheme.\+cs\end{DoxyCompactItemize}

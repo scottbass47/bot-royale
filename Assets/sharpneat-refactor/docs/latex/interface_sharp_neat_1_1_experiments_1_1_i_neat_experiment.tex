@@ -1,0 +1,234 @@
+\hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{}\doxysection{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment$<$ T $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+
+
+An interface that brings together a number of settings objects that make up a given experiment.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}
+\end{center}
+\end{figure}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_af605f441af51b94f8da621f8178393f7}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Experiment name. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ae2c4fd05ce3d0bd458be0b6968f1ba89}{Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Experiment description. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_black_box_evaluation_scheme}{I\+Black\+Box\+Evaluation\+Scheme}}$<$ T $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a22c121726a62c7b42cdee9de675b566c}{Evaluation\+Scheme}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Experiment evaluation scheme object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a08d1876f7309bb2955f8e7530fa7c41b}{Is\+Acyclic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A boolean flag that indicates if the genomes that are evolved are acyclic, i.\+e. they should have no recurrent/cyclic connection paths. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ad2d4bfdda6f8ccd7e1b4c2a650a8d1aa}{Cycles\+Per\+Activation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For cyclic neural networks (i.\+e. if \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a08d1876f7309bb2955f8e7530fa7c41b}{Is\+Acyclic}} is false) this defines how many timesteps to run the neural net per call to Activate(). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a4b381beb23496075474492c3bb820043}{Activation\+Fn\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the neuron activation function to use in evolved networks. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings}{Neat\+Evolution\+Algorithm\+Settings}} \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a6290465922fafa5950c0d8f6a16f70e2}{Neat\+Evolution\+Algorithm\+Settings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a6290465922fafa5950c0d8f6a16f70e2}{Neat\+Evolution\+Algorithm\+Settings}} to be used for the experiment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_neat_reproduction_asexual_settings}{Neat\+Reproduction\+Asexual\+Settings}} \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a04e899b27c923942b18965470c6b0c09}{Reproduction\+Asexual\+Settings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The asexual reproduction settings to use for the experiment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_neat_reproduction_sexual_settings}{Neat\+Reproduction\+Sexual\+Settings}} \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a632efde2de8b209ce57f9200cd168eb0}{Reproduction\+Sexual\+Settings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The sexual reproduction settings to use for the experiment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a2e9dff9bdbb83e399a0522bf65b25a83}{Population\+Size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The population size to use for the experiment. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a8f35d511cacaa251244252e9a1c60857}{Initial\+Interconnections\+Proportion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The initial interconnections proportion. This is the proportion of possible direct connections from the input nodes to the output nodes that are to be created in each initial genome. The connections to create are selected at random (using a select-\/without-\/replacement method). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ad7b51a1e21a065f4c6fd99e32fc474ad}{Connection\+Weight\+Scale}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The maximum connection weight scale/magnitude. E.\+g. a value of 5 defines a weight range of -\/5 to 5. The weight range is strictly enforced, e.\+g. when creating new connections and mutating existing ones. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}{I\+Complexity\+Regulation\+Strategy}} \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a2cacb9a6f52178824b961bd2c1d8442b}{Complexity\+Regulation\+Strategy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The complexity regulation strategy to use for the experiment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a87b256a81f5083c78c53bdad74cf3f36}{Degree\+Of\+Parallelism}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of C\+PU threads to distribute work to. Set to -\/1 to use a thread count that matches the number of logical C\+PU cores. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a3cbf7777191e5b606348a6c28ab73923}{Enable\+Hardware\+Accelerated\+Neural\+Nets}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enable use of hardware accelerated neural network implementations, i.\+e. alternate implementations that use C\+PU S\+I\+M\+D/vector instructions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ad2eea74c1cbd7cac06414d3b722d8f91}{Enable\+Hardware\+Accelerated\+Activation\+Functions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enable use of hardware accelerated neural network activation functions, i.\+e. alternate implementations that use C\+PU S\+I\+M\+D/vector instructions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface that brings together a number of settings objects that make up a given experiment. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Black box numeric data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a4b381beb23496075474492c3bb820043}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a4b381beb23496075474492c3bb820043}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!ActivationFnName@{ActivationFnName}}
+\index{ActivationFnName@{ActivationFnName}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ActivationFnName}{ActivationFnName}}
+{\footnotesize\ttfamily string \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Activation\+Fn\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Name of the neuron activation function to use in evolved networks. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a2cacb9a6f52178824b961bd2c1d8442b}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a2cacb9a6f52178824b961bd2c1d8442b}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!ComplexityRegulationStrategy@{ComplexityRegulationStrategy}}
+\index{ComplexityRegulationStrategy@{ComplexityRegulationStrategy}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ComplexityRegulationStrategy}{ComplexityRegulationStrategy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}{I\+Complexity\+Regulation\+Strategy}} \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Complexity\+Regulation\+Strategy\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The complexity regulation strategy to use for the experiment. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ad7b51a1e21a065f4c6fd99e32fc474ad}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ad7b51a1e21a065f4c6fd99e32fc474ad}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!ConnectionWeightScale@{ConnectionWeightScale}}
+\index{ConnectionWeightScale@{ConnectionWeightScale}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ConnectionWeightScale}{ConnectionWeightScale}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Connection\+Weight\+Scale\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The maximum connection weight scale/magnitude. E.\+g. a value of 5 defines a weight range of -\/5 to 5. The weight range is strictly enforced, e.\+g. when creating new connections and mutating existing ones. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ad2d4bfdda6f8ccd7e1b4c2a650a8d1aa}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ad2d4bfdda6f8ccd7e1b4c2a650a8d1aa}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!CyclesPerActivation@{CyclesPerActivation}}
+\index{CyclesPerActivation@{CyclesPerActivation}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CyclesPerActivation}{CyclesPerActivation}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Cycles\+Per\+Activation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+For cyclic neural networks (i.\+e. if \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a08d1876f7309bb2955f8e7530fa7c41b}{Is\+Acyclic}} is false) this defines how many timesteps to run the neural net per call to Activate(). 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a87b256a81f5083c78c53bdad74cf3f36}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a87b256a81f5083c78c53bdad74cf3f36}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!DegreeOfParallelism@{DegreeOfParallelism}}
+\index{DegreeOfParallelism@{DegreeOfParallelism}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DegreeOfParallelism}{DegreeOfParallelism}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Degree\+Of\+Parallelism\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of C\+PU threads to distribute work to. Set to -\/1 to use a thread count that matches the number of logical C\+PU cores. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ae2c4fd05ce3d0bd458be0b6968f1ba89}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ae2c4fd05ce3d0bd458be0b6968f1ba89}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!Description@{Description}}
+\index{Description@{Description}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily string \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Experiment description. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ad2eea74c1cbd7cac06414d3b722d8f91}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_ad2eea74c1cbd7cac06414d3b722d8f91}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!EnableHardwareAcceleratedActivationFunctions@{EnableHardwareAcceleratedActivationFunctions}}
+\index{EnableHardwareAcceleratedActivationFunctions@{EnableHardwareAcceleratedActivationFunctions}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{EnableHardwareAcceleratedActivationFunctions}{EnableHardwareAcceleratedActivationFunctions}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Enable\+Hardware\+Accelerated\+Activation\+Functions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enable use of hardware accelerated neural network activation functions, i.\+e. alternate implementations that use C\+PU S\+I\+M\+D/vector instructions. 
+
+The vectorized code is provided by alternative classes, and these classes tend to be more complex than their \textquotesingle{}baseline\textquotesingle{} non-\/vectorized equivalents. Therefore when debugging a problem it is often useful to disable use of all vectorized code so as to rule out that code as the source of a problem/bug.
+
+Furthermore, enabling hardware acceleration has been observed to often result in slower execution speed, probably because N\+E\+AT deals with non-\/homogeneous, irregular neural network structures that are generally not conducive to the application of vectorized code. \mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a3cbf7777191e5b606348a6c28ab73923}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a3cbf7777191e5b606348a6c28ab73923}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!EnableHardwareAcceleratedNeuralNets@{EnableHardwareAcceleratedNeuralNets}}
+\index{EnableHardwareAcceleratedNeuralNets@{EnableHardwareAcceleratedNeuralNets}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{EnableHardwareAcceleratedNeuralNets}{EnableHardwareAcceleratedNeuralNets}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Enable\+Hardware\+Accelerated\+Neural\+Nets\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enable use of hardware accelerated neural network implementations, i.\+e. alternate implementations that use C\+PU S\+I\+M\+D/vector instructions. 
+
+The vectorized code is provided by alternative classes, and these classes tend to be more complex than their \textquotesingle{}baseline\textquotesingle{} non-\/vectorized equivalents. Therefore when debugging a problem it is often useful to disable use of all vectorized code so as to rule out that code as the source of a problem/bug.
+
+Furthermore, enabling hardware acceleration has been observed to often result in slower execution speed, probably because N\+E\+AT deals with non-\/homogeneous, irregular neural network structures that are generally not conducive to the application of vectorized code. \mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a22c121726a62c7b42cdee9de675b566c}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a22c121726a62c7b42cdee9de675b566c}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!EvaluationScheme@{EvaluationScheme}}
+\index{EvaluationScheme@{EvaluationScheme}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluationScheme}{EvaluationScheme}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_black_box_evaluation_scheme}{I\+Black\+Box\+Evaluation\+Scheme}}$<$T$>$ \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Evaluation\+Scheme\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Experiment evaluation scheme object. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a8f35d511cacaa251244252e9a1c60857}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a8f35d511cacaa251244252e9a1c60857}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!InitialInterconnectionsProportion@{InitialInterconnectionsProportion}}
+\index{InitialInterconnectionsProportion@{InitialInterconnectionsProportion}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InitialInterconnectionsProportion}{InitialInterconnectionsProportion}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Initial\+Interconnections\+Proportion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The initial interconnections proportion. This is the proportion of possible direct connections from the input nodes to the output nodes that are to be created in each initial genome. The connections to create are selected at random (using a select-\/without-\/replacement method). 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a08d1876f7309bb2955f8e7530fa7c41b}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a08d1876f7309bb2955f8e7530fa7c41b}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!IsAcyclic@{IsAcyclic}}
+\index{IsAcyclic@{IsAcyclic}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsAcyclic}{IsAcyclic}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Is\+Acyclic\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A boolean flag that indicates if the genomes that are evolved are acyclic, i.\+e. they should have no recurrent/cyclic connection paths. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_af605f441af51b94f8da621f8178393f7}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_af605f441af51b94f8da621f8178393f7}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!Name@{Name}}
+\index{Name@{Name}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Experiment name. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a6290465922fafa5950c0d8f6a16f70e2}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a6290465922fafa5950c0d8f6a16f70e2}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!NeatEvolutionAlgorithmSettings@{NeatEvolutionAlgorithmSettings}}
+\index{NeatEvolutionAlgorithmSettings@{NeatEvolutionAlgorithmSettings}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{NeatEvolutionAlgorithmSettings}{NeatEvolutionAlgorithmSettings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings}{Neat\+Evolution\+Algorithm\+Settings}} \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings}{Neat\+Evolution\+Algorithm\+Settings}}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a6290465922fafa5950c0d8f6a16f70e2}{Neat\+Evolution\+Algorithm\+Settings}} to be used for the experiment. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a2e9dff9bdbb83e399a0522bf65b25a83}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a2e9dff9bdbb83e399a0522bf65b25a83}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!PopulationSize@{PopulationSize}}
+\index{PopulationSize@{PopulationSize}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PopulationSize}{PopulationSize}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Population\+Size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The population size to use for the experiment. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a04e899b27c923942b18965470c6b0c09}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a04e899b27c923942b18965470c6b0c09}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!ReproductionAsexualSettings@{ReproductionAsexualSettings}}
+\index{ReproductionAsexualSettings@{ReproductionAsexualSettings}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ReproductionAsexualSettings}{ReproductionAsexualSettings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_neat_reproduction_asexual_settings}{Neat\+Reproduction\+Asexual\+Settings}} \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Reproduction\+Asexual\+Settings\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The asexual reproduction settings to use for the experiment. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a632efde2de8b209ce57f9200cd168eb0}\label{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment_a632efde2de8b209ce57f9200cd168eb0}} 
+\index{SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}!ReproductionSexualSettings@{ReproductionSexualSettings}}
+\index{ReproductionSexualSettings@{ReproductionSexualSettings}!SharpNeat.Experiments.INeatExperiment$<$ T $>$@{SharpNeat.Experiments.INeatExperiment$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ReproductionSexualSettings}{ReproductionSexualSettings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_neat_reproduction_sexual_settings}{Neat\+Reproduction\+Sexual\+Settings}} \mbox{\hyperlink{interface_sharp_neat_1_1_experiments_1_1_i_neat_experiment}{Sharp\+Neat.\+Experiments.\+I\+Neat\+Experiment}}$<$ T $>$.Reproduction\+Sexual\+Settings\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The sexual reproduction settings to use for the experiment. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Experiments/I\+Neat\+Experiment.\+cs\end{DoxyCompactItemize}

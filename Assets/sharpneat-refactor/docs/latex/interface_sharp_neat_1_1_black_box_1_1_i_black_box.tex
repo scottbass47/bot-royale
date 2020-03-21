@@ -1,0 +1,112 @@
+\hypertarget{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{}\doxysection{Sharp\+Neat.\+Black\+Box.\+I\+Black\+Box$<$ T $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_black_box_1_1_i_black_box}\index{SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}}
+
+
+Represents an abstract \textquotesingle{}black box\textquotesingle{} function, with and input vector, an \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa1e102d1d6c5d3ea5c371e1669e14545}{Activate()}} method that takes the inputs to produce an output vector. I.\+e. \textquotesingle{}black box\textquotesingle{} here could also be described as a multivariate mathematical function.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa1e102d1d6c5d3ea5c371e1669e14545}{Activate}} ()
+\begin{DoxyCompactList}\small\item\em Activate the black box. This causes the black box to accept its inputs and produce output signals ready for reading from Output\+Vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa67bbbe7bb02c3c60f40afbffe761c39}{Reset\+State}} ()
+\begin{DoxyCompactList}\small\item\em Reset any internal state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box_a4c992114ffccaa2775de01efd9c3612a}{Input\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of inputs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box_a418edf805bda151a2031d698caa31dd9}{Output\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of outputs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$ T $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box_a15d0bf3f7e9fa1acc073853a1125081e}{Input\+Vector}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a vector of input values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$ T $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa1893355ffbd13da44a7cf6b14e82c94}{Output\+Vector}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a vector of output values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an abstract \textquotesingle{}black box\textquotesingle{} function, with and input vector, an \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa1e102d1d6c5d3ea5c371e1669e14545}{Activate()}} method that takes the inputs to produce an output vector. I.\+e. \textquotesingle{}black box\textquotesingle{} here could also be described as a multivariate mathematical function. 
+
+Typically a black box will be a neural network, whereby we set the input vector, activate the network, and read its output vector. However, in principle a black box could be any kind of function or information processing system such as a C\# program or a genetic programming tree.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Black box numeric data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa1e102d1d6c5d3ea5c371e1669e14545}\label{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa1e102d1d6c5d3ea5c371e1669e14545}} 
+\index{SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}!Activate@{Activate}}
+\index{Activate@{Activate}!SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{Sharp\+Neat.\+Black\+Box.\+I\+Black\+Box}}$<$ T $>$.Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activate the black box. This causes the black box to accept its inputs and produce output signals ready for reading from Output\+Vector. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa67bbbe7bb02c3c60f40afbffe761c39}\label{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa67bbbe7bb02c3c60f40afbffe761c39}} 
+\index{SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}!ResetState@{ResetState}}
+\index{ResetState@{ResetState}!SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ResetState()}{ResetState()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{Sharp\+Neat.\+Black\+Box.\+I\+Black\+Box}}$<$ T $>$.Reset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset any internal state. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_black_box_1_1_i_black_box_a4c992114ffccaa2775de01efd9c3612a}\label{interface_sharp_neat_1_1_black_box_1_1_i_black_box_a4c992114ffccaa2775de01efd9c3612a}} 
+\index{SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}!InputCount@{InputCount}}
+\index{InputCount@{InputCount}!SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InputCount}{InputCount}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{Sharp\+Neat.\+Black\+Box.\+I\+Black\+Box}}$<$ T $>$.Input\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of inputs. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_black_box_1_1_i_black_box_a15d0bf3f7e9fa1acc073853a1125081e}\label{interface_sharp_neat_1_1_black_box_1_1_i_black_box_a15d0bf3f7e9fa1acc073853a1125081e}} 
+\index{SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}!InputVector@{InputVector}}
+\index{InputVector@{InputVector}!SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InputVector}{InputVector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$T$>$ \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{Sharp\+Neat.\+Black\+Box.\+I\+Black\+Box}}$<$ T $>$.Input\+Vector\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a vector of input values. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_black_box_1_1_i_black_box_a418edf805bda151a2031d698caa31dd9}\label{interface_sharp_neat_1_1_black_box_1_1_i_black_box_a418edf805bda151a2031d698caa31dd9}} 
+\index{SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}!OutputCount@{OutputCount}}
+\index{OutputCount@{OutputCount}!SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OutputCount}{OutputCount}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{Sharp\+Neat.\+Black\+Box.\+I\+Black\+Box}}$<$ T $>$.Output\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of outputs. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa1893355ffbd13da44a7cf6b14e82c94}\label{interface_sharp_neat_1_1_black_box_1_1_i_black_box_aa1893355ffbd13da44a7cf6b14e82c94}} 
+\index{SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}!OutputVector@{OutputVector}}
+\index{OutputVector@{OutputVector}!SharpNeat.BlackBox.IBlackBox$<$ T $>$@{SharpNeat.BlackBox.IBlackBox$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OutputVector}{OutputVector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$T$>$ \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{Sharp\+Neat.\+Black\+Box.\+I\+Black\+Box}}$<$ T $>$.Output\+Vector\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a vector of output values. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Black\+Box/I\+Black\+Box.\+cs\end{DoxyCompactItemize}

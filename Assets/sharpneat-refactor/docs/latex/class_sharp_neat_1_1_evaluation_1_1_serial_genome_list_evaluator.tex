@@ -1,0 +1,130 @@
+\hypertarget{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator}{}\doxysection{Sharp\+Neat.\+Evaluation.\+Serial\+Genome\+List\+Evaluator$<$ T\+Genome, T\+Phenome $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator}\index{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+
+
+An implementation of I\+Genome\+List\+Evaluator$<$\+T\+Genome$>$ that evaluates genomes in series on a single C\+PU thread.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Evaluation.\+Serial\+Genome\+List\+Evaluator$<$ T\+Genome, T\+Phenome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_a26e9a40059bad5629384d6be0c07f854}{Serial\+Genome\+List\+Evaluator}} (\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}{I\+Genome\+Decoder}}$<$ T\+Genome, T\+Phenome $>$ genome\+Decoder, \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$ phenome\+Evaluation\+Scheme)
+\begin{DoxyCompactList}\small\item\em Construct with the provided I\+Genome\+Decoder$<$\+T\+Genome,\+T\+Phenome$>$ and I\+Phenome\+Evaluator$<$\+T\+Phenome$>$. Phenome caching is enabled by default. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_ae31ab05a76843029fe8f6f32bd6e975d}{Evaluate}} (I\+Collection$<$ T\+Genome $>$ genome\+List)
+\begin{DoxyCompactList}\small\item\em Evaluates a collection of genomes and assigns fitness info to each. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_a3dee6133431e31ff688bc106dd783f2c}{Test\+For\+Stop\+Condition}} (\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} fitness\+Info)
+\begin{DoxyCompactList}\small\item\em Accepts a \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_ab5842fa6390c69f0240ba96f11842d67}{Is\+Deterministic}} =$>$ \+\_\+phenome\+Evaluation\+Scheme.\+Is\+Deterministic
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. \end{DoxyCompactList}\item 
+I\+Comparer$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_a464ac937fb6a46ad101fc37f8c0c07a1}{Fitness\+Comparer}} =$>$ \+\_\+phenome\+Evaluation\+Scheme.\+Fitness\+Comparer
+\begin{DoxyCompactList}\small\item\em Gets a fitness comparer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An implementation of I\+Genome\+List\+Evaluator$<$\+T\+Genome$>$ that evaluates genomes in series on a single C\+PU thread. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Genome} & The genome type that is decoded.\\
+\hline
+{\em T\+Phenome} & The phenome type that is decoded to and then evaluated.\\
+\hline
+\end{DoxyTemplParams}
+
+
+Single threaded evaluation can be useful in various scenarios e.\+g. when debugging.
+
+Genome decoding is performed by a provided \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}{I\+Genome\+Decoder}}. Phenome evaluation is performed by a provided \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}. \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em I\+Genome}]\item[{\em T\+Phenome} : {\em class}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_a26e9a40059bad5629384d6be0c07f854}\label{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_a26e9a40059bad5629384d6be0c07f854}} 
+\index{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!SerialGenomeListEvaluator@{SerialGenomeListEvaluator}}
+\index{SerialGenomeListEvaluator@{SerialGenomeListEvaluator}!SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{SerialGenomeListEvaluator()}{SerialGenomeListEvaluator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Evaluation.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator}{Serial\+Genome\+List\+Evaluator}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}{I\+Genome\+Decoder}}$<$ T\+Genome, T\+Phenome $>$}]{genome\+Decoder,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$}]{phenome\+Evaluation\+Scheme }\end{DoxyParamCaption})}
+
+
+
+Construct with the provided I\+Genome\+Decoder$<$\+T\+Genome,\+T\+Phenome$>$ and I\+Phenome\+Evaluator$<$\+T\+Phenome$>$. Phenome caching is enabled by default. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_ae31ab05a76843029fe8f6f32bd6e975d}\label{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_ae31ab05a76843029fe8f6f32bd6e975d}} 
+\index{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Evaluation.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.Evaluate (\begin{DoxyParamCaption}\item[{I\+Collection$<$ T\+Genome $>$}]{genome\+List }\end{DoxyParamCaption})}
+
+
+
+Evaluates a collection of genomes and assigns fitness info to each. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_list_evaluator_a0511ee087db26d0c3ba130479200d50c}{Sharp\+Neat.\+Evaluation.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_a3dee6133431e31ff688bc106dd783f2c}\label{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_a3dee6133431e31ff688bc106dd783f2c}} 
+\index{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!TestForStopCondition@{TestForStopCondition}}
+\index{TestForStopCondition@{TestForStopCondition}!SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{TestForStopCondition()}{TestForStopCondition()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Evaluation.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.Test\+For\+Stop\+Condition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}}]{fitness\+Info }\end{DoxyParamCaption})}
+
+
+
+Accepts a \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness\+Info} & The fitness info object to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the fitness is good enough to signal the evolution algorithm to stop.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_list_evaluator_aadecbfd90b6c478aacc8dd42213ce5e4}{Sharp\+Neat.\+Evaluation.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_a464ac937fb6a46ad101fc37f8c0c07a1}\label{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_a464ac937fb6a46ad101fc37f8c0c07a1}} 
+\index{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!FitnessComparer@{FitnessComparer}}
+\index{FitnessComparer@{FitnessComparer}!SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{FitnessComparer}{FitnessComparer}}
+{\footnotesize\ttfamily I\+Comparer$<$\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}$>$ \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Evaluation.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.Fitness\+Comparer =$>$ \+\_\+phenome\+Evaluation\+Scheme.\+Fitness\+Comparer}
+
+
+
+Gets a fitness comparer. 
+
+Typically there is a single fitness score whereby a higher score is better, however if there are multiple fitness scores per genome then we need a more general purpose comparer to determine an ordering on Fitness\+Info(s), i.\+e. to be able to determine which is the better Fitenss\+Info between any two. \mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_ab5842fa6390c69f0240ba96f11842d67}\label{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator_ab5842fa6390c69f0240ba96f11842d67}} 
+\index{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!IsDeterministic@{IsDeterministic}}
+\index{IsDeterministic@{IsDeterministic}!SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{IsDeterministic}{IsDeterministic}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Evaluation.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.Is\+Deterministic =$>$ \+\_\+phenome\+Evaluation\+Scheme.\+Is\+Deterministic}
+
+
+
+Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. 
+
+An evaluation scheme that has some random/stochastic characteristics may give a different fitness score at each invocation for the same genome, such a scheme is non-\/deterministic. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evaluation/Serial\+Genome\+List\+Evaluator.\+cs\end{DoxyCompactItemize}

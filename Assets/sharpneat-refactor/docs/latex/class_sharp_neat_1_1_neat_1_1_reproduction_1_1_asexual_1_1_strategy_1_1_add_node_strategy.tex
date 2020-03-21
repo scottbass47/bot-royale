@@ -1,0 +1,111 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy}{}\doxysection{Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+Add\+Node\+Strategy$<$ T $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy}\index{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$}}
+
+
+A N\+E\+AT genome asexual reproduction strategy based on adding a single node.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+Add\+Node\+Strategy$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy_a8d1df4e8a24127bb15ecc7763cb2926b}{Add\+Node\+Strategy}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_meta_neat_genome}{Meta\+Neat\+Genome}}$<$ T $>$ meta\+Neat\+Genome, \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_genome_1_1_i_neat_genome_builder}{I\+Neat\+Genome\+Builder}}$<$ T $>$ genome\+Builder, Int32\+Sequence genome\+Id\+Seq, Int32\+Sequence innovation\+Id\+Seq, Int32\+Sequence generation\+Seq, \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_added_node_buffer}{Added\+Node\+Buffer}} added\+Node\+Buffer)
+\begin{DoxyCompactList}\small\item\em Construct a new instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy_a07f749b0c2dfadf7a9f361858ef90ff5}{Create\+Child\+Genome}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$ parent, I\+Random\+Source rng)
+\begin{DoxyCompactList}\small\item\em Create a new child genome from a given parent genome. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy_a045513a6686dab02d20e70add2a082d4}{Get\+Hidden\+Node\+Id\+Array}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$ parent, int added\+Node\+Id, bool new\+Innovation\+Ids\+Flag)
+\begin{DoxyCompactList}\small\item\em Get an array of hidden node I\+Ds in the child genome. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A N\+E\+AT genome asexual reproduction strategy based on adding a single node. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+Offspring genomes are created by taking a clone of a single parent genome and adding a single node, if possible. A node is added by selecting a connection at random, and splitting it, i.\+e. replacing A → B with A → C → B, where A and B are the existing nodes, and C is the new node. \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy_a8d1df4e8a24127bb15ecc7763cb2926b}\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy_a8d1df4e8a24127bb15ecc7763cb2926b}} 
+\index{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$}!AddNodeStrategy@{AddNodeStrategy}}
+\index{AddNodeStrategy@{AddNodeStrategy}!SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AddNodeStrategy()}{AddNodeStrategy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy}{Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+Add\+Node\+Strategy}}$<$ T $>$.\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy}{Add\+Node\+Strategy}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_meta_neat_genome}{Meta\+Neat\+Genome}}$<$ T $>$}]{meta\+Neat\+Genome,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_genome_1_1_i_neat_genome_builder}{I\+Neat\+Genome\+Builder}}$<$ T $>$}]{genome\+Builder,  }\item[{Int32\+Sequence}]{genome\+Id\+Seq,  }\item[{Int32\+Sequence}]{innovation\+Id\+Seq,  }\item[{Int32\+Sequence}]{generation\+Seq,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_added_node_buffer}{Added\+Node\+Buffer}}}]{added\+Node\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Construct a new instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meta\+Neat\+Genome} & N\+E\+AT genome metadata.\\
+\hline
+{\em genome\+Builder} & Neat\+Genome builder.\\
+\hline
+{\em genome\+Id\+Seq} & \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_genome}{Genome}} ID sequence; for obtaining new genome I\+Ds.\\
+\hline
+{\em innovation\+Id\+Seq} & Innovation ID sequence; for obtaining new innovation I\+Ds.\\
+\hline
+{\em generation\+Seq} & Generation sequence; for obtaining the current generation number.\\
+\hline
+{\em added\+Node\+Buffer} & A history buffer of added nodes.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy_a07f749b0c2dfadf7a9f361858ef90ff5}\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy_a07f749b0c2dfadf7a9f361858ef90ff5}} 
+\index{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$}!CreateChildGenome@{CreateChildGenome}}
+\index{CreateChildGenome@{CreateChildGenome}!SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateChildGenome()}{CreateChildGenome()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$T$>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy}{Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+Add\+Node\+Strategy}}$<$ T $>$.Create\+Child\+Genome (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$}]{parent,  }\item[{I\+Random\+Source}]{rng }\end{DoxyParamCaption})}
+
+
+
+Create a new child genome from a given parent genome. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent genome.\\
+\hline
+{\em rng} & Random source.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new child genome.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_i_asexual_reproduction_strategy_a498702b959c0bdaac8fd4dfe8229306f}{Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+I\+Asexual\+Reproduction\+Strategy$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy_a045513a6686dab02d20e70add2a082d4}\label{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy_a045513a6686dab02d20e70add2a082d4}} 
+\index{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$}!GetHiddenNodeIdArray@{GetHiddenNodeIdArray}}
+\index{GetHiddenNodeIdArray@{GetHiddenNodeIdArray}!SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$@{SharpNeat.Neat.Reproduction.Asexual.Strategy.AddNodeStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetHiddenNodeIdArray()}{GetHiddenNodeIdArray()}}
+{\footnotesize\ttfamily static int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_strategy_1_1_add_node_strategy}{Sharp\+Neat.\+Neat.\+Reproduction.\+Asexual.\+Strategy.\+Add\+Node\+Strategy}}$<$ T $>$.Get\+Hidden\+Node\+Id\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$}]{parent,  }\item[{int}]{added\+Node\+Id,  }\item[{bool}]{new\+Innovation\+Ids\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get an array of hidden node I\+Ds in the child genome. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Reproduction/\+Asexual/\+Strategy/Add\+Node\+Strategy.\+cs\end{DoxyCompactItemize}

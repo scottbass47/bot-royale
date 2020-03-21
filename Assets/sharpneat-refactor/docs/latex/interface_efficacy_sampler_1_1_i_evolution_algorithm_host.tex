@@ -1,0 +1,48 @@
+\hypertarget{interface_efficacy_sampler_1_1_i_evolution_algorithm_host}{}\doxysection{Efficacy\+Sampler.\+I\+Evolution\+Algorithm\+Host Interface Reference}
+\label{interface_efficacy_sampler_1_1_i_evolution_algorithm_host}\index{EfficacySampler.IEvolutionAlgorithmHost@{EfficacySampler.IEvolutionAlgorithmHost}}
+
+
+Represents a host for an I\+Evolution\+Algorithm instance, that runs the algorithm until some defined stop condition occurs, and then returns statistics (e.\+g. max fitness) associated with the evolution algorithm recorded at the stop time.  
+
+
+Inheritance diagram for Efficacy\+Sampler.\+I\+Evolution\+Algorithm\+Host\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.755486cm]{interface_efficacy_sampler_1_1_i_evolution_algorithm_host}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_efficacy_sampler_1_1_sample}{Sample}} \mbox{\hyperlink{interface_efficacy_sampler_1_1_i_evolution_algorithm_host_acea8d06005b9d23fa9528dd5a800e239}{Sample}} ()
+\begin{DoxyCompactList}\small\item\em Take one sample, i.\+e. start one instance of an evolution algorithm, wait for the stop condition, and return evolution algorithm statistics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a host for an I\+Evolution\+Algorithm instance, that runs the algorithm until some defined stop condition occurs, and then returns statistics (e.\+g. max fitness) associated with the evolution algorithm recorded at the stop time. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_efficacy_sampler_1_1_i_evolution_algorithm_host_acea8d06005b9d23fa9528dd5a800e239}\label{interface_efficacy_sampler_1_1_i_evolution_algorithm_host_acea8d06005b9d23fa9528dd5a800e239}} 
+\index{EfficacySampler.IEvolutionAlgorithmHost@{EfficacySampler.IEvolutionAlgorithmHost}!Sample@{Sample}}
+\index{Sample@{Sample}!EfficacySampler.IEvolutionAlgorithmHost@{EfficacySampler.IEvolutionAlgorithmHost}}
+\doxysubsubsection{\texorpdfstring{Sample()}{Sample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_efficacy_sampler_1_1_sample}{Sample}} Efficacy\+Sampler.\+I\+Evolution\+Algorithm\+Host.\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Take one sample, i.\+e. start one instance of an evolution algorithm, wait for the stop condition, and return evolution algorithm statistics. 
+
+\begin{DoxyReturn}{Returns}
+A new sample object that conveys the recorded statistics.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_efficacy_sampler_1_1_evolution_algorithm_host_clock_time_ad362c293b4cb9c3c6c708bcfc1b8f78e}{Efficacy\+Sampler.\+Evolution\+Algorithm\+Host\+Clock\+Time}}, and \mbox{\hyperlink{class_efficacy_sampler_1_1_evolution_algorithm_host_generational_a40e8ec5ff727c8814e5bc8b10b1b97c2}{Efficacy\+Sampler.\+Evolution\+Algorithm\+Host\+Generational}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Efficacy\+Sampler/I\+Evolution\+Algorithm\+Host.\+cs\end{DoxyCompactItemize}

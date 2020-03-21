@@ -1,0 +1,75 @@
+\hypertarget{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}{}\doxysection{Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+I\+Complexity\+Regulation\+Strategy Interface Reference}
+\label{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}\index{SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy}}
+
+
+Represents a complexity regulation strategy.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+I\+Complexity\+Regulation\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.822320cm]{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_a106f34f2009e4f0f6682646dc0cac75e}{Update\+Mode}} (\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_evolution_algorithm_statistics}{Evolution\+Algorithm\+Statistics}} ea\+Stats, \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics}{Population\+Statistics}} pop\+Stats)
+\begin{DoxyCompactList}\small\item\em Update the complexity regulation mode that the evolution algorithm should be in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_afbe02629da9f7ada0fbebadd7b59ed29}{Current\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the current complexity regulation mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a complexity regulation strategy. 
+
+Determine\+Mode() is called once per generation. A strategy determines the \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} that the evolution algorithm search should be in by examining passed in statistics. As such, the simplest valid strategy is to just return \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63ea0839c8f3dfc4a4256ae6ff9018158f7f}{Complexity\+Regulation\+Mode.\+Complexifying}}, which results in no complexity regulation taking place.
+
+Complexity regulation is also known as \textquotesingle{}Phased Search\textquotesingle{}. For more information see\+: Phased Searching with N\+E\+AT\+: Alternating Between Complexification And Simplification, Colin Green, 2004 (\href{http://sharpneat.sourceforge.net/phasedsearch.html}{\texttt{ http\+://sharpneat.\+sourceforge.\+net/phasedsearch.\+html}})
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_a106f34f2009e4f0f6682646dc0cac75e}\label{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_a106f34f2009e4f0f6682646dc0cac75e}} 
+\index{SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy}!UpdateMode@{UpdateMode}}
+\index{UpdateMode@{UpdateMode}!SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy}}
+\doxysubsubsection{\texorpdfstring{UpdateMode()}{UpdateMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+I\+Complexity\+Regulation\+Strategy.\+Update\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_evolution_algorithm_statistics}{Evolution\+Algorithm\+Statistics}}}]{ea\+Stats,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics}{Population\+Statistics}}}]{pop\+Stats }\end{DoxyParamCaption})}
+
+
+
+Update the complexity regulation mode that the evolution algorithm should be in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ea\+Stats} & Evolution algorithm statistics.\\
+\hline
+{\em pop\+Stats} & Population statistics.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated mode.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a27f52d75709e3a3852d7dea20a4e889c}{Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+Relative\+Complexity\+Regulation\+Strategy}}, \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_absolute_complexity_regulation_strategy_adbe5df69f406e0eb78d8b1a6852444c3}{Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+Absolute\+Complexity\+Regulation\+Strategy}}, and \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_null_complexity_regulation_strategy_aef5bedfdd05dcc54793e2b647b0ba152}{Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+Null\+Complexity\+Regulation\+Strategy}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_afbe02629da9f7ada0fbebadd7b59ed29}\label{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_afbe02629da9f7ada0fbebadd7b59ed29}} 
+\index{SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy}!CurrentMode@{CurrentMode}}
+\index{CurrentMode@{CurrentMode}!SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.IComplexityRegulationStrategy}}
+\doxysubsubsection{\texorpdfstring{CurrentMode}{CurrentMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+I\+Complexity\+Regulation\+Strategy.\+Current\+Mode\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the current complexity regulation mode. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Complexity\+Regulation/I\+Complexity\+Regulation\+Strategy.\+cs\end{DoxyCompactItemize}

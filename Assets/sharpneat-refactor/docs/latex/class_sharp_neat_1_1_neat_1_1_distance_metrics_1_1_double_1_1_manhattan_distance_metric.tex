@@ -1,0 +1,111 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric}{}\doxysection{Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+Double.\+Manhattan\+Distance\+Metric Class Reference}
+\label{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric}\index{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}}
+
+
+Manhattan distance metric.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+Double.\+Manhattan\+Distance\+Metric\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a8e46a81cff0a9d885480d206f49c3757}{Manhattan\+Distance\+Metric}} ()
+\begin{DoxyCompactList}\small\item\em Constructs using default weightings for comparisons on matching and mismatching dimensions. Classical Manhattan Distance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a799d99675f6b84c6aef3ae73758b3372}{Manhattan\+Distance\+Metric}} (double match\+Distance\+Coeff, double mismatch\+Distance\+Coeff, double mismatch\+Distance\+Constant)
+\begin{DoxyCompactList}\small\item\em Constructs using the provided weightings for comparisons on matching and mismatching dimensions. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a898bd38652865a4c51e71ec4cf6b95bd}{Calc\+Distance}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$ p1, \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$ p2)
+\begin{DoxyCompactList}\small\item\em Calculates the distance between two positions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a6d3d5dd094a24a16919a33db4f4def03}{Test\+Distance}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$ p1, \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$ p2, double threshold)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_sharp_neat_1_1_tests}{Tests}} if the distance between two positions is less than some threshold. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a53134804e4d89a1d6d2584f510407b84}{Calculate\+Centroid}} (I\+Enumerable$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$$>$ coord\+List)
+\begin{DoxyCompactList}\small\item\em Calculates the centroid for the given set of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manhattan distance metric. 
+
+The Manhattan distance is simply the sum total of all of the distances in each dimension. Also known as the taxicab distance, rectilinear distance, L1 distance or L1 norm.
+
+Use the default constructor for classical Manhattan Distance. Optionally the constructor can be provided with a two coefficients and a constant that can be used to modify/distort distance measures. These are\+:
+
+match\+Distance\+Coeff\+: When comparing two positions in the same dimension the distance between those two position is multiplied by this coefficient.
+
+mismatch\+Distance\+Coeff, mismatch\+Distance\+Constant\+: When comparing two coordinates where one describes a position in a given dimension and the other does not then the second coordinate is assumed to be at position zero in that dimension. However, the resulting distance is multiplied by this coefficient and mismatch\+Distance\+Constant is added, therefore allowing matches and mismatches to be weighted differently, e.\+g. more emphasis can be placed on mismatches (and therefore network topology). If mismatch\+Distance\+Coeff is zero and mismatch\+Distance\+Constant is non-\/zero then the distance of mismatches is a fixed value.
+
+The two coefficients and constant allow the following schemes\+:
+
+1) Classical Manhattan distance. 2) Topology only distance metric (ignore connections weights). 3) Equivalent of genome distance in Original N\+E\+AT (O-\/\+N\+E\+AT). This is actually a mix of (1) and (2).
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a8e46a81cff0a9d885480d206f49c3757}\label{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a8e46a81cff0a9d885480d206f49c3757}} 
+\index{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}!ManhattanDistanceMetric@{ManhattanDistanceMetric}}
+\index{ManhattanDistanceMetric@{ManhattanDistanceMetric}!SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{ManhattanDistanceMetric()}{ManhattanDistanceMetric()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+Double.\+Manhattan\+Distance\+Metric.\+Manhattan\+Distance\+Metric (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs using default weightings for comparisons on matching and mismatching dimensions. Classical Manhattan Distance. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a799d99675f6b84c6aef3ae73758b3372}\label{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a799d99675f6b84c6aef3ae73758b3372}} 
+\index{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}!ManhattanDistanceMetric@{ManhattanDistanceMetric}}
+\index{ManhattanDistanceMetric@{ManhattanDistanceMetric}!SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{ManhattanDistanceMetric()}{ManhattanDistanceMetric()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+Double.\+Manhattan\+Distance\+Metric.\+Manhattan\+Distance\+Metric (\begin{DoxyParamCaption}\item[{double}]{match\+Distance\+Coeff,  }\item[{double}]{mismatch\+Distance\+Coeff,  }\item[{double}]{mismatch\+Distance\+Constant }\end{DoxyParamCaption})}
+
+
+
+Constructs using the provided weightings for comparisons on matching and mismatching dimensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em match\+Distance\+Coeff} & A coefficient to applied to the distance obtained from two coordinates that both describe a position in a given dimension.\\
+\hline
+{\em mismatch\+Distance\+Coeff} & A coefficient applied to the distance obtained from two coordinates where only one of the coordinates describes a position in a given dimension. The other point is taken to be at position zero in that dimension.\\
+\hline
+{\em mismatch\+Distance\+Constant} & A constant that is added to the distance where only one of the coordinates describes a position in a given dimension. This adds extra emphasis to distance when comparing coordinates that exist in different dimensions.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a898bd38652865a4c51e71ec4cf6b95bd}\label{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a898bd38652865a4c51e71ec4cf6b95bd}} 
+\index{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}!CalcDistance@{CalcDistance}}
+\index{CalcDistance@{CalcDistance}!SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{CalcDistance()}{CalcDistance()}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+Double.\+Manhattan\+Distance\+Metric.\+Calc\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$}]{p1,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Calculates the distance between two positions. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a53134804e4d89a1d6d2584f510407b84}\label{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a53134804e4d89a1d6d2584f510407b84}} 
+\index{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}!CalculateCentroid@{CalculateCentroid}}
+\index{CalculateCentroid@{CalculateCentroid}!SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{CalculateCentroid()}{CalculateCentroid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$double$>$ Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+Double.\+Manhattan\+Distance\+Metric.\+Calculate\+Centroid (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$$>$}]{coord\+List }\end{DoxyParamCaption})}
+
+
+
+Calculates the centroid for the given set of points. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a6d3d5dd094a24a16919a33db4f4def03}\label{class_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_a6d3d5dd094a24a16919a33db4f4def03}} 
+\index{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}!TestDistance@{TestDistance}}
+\index{TestDistance@{TestDistance}!SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric@{SharpNeat.Neat.DistanceMetrics.Double.ManhattanDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{TestDistance()}{TestDistance()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Neat.\+Distance\+Metrics.\+Double.\+Manhattan\+Distance\+Metric.\+Test\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$}]{p1,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_connection_genes}{Connection\+Genes}}$<$ double $>$}]{p2,  }\item[{double}]{threshold }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{namespace_sharp_neat_1_1_tests}{Tests}} if the distance between two positions is less than some threshold. 
+
+A simple way of implementing this method would be to calculate the distance between the two coordinates and test if it is less than the threshold. However, that approach requires that all of the elements in both Coordinate\+Vectors be fully compared. We can improve performance in the general case by testing if the threshold has been passed after each vector element comparison thus allowing an early exit from the method for many calls. Further to this, we can begin comparing from the ends of the vectors where differences are most likely to occur.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Distance\+Metrics/\+Double/Manhattan\+Distance\+Metric.\+cs\end{DoxyCompactItemize}

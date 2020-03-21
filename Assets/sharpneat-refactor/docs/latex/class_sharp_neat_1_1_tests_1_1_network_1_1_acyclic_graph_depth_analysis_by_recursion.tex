@@ -1,0 +1,37 @@
+\hypertarget{class_sharp_neat_1_1_tests_1_1_network_1_1_acyclic_graph_depth_analysis_by_recursion}{}\doxysection{Sharp\+Neat.\+Tests.\+Network.\+Acyclic\+Graph\+Depth\+Analysis\+By\+Recursion Class Reference}
+\label{class_sharp_neat_1_1_tests_1_1_network_1_1_acyclic_graph_depth_analysis_by_recursion}\index{SharpNeat.Tests.Network.AcyclicGraphDepthAnalysisByRecursion@{SharpNeat.Tests.Network.AcyclicGraphDepthAnalysisByRecursion}}
+
+
+An alternative implementation of Acyclic\+Graph\+Depth\+Analysis that uses function recursion.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_graph_depth_info}{Graph\+Depth\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_tests_1_1_network_1_1_acyclic_graph_depth_analysis_by_recursion_ac0ec0e5e1781f6e01c8a385941e19d51}{Calculate\+Node\+Depths}} (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_directed_graph}{Directed\+Graph}} digraph)
+\begin{DoxyCompactList}\small\item\em Calculate node depths in an acyclic network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An alternative implementation of Acyclic\+Graph\+Depth\+Analysis that uses function recursion. 
+
+This version is used for testing only. The main implementation uses a number of optimizations, one of which is to use it own graph traversal stack instead of using function recursion. However, those optimizations make the code harder to read/understand, and therefore that code has a higher chance of containing defects.
+
+As part of the unit testing of Acyclic\+Graph\+Depth\+Analysis we use this implementation in parallel with the optimized version, and check that both versions give the same results for any given graph.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tests_1_1_network_1_1_acyclic_graph_depth_analysis_by_recursion_ac0ec0e5e1781f6e01c8a385941e19d51}\label{class_sharp_neat_1_1_tests_1_1_network_1_1_acyclic_graph_depth_analysis_by_recursion_ac0ec0e5e1781f6e01c8a385941e19d51}} 
+\index{SharpNeat.Tests.Network.AcyclicGraphDepthAnalysisByRecursion@{SharpNeat.Tests.Network.AcyclicGraphDepthAnalysisByRecursion}!CalculateNodeDepths@{CalculateNodeDepths}}
+\index{CalculateNodeDepths@{CalculateNodeDepths}!SharpNeat.Tests.Network.AcyclicGraphDepthAnalysisByRecursion@{SharpNeat.Tests.Network.AcyclicGraphDepthAnalysisByRecursion}}
+\doxysubsubsection{\texorpdfstring{CalculateNodeDepths()}{CalculateNodeDepths()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_graph_depth_info}{Graph\+Depth\+Info}} Sharp\+Neat.\+Tests.\+Network.\+Acyclic\+Graph\+Depth\+Analysis\+By\+Recursion.\+Calculate\+Node\+Depths (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_directed_graph}{Directed\+Graph}}}]{digraph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculate node depths in an acyclic network. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Tests/\+Sharp\+Neat\+Lib.\+Tests/\+Network/Acyclic\+Graph\+Depth\+Analysis\+By\+Recursion.\+cs\end{DoxyCompactItemize}

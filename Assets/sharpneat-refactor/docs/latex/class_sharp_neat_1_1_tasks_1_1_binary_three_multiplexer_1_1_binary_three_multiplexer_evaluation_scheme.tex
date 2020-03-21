@@ -1,0 +1,143 @@
+\hypertarget{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme}{}\doxysection{Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme Class Reference}
+\label{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme}\index{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}}
+
+
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evaluation}{Evaluation}} scheme for the Binary 3-\/Multiplexer task.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$ double $>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a63468246c866bce524d53081d63409b5}{Create\+Evaluator}} ()
+\begin{DoxyCompactList}\small\item\em Create a new evaluator object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a932f44cacf9a9406a8f3142dd7761240}{Test\+For\+Stop\+Condition}} (\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} fitness\+Info)
+\begin{DoxyCompactList}\small\item\em Accepts a Fitness\+Info, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a7e3b150ed845cb6d7bb21ea4c8aa3047}{Input\+Count}} =$>$ 4
+\begin{DoxyCompactList}\small\item\em The number of black box inputs expected/required by the black box evaluation scheme. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_aa8abf29eb3ba988c2adab51f74486aa9}{Output\+Count}} =$>$ 1
+\begin{DoxyCompactList}\small\item\em The number of black box inputs expected/required by the black box evaluation scheme. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a322755ada3fa1db5fa70cac42445e21c}{Is\+Deterministic}} =$>$ true
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. \end{DoxyCompactList}\item 
+I\+Comparer$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_ae58e26d9f222af61fd9b6109b9b30040}{Fitness\+Comparer}} =$>$ Primary\+Fitness\+Info\+Comparer.\+Singleton
+\begin{DoxyCompactList}\small\item\em Gets a fitness comparer for the scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_aef9bbaf093dcf64b59ba909dc2d3d64d}{Null\+Fitness}} =$>$ Fitness\+Info.\+Default\+Fitness\+Info
+\begin{DoxyCompactList}\small\item\em Represents the zero or null fitness for the task. I.\+e. e.\+g. for genomes that utterly fail at the task, or genomes that fail even to decode (not possible in N\+E\+AT). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a50b18da5e2facaab404ca85eeecfbc10}{Evaluators\+Have\+State}} =$>$ false
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluators created by \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a63468246c866bce524d53081d63409b5}{Create\+Evaluator}} have state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evaluation}{Evaluation}} scheme for the Binary 3-\/Multiplexer task. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a63468246c866bce524d53081d63409b5}\label{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a63468246c866bce524d53081d63409b5}} 
+\index{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}!CreateEvaluator@{CreateEvaluator}}
+\index{CreateEvaluator@{CreateEvaluator}!SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{CreateEvaluator()}{CreateEvaluator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$double$>$ $>$ Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme.\+Create\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new evaluator object. 
+
+\begin{DoxyReturn}{Returns}
+A new instance of I\+Phenome\+Evaluator$<$\+T$>$.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a932f44cacf9a9406a8f3142dd7761240}\label{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a932f44cacf9a9406a8f3142dd7761240}} 
+\index{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}!TestForStopCondition@{TestForStopCondition}}
+\index{TestForStopCondition@{TestForStopCondition}!SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{TestForStopCondition()}{TestForStopCondition()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme.\+Test\+For\+Stop\+Condition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}}]{fitness\+Info }\end{DoxyParamCaption})}
+
+
+
+Accepts a Fitness\+Info, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness\+Info} & The fitness info object to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the fitness is good enough to signal the evolution algorithm to stop.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a50b18da5e2facaab404ca85eeecfbc10}\label{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a50b18da5e2facaab404ca85eeecfbc10}} 
+\index{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}!EvaluatorsHaveState@{EvaluatorsHaveState}}
+\index{EvaluatorsHaveState@{EvaluatorsHaveState}!SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{EvaluatorsHaveState}{EvaluatorsHaveState}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme.\+Evaluators\+Have\+State =$>$ false}
+
+
+
+Indicates if the evaluators created by \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a63468246c866bce524d53081d63409b5}{Create\+Evaluator}} have state. 
+
+If an evaluator has no state then it is sufficient to create a single instance and to use that evaluator concurrently on multiple threads. If an evaluator has state then concurrent use requires the creation of one evaluator instance per thread. \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_ae58e26d9f222af61fd9b6109b9b30040}\label{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_ae58e26d9f222af61fd9b6109b9b30040}} 
+\index{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}!FitnessComparer@{FitnessComparer}}
+\index{FitnessComparer@{FitnessComparer}!SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{FitnessComparer}{FitnessComparer}}
+{\footnotesize\ttfamily I\+Comparer$<$\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}$>$ Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme.\+Fitness\+Comparer =$>$ Primary\+Fitness\+Info\+Comparer.\+Singleton}
+
+
+
+Gets a fitness comparer for the scheme. 
+
+Typically there is a single fitness score and a higher score is considered better/fitter. However, if there are multiple fitness values assigned to a genome (e.\+g. where multiple measures of fitness are in use) then we need a task specific comparer to determine the relative fitness between two instances of Fitness\+Info. \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a7e3b150ed845cb6d7bb21ea4c8aa3047}\label{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a7e3b150ed845cb6d7bb21ea4c8aa3047}} 
+\index{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}!InputCount@{InputCount}}
+\index{InputCount@{InputCount}!SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{InputCount}{InputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme.\+Input\+Count =$>$ 4}
+
+
+
+The number of black box inputs expected/required by the black box evaluation scheme. 
+
+The 3 inputs of the binary 3-\/multiplexer task, plus one bias input (input zero). \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a322755ada3fa1db5fa70cac42445e21c}\label{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_a322755ada3fa1db5fa70cac42445e21c}} 
+\index{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}!IsDeterministic@{IsDeterministic}}
+\index{IsDeterministic@{IsDeterministic}!SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{IsDeterministic}{IsDeterministic}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme.\+Is\+Deterministic =$>$ true}
+
+
+
+Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. 
+
+An evaluation scheme that has some random/stochastic characteristics may give a different fitness score at each invocation for the same genome, such a scheme is non-\/deterministic. \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_aef9bbaf093dcf64b59ba909dc2d3d64d}\label{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_aef9bbaf093dcf64b59ba909dc2d3d64d}} 
+\index{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}!NullFitness@{NullFitness}}
+\index{NullFitness@{NullFitness}!SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{NullFitness}{NullFitness}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme.\+Null\+Fitness =$>$ Fitness\+Info.\+Default\+Fitness\+Info}
+
+
+
+Represents the zero or null fitness for the task. I.\+e. e.\+g. for genomes that utterly fail at the task, or genomes that fail even to decode (not possible in N\+E\+AT). 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_aa8abf29eb3ba988c2adab51f74486aa9}\label{class_sharp_neat_1_1_tasks_1_1_binary_three_multiplexer_1_1_binary_three_multiplexer_evaluation_scheme_aa8abf29eb3ba988c2adab51f74486aa9}} 
+\index{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}!OutputCount@{OutputCount}}
+\index{OutputCount@{OutputCount}!SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme@{SharpNeat.Tasks.BinaryThreeMultiplexer.BinaryThreeMultiplexerEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{OutputCount}{OutputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Tasks.\+Binary\+Three\+Multiplexer.\+Binary\+Three\+Multiplexer\+Evaluation\+Scheme.\+Output\+Count =$>$ 1}
+
+
+
+The number of black box inputs expected/required by the black box evaluation scheme. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Tasks/\+Binary\+Three\+Multiplexer/Binary\+Three\+Multiplexer\+Evaluation\+Scheme.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,120 @@
+\hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{}\doxysection{Sharp\+Neat.\+Evolution\+Algorithm.\+Runner.\+Update\+Scheme Class Reference}
+\label{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}\index{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}}
+
+
+Evolution algorithm update scheme.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_a72e132043107700d33e0fa79ee9681b8}{Create\+No\+Update\+Scheme}} ()
+\begin{DoxyCompactList}\small\item\em Create a \textquotesingle{}no updates\textquotesingle{} update scheme. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_a819966f2a889e778da4b3f7c5865cdd3}{Create\+Generational\+Update\+Scheme}} (uint generations)
+\begin{DoxyCompactList}\small\item\em Create a generation based update scheme. I.\+e. the update event will trigger every N generations. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_acfe00bf0876506eab0690d13a44c4ada}{Create\+Time\+Span\+Update\+Scheme}} (\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_ad0d4957f7ad04d6076f15dad26e9c4e7}{Time\+Span}} timespan)
+\begin{DoxyCompactList}\small\item\em Create a clock time based update scheme. I.\+e. the update event will trigger periodically based on the specified clock time duration/timespan. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02d}{Update\+Mode}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_a3005be4a224b1118c7460f36ae02aab1}{Update\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the update scheme\textquotesingle{}s mode. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_ad319f1257ed7c4e93a2209aaa92c5a33}{Generations}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of generations between updates Applies to the generational update scheme only. \end{DoxyCompactList}\item 
+Time\+Span \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_ad0d4957f7ad04d6076f15dad26e9c4e7}{Time\+Span}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the timespan between updates. Applies to the timespan update scheme only. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Evolution algorithm update scheme. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_a819966f2a889e778da4b3f7c5865cdd3}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_a819966f2a889e778da4b3f7c5865cdd3}} 
+\index{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}!CreateGenerationalUpdateScheme@{CreateGenerationalUpdateScheme}}
+\index{CreateGenerationalUpdateScheme@{CreateGenerationalUpdateScheme}!SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}}
+\doxysubsubsection{\texorpdfstring{CreateGenerationalUpdateScheme()}{CreateGenerationalUpdateScheme()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}} Sharp\+Neat.\+Evolution\+Algorithm.\+Runner.\+Update\+Scheme.\+Create\+Generational\+Update\+Scheme (\begin{DoxyParamCaption}\item[{uint}]{generations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a generation based update scheme. I.\+e. the update event will trigger every N generations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em generations} & The number of generations between update events.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}}.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_a72e132043107700d33e0fa79ee9681b8}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_a72e132043107700d33e0fa79ee9681b8}} 
+\index{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}!CreateNoUpdateScheme@{CreateNoUpdateScheme}}
+\index{CreateNoUpdateScheme@{CreateNoUpdateScheme}!SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}}
+\doxysubsubsection{\texorpdfstring{CreateNoUpdateScheme()}{CreateNoUpdateScheme()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}} Sharp\+Neat.\+Evolution\+Algorithm.\+Runner.\+Update\+Scheme.\+Create\+No\+Update\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a \textquotesingle{}no updates\textquotesingle{} update scheme. 
+
+\begin{DoxyReturn}{Returns}
+A new instance of \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}}.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_acfe00bf0876506eab0690d13a44c4ada}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_acfe00bf0876506eab0690d13a44c4ada}} 
+\index{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}!CreateTimeSpanUpdateScheme@{CreateTimeSpanUpdateScheme}}
+\index{CreateTimeSpanUpdateScheme@{CreateTimeSpanUpdateScheme}!SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}}
+\doxysubsubsection{\texorpdfstring{CreateTimeSpanUpdateScheme()}{CreateTimeSpanUpdateScheme()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}} Sharp\+Neat.\+Evolution\+Algorithm.\+Runner.\+Update\+Scheme.\+Create\+Time\+Span\+Update\+Scheme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_ad0d4957f7ad04d6076f15dad26e9c4e7}{Time\+Span}}}]{timespan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a clock time based update scheme. I.\+e. the update event will trigger periodically based on the specified clock time duration/timespan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timespan} & The duration between update events.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}}.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_ad319f1257ed7c4e93a2209aaa92c5a33}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_ad319f1257ed7c4e93a2209aaa92c5a33}} 
+\index{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}!Generations@{Generations}}
+\index{Generations@{Generations}!SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}}
+\doxysubsubsection{\texorpdfstring{Generations}{Generations}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Evolution\+Algorithm.\+Runner.\+Update\+Scheme.\+Generations\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of generations between updates Applies to the generational update scheme only. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_ad0d4957f7ad04d6076f15dad26e9c4e7}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_ad0d4957f7ad04d6076f15dad26e9c4e7}} 
+\index{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}!TimeSpan@{TimeSpan}}
+\index{TimeSpan@{TimeSpan}!SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}}
+\doxysubsubsection{\texorpdfstring{TimeSpan}{TimeSpan}}
+{\footnotesize\ttfamily Time\+Span Sharp\+Neat.\+Evolution\+Algorithm.\+Runner.\+Update\+Scheme.\+Time\+Span\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the timespan between updates. Applies to the timespan update scheme only. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_a3005be4a224b1118c7460f36ae02aab1}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme_a3005be4a224b1118c7460f36ae02aab1}} 
+\index{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}!UpdateMode@{UpdateMode}}
+\index{UpdateMode@{UpdateMode}!SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme@{SharpNeat.EvolutionAlgorithm.Runner.UpdateScheme}}
+\doxysubsubsection{\texorpdfstring{UpdateMode}{UpdateMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02d}{Update\+Mode}} Sharp\+Neat.\+Evolution\+Algorithm.\+Runner.\+Update\+Scheme.\+Update\+Mode\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the update scheme\textquotesingle{}s mode. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evolution\+Algorithm/\+Runner/Update\+Scheme.\+cs\end{DoxyCompactItemize}

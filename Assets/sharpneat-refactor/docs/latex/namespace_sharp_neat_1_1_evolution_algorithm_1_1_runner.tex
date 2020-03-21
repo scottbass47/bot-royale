@@ -1,0 +1,85 @@
+\hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner}{}\doxysection{Sharp\+Neat.\+Evolution\+Algorithm.\+Runner Namespace Reference}
+\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner}\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_evolution_algorithm_runner}{Evolution\+Algorithm\+Runner}}
+\begin{DoxyCompactList}\small\item\em Wraps a background thread for running an \mbox{\hyperlink{interface_sharp_neat_1_1_evolution_algorithm_1_1_i_evolution_algorithm}{I\+Evolution\+Algorithm}}, and methods for asynchronous control of the background thread, for starting, stopping, pausing and restarting the evolution algorithm. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_runner_1_1_update_scheme}{Update\+Scheme}}
+\begin{DoxyCompactList}\small\item\em Evolution algorithm update scheme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77e}{Run\+State}} \{ \newline
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eadd353567e8118a2b8df4e822e59084ab}{Run\+State.\+Not\+Ready}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eae7d31fc0602fb2ede144d18cdffd816b}{Run\+State.\+Ready}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77ea5bda814c4aedb126839228f1a3d92f09}{Run\+State.\+Running}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eae99180abf47a8b3a856e0bcb2656990a}{Run\+State.\+Paused}}, 
+\newline
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eafba9c4daa2dd29d1077d32d965320ac1}{Run\+State.\+Terminated}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumeration of possible execution states for an I\+Evolution\+Algorithm. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02d}{Update\+Mode}} \{ \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02da6adf97f83acf6453d4a6a4b1070f3754}{Update\+Mode.\+None}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02da0e024a19f9707cc61b34570b237b9bee}{Update\+Mode.\+Timespan}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02daa93734183819f0ffb99778d05b9fc778}{Update\+Mode.\+Generational}}
+ \}
+\begin{DoxyCompactList}\small\item\em Evolution algorithm update event modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77e}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77e}} 
+\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!RunState@{RunState}}
+\index{RunState@{RunState}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}
+\doxysubsubsection{\texorpdfstring{RunState}{RunState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77e}{Sharp\+Neat.\+Evolution\+Algorithm.\+Runner.\+Run\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+An enumeration of possible execution states for an \mbox{\hyperlink{interface_sharp_neat_1_1_evolution_algorithm_1_1_i_evolution_algorithm}{I\+Evolution\+Algorithm}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotReady@{NotReady}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!NotReady@{NotReady}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eadd353567e8118a2b8df4e822e59084ab}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eadd353567e8118a2b8df4e822e59084ab}} 
+Not\+Ready&Not yet initialized. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ready@{Ready}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!Ready@{Ready}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eae7d31fc0602fb2ede144d18cdffd816b}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eae7d31fc0602fb2ede144d18cdffd816b}} 
+Ready&Initialized and ready to start. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Running@{Running}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!Running@{Running}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77ea5bda814c4aedb126839228f1a3d92f09}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77ea5bda814c4aedb126839228f1a3d92f09}} 
+Running&The algorithm is running. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Paused@{Paused}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!Paused@{Paused}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eae99180abf47a8b3a856e0bcb2656990a}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eae99180abf47a8b3a856e0bcb2656990a}} 
+Paused&The algorithm has been paused, either due to a user request or because a stop condition has been met. The algorithm can be restarted if the stop condition is no longer true. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Terminated@{Terminated}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!Terminated@{Terminated}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eafba9c4daa2dd29d1077d32d965320ac1}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_a4e4d6d8d1f79987ac7b6ea05bd75a77eafba9c4daa2dd29d1077d32d965320ac1}} 
+Terminated&The algorithm thread has terminated. The algorithm cannot be restarted from this state, a new algorithm object must be created and started afresh. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02d}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02d}} 
+\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!UpdateMode@{UpdateMode}}
+\index{UpdateMode@{UpdateMode}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}
+\doxysubsubsection{\texorpdfstring{UpdateMode}{UpdateMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02d}{Sharp\+Neat.\+Evolution\+Algorithm.\+Runner.\+Update\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Evolution algorithm update event modes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!None@{None}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02da6adf97f83acf6453d4a6a4b1070f3754}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02da6adf97f83acf6453d4a6a4b1070f3754}} 
+None&Do not generate any update events. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Timespan@{Timespan}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!Timespan@{Timespan}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02da0e024a19f9707cc61b34570b237b9bee}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02da0e024a19f9707cc61b34570b237b9bee}} 
+Timespan&Generate an update event at regular time intervals. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Generational@{Generational}!SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}}\index{SharpNeat.EvolutionAlgorithm.Runner@{SharpNeat.EvolutionAlgorithm.Runner}!Generational@{Generational}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02daa93734183819f0ffb99778d05b9fc778}\label{namespace_sharp_neat_1_1_evolution_algorithm_1_1_runner_abee12f61edac00e450f2fdcbca2da02daa93734183819f0ffb99778d05b9fc778}} 
+Generational&Generate an update event at regular generation intervals. (Every N generations). \\
+\hline
+
+\end{DoxyEnumFields}

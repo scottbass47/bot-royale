@@ -1,0 +1,92 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader}{}\doxysection{Sharp\+Neat.\+Neat.\+Genome.\+I\+O.\+Neat\+Population\+Loader$<$ T $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader}\index{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$@{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$}}
+
+
+For loading/deserializing a population of Neat\+Genome$<$\+T$>$ instances from the local filesystem.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader_a852f52c1962504e364d97ab30af3654d}{Neat\+Population\+Loader}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_genome_loader}{Neat\+Genome\+Loader}}$<$ T $>$ genome\+Loader)
+\begin{DoxyCompactList}\small\item\em Construct with the provided Neat\+Genome\+Loader$<$\+T$>$. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader_a15472015e24c204bc171d2c9f4c8afe1}{Load\+From\+Folder}} (string path)
+\begin{DoxyCompactList}\small\item\em Load a population from a folder containing one or more genome files (with a .genome file extension). \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader_a5e464e74fafa8272bd41e0206ad92bc9}{Load\+From\+Zip\+Archive}} (string path)
+\begin{DoxyCompactList}\small\item\em Load a population from a zip archive file containing one or more genome file entries (with a .genome file extension). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For loading/deserializing a population of Neat\+Genome$<$\+T$>$ instances from the local filesystem. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Connection weight data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader_a852f52c1962504e364d97ab30af3654d}\label{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader_a852f52c1962504e364d97ab30af3654d}} 
+\index{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$@{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$}!NeatPopulationLoader@{NeatPopulationLoader}}
+\index{NeatPopulationLoader@{NeatPopulationLoader}!SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$@{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{NeatPopulationLoader()}{NeatPopulationLoader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader}{Sharp\+Neat.\+Neat.\+Genome.\+I\+O.\+Neat\+Population\+Loader}}$<$ T $>$.\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader}{Neat\+Population\+Loader}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_genome_loader}{Neat\+Genome\+Loader}}$<$ T $>$}]{genome\+Loader }\end{DoxyParamCaption})}
+
+
+
+Construct with the provided Neat\+Genome\+Loader$<$\+T$>$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+Loader} & A genome loader.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader_a15472015e24c204bc171d2c9f4c8afe1}\label{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader_a15472015e24c204bc171d2c9f4c8afe1}} 
+\index{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$@{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$}!LoadFromFolder@{LoadFromFolder}}
+\index{LoadFromFolder@{LoadFromFolder}!SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$@{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LoadFromFolder()}{LoadFromFolder()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$T$>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader}{Sharp\+Neat.\+Neat.\+Genome.\+I\+O.\+Neat\+Population\+Loader}}$<$ T $>$.Load\+From\+Folder (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Load a population from a folder containing one or more genome files (with a .genome file extension). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the folder to load genomes from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of the loaded genomes.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader_a5e464e74fafa8272bd41e0206ad92bc9}\label{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader_a5e464e74fafa8272bd41e0206ad92bc9}} 
+\index{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$@{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$}!LoadFromZipArchive@{LoadFromZipArchive}}
+\index{LoadFromZipArchive@{LoadFromZipArchive}!SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$@{SharpNeat.Neat.Genome.IO.NeatPopulationLoader$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LoadFromZipArchive()}{LoadFromZipArchive()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$T$>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_i_o_1_1_neat_population_loader}{Sharp\+Neat.\+Neat.\+Genome.\+I\+O.\+Neat\+Population\+Loader}}$<$ T $>$.Load\+From\+Zip\+Archive (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Load a population from a zip archive file containing one or more genome file entries (with a .genome file extension). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the zip file to load.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of the loaded genomes.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Genome/\+I\+O/Neat\+Population\+Loader.\+cs\end{DoxyCompactItemize}

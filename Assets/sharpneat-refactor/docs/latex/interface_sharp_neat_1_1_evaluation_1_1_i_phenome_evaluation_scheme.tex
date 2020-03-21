@@ -1,0 +1,119 @@
+\hypertarget{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{}\doxysection{Sharp\+Neat.\+Evaluation.\+I\+Phenome\+Evaluation\+Scheme$<$ T\+Phenome $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}\index{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}}
+
+
+Represents an overall phenome evaluation scheme.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_abc3fab0085a7eaff422c7ee89f68e298}{Create\+Evaluator}} ()
+\begin{DoxyCompactList}\small\item\em Create a new evaluator object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a52c69e2bf9b726769d604e820eb08e82}{Test\+For\+Stop\+Condition}} (\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} fitness\+Info)
+\begin{DoxyCompactList}\small\item\em Accepts a \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a2ae3c8409b097cb891e9ebc4911606a0}{Is\+Deterministic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. \end{DoxyCompactList}\item 
+I\+Comparer$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a95627509141e6403965b20362f326963}{Fitness\+Comparer}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a fitness comparer for the scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a37cf71f9e2c2e8fd1fdddf321334554a}{Null\+Fitness}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Represents the zero or null fitness for the task. I.\+e. e.\+g. for genomes that utterly fail at the task, or genomes that fail even to decode (not possible in N\+E\+AT). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_af4e55719d429c3d48d729f02dd036323}{Evaluators\+Have\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluators created by \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_abc3fab0085a7eaff422c7ee89f68e298}{Create\+Evaluator}} have state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an overall phenome evaluation scheme. 
+
+Provides information related to the evaluation scheme, and a method for creating new evaluator instances. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Phenome} & The phenome type to be evaluated.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_abc3fab0085a7eaff422c7ee89f68e298}\label{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_abc3fab0085a7eaff422c7ee89f68e298}} 
+\index{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}!CreateEvaluator@{CreateEvaluator}}
+\index{CreateEvaluator@{CreateEvaluator}!SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{CreateEvaluator()}{CreateEvaluator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$T\+Phenome$>$ \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{Sharp\+Neat.\+Evaluation.\+I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$.Create\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new evaluator object. 
+
+\begin{DoxyReturn}{Returns}
+A new instance of I\+Phenome\+Evaluator$<$\+T$>$.
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a52c69e2bf9b726769d604e820eb08e82}\label{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a52c69e2bf9b726769d604e820eb08e82}} 
+\index{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}!TestForStopCondition@{TestForStopCondition}}
+\index{TestForStopCondition@{TestForStopCondition}!SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{TestForStopCondition()}{TestForStopCondition()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{Sharp\+Neat.\+Evaluation.\+I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$.Test\+For\+Stop\+Condition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}}]{fitness\+Info }\end{DoxyParamCaption})}
+
+
+
+Accepts a \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness\+Info} & The fitness info object to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the fitness is good enough to signal the evolution algorithm to stop.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_af4e55719d429c3d48d729f02dd036323}\label{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_af4e55719d429c3d48d729f02dd036323}} 
+\index{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}!EvaluatorsHaveState@{EvaluatorsHaveState}}
+\index{EvaluatorsHaveState@{EvaluatorsHaveState}!SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluatorsHaveState}{EvaluatorsHaveState}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{Sharp\+Neat.\+Evaluation.\+I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$.Evaluators\+Have\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Indicates if the evaluators created by \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_abc3fab0085a7eaff422c7ee89f68e298}{Create\+Evaluator}} have state. 
+
+If an evaluator has no state then it is sufficient to create a single instance and to use that evaluator concurrently on multiple threads. If an evaluator has state then concurrent use requires the creation of one evaluator instance per thread. \mbox{\Hypertarget{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a95627509141e6403965b20362f326963}\label{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a95627509141e6403965b20362f326963}} 
+\index{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}!FitnessComparer@{FitnessComparer}}
+\index{FitnessComparer@{FitnessComparer}!SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{FitnessComparer}{FitnessComparer}}
+{\footnotesize\ttfamily I\+Comparer$<$\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}$>$ \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{Sharp\+Neat.\+Evaluation.\+I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$.Fitness\+Comparer\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a fitness comparer for the scheme. 
+
+Typically there is a single fitness score and a higher score is considered better/fitter. However, if there are multiple fitness values assigned to a genome (e.\+g. where multiple measures of fitness are in use) then we need a task specific comparer to determine the relative fitness between two instances of \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}. \mbox{\Hypertarget{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a2ae3c8409b097cb891e9ebc4911606a0}\label{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a2ae3c8409b097cb891e9ebc4911606a0}} 
+\index{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}!IsDeterministic@{IsDeterministic}}
+\index{IsDeterministic@{IsDeterministic}!SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{IsDeterministic}{IsDeterministic}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{Sharp\+Neat.\+Evaluation.\+I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$.Is\+Deterministic\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. 
+
+An evaluation scheme that has some random/stochastic characteristics may give a different fitness score at each invocation for the same genome, such a scheme is non-\/deterministic. \mbox{\Hypertarget{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a37cf71f9e2c2e8fd1fdddf321334554a}\label{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme_a37cf71f9e2c2e8fd1fdddf321334554a}} 
+\index{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}!NullFitness@{NullFitness}}
+\index{NullFitness@{NullFitness}!SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$@{SharpNeat.Evaluation.IPhenomeEvaluationScheme$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{NullFitness}{NullFitness}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{Sharp\+Neat.\+Evaluation.\+I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$.Null\+Fitness\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Represents the zero or null fitness for the task. I.\+e. e.\+g. for genomes that utterly fail at the task, or genomes that fail even to decode (not possible in N\+E\+AT). 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evaluation/I\+Phenome\+Evaluation\+Scheme.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_acyclic_1_1_cyclic_connection_test}{}\doxysection{Sharp\+Neat.\+Network.\+Acyclic.\+Cyclic\+Connection\+Test Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_acyclic_1_1_cyclic_connection_test}\index{SharpNeat.Network.Acyclic.CyclicConnectionTest@{SharpNeat.Network.Acyclic.CyclicConnectionTest}}
+
+
+For testing if a new connection would form a connectivity cycle in an existing acyclic digraph.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_cyclic_connection_test_a04f1243a94a2901fa1a04f0c9c4029f7}{Is\+Connection\+Cyclic}} (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_directed_graph}{Directed\+Graph}} digraph, in \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_directed_connection}{Directed\+Connection}} new\+Conn)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_sharp_neat_1_1_tests}{Tests}} if the proposed new connection new\+Conn would form a cycle if added to the existing directed acyclic graph described by digraph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For testing if a new connection would form a connectivity cycle in an existing acyclic digraph. 
+
+The algorithm utilises a depth first traversal of the graph but using its own traversal stack data structure instead of relying on function recursion and the call stack. This is an optimisation, for more details see the comments on\+: \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_reproduction_1_1_sexual_1_1_strategy_1_1_uniform_crossover_1_1_cyclic_connection_test}{Sharp\+Neat.\+Neat.\+Reproduction.\+Sexual.\+Strategy.\+Uniform\+Crossover.\+Cyclic\+Connection\+Test}}. Also see\+: \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_acyclic_graph_depth_analysis}{Acyclic\+Graph\+Depth\+Analysis}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_cyclic_graph_analysis}{Cyclic\+Graph\+Analysis}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_acyclic_1_1_cyclic_connection_test_a04f1243a94a2901fa1a04f0c9c4029f7}\label{class_sharp_neat_1_1_network_1_1_acyclic_1_1_cyclic_connection_test_a04f1243a94a2901fa1a04f0c9c4029f7}} 
+\index{SharpNeat.Network.Acyclic.CyclicConnectionTest@{SharpNeat.Network.Acyclic.CyclicConnectionTest}!IsConnectionCyclic@{IsConnectionCyclic}}
+\index{IsConnectionCyclic@{IsConnectionCyclic}!SharpNeat.Network.Acyclic.CyclicConnectionTest@{SharpNeat.Network.Acyclic.CyclicConnectionTest}}
+\doxysubsubsection{\texorpdfstring{IsConnectionCyclic()}{IsConnectionCyclic()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Acyclic.\+Cyclic\+Connection\+Test.\+Is\+Connection\+Cyclic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_directed_graph}{Directed\+Graph}}}]{digraph,  }\item[{in \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_directed_connection}{Directed\+Connection}}}]{new\+Conn }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{namespace_sharp_neat_1_1_tests}{Tests}} if the proposed new connection new\+Conn would form a cycle if added to the existing directed acyclic graph described by digraph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digraph} & The directed acyclic graph to run the test against.\\
+\hline
+{\em new\+Conn} & A proposed new connection to add to the graph. Note. the connection source and target nodes I\+Ds are node indexes as used by the supplied digraph.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Acyclic/Cyclic\+Connection\+Test.\+cs\end{DoxyCompactItemize}

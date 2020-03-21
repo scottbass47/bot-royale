@@ -1,0 +1,113 @@
+\hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics}{}\doxysection{Sharp\+Neat.\+Evolution\+Algorithm.\+Population\+Statistics Class Reference}
+\label{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics}\index{SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}}
+
+
+\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population}{Population}} statistics.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Evolution\+Algorithm.\+Population\+Statistics\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics}
+\end{center}
+\end{figure}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a24765a2e5c22cf42d8958093025d9129}{Best\+Genome\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Index of the best genome in the population\textquotesingle{}s genome list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a1621c0198c626f968ac6bd3ae1f95780}{Best\+Fitness}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Fitness\+Info for the current best genome. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a3b5eb9d3c1b656f23bfa16d88d4dc531}{Mean\+Fitness}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Mean of the genome primary fitness for the current population. \end{DoxyCompactList}\item 
+Double\+Circular\+Buffer\+With\+Stats \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a5f8644228f266146fbe27613825740de}{Best\+Fitness\+History}} = new Double\+Circular\+Buffer\+With\+Stats(100)\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A trailing history of best fitness scores at each of the previous N generations. This object can also provide a mean over the historical fitness scores, thus providing a moving average value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a8d95921a0568dcbd23d9224682c54f17}{Best\+Complexity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Complexity of the current best genome. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_aacec74d52cfa70139ace4081a5ab06be}{Mean\+Complexity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Mean genome complexity for the current population. \end{DoxyCompactList}\item 
+Double\+Circular\+Buffer\+With\+Stats \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a95427576d6e83a15112d7ebf768f61c7}{Mean\+Complexity\+History}} = new Double\+Circular\+Buffer\+With\+Stats(100)\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A trailing history of mean genome complexity at each of the previous N generations. This object can also provide a mean over the historical values, thus providing a moving average value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population}{Population}} statistics. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a8d95921a0568dcbd23d9224682c54f17}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a8d95921a0568dcbd23d9224682c54f17}} 
+\index{SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}!BestComplexity@{BestComplexity}}
+\index{BestComplexity@{BestComplexity}!SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}}
+\doxysubsubsection{\texorpdfstring{BestComplexity}{BestComplexity}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithm.\+Population\+Statistics.\+Best\+Complexity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Complexity of the current best genome. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a1621c0198c626f968ac6bd3ae1f95780}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a1621c0198c626f968ac6bd3ae1f95780}} 
+\index{SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}!BestFitness@{BestFitness}}
+\index{BestFitness@{BestFitness}!SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}}
+\doxysubsubsection{\texorpdfstring{BestFitness}{BestFitness}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} Sharp\+Neat.\+Evolution\+Algorithm.\+Population\+Statistics.\+Best\+Fitness\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Fitness\+Info for the current best genome. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a5f8644228f266146fbe27613825740de}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a5f8644228f266146fbe27613825740de}} 
+\index{SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}!BestFitnessHistory@{BestFitnessHistory}}
+\index{BestFitnessHistory@{BestFitnessHistory}!SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}}
+\doxysubsubsection{\texorpdfstring{BestFitnessHistory}{BestFitnessHistory}}
+{\footnotesize\ttfamily Double\+Circular\+Buffer\+With\+Stats Sharp\+Neat.\+Evolution\+Algorithm.\+Population\+Statistics.\+Best\+Fitness\+History = new Double\+Circular\+Buffer\+With\+Stats(100)\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A trailing history of best fitness scores at each of the previous N generations. This object can also provide a mean over the historical fitness scores, thus providing a moving average value. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a24765a2e5c22cf42d8958093025d9129}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a24765a2e5c22cf42d8958093025d9129}} 
+\index{SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}!BestGenomeIndex@{BestGenomeIndex}}
+\index{BestGenomeIndex@{BestGenomeIndex}!SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}}
+\doxysubsubsection{\texorpdfstring{BestGenomeIndex}{BestGenomeIndex}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Evolution\+Algorithm.\+Population\+Statistics.\+Best\+Genome\+Index\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Index of the best genome in the population\textquotesingle{}s genome list. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_aacec74d52cfa70139ace4081a5ab06be}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_aacec74d52cfa70139ace4081a5ab06be}} 
+\index{SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}!MeanComplexity@{MeanComplexity}}
+\index{MeanComplexity@{MeanComplexity}!SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}}
+\doxysubsubsection{\texorpdfstring{MeanComplexity}{MeanComplexity}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithm.\+Population\+Statistics.\+Mean\+Complexity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Mean genome complexity for the current population. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a95427576d6e83a15112d7ebf768f61c7}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a95427576d6e83a15112d7ebf768f61c7}} 
+\index{SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}!MeanComplexityHistory@{MeanComplexityHistory}}
+\index{MeanComplexityHistory@{MeanComplexityHistory}!SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}}
+\doxysubsubsection{\texorpdfstring{MeanComplexityHistory}{MeanComplexityHistory}}
+{\footnotesize\ttfamily Double\+Circular\+Buffer\+With\+Stats Sharp\+Neat.\+Evolution\+Algorithm.\+Population\+Statistics.\+Mean\+Complexity\+History = new Double\+Circular\+Buffer\+With\+Stats(100)\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A trailing history of mean genome complexity at each of the previous N generations. This object can also provide a mean over the historical values, thus providing a moving average value. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a3b5eb9d3c1b656f23bfa16d88d4dc531}\label{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics_a3b5eb9d3c1b656f23bfa16d88d4dc531}} 
+\index{SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}!MeanFitness@{MeanFitness}}
+\index{MeanFitness@{MeanFitness}!SharpNeat.EvolutionAlgorithm.PopulationStatistics@{SharpNeat.EvolutionAlgorithm.PopulationStatistics}}
+\doxysubsubsection{\texorpdfstring{MeanFitness}{MeanFitness}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithm.\+Population\+Statistics.\+Mean\+Fitness\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Mean of the genome primary fitness for the current population. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evolution\+Algorithm/Population\+Statistics.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,205 @@
+\hypertarget{namespace_sharp_neat_1_1_neural_net}{}\doxysection{Sharp\+Neat.\+Neural\+Net Namespace Reference}
+\label{namespace_sharp_neat_1_1_neural_net}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory}{Default\+Activation\+Function\+Factory}}
+\begin{DoxyCompactList}\small\item\em Default implementation of I\+Activation\+Function\+Factory$<$\+T$>$. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function}{I\+Activation\+Function}}
+\begin{DoxyCompactList}\small\item\em Neural net node activation function. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_factory}{I\+Activation\+Function\+Factory}}
+\begin{DoxyCompactList}\small\item\em Represents a factory for obtaining instances of I\+Activation\+Function$<$\+T$>$. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_network_activation_scheme}{Network\+Activation\+Scheme}}
+\begin{DoxyCompactList}\small\item\em Represents network activation schemes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3}{Activation\+Function\+Id}} \{ \newline
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3ab15819524466d41b2114dc91630edc0c}{Activation\+Function\+Id.\+Arc\+SinH}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3aceffe7f812563934924b8dd08a319fc7}{Activation\+Function\+Id.\+Arc\+Tan}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3abb7ba525e0c40179fab22b4f7021e1f8}{Activation\+Function\+Id.\+Leaky\+Re\+LU}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3abf418518814d00feae3c57abdb42ed33}{Activation\+Function\+Id.\+Leaky\+Re\+L\+U\+Shifted}}, 
+\newline
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a9a2126552a9de60d20d95a47f85a16fd}{Activation\+Function\+Id.\+Logistic}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3af332fa7e3bdba9d6626b2b0fa81ff750}{Activation\+Function\+Id.\+Logistic\+Approximant\+Steep}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a2aec9459f1ea9e144c3df7f96a2a080d}{Activation\+Function\+Id.\+Logistic\+Steep}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a185bbed8eed73247c37f61fe6af0c73a}{Activation\+Function\+Id.\+Max\+Minus\+One}}, 
+\newline
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a7ee44e8257ec8046f96bb86a6c5837ec}{Activation\+Function\+Id.\+Null\+Fn}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a07cade9a2910a2401165771a815bb7bd}{Activation\+Function\+Id.\+Polynomial\+Approximant\+Steep}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a42dfb5214fde625aa0b9daa25fa48745}{Activation\+Function\+Id.\+Quadratic\+Sigmoid}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3add10d919fa85cf27fc78c0e06fe0b378}{Activation\+Function\+Id.\+Re\+LU}}, 
+\newline
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a507397d2e79e077181748788413cf0e1}{Activation\+Function\+Id.\+Scaled\+E\+LU}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a9a2993b063c53c9152efc379d854233c}{Activation\+Function\+Id.\+Soft\+Sign\+Steep}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3aa56102aa4851a1dbb5279c6a73b3c439}{Activation\+Function\+Id.\+S\+Re\+LU}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a47015ed4ddc5087547e16930ddfce10e}{Activation\+Function\+Id.\+S\+Re\+L\+U\+Shifted}}, 
+\newline
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a23b68da1de2b77d74da9da2635722a3e}{Activation\+Function\+Id.\+TanH}}
+ \}
+\begin{DoxyCompactList}\small\item\em The set of neural network activation functions provided as standard in Sharp\+N\+E\+AT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a07799c995b8a60aa890f0ed13957ea5f}{Vec\+Fn$<$ T $>$}} (T\mbox{[}$\,$\mbox{]} v)
+\begin{DoxyCompactList}\small\item\em Vectorized activation function. \end{DoxyCompactList}\item 
+delegate void \mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a24d800421b54ea3542656b8139caa263}{Vec\+Fn\+Segment$<$ T $>$}} (double\mbox{[}$\,$\mbox{]} v, int start\+Idx, int end\+Idx)
+\begin{DoxyCompactList}\small\item\em Vectorized activation function with activity limited to a defined sub-\/range/segment of the vector. \end{DoxyCompactList}\item 
+delegate void \mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_ad5f51a21485ae71aeec537c68ab11026}{Vec\+Fn\+Segment2$<$ T $>$}} (double\mbox{[}$\,$\mbox{]} v, double\mbox{[}$\,$\mbox{]} w, int start\+Idx, int end\+Idx)
+\begin{DoxyCompactList}\small\item\em Vectorized activation function with activity limited to a defined sub-\/range/segment of the vector, and post-\/activation levels stored in a separate supplied vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3}} 
+\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!ActivationFunctionId@{ActivationFunctionId}}
+\index{ActivationFunctionId@{ActivationFunctionId}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}
+\doxysubsubsection{\texorpdfstring{ActivationFunctionId}{ActivationFunctionId}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3}{Sharp\+Neat.\+Neural\+Net.\+Activation\+Function\+Id}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The set of neural network activation functions provided as standard in Sharp\+N\+E\+AT. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ArcSinH@{ArcSinH}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!ArcSinH@{ArcSinH}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3ab15819524466d41b2114dc91630edc0c}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3ab15819524466d41b2114dc91630edc0c}} 
+Arc\+SinH&The Arc\+SinH function (inverse hyperbolic sine function). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ArcTan@{ArcTan}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!ArcTan@{ArcTan}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3aceffe7f812563934924b8dd08a319fc7}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3aceffe7f812563934924b8dd08a319fc7}} 
+Arc\+Tan&The Arc\+Tan function (inverse tangent function). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeakyReLU@{LeakyReLU}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!LeakyReLU@{LeakyReLU}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3abb7ba525e0c40179fab22b4f7021e1f8}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3abb7ba525e0c40179fab22b4f7021e1f8}} 
+Leaky\+Re\+LU&Leaky rectified linear activation unit (Re\+LU). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeakyReLUShifted@{LeakyReLUShifted}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!LeakyReLUShifted@{LeakyReLUShifted}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3abf418518814d00feae3c57abdb42ed33}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3abf418518814d00feae3c57abdb42ed33}} 
+Leaky\+Re\+L\+U\+Shifted&Leaky rectified linear activation unit (Re\+LU). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Logistic@{Logistic}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!Logistic@{Logistic}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a9a2126552a9de60d20d95a47f85a16fd}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a9a2126552a9de60d20d95a47f85a16fd}} 
+Logistic&The logistic function. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LogisticApproximantSteep@{LogisticApproximantSteep}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!LogisticApproximantSteep@{LogisticApproximantSteep}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3af332fa7e3bdba9d6626b2b0fa81ff750}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3af332fa7e3bdba9d6626b2b0fa81ff750}} 
+Logistic\+Approximant\+Steep&The logistic function with a steepened slope, and implemented using a fast to compute approximation of exp(). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LogisticSteep@{LogisticSteep}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!LogisticSteep@{LogisticSteep}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a2aec9459f1ea9e144c3df7f96a2a080d}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a2aec9459f1ea9e144c3df7f96a2a080d}} 
+Logistic\+Steep&The logistic function with a steepened slope. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxMinusOne@{MaxMinusOne}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!MaxMinusOne@{MaxMinusOne}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a185bbed8eed73247c37f61fe6af0c73a}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a185bbed8eed73247c37f61fe6af0c73a}} 
+Max\+Minus\+One&max(-\/1, x,) function. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NullFn@{NullFn}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!NullFn@{NullFn}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a7ee44e8257ec8046f96bb86a6c5837ec}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a7ee44e8257ec8046f96bb86a6c5837ec}} 
+Null\+Fn&Null activation function. Returns zero regardless of input. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PolynomialApproximantSteep@{PolynomialApproximantSteep}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!PolynomialApproximantSteep@{PolynomialApproximantSteep}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a07cade9a2910a2401165771a815bb7bd}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a07cade9a2910a2401165771a815bb7bd}} 
+Polynomial\+Approximant\+Steep&A very close approximation of the logistic function that avoids use of exp() and is therefore typically much faster to compute, while giving an almost identical sigmoid curve. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QuadraticSigmoid@{QuadraticSigmoid}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!QuadraticSigmoid@{QuadraticSigmoid}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a42dfb5214fde625aa0b9daa25fa48745}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a42dfb5214fde625aa0b9daa25fa48745}} 
+Quadratic\+Sigmoid&A sigmoid formed by two sub-\/sections of the y=x$^\wedge$2 curve. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReLU@{ReLU}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!ReLU@{ReLU}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3add10d919fa85cf27fc78c0e06fe0b378}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3add10d919fa85cf27fc78c0e06fe0b378}} 
+Re\+LU&Rectified linear activation unit (Re\+LU). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ScaledELU@{ScaledELU}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!ScaledELU@{ScaledELU}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a507397d2e79e077181748788413cf0e1}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a507397d2e79e077181748788413cf0e1}} 
+Scaled\+E\+LU&Scaled Exponential Linear Unit (S\+E\+LU). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SoftSignSteep@{SoftSignSteep}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!SoftSignSteep@{SoftSignSteep}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a9a2993b063c53c9152efc379d854233c}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a9a2993b063c53c9152efc379d854233c}} 
+Soft\+Sign\+Steep&The softsign sigmoid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SReLU@{SReLU}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!SReLU@{SReLU}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3aa56102aa4851a1dbb5279c6a73b3c439}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3aa56102aa4851a1dbb5279c6a73b3c439}} 
+S\+Re\+LU&S-\/shaped rectified linear activation unit (S\+Re\+LU). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SReLUShifted@{SReLUShifted}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!SReLUShifted@{SReLUShifted}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a47015ed4ddc5087547e16930ddfce10e}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a47015ed4ddc5087547e16930ddfce10e}} 
+S\+Re\+L\+U\+Shifted&S-\/shaped rectified linear activation unit (S\+Re\+LU). Shifted on the x-\/axis so that x=0 gives y=0.\+5, in keeping with the logistic sigmoid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TanH@{TanH}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!TanH@{TanH}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a23b68da1de2b77d74da9da2635722a3e}\label{namespace_sharp_neat_1_1_neural_net_a27ff9f8b81855c4d5fc8cef8b0f72de3a23b68da1de2b77d74da9da2635722a3e}} 
+TanH&TanH function (hyperbolic tangent function). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a07799c995b8a60aa890f0ed13957ea5f}\label{namespace_sharp_neat_1_1_neural_net_a07799c995b8a60aa890f0ed13957ea5f}} 
+\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!VecFn$<$ T $>$@{VecFn$<$ T $>$}}
+\index{VecFn$<$ T $>$@{VecFn$<$ T $>$}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}
+\doxysubsubsection{\texorpdfstring{VecFn$<$ T $>$()}{VecFn< T >()}}
+{\footnotesize\ttfamily delegate void Sharp\+Neat.\+Neural\+Net.\+Vec\+Fn$<$ T $>$ (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{v }\end{DoxyParamCaption})}
+
+
+
+Vectorized activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A vector of pre-\/activation levels to pass through the function. The resulting post-\/activation levels are written back to this array/vector.\\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_ad5f51a21485ae71aeec537c68ab11026}\label{namespace_sharp_neat_1_1_neural_net_ad5f51a21485ae71aeec537c68ab11026}} 
+\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!VecFnSegment2$<$ T $>$@{VecFnSegment2$<$ T $>$}}
+\index{VecFnSegment2$<$ T $>$@{VecFnSegment2$<$ T $>$}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}
+\doxysubsubsection{\texorpdfstring{VecFnSegment2$<$ T $>$()}{VecFnSegment2< T >()}}
+{\footnotesize\ttfamily delegate void Sharp\+Neat.\+Neural\+Net.\+Vec\+Fn\+Segment2$<$ T $>$ (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{v,  }\item[{double\mbox{[}$\,$\mbox{]}}]{w,  }\item[{int}]{start\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})}
+
+
+
+Vectorized activation function with activity limited to a defined sub-\/range/segment of the vector, and post-\/activation levels stored in a separate supplied vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A vector of pre-\/activation levels to pass through the function. 
+\begin{DoxyParams}{Parameters}
+{\em w} & A vector in which the post activation levels are stored.\\
+\hline
+\end{DoxyParams}
+The resulting post-\/activation levels are written back to this array/vector.\\
+\hline
+{\em start\+Idx} & Start index.\\
+\hline
+{\em end\+Idx} & End index (exclusive).\\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_neural_net_a24d800421b54ea3542656b8139caa263}\label{namespace_sharp_neat_1_1_neural_net_a24d800421b54ea3542656b8139caa263}} 
+\index{SharpNeat.NeuralNet@{SharpNeat.NeuralNet}!VecFnSegment$<$ T $>$@{VecFnSegment$<$ T $>$}}
+\index{VecFnSegment$<$ T $>$@{VecFnSegment$<$ T $>$}!SharpNeat.NeuralNet@{SharpNeat.NeuralNet}}
+\doxysubsubsection{\texorpdfstring{VecFnSegment$<$ T $>$()}{VecFnSegment< T >()}}
+{\footnotesize\ttfamily delegate void Sharp\+Neat.\+Neural\+Net.\+Vec\+Fn\+Segment$<$ T $>$ (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{v,  }\item[{int}]{start\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})}
+
+
+
+Vectorized activation function with activity limited to a defined sub-\/range/segment of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A vector of pre-\/activation levels to pass through the function. The resulting post-\/activation levels are written back to this array/vector.\\
+\hline
+{\em start\+Idx} & Start index.\\
+\hline
+{\em end\+Idx} & End index (exclusive).\\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}

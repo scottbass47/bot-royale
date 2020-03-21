@@ -1,0 +1,119 @@
+\hypertarget{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{}\doxysection{Sharp\+Neat.\+Evaluation.\+Fitness\+Info Struct Reference}
+\label{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}\index{SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}}
+
+
+Conveys fitness information for a genome.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_ae170b40aa6417b0bf9e13af7430ba5d3}{Fitness\+Info}} (double fitness)
+\begin{DoxyCompactList}\small\item\em Construct with a single fitness score. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_ae99eb76476d8c33ec7c2262f4058e334}{Fitness\+Info}} (double primary\+Fitness, double\mbox{[}$\,$\mbox{]} aux\+Fitness\+Scores)
+\begin{DoxyCompactList}\small\item\em Construct with a compound fitness score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_affc37095193ae02314821cadbf684c07}\label{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_affc37095193ae02314821cadbf684c07}} 
+readonly double {\bfseries \+\_\+primary\+Fitness}
+\item 
+readonly double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_a8c44511297817d6894a7ab0240cc4125}{\+\_\+aux\+Fitness\+Scores}}
+\begin{DoxyCompactList}\small\item\em An array of auxiliary fitness scores. Most problem tasks will yield just a single fitness value, here we allow for multiple fitness values per evaluation to allow for multiple objectives, or secondary fitness scores for reporting only. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_ae1b0fb1e953176f82a29b07d06e30b3d}{Primary\+Fitness}} =$>$ \+\_\+primary\+Fitness
+\begin{DoxyCompactList}\small\item\em Gets the primary fitness score; for most evaluation schemes this is the one and only fitness score. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_a00a16f071f151632e261ff1fe1219902}{Aux\+Fitness\+Scores}} =$>$ \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_a8c44511297817d6894a7ab0240cc4125}{\+\_\+aux\+Fitness\+Scores}}
+\begin{DoxyCompactList}\small\item\em Gets an array of auxiliary fitness scores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_aa85d7c96aa5b2d40af902f182a39af86}{Default\+Fitness\+Info}} = new \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}(0.\+0)
+\begin{DoxyCompactList}\small\item\em Default singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Conveys fitness information for a genome. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_ae170b40aa6417b0bf9e13af7430ba5d3}\label{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_ae170b40aa6417b0bf9e13af7430ba5d3}} 
+\index{SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}!FitnessInfo@{FitnessInfo}}
+\index{FitnessInfo@{FitnessInfo}!SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}}
+\doxysubsubsection{\texorpdfstring{FitnessInfo()}{FitnessInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Evaluation.\+Fitness\+Info.\+Fitness\+Info (\begin{DoxyParamCaption}\item[{double}]{fitness }\end{DoxyParamCaption})}
+
+
+
+Construct with a single fitness score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness} & Genome fitness score.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_ae99eb76476d8c33ec7c2262f4058e334}\label{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_ae99eb76476d8c33ec7c2262f4058e334}} 
+\index{SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}!FitnessInfo@{FitnessInfo}}
+\index{FitnessInfo@{FitnessInfo}!SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}}
+\doxysubsubsection{\texorpdfstring{FitnessInfo()}{FitnessInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Evaluation.\+Fitness\+Info.\+Fitness\+Info (\begin{DoxyParamCaption}\item[{double}]{primary\+Fitness,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Fitness\+Scores }\end{DoxyParamCaption})}
+
+
+
+Construct with a compound fitness score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em primary\+Fitness} & Primary fitness.\\
+\hline
+{\em aux\+Fitness\+Scores} & Auxiliary fitness scores.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_a8c44511297817d6894a7ab0240cc4125}\label{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_a8c44511297817d6894a7ab0240cc4125}} 
+\index{SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}!\_auxFitnessScores@{\_auxFitnessScores}}
+\index{\_auxFitnessScores@{\_auxFitnessScores}!SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}}
+\doxysubsubsection{\texorpdfstring{\_auxFitnessScores}{\_auxFitnessScores}}
+{\footnotesize\ttfamily readonly double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Evaluation.\+Fitness\+Info.\+\_\+aux\+Fitness\+Scores}
+
+
+
+An array of auxiliary fitness scores. Most problem tasks will yield just a single fitness value, here we allow for multiple fitness values per evaluation to allow for multiple objectives, or secondary fitness scores for reporting only. 
+
+\mbox{\Hypertarget{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_a00a16f071f151632e261ff1fe1219902}\label{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_a00a16f071f151632e261ff1fe1219902}} 
+\index{SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}!AuxFitnessScores@{AuxFitnessScores}}
+\index{AuxFitnessScores@{AuxFitnessScores}!SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}}
+\doxysubsubsection{\texorpdfstring{AuxFitnessScores}{AuxFitnessScores}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Evaluation.\+Fitness\+Info.\+Aux\+Fitness\+Scores =$>$ \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_a8c44511297817d6894a7ab0240cc4125}{\+\_\+aux\+Fitness\+Scores}}}
+
+
+
+Gets an array of auxiliary fitness scores. 
+
+\mbox{\Hypertarget{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_aa85d7c96aa5b2d40af902f182a39af86}\label{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_aa85d7c96aa5b2d40af902f182a39af86}} 
+\index{SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}!DefaultFitnessInfo@{DefaultFitnessInfo}}
+\index{DefaultFitnessInfo@{DefaultFitnessInfo}!SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}}
+\doxysubsubsection{\texorpdfstring{DefaultFitnessInfo}{DefaultFitnessInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} Sharp\+Neat.\+Evaluation.\+Fitness\+Info.\+Default\+Fitness\+Info = new \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}(0.\+0)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default singleton instance. 
+
+\mbox{\Hypertarget{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_ae1b0fb1e953176f82a29b07d06e30b3d}\label{struct_sharp_neat_1_1_evaluation_1_1_fitness_info_ae1b0fb1e953176f82a29b07d06e30b3d}} 
+\index{SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}!PrimaryFitness@{PrimaryFitness}}
+\index{PrimaryFitness@{PrimaryFitness}!SharpNeat.Evaluation.FitnessInfo@{SharpNeat.Evaluation.FitnessInfo}}
+\doxysubsubsection{\texorpdfstring{PrimaryFitness}{PrimaryFitness}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evaluation.\+Fitness\+Info.\+Primary\+Fitness =$>$ \+\_\+primary\+Fitness}
+
+
+
+Gets the primary fitness score; for most evaluation schemes this is the one and only fitness score. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evaluation/Fitness\+Info.\+cs\end{DoxyCompactItemize}

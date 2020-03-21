@@ -1,0 +1,103 @@
+\hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator}{}\doxysection{Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Double\+Pole.\+Cart\+Double\+Pole\+Evaluator Class Reference}
+\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator}\index{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator@{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator}}
+
+
+Evaluator for the cart and double pole balancing task.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Double\+Pole.\+Cart\+Double\+Pole\+Evaluator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_aec3dc3ae430a8cc8f6c80ac5a15b380b}{Cart\+Double\+Pole\+Evaluator}} ()
+\begin{DoxyCompactList}\small\item\em Construct evaluator with default task arguments/variables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_a3d3f0f70f24c670f42e86aaafb387297}{Cart\+Double\+Pole\+Evaluator}} (int max\+Timesteps)
+\begin{DoxyCompactList}\small\item\em Construct evaluator with the provided task arguments/variables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_af7a759852dbb12677fd2213a4aa8709f}{Evaluate}} (\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$ double $>$ box)
+\begin{DoxyCompactList}\small\item\em Evaluate the provided black box against the cart and double pole balancing task, and return its fitness score. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_a2865dc389723e641f97cb7b58a59539f}{Run\+Trial}} (\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$ double $>$ box, float cart\+Pos, float pole\+Angle1, float pole\+Angle2)
+\begin{DoxyCompactList}\small\item\em Run a single cart-\/pole simulation/trial on the given black box, and with the given initial model state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Evaluator for the cart and double pole balancing task. 
+
+This task is solvable by Sharp\+N\+E\+AT, but not on every run. This is likely due to \textquotesingle{}deceptive\textquotesingle{} local maxima in the fitness landscape. As such this task would be a reasonable choice for research into addressing the problem of fitness landscape deception.
+
+This task can be made more difficult by not providing the velocity information (the cart and the two pole angular velocities) to the neural network. Difficulty can be further increases by making the two pole lengths increasingly similar, with the task becoming impossible when the poles have the same length.
+
+As things stand the problem is difficult enough in its current form, therefore we provide velocity inputs and define two very different pole lengths. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_aec3dc3ae430a8cc8f6c80ac5a15b380b}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_aec3dc3ae430a8cc8f6c80ac5a15b380b}} 
+\index{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator@{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator}!CartDoublePoleEvaluator@{CartDoublePoleEvaluator}}
+\index{CartDoublePoleEvaluator@{CartDoublePoleEvaluator}!SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator@{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator}}
+\doxysubsubsection{\texorpdfstring{CartDoublePoleEvaluator()}{CartDoublePoleEvaluator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Double\+Pole.\+Cart\+Double\+Pole\+Evaluator.\+Cart\+Double\+Pole\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct evaluator with default task arguments/variables. 
+
+Default to 960 timesteps, or 960/16 = 60 seconds of clock time.\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_a3d3f0f70f24c670f42e86aaafb387297}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_a3d3f0f70f24c670f42e86aaafb387297}} 
+\index{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator@{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator}!CartDoublePoleEvaluator@{CartDoublePoleEvaluator}}
+\index{CartDoublePoleEvaluator@{CartDoublePoleEvaluator}!SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator@{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator}}
+\doxysubsubsection{\texorpdfstring{CartDoublePoleEvaluator()}{CartDoublePoleEvaluator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Double\+Pole.\+Cart\+Double\+Pole\+Evaluator.\+Cart\+Double\+Pole\+Evaluator (\begin{DoxyParamCaption}\item[{int}]{max\+Timesteps }\end{DoxyParamCaption})}
+
+
+
+Construct evaluator with the provided task arguments/variables. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_af7a759852dbb12677fd2213a4aa8709f}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_af7a759852dbb12677fd2213a4aa8709f}} 
+\index{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator@{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator@{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Double\+Pole.\+Cart\+Double\+Pole\+Evaluator.\+Evaluate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$ double $>$}]{box }\end{DoxyParamCaption})}
+
+
+
+Evaluate the provided black box against the cart and double pole balancing task, and return its fitness score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em box} & The black box to evaluate.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_a2865dc389723e641f97cb7b58a59539f}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator_a2865dc389723e641f97cb7b58a59539f}} 
+\index{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator@{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator}!RunTrial@{RunTrial}}
+\index{RunTrial@{RunTrial}!SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator@{SharpNeat.Tasks.CartPole.DoublePole.CartDoublePoleEvaluator}}
+\doxysubsubsection{\texorpdfstring{RunTrial()}{RunTrial()}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Double\+Pole.\+Cart\+Double\+Pole\+Evaluator.\+Run\+Trial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$ double $>$}]{box,  }\item[{float}]{cart\+Pos,  }\item[{float}]{pole\+Angle1,  }\item[{float}]{pole\+Angle2 }\end{DoxyParamCaption})}
+
+
+
+Run a single cart-\/pole simulation/trial on the given black box, and with the given initial model state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em box} & The black box (neural net) to evaluate.\\
+\hline
+{\em cart\+Pos} & Cart position on the track.\\
+\hline
+{\em pole\+Angle1} & Pole 1 angle in radians.\\
+\hline
+{\em pole\+Angle2} & Pole 2 angle in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Fitness score.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Tasks/\+Cart\+Pole/\+Double\+Pole/Cart\+Double\+Pole\+Evaluator.\+cs\end{DoxyCompactItemize}

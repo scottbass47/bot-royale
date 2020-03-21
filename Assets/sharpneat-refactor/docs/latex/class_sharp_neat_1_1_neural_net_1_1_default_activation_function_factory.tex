@@ -1,0 +1,84 @@
+\hypertarget{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory}{}\doxysection{Sharp\+Neat.\+Neural\+Net.\+Default\+Activation\+Function\+Factory$<$ T $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory}\index{SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$@{SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$}}
+
+
+Default implementation of I\+Activation\+Function\+Factory$<$\+T$>$.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neural\+Net.\+Default\+Activation\+Function\+Factory$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory_a9b3687d7db2dde69cc1cab1f640fe40a}{Default\+Activation\+Function\+Factory}} (bool enable\+Hardware\+Acceleration)
+\begin{DoxyCompactList}\small\item\em Construct with the provided options. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function}{I\+Activation\+Function}}$<$ T $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory_ab2da3a20e6486c96fe1920dbe08e463c}{Get\+Activation\+Function}} (string name)
+\begin{DoxyCompactList}\small\item\em Get an activation function instance for the given activation function name/\+ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default implementation of I\+Activation\+Function\+Factory$<$\+T$>$. 
+
+A factory class for obtaining instances of I\+Activation\+Function$<$\+T$>$.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Neural net signal and weight data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory_a9b3687d7db2dde69cc1cab1f640fe40a}\label{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory_a9b3687d7db2dde69cc1cab1f640fe40a}} 
+\index{SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$@{SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$}!DefaultActivationFunctionFactory@{DefaultActivationFunctionFactory}}
+\index{DefaultActivationFunctionFactory@{DefaultActivationFunctionFactory}!SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$@{SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DefaultActivationFunctionFactory()}{DefaultActivationFunctionFactory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory}{Sharp\+Neat.\+Neural\+Net.\+Default\+Activation\+Function\+Factory}}$<$ T $>$.\mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory}{Default\+Activation\+Function\+Factory}} (\begin{DoxyParamCaption}\item[{bool}]{enable\+Hardware\+Acceleration }\end{DoxyParamCaption})}
+
+
+
+Construct with the provided options. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable\+Hardware\+Acceleration} & If true then hardware accelerated activation functions are used when available.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory_ab2da3a20e6486c96fe1920dbe08e463c}\label{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory_ab2da3a20e6486c96fe1920dbe08e463c}} 
+\index{SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$@{SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$}!GetActivationFunction@{GetActivationFunction}}
+\index{GetActivationFunction@{GetActivationFunction}!SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$@{SharpNeat.NeuralNet.DefaultActivationFunctionFactory$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetActivationFunction()}{GetActivationFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function}{I\+Activation\+Function}}$<$T$>$ \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_default_activation_function_factory}{Sharp\+Neat.\+Neural\+Net.\+Default\+Activation\+Function\+Factory}}$<$ T $>$.Get\+Activation\+Function (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Get an activation function instance for the given activation function name/\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Activation function name/\+ID.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of I\+Activation\+Function$<$\+T$>$.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_neural_net_1_1_i_activation_function_factory_a89dca381c01653d19f0e804ce5aab6c9}{Sharp\+Neat.\+Neural\+Net.\+I\+Activation\+Function\+Factory$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neural\+Net/Default\+Activation\+Function\+Factory.\+cs\end{DoxyCompactItemize}

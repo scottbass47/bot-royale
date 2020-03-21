@@ -1,0 +1,167 @@
+\hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme}{}\doxysection{Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme Class Reference}
+\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme}\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+
+
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evaluation}{Evaluation}} scheme for the function regression task.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_abcc3907fca7065d53f5dc5d573c82a27}{Generative\+Fn\+Regression\+Evaluation\+Scheme}} (Func$<$ double, double $>$ fn, \mbox{\hyperlink{struct_sharp_neat_1_1_tasks_1_1_function_regression_1_1_param_sampling_info}{Param\+Sampling\+Info}} param\+Sampling\+Info, double gradient\+Mse\+Weight)
+\begin{DoxyCompactList}\small\item\em Construct a new instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$ double $>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a665576ea4fd2728a152b23b6e493b6d2}{Create\+Evaluator}} ()
+\begin{DoxyCompactList}\small\item\em Create a new evaluator object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a5c66b8dd10d0558b55c0f8c7f56f19bd}{Test\+For\+Stop\+Condition}} (\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} fitness\+Info)
+\begin{DoxyCompactList}\small\item\em Accepts a Fitness\+Info, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a5d6aeb8c58f7681525a2aabc8ec8daae}{Input\+Count}} =$>$ 1
+\begin{DoxyCompactList}\small\item\em The number of black box inputs expected/required by the black box evaluation scheme. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a210674acaf6612d99af9d7bb0252eca0}{Output\+Count}} =$>$ 1
+\begin{DoxyCompactList}\small\item\em The number of black box inputs expected/required by the black box evaluation scheme. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_aced471fc3f83ce5478b63bfd0e446e74}{Is\+Deterministic}} =$>$ true
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. \end{DoxyCompactList}\item 
+I\+Comparer$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a77e3dfda7b8e5782f3ce3e50fe71a39e}{Fitness\+Comparer}} =$>$ Primary\+Fitness\+Info\+Comparer.\+Singleton
+\begin{DoxyCompactList}\small\item\em Gets a fitness comparer for the scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a209672323b16fb3a14dc7b0a218d1557}{Null\+Fitness}} =$>$ Fitness\+Info.\+Default\+Fitness\+Info
+\begin{DoxyCompactList}\small\item\em Represents the zero or null fitness for the task. I.\+e. e.\+g. for genomes that utterly fail at the task, or genomes that fail even to decode (not possible in N\+E\+AT). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a0434d651ae85b207798442bced86d1bb}{Evaluators\+Have\+State}} =$>$ true
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluators created by \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a665576ea4fd2728a152b23b6e493b6d2}{Create\+Evaluator}} have state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evaluation}{Evaluation}} scheme for the function regression task. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_abcc3907fca7065d53f5dc5d573c82a27}\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_abcc3907fca7065d53f5dc5d573c82a27}} 
+\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}!GenerativeFnRegressionEvaluationScheme@{GenerativeFnRegressionEvaluationScheme}}
+\index{GenerativeFnRegressionEvaluationScheme@{GenerativeFnRegressionEvaluationScheme}!SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{GenerativeFnRegressionEvaluationScheme()}{GenerativeFnRegressionEvaluationScheme()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme.\+Generative\+Fn\+Regression\+Evaluation\+Scheme (\begin{DoxyParamCaption}\item[{Func$<$ double, double $>$}]{fn,  }\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_tasks_1_1_function_regression_1_1_param_sampling_info}{Param\+Sampling\+Info}}}]{param\+Sampling\+Info,  }\item[{double}]{gradient\+Mse\+Weight }\end{DoxyParamCaption})}
+
+
+
+Construct a new instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & The target function.\\
+\hline
+{\em param\+Sampling\+Info} & Sampling (defines the x range and sampling density).\\
+\hline
+{\em gradient\+Mse\+Weight} & The fitness weighting to assign to the gradient mean squared error (M\+SE) score.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a665576ea4fd2728a152b23b6e493b6d2}\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a665576ea4fd2728a152b23b6e493b6d2}} 
+\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}!CreateEvaluator@{CreateEvaluator}}
+\index{CreateEvaluator@{CreateEvaluator}!SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{CreateEvaluator()}{CreateEvaluator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_black_box}{I\+Black\+Box}}$<$double$>$ $>$ Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme.\+Create\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new evaluator object. 
+
+\begin{DoxyReturn}{Returns}
+A new instance of I\+Phenome\+Evaluator$<$\+T$>$.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a5c66b8dd10d0558b55c0f8c7f56f19bd}\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a5c66b8dd10d0558b55c0f8c7f56f19bd}} 
+\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}!TestForStopCondition@{TestForStopCondition}}
+\index{TestForStopCondition@{TestForStopCondition}!SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{TestForStopCondition()}{TestForStopCondition()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme.\+Test\+For\+Stop\+Condition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}}]{fitness\+Info }\end{DoxyParamCaption})}
+
+
+
+Accepts a Fitness\+Info, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness\+Info} & The fitness info object to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the fitness is good enough to signal the evolution algorithm to stop.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a0434d651ae85b207798442bced86d1bb}\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a0434d651ae85b207798442bced86d1bb}} 
+\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}!EvaluatorsHaveState@{EvaluatorsHaveState}}
+\index{EvaluatorsHaveState@{EvaluatorsHaveState}!SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{EvaluatorsHaveState}{EvaluatorsHaveState}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme.\+Evaluators\+Have\+State =$>$ true}
+
+
+
+Indicates if the evaluators created by \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a665576ea4fd2728a152b23b6e493b6d2}{Create\+Evaluator}} have state. 
+
+If an evaluator has no state then it is sufficient to create a single instance and to use that evaluator concurrently on multiple threads. If an evaluator has state then concurrent use requires the creation of one evaluator instance per thread. \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a77e3dfda7b8e5782f3ce3e50fe71a39e}\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a77e3dfda7b8e5782f3ce3e50fe71a39e}} 
+\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}!FitnessComparer@{FitnessComparer}}
+\index{FitnessComparer@{FitnessComparer}!SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{FitnessComparer}{FitnessComparer}}
+{\footnotesize\ttfamily I\+Comparer$<$\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}$>$ Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme.\+Fitness\+Comparer =$>$ Primary\+Fitness\+Info\+Comparer.\+Singleton}
+
+
+
+Gets a fitness comparer for the scheme. 
+
+Typically there is a single fitness score and a higher score is considered better/fitter. However, if there are multiple fitness values assigned to a genome (e.\+g. where multiple measures of fitness are in use) then we need a task specific comparer to determine the relative fitness between two instances of Fitness\+Info. \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a5d6aeb8c58f7681525a2aabc8ec8daae}\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a5d6aeb8c58f7681525a2aabc8ec8daae}} 
+\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}!InputCount@{InputCount}}
+\index{InputCount@{InputCount}!SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{InputCount}{InputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme.\+Input\+Count =$>$ 1}
+
+
+
+The number of black box inputs expected/required by the black box evaluation scheme. 
+
+A single bias input (input zero). \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_aced471fc3f83ce5478b63bfd0e446e74}\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_aced471fc3f83ce5478b63bfd0e446e74}} 
+\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}!IsDeterministic@{IsDeterministic}}
+\index{IsDeterministic@{IsDeterministic}!SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{IsDeterministic}{IsDeterministic}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme.\+Is\+Deterministic =$>$ true}
+
+
+
+Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. 
+
+An evaluation scheme that has some random/stochastic characteristics may give a different fitness score at each invocation for the same genome, such a scheme is non-\/deterministic. \mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a209672323b16fb3a14dc7b0a218d1557}\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a209672323b16fb3a14dc7b0a218d1557}} 
+\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}!NullFitness@{NullFitness}}
+\index{NullFitness@{NullFitness}!SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{NullFitness}{NullFitness}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme.\+Null\+Fitness =$>$ Fitness\+Info.\+Default\+Fitness\+Info}
+
+
+
+Represents the zero or null fitness for the task. I.\+e. e.\+g. for genomes that utterly fail at the task, or genomes that fail even to decode (not possible in N\+E\+AT). 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a210674acaf6612d99af9d7bb0252eca0}\label{class_sharp_neat_1_1_tasks_1_1_generative_function_regression_1_1_generative_fn_regression_evaluation_scheme_a210674acaf6612d99af9d7bb0252eca0}} 
+\index{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}!OutputCount@{OutputCount}}
+\index{OutputCount@{OutputCount}!SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme@{SharpNeat.Tasks.GenerativeFunctionRegression.GenerativeFnRegressionEvaluationScheme}}
+\doxysubsubsection{\texorpdfstring{OutputCount}{OutputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Tasks.\+Generative\+Function\+Regression.\+Generative\+Fn\+Regression\+Evaluation\+Scheme.\+Output\+Count =$>$ 1}
+
+
+
+The number of black box inputs expected/required by the black box evaluation scheme. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Tasks/\+Generative\+Function\+Regression/Generative\+Fn\+Regression\+Evaluation\+Scheme.\+cs\end{DoxyCompactItemize}

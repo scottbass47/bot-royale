@@ -1,0 +1,46 @@
+\hypertarget{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}{}\doxysection{Sharp\+Neat.\+Evaluation.\+I\+Genome\+Decoder$<$ T\+Genome, T\+Phenome $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}\index{SharpNeat.Evaluation.IGenomeDecoder$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.IGenomeDecoder$<$ TGenome, TPhenome $>$}}
+
+
+Represents types that decode genomes into phenomes.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T\+Phenome \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder_a7f0d01475ccca818a120977b1181ad7b}{Decode}} (T\+Genome genome)
+\begin{DoxyCompactList}\small\item\em Decodes a genome into a phenome. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents types that decode genomes into phenomes. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Genome} & The genome type to be decoded.\\
+\hline
+{\em T\+Phenome} & The phenome type that is decoded to.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Phenome} : {\em class}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder_a7f0d01475ccca818a120977b1181ad7b}\label{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder_a7f0d01475ccca818a120977b1181ad7b}} 
+\index{SharpNeat.Evaluation.IGenomeDecoder$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.IGenomeDecoder$<$ TGenome, TPhenome $>$}!Decode@{Decode}}
+\index{Decode@{Decode}!SharpNeat.Evaluation.IGenomeDecoder$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.IGenomeDecoder$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{Decode()}{Decode()}}
+{\footnotesize\ttfamily T\+Phenome \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}{Sharp\+Neat.\+Evaluation.\+I\+Genome\+Decoder}}$<$ T\+Genome, T\+Phenome $>$.Decode (\begin{DoxyParamCaption}\item[{T\+Genome}]{genome }\end{DoxyParamCaption})}
+
+
+
+Decodes a genome into a phenome. 
+
+Note that not all genomes have to decode successfully. That is, we support genetic representations that may produce non-\/viable offspring. In such cases this method can return a null. 
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evaluation/I\+Genome\+Decoder.\+cs\end{DoxyCompactItemize}

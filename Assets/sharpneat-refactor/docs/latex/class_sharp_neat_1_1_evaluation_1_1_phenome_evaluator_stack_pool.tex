@@ -1,0 +1,96 @@
+\hypertarget{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool}{}\doxysection{Sharp\+Neat.\+Evaluation.\+Phenome\+Evaluator\+Stack\+Pool$<$ T\+Phenome $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool}\index{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$@{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$}}
+
+
+A pool of phenome evaluators, in which the pool is implemented with a stack structure with thread synchronised access to the stack.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Evaluation.\+Phenome\+Evaluator\+Stack\+Pool$<$ T\+Phenome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool_aec5d150d20e05db56862a492b60579dc}{Phenome\+Evaluator\+Stack\+Pool}} (\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$ phenome\+Evaluation\+Scheme, int initial\+Pool\+Size)
+\begin{DoxyCompactList}\small\item\em Construct a new instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$ \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool_a655c7f4490804bffafdef458f0b42d5a}{Get\+Evaluator}} ()
+\begin{DoxyCompactList}\small\item\em Get an evaluator from the pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool_a74aa3d2528c9f3c19006259a2ad7f3ee}{Release\+Evaluator}} (\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$ evaluator)
+\begin{DoxyCompactList}\small\item\em Releases an evaluator back into the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A pool of phenome evaluators, in which the pool is implemented with a stack structure with thread synchronised access to the stack. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Phenome} & Phenome type.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool_aec5d150d20e05db56862a492b60579dc}\label{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool_aec5d150d20e05db56862a492b60579dc}} 
+\index{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$@{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$}!PhenomeEvaluatorStackPool@{PhenomeEvaluatorStackPool}}
+\index{PhenomeEvaluatorStackPool@{PhenomeEvaluatorStackPool}!SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$@{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{PhenomeEvaluatorStackPool()}{PhenomeEvaluatorStackPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool}{Sharp\+Neat.\+Evaluation.\+Phenome\+Evaluator\+Stack\+Pool}}$<$ T\+Phenome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool}{Phenome\+Evaluator\+Stack\+Pool}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$}]{phenome\+Evaluation\+Scheme,  }\item[{int}]{initial\+Pool\+Size }\end{DoxyParamCaption})}
+
+
+
+Construct a new instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phenome\+Evaluation\+Scheme} & Phenome evaluation scheme.\\
+\hline
+{\em initial\+Pool\+Size} & Initial pool size.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool_a655c7f4490804bffafdef458f0b42d5a}\label{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool_a655c7f4490804bffafdef458f0b42d5a}} 
+\index{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$@{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$}!GetEvaluator@{GetEvaluator}}
+\index{GetEvaluator@{GetEvaluator}!SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$@{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{GetEvaluator()}{GetEvaluator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$T\+Phenome$>$ \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool}{Sharp\+Neat.\+Evaluation.\+Phenome\+Evaluator\+Stack\+Pool}}$<$ T\+Phenome $>$.Get\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get an evaluator from the pool. 
+
+\begin{DoxyReturn}{Returns}
+An evaluator instance.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator_pool_a143c82924d015b82207561b4e0238641}{Sharp\+Neat.\+Evaluation.\+I\+Phenome\+Evaluator\+Pool$<$ T\+Phenome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool_a74aa3d2528c9f3c19006259a2ad7f3ee}\label{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool_a74aa3d2528c9f3c19006259a2ad7f3ee}} 
+\index{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$@{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$}!ReleaseEvaluator@{ReleaseEvaluator}}
+\index{ReleaseEvaluator@{ReleaseEvaluator}!SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$@{SharpNeat.Evaluation.PhenomeEvaluatorStackPool$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{ReleaseEvaluator()}{ReleaseEvaluator()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_phenome_evaluator_stack_pool}{Sharp\+Neat.\+Evaluation.\+Phenome\+Evaluator\+Stack\+Pool}}$<$ T\+Phenome $>$.Release\+Evaluator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$}]{evaluator }\end{DoxyParamCaption})}
+
+
+
+Releases an evaluator back into the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evaluator} & The evaluator to release.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator_pool_a5da3fbae1605f655744c2e8ffec8175f}{Sharp\+Neat.\+Evaluation.\+I\+Phenome\+Evaluator\+Pool$<$ T\+Phenome $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evaluation/Phenome\+Evaluator\+Stack\+Pool.\+cs\end{DoxyCompactItemize}

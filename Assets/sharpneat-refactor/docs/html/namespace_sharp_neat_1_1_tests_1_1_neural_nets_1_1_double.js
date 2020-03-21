@@ -1,0 +1,7 @@
+var namespace_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double =
+[
+    [ "ActivationFunctions", "namespace_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_activation_functions.html", "namespace_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_activation_functions" ],
+    [ "ActivationFunctionFactoryTests", "class_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_activation_function_factory_tests.html", "class_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_activation_function_factory_tests" ],
+    [ "NeuralNetAcyclicTests", "class_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_neural_net_acyclic_tests.html", "class_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_neural_net_acyclic_tests" ],
+    [ "NeuralNetCyclicTests", "class_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_neural_net_cyclic_tests.html", "class_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_neural_net_cyclic_tests" ]
+];

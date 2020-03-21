@@ -1,0 +1,93 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy}{}\doxysection{Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+Relative\+Complexity\+Regulation\+Strategy Class Reference}
+\label{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy}\index{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy}}
+
+
+A complexity regulation strategy that applies a moving complexity ceiling that is relative to the population mean complexity each at the start of each transition to complexifying mode.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+Relative\+Complexity\+Regulation\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a132fc1059da5bad996da59b1f75d44bc}{Relative\+Complexity\+Regulation\+Strategy}} (int min\+Simplifcation\+Generations, double relative\+Complexity\+Ceiling)
+\begin{DoxyCompactList}\small\item\em Construct a new instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a27f52d75709e3a3852d7dea20a4e889c}{Update\+Mode}} (\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_evolution_algorithm_statistics}{Evolution\+Algorithm\+Statistics}} ea\+Stats, \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics}{Population\+Statistics}} pop\+Stats)
+\begin{DoxyCompactList}\small\item\em Determine the complexity regulation mode that the evolution algorithm search should be in given the provided evolution algorithm statistics object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a592aa797f788cbb6ac25318501cacb1e}{Current\+Mode}} =$>$ \+\_\+current\+Mode
+\begin{DoxyCompactList}\small\item\em Gets the current complexity regulation mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A complexity regulation strategy that applies a moving complexity ceiling that is relative to the population mean complexity each at the start of each transition to complexifying mode. 
+
+The strategy transitions from complexifying to simplifying when the relative ceiling is reached. Transitioning from simplifying to complexifying occurs when complexity is no longer falling {\itshape and} complexity is below the ceiling.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a132fc1059da5bad996da59b1f75d44bc}\label{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a132fc1059da5bad996da59b1f75d44bc}} 
+\index{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy}!RelativeComplexityRegulationStrategy@{RelativeComplexityRegulationStrategy}}
+\index{RelativeComplexityRegulationStrategy@{RelativeComplexityRegulationStrategy}!SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy}}
+\doxysubsubsection{\texorpdfstring{RelativeComplexityRegulationStrategy()}{RelativeComplexityRegulationStrategy()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+Relative\+Complexity\+Regulation\+Strategy.\+Relative\+Complexity\+Regulation\+Strategy (\begin{DoxyParamCaption}\item[{int}]{min\+Simplifcation\+Generations,  }\item[{double}]{relative\+Complexity\+Ceiling }\end{DoxyParamCaption})}
+
+
+
+Construct a new instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em relative\+Complexity\+Ceiling} & The relative complexity ceiling.\\
+\hline
+{\em min\+Simplifcation\+Generations} & The minimum number of generations we stay within simplification mode.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a27f52d75709e3a3852d7dea20a4e889c}\label{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a27f52d75709e3a3852d7dea20a4e889c}} 
+\index{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy}!UpdateMode@{UpdateMode}}
+\index{UpdateMode@{UpdateMode}!SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy}}
+\doxysubsubsection{\texorpdfstring{UpdateMode()}{UpdateMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+Relative\+Complexity\+Regulation\+Strategy.\+Update\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_evolution_algorithm_statistics}{Evolution\+Algorithm\+Statistics}}}]{ea\+Stats,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithm_1_1_population_statistics}{Population\+Statistics}}}]{pop\+Stats }\end{DoxyParamCaption})}
+
+
+
+Determine the complexity regulation mode that the evolution algorithm search should be in given the provided evolution algorithm statistics object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ea\+Stats} & Evolution algorithm statistics.\\
+\hline
+{\em pop\+Stats} & Population statistics.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_a106f34f2009e4f0f6682646dc0cac75e}{Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+I\+Complexity\+Regulation\+Strategy}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a592aa797f788cbb6ac25318501cacb1e}\label{class_sharp_neat_1_1_neat_1_1_complexity_regulation_1_1_relative_complexity_regulation_strategy_a592aa797f788cbb6ac25318501cacb1e}} 
+\index{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy}!CurrentMode@{CurrentMode}}
+\index{CurrentMode@{CurrentMode}!SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy@{SharpNeat.Neat.ComplexityRegulation.RelativeComplexityRegulationStrategy}}
+\doxysubsubsection{\texorpdfstring{CurrentMode}{CurrentMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_neat_1_1_complexity_regulation_aea67cb189e0a06683f2381679f59b63e}{Complexity\+Regulation\+Mode}} Sharp\+Neat.\+Neat.\+Complexity\+Regulation.\+Relative\+Complexity\+Regulation\+Strategy.\+Current\+Mode =$>$ \+\_\+current\+Mode}
+
+
+
+Gets the current complexity regulation mode. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Complexity\+Regulation/Relative\+Complexity\+Regulation\+Strategy.\+cs\end{DoxyCompactItemize}

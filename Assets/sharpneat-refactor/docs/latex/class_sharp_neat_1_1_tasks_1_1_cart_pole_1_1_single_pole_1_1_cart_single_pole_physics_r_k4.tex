@@ -1,0 +1,79 @@
+\hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4}{}\doxysection{Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Physics\+R\+K4 Class Reference}
+\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4}\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4}}
+
+
+Represents the cart-\/pole physical model (with a single pole); providing a model state update method that employs a classic 4th order Runge-\/\+Kutta to project to the state at the next timestep.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_ac8bfd28421a49af69248cb6c29340318}{Reset\+State}} (float cart\+Pos, float pole\+Angle)
+\begin{DoxyCompactList}\small\item\em Reset model state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_a631bb7e0e603b596b134f14a35fa004d}{Update}} (float f)
+\begin{DoxyCompactList}\small\item\em Update the model state. I.\+e. move the state forward by one timestep. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_aa41872ff283a6bc10afa7e7eaaa10f5b}{State}} =$>$ \+\_\+state
+\begin{DoxyCompactList}\small\item\em Get the cart-\/pole model state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the cart-\/pole physical model (with a single pole); providing a model state update method that employs a classic 4th order Runge-\/\+Kutta to project to the state at the next timestep. 
+
+This cart-\/pole physics code is based on code from \href{https://github.com/colgreen/cartpole-physics}{\texttt{ https\+://github.\+com/colgreen/cartpole-\/physics}} which in turn is based on the cart-\/pole equations from this paper\+: \char`\"{}\+Equations of Motion for the Cart and Pole Control Task\char`\"{} \href{https://sharpneat.sourceforge.io/research/cart-pole/cart-pole-equations.html}{\texttt{ https\+://sharpneat.\+sourceforge.\+io/research/cart-\/pole/cart-\/pole-\/equations.\+html}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_ac8bfd28421a49af69248cb6c29340318}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_ac8bfd28421a49af69248cb6c29340318}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4}!ResetState@{ResetState}}
+\index{ResetState@{ResetState}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4}}
+\doxysubsubsection{\texorpdfstring{ResetState()}{ResetState()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Physics\+R\+K4.\+Reset\+State (\begin{DoxyParamCaption}\item[{float}]{cart\+Pos,  }\item[{float}]{pole\+Angle }\end{DoxyParamCaption})}
+
+
+
+Reset model state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cart\+Pos} & Cart position on the track.\\
+\hline
+{\em pole\+Angle} & Pole angle in radians.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_a631bb7e0e603b596b134f14a35fa004d}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_a631bb7e0e603b596b134f14a35fa004d}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4}!Update@{Update}}
+\index{Update@{Update}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Physics\+R\+K4.\+Update (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+
+
+Update the model state. I.\+e. move the state forward by one timestep. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The external horizontal force applied to the cart.\\
+\hline
+\end{DoxyParams}
+
+
+This implementation of \mbox{\hyperlink{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_a631bb7e0e603b596b134f14a35fa004d}{Update()}} uses classic 4th order Runge-\/\+Kutta; this is considerably more accurate that Euler\textquotesingle{}s method or 2nd order Runge-\/\+Kutta for a given timestep size.
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_aa41872ff283a6bc10afa7e7eaaa10f5b}\label{class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_single_pole_1_1_cart_single_pole_physics_r_k4_aa41872ff283a6bc10afa7e7eaaa10f5b}} 
+\index{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4}!State@{State}}
+\index{State@{State}!SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4@{SharpNeat.Tasks.CartPole.SinglePole.CartSinglePolePhysicsRK4}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily float \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Tasks.\+Cart\+Pole.\+Single\+Pole.\+Cart\+Single\+Pole\+Physics\+R\+K4.\+State =$>$ \+\_\+state}
+
+
+
+Get the cart-\/pole model state. 
+
+The model state variables are\+: \mbox{[}0\mbox{]} x-\/axis coordinate of the cart (metres). \mbox{[}1\mbox{]} x-\/axis velocity of the cart (m/s). \mbox{[}2\mbox{]} Pole angle (radians); deviation from the vertical. Positive is clockwise. \mbox{[}3\mbox{]} Pole angular velocity (radians/s). Positive is clockwise. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Tasks/\+Cart\+Pole/\+Single\+Pole/Cart\+Single\+Pole\+Physics\+R\+K4.\+cs\end{DoxyCompactItemize}

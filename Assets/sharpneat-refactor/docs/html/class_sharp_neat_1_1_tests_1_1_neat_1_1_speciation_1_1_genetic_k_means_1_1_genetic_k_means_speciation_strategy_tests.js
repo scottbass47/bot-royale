@@ -1,0 +1,7 @@
+var class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_tests =
+[
+    [ "TestSpeciateAdd_Euclidean", "class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_tests.html#abba29ea77a92d574a88a92764e247dca", null ],
+    [ "TestSpeciateAdd_Manhattan", "class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_tests.html#ab5c9cbac009d36f39f2ddb15b9ab091c", null ],
+    [ "TestSpeciateAll_Euclidean", "class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_tests.html#a716d2c99f86a01c4165dc84524b0a987", null ],
+    [ "TestSpeciateAll_Manhattan", "class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_genetic_k_means_speciation_strategy_tests.html#a4f475b3b6d6e7e7809aff0b5a005022a", null ]
+];

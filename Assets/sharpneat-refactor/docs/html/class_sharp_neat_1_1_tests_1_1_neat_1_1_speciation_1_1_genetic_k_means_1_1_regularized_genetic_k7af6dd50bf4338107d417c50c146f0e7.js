@@ -1,0 +1,7 @@
+var class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_regularized_genetic_k7af6dd50bf4338107d417c50c146f0e7 =
+[
+    [ "TestSpeciateAdd_Euclidean", "class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_regularized_genetic_k7af6dd50bf4338107d417c50c146f0e7.html#aaf57b3d333ebbb6216f44dbfde67f551", null ],
+    [ "TestSpeciateAdd_Manhattan", "class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_regularized_genetic_k7af6dd50bf4338107d417c50c146f0e7.html#ad870f8728e80bd3960cf896814efc880", null ],
+    [ "TestSpeciateAll_Euclidean", "class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_regularized_genetic_k7af6dd50bf4338107d417c50c146f0e7.html#a1eedec90744df83aa091c8e62aabb664", null ],
+    [ "TestSpeciateAll_Manhattan", "class_sharp_neat_1_1_tests_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_regularized_genetic_k7af6dd50bf4338107d417c50c146f0e7.html#ac857b1c4fa8d77946f848950efdd0e9f", null ]
+];

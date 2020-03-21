@@ -1,0 +1,95 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map}{}\doxysection{Sharp\+Neat.\+Network.\+Dictionary\+Node\+Id\+Map Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map}\index{SharpNeat.Network.DictionaryNodeIdMap@{SharpNeat.Network.DictionaryNodeIdMap}}
+
+
+An \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_id_map}{I\+Node\+Id\+Map}} implementation based on a dictionary keyed by node ID and a fixed node count.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Dictionary\+Node\+Id\+Map\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map_a25d96c13fb98aa430771b00c51c7ba95}{Dictionary\+Node\+Id\+Map}} (int fixed\+Node\+Count, Dictionary$<$ int, int $>$ node\+Idx\+By\+Id)
+\begin{DoxyCompactList}\small\item\em Construct with the given pre-\/built dictionary, and a fixed node count. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map_a1b25f3e8ee1e7ae7decfdc89d91b695b}{Map}} (int id)
+\begin{DoxyCompactList}\small\item\em Map a given node ID \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map_a5963773e14c8fd1d0d56dedd417a289d}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the total number of mapped node I\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_id_map}{I\+Node\+Id\+Map}} implementation based on a dictionary keyed by node ID and a fixed node count. 
+
+The fixed nodes count defines the identity mapping (i.\+e. x maps to x) for I\+Ds from 0 to count-\/1, i.\+e. it\textquotesingle{}s a cheap way of describing those mappings rather than including them in the dictionary, which is relatively expensive to populate and query.
+
+Input nodes are {\itshape always} fixed, i.\+e. they exist in a contiguous run of I\+Ds starting at zero. In cyclic networks the output nodes are also fixed, starting directly after the input node I\+Ds. In acyclic networks the outputs are not fixed, and are therefore mapped by the dictionary. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map_a25d96c13fb98aa430771b00c51c7ba95}\label{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map_a25d96c13fb98aa430771b00c51c7ba95}} 
+\index{SharpNeat.Network.DictionaryNodeIdMap@{SharpNeat.Network.DictionaryNodeIdMap}!DictionaryNodeIdMap@{DictionaryNodeIdMap}}
+\index{DictionaryNodeIdMap@{DictionaryNodeIdMap}!SharpNeat.Network.DictionaryNodeIdMap@{SharpNeat.Network.DictionaryNodeIdMap}}
+\doxysubsubsection{\texorpdfstring{DictionaryNodeIdMap()}{DictionaryNodeIdMap()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Network.\+Dictionary\+Node\+Id\+Map.\+Dictionary\+Node\+Id\+Map (\begin{DoxyParamCaption}\item[{int}]{fixed\+Node\+Count,  }\item[{Dictionary$<$ int, int $>$}]{node\+Idx\+By\+Id }\end{DoxyParamCaption})}
+
+
+
+Construct with the given pre-\/built dictionary, and a fixed node count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fixed\+Node\+Count} & Fixed node count.\\
+\hline
+{\em node\+Idx\+By\+Id} & A pre-\/built dictionary of node ID to index mappings.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map_a1b25f3e8ee1e7ae7decfdc89d91b695b}\label{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map_a1b25f3e8ee1e7ae7decfdc89d91b695b}} 
+\index{SharpNeat.Network.DictionaryNodeIdMap@{SharpNeat.Network.DictionaryNodeIdMap}!Map@{Map}}
+\index{Map@{Map}!SharpNeat.Network.DictionaryNodeIdMap@{SharpNeat.Network.DictionaryNodeIdMap}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Network.\+Dictionary\+Node\+Id\+Map.\+Map (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Map a given node ID 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & A node ID.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The mapped to ID.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_id_map_a141ffa18c19f1f99be5a43bd2c518470}{Sharp\+Neat.\+Network.\+I\+Node\+Id\+Map}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map_a5963773e14c8fd1d0d56dedd417a289d}\label{class_sharp_neat_1_1_network_1_1_dictionary_node_id_map_a5963773e14c8fd1d0d56dedd417a289d}} 
+\index{SharpNeat.Network.DictionaryNodeIdMap@{SharpNeat.Network.DictionaryNodeIdMap}!Count@{Count}}
+\index{Count@{Count}!SharpNeat.Network.DictionaryNodeIdMap@{SharpNeat.Network.DictionaryNodeIdMap}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Network.\+Dictionary\+Node\+Id\+Map.\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the total number of mapped node I\+Ds. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/Dictionary\+Node\+Id\+Map.\+cs\end{DoxyCompactItemize}

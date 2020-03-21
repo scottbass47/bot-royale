@@ -1,0 +1,150 @@
+\hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic}{}\doxysection{Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic Class Reference}
+\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic}\index{SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}}
+
+
+A neural network class that represents a network with recurrent (cyclic) connections.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a9d4f225cc10a5b97b74c0ee8a9b10b3c}{Neural\+Net\+Cyclic}} (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_weighted_directed_graph}{Weighted\+Directed\+Graph}}$<$ double $>$ digraph, Vec\+Fn\+Segment2$<$ double $>$ activation\+Fn, int cycles\+Per\+Activation)
+\begin{DoxyCompactList}\small\item\em Constructs a Cyclic\+Network with the provided neural net definition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_af54d4b1a1837dcae37415fbf7963d6dc}{Neural\+Net\+Cyclic}} (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_directed_graph}{Directed\+Graph}} digraph, double\mbox{[}$\,$\mbox{]} weight\+Arr, Vec\+Fn\+Segment2$<$ double $>$ activation\+Fn, int cycles\+Per\+Activation)
+\begin{DoxyCompactList}\small\item\em Constructs a Cyclic\+Network with the provided neural net definition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a106659a14b8f680864b13cd8161c2b61}{Activate}} ()
+\begin{DoxyCompactList}\small\item\em Activate the network for a fixed number of iterations defined by the \textquotesingle{}max\+Iterations\textquotesingle{} parameter at construction time. Activation reads input signals from Input\+Signal\+Array and writes output signals to Output\+Signal\+Array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a2bfba7372d5267abb9282e33c2aa1570}{Reset\+State}} ()
+\begin{DoxyCompactList}\small\item\em Reset the network\textquotesingle{}s internal state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a385eb756a5d48d20ed4e6636bb39f923}{Input\+Count}} =$>$ \+\_\+input\+Count
+\begin{DoxyCompactList}\small\item\em Gets the number of input nodes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a15fd64759c95eecdc4dc0bc768354069}{Output\+Count}} =$>$ \+\_\+output\+Count
+\begin{DoxyCompactList}\small\item\em Gets the number of output nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$ double $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_ab358e402c52125078826deadb0570c15}{Input\+Vector}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array for used for passing input signals to the network, i.\+e. the network input vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$ double $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_ae8f9813d06d888d0dc471bb8c91c5e64}{Output\+Vector}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array of output signals from the network, i.\+e. the network output vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A neural network class that represents a network with recurrent (cyclic) connections. 
+
+This class contains performance improvements described in the following report/post\+: \begin{DoxyVerb}http://sharpneat.sourceforge.net/research/network-optimisations.html
+\end{DoxyVerb}
+
+
+A speed-\/up over a previous \textquotesingle{}naive\textquotesingle{} implementation was achieved by compactly storing all required data in arrays in a way that maximizes in-\/order memory accesses; this allows for good utilisation of C\+PU caches.
+
+Algorithm Overview. 1) Loop connections. Each connection gets its input signal from its source node, multiplies this signal by its weight, and adds the result to its target node\textquotesingle{}s pre-\/activation variable. Connections are ordered by source node index, thus all memory reads here are sequential, but the memory writes to node pre-\/activation variables are non-\/sequential.
+
+2) Loop nodes. Pass each node\textquotesingle{}s pre-\/activation signal through the activation function and set its post-\/activation signal value.
+
+The activation loop is now complete and we can go back to (1) or stop.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a9d4f225cc10a5b97b74c0ee8a9b10b3c}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a9d4f225cc10a5b97b74c0ee8a9b10b3c}} 
+\index{SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}!NeuralNetCyclic@{NeuralNetCyclic}}
+\index{NeuralNetCyclic@{NeuralNetCyclic}!SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}}
+\doxysubsubsection{\texorpdfstring{NeuralNetCyclic()}{NeuralNetCyclic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic.\+Neural\+Net\+Cyclic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_weighted_directed_graph}{Weighted\+Directed\+Graph}}$<$ double $>$}]{digraph,  }\item[{Vec\+Fn\+Segment2$<$ double $>$}]{activation\+Fn,  }\item[{int}]{cycles\+Per\+Activation }\end{DoxyParamCaption})}
+
+
+
+Constructs a Cyclic\+Network with the provided neural net definition. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_af54d4b1a1837dcae37415fbf7963d6dc}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_af54d4b1a1837dcae37415fbf7963d6dc}} 
+\index{SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}!NeuralNetCyclic@{NeuralNetCyclic}}
+\index{NeuralNetCyclic@{NeuralNetCyclic}!SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}}
+\doxysubsubsection{\texorpdfstring{NeuralNetCyclic()}{NeuralNetCyclic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic.\+Neural\+Net\+Cyclic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_directed_graph}{Directed\+Graph}}}]{digraph,  }\item[{double\mbox{[}$\,$\mbox{]}}]{weight\+Arr,  }\item[{Vec\+Fn\+Segment2$<$ double $>$}]{activation\+Fn,  }\item[{int}]{cycles\+Per\+Activation }\end{DoxyParamCaption})}
+
+
+
+Constructs a Cyclic\+Network with the provided neural net definition. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a106659a14b8f680864b13cd8161c2b61}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a106659a14b8f680864b13cd8161c2b61}} 
+\index{SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}!Activate@{Activate}}
+\index{Activate@{Activate}!SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}}
+\doxysubsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic.\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activate the network for a fixed number of iterations defined by the \textquotesingle{}max\+Iterations\textquotesingle{} parameter at construction time. Activation reads input signals from Input\+Signal\+Array and writes output signals to Output\+Signal\+Array. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a2bfba7372d5267abb9282e33c2aa1570}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a2bfba7372d5267abb9282e33c2aa1570}} 
+\index{SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}!ResetState@{ResetState}}
+\index{ResetState@{ResetState}!SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}}
+\doxysubsubsection{\texorpdfstring{ResetState()}{ResetState()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic.\+Reset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the network\textquotesingle{}s internal state. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a385eb756a5d48d20ed4e6636bb39f923}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a385eb756a5d48d20ed4e6636bb39f923}} 
+\index{SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}!InputCount@{InputCount}}
+\index{InputCount@{InputCount}!SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}}
+\doxysubsubsection{\texorpdfstring{InputCount}{InputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic.\+Input\+Count =$>$ \+\_\+input\+Count}
+
+
+
+Gets the number of input nodes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a15fd64759c95eecdc4dc0bc768354069}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_a15fd64759c95eecdc4dc0bc768354069}} 
+\index{SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}!OutputCount@{OutputCount}}
+\index{OutputCount@{OutputCount}!SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}}
+\doxysubsubsection{\texorpdfstring{OutputCount}{OutputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic.\+Output\+Count =$>$ \+\_\+output\+Count}
+
+
+
+Gets the number of output nodes. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_ab358e402c52125078826deadb0570c15}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_ab358e402c52125078826deadb0570c15}} 
+\index{SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}!InputVector@{InputVector}}
+\index{InputVector@{InputVector}!SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}}
+\doxysubsubsection{\texorpdfstring{InputVector}{InputVector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$double$>$ Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic.\+Input\+Vector\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array for used for passing input signals to the network, i.\+e. the network input vector. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_ae8f9813d06d888d0dc471bb8c91c5e64}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_cyclic_ae8f9813d06d888d0dc471bb8c91c5e64}} 
+\index{SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}!OutputVector@{OutputVector}}
+\index{OutputVector@{OutputVector}!SharpNeat.NeuralNet.Double.NeuralNetCyclic@{SharpNeat.NeuralNet.Double.NeuralNetCyclic}}
+\doxysubsubsection{\texorpdfstring{OutputVector}{OutputVector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$double$>$ Sharp\+Neat.\+Neural\+Net.\+Double.\+Neural\+Net\+Cyclic.\+Output\+Vector\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array of output signals from the network, i.\+e. the network output vector. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neural\+Net/\+Double/Neural\+Net\+Cyclic.\+cs\end{DoxyCompactItemize}

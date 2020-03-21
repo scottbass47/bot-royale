@@ -1,0 +1,255 @@
+\hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{}\doxysection{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector$<$ T $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector}\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+
+
+Wraps a native array along with an indirection/mapping array.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_black_box_1_1_mapping_vector}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a2e6e006b91a71a9baf05edb85ea1f681}{Mapping\+Vector}} (T\mbox{[}$\,$\mbox{]} inner\+Array, int\mbox{[}$\,$\mbox{]} map)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} that wraps the provided wrapped\+Array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a2d7441720eb332b0cdba45f23b837953}{Copy\+To}} (T\mbox{[}$\,$\mbox{]} target\+Array, int target\+Index)
+\begin{DoxyCompactList}\small\item\em Copies all elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} to the specified target array starting at the specified target Array index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_ad45ba1a866fac40e66e3ccc6af9ec62f}{Copy\+To}} (T\mbox{[}$\,$\mbox{]} target\+Array, int target\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Copies {\itshape length}  elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} to the specified target array starting at the specified target Array index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a12d54b532ab6cb63d93a7f184e66d10a}{Copy\+To}} (T\mbox{[}$\,$\mbox{]} target\+Array, int target\+Index, int source\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Copies {\itshape length}  elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} to the specified target array starting from {\itshape target\+Index}  on the target array and {\itshape source\+Index}  on the current source \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_ae26dd6d507df9f935a659aa71996e48c}{Copy\+From}} (T\mbox{[}$\,$\mbox{]} source\+Array, int target\+Index)
+\begin{DoxyCompactList}\small\item\em Copies all elements from the source array writing them into the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} starting at the specified target\+Index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_acdd6a4811db3889c448c26752018ed20}{Copy\+From}} (T\mbox{[}$\,$\mbox{]} source\+Array, int target\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Copies {\itshape length}  elements from the source array writing them to the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} starting at the specified target\+Index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a1a7739eeb6a043e1b92269b5381433c2}{Copy\+From}} (T\mbox{[}$\,$\mbox{]} source\+Array, int source\+Index, int target\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Copies {\itshape length}  elements starting from source\+Index on source\+Array to the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} starting at the specified target\+Index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a1998f839a25598be8028b86bace5784d}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset all array elements to zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a9b0f08ec6c0a4f967e1948664e50ed15}{Length}} =$>$ \+\_\+map.\+Length
+\begin{DoxyCompactList}\small\item\em Gets the length of the signal array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector_aceca5fca6365edd3e225fb6a8580ac82}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the single value at the specified index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wraps a native array along with an indirection/mapping array. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Vector data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a2e6e006b91a71a9baf05edb85ea1f681}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a2e6e006b91a71a9baf05edb85ea1f681}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!MappingVector@{MappingVector}}
+\index{MappingVector@{MappingVector}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MappingVector()}{MappingVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.\mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{inner\+Array,  }\item[{int\mbox{[}$\,$\mbox{]}}]{map }\end{DoxyParamCaption})}
+
+
+
+Construct a \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} that wraps the provided wrapped\+Array. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a1a7739eeb6a043e1b92269b5381433c2}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a1a7739eeb6a043e1b92269b5381433c2}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!CopyFrom@{CopyFrom}}
+\index{CopyFrom@{CopyFrom}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CopyFrom()}{CopyFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.Copy\+From (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{source\+Array,  }\item[{int}]{source\+Index,  }\item[{int}]{target\+Index,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Copies {\itshape length}  elements starting from source\+Index on source\+Array to the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} starting at the specified target\+Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Array} & The array to copy elements from.\\
+\hline
+{\em source\+Index} & The source\+Array index at which copying begins.\\
+\hline
+{\em target\+Index} & The index into the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} at which copying begins.\\
+\hline
+{\em length} & The number of elements to copy.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector_a3b8fa706af3dc711b83e93558c1814f6}{Sharp\+Neat.\+Black\+Box.\+I\+Vector$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_ae26dd6d507df9f935a659aa71996e48c}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_ae26dd6d507df9f935a659aa71996e48c}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!CopyFrom@{CopyFrom}}
+\index{CopyFrom@{CopyFrom}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CopyFrom()}{CopyFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.Copy\+From (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{source\+Array,  }\item[{int}]{target\+Index }\end{DoxyParamCaption})}
+
+
+
+Copies all elements from the source array writing them into the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} starting at the specified target\+Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Array} & The array to copy elements from.\\
+\hline
+{\em target\+Index} & The index into the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} at which copying begins.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector_a2bd6d16e242dec4a07944dd6ad33049c}{Sharp\+Neat.\+Black\+Box.\+I\+Vector$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_acdd6a4811db3889c448c26752018ed20}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_acdd6a4811db3889c448c26752018ed20}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!CopyFrom@{CopyFrom}}
+\index{CopyFrom@{CopyFrom}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CopyFrom()}{CopyFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.Copy\+From (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{source\+Array,  }\item[{int}]{target\+Index,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Copies {\itshape length}  elements from the source array writing them to the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} starting at the specified target\+Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Array} & The array to copy elements from.\\
+\hline
+{\em target\+Index} & The index into the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} at which copying begins.\\
+\hline
+{\em length} & The number of elements to copy.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector_a10441003c52ba9a422db1d16045ec54d}{Sharp\+Neat.\+Black\+Box.\+I\+Vector$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a2d7441720eb332b0cdba45f23b837953}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a2d7441720eb332b0cdba45f23b837953}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!CopyTo@{CopyTo}}
+\index{CopyTo@{CopyTo}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CopyTo()}{CopyTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.Copy\+To (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{target\+Array,  }\item[{int}]{target\+Index }\end{DoxyParamCaption})}
+
+
+
+Copies all elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} to the specified target array starting at the specified target Array index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Array} & The array to copy elements to.\\
+\hline
+{\em target\+Index} & The target\+Array index at which copying to begins.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector_afd8297af17258613eaa17e3d2e4c6aa1}{Sharp\+Neat.\+Black\+Box.\+I\+Vector$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_ad45ba1a866fac40e66e3ccc6af9ec62f}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_ad45ba1a866fac40e66e3ccc6af9ec62f}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!CopyTo@{CopyTo}}
+\index{CopyTo@{CopyTo}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CopyTo()}{CopyTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.Copy\+To (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{target\+Array,  }\item[{int}]{target\+Index,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Copies {\itshape length}  elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} to the specified target array starting at the specified target Array index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Array} & The array to copy elements to.\\
+\hline
+{\em target\+Index} & The target\+Array index at which storing begins.\\
+\hline
+{\em length} & The number of elements to copy.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector_abaec455354d95a69c4a9e51829da3cf7}{Sharp\+Neat.\+Black\+Box.\+I\+Vector$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a12d54b532ab6cb63d93a7f184e66d10a}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a12d54b532ab6cb63d93a7f184e66d10a}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!CopyTo@{CopyTo}}
+\index{CopyTo@{CopyTo}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CopyTo()}{CopyTo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.Copy\+To (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{target\+Array,  }\item[{int}]{target\+Index,  }\item[{int}]{source\+Index,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Copies {\itshape length}  elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} to the specified target array starting from {\itshape target\+Index}  on the target array and {\itshape source\+Index}  on the current source \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Array} & The array to copy elements to.\\
+\hline
+{\em target\+Index} & The target\+Array index at which copying begins.\\
+\hline
+{\em source\+Index} & The index into the current \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Mapping\+Vector}} at which copying begins.\\
+\hline
+{\em length} & The number of elements to copy.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector_af2c66997aac8f568342486fbe5c50e59}{Sharp\+Neat.\+Black\+Box.\+I\+Vector$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a1998f839a25598be8028b86bace5784d}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a1998f839a25598be8028b86bace5784d}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!Reset@{Reset}}
+\index{Reset@{Reset}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset all array elements to zero. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector_afc16eea62b519e6f0bc1957e7570bfd1}{Sharp\+Neat.\+Black\+Box.\+I\+Vector$<$ T $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a9b0f08ec6c0a4f967e1948664e50ed15}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_a9b0f08ec6c0a4f967e1948664e50ed15}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!Length@{Length}}
+\index{Length@{Length}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Length}{Length}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.Length =$>$ \+\_\+map.\+Length}
+
+
+
+Gets the length of the signal array. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_black_box_1_1_mapping_vector_aceca5fca6365edd3e225fb6a8580ac82}\label{class_sharp_neat_1_1_black_box_1_1_mapping_vector_aceca5fca6365edd3e225fb6a8580ac82}} 
+\index{SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!SharpNeat.BlackBox.MappingVector$<$ T $>$@{SharpNeat.BlackBox.MappingVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_sharp_neat_1_1_black_box_1_1_mapping_vector}{Sharp\+Neat.\+Black\+Box.\+Mapping\+Vector}}$<$ T $>$.this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the single value at the specified index. 
+
+Debug asserts are used to check the index value, this avoids the check in release builds thus improving performance, but includes the check in debug builds. \mbox{\hyperlink{namespace_sharp_neat_1_1_tasks}{Tasks}} will typically access this indexer heavily, therefore the removal of the test in release builds was deemed a reasonable choice here. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Black\+Box/Mapping\+Vector.\+cs\end{DoxyCompactItemize}

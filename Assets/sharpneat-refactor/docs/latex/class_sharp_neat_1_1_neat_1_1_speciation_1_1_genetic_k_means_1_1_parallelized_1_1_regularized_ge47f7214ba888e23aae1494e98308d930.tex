@@ -1,0 +1,131 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930}{}\doxysection{Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Parallelized.\+Regularized\+Genetic\+K\+Means\+Speciation\+Strategy$<$ T $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930}\index{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$}}
+
+
+A speciation strategy that assigns genomes to species using k-\/means clustering on the genes of each genome.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Parallelized.\+Regularized\+Genetic\+K\+Means\+Speciation\+Strategy$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.769352cm]{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930_a2a717c06ca0c8ce8405cddfe01963c7c}{Regularized\+Genetic\+K\+Means\+Speciation\+Strategy}} (\mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}{I\+Distance\+Metric}}$<$ T $>$ distance\+Metric, int max\+K\+Means\+Iters, double regularization\+Constant, int degree\+Of\+Parallelism)
+\begin{DoxyCompactList}\small\item\em Construct with the provided distance metric and k-\/means settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_species}{Species}}$<$ T $>$\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930_aebbd383ae2d5ea5274f4a8c7d0b5413a}{Speciate\+All}} (I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$$>$ genome\+List, int species\+Count, I\+Random\+Source rng)
+\begin{DoxyCompactList}\small\item\em Initialise a new set of species based on the provided population of genomes and the speciation method in use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930_a3a0f9cc645df7d60599df8be65b69c0b}{Speciate\+Add}} (I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$$>$ genome\+List, \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_species}{Species}}$<$ T $>$\mbox{[}$\,$\mbox{]} species\+Arr, I\+Random\+Source rng)
+\begin{DoxyCompactList}\small\item\em Merge new genomes into an existing set of species. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A speciation strategy that assigns genomes to species using k-\/means clustering on the genes of each genome. 
+
+This class applies a regularized k-\/means method as described in this paper\+: \char`\"{}\+R\+E\+G\+U\+L\+A\+R\+I\+S\+E\+D k-\/\+M\+E\+A\+N\+S C\+L\+U\+S\+T\+E\+R\+I\+N\+G F\+O\+R D\+I\+M\+E\+N\+S\+I\+O\+N R\+E\+D\+U\+C\+T\+I\+O\+N A\+P\+P\+L\+I\+E\+D T\+O S\+U\+P\+E\+R\+V\+I\+S\+E\+D C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+O\+N\char`\"{}, Vladimir Nikulin, Geoffrey J. Mc\+Lachlan, Department of Mathematics, University of Queensland, Brisbane, Australia. \href{https://people.smp.uq.edu.au/GeoffMcLachlan/cibb/nm_cibb09.pdf}{\texttt{ https\+://people.\+smp.\+uq.\+edu.\+au/\+Geoff\+Mc\+Lachlan/cibb/nm\+\_\+cibb09.\+pdf}}
+
+The intent of regularization is to discourage formation of large dominating clusters (species), and instead to encourage more even distribution of genomes amongst clusters, and also the formation of more stable clusters.
+
+Regularization works as follows. In standard k-\/means the genomes are allocated to species who\textquotesingle{}s centroid they are nearest to, the regularization method in use here adjusts the calculated genome-\/centroid distances to include an additional regularization term, like so\+: \begin{DoxyVerb}adjustedDistance = distance + regularitationTerm
+\end{DoxyVerb}
+
+
+The regularization term (r) is calculated as follows\+: \begin{DoxyVerb}r = (c/populationSize) * L * alpha
+\end{DoxyVerb}
+
+
+Where\+: c is a cluster size (species size). alpha is a constant scaling factor. L is the maximum distance between any two species centroid.
+
+Thus, the term (c/population\+Size) is a proportion ranging over the interval \mbox{[}0,1\mbox{]}, where small clusters are near to zero and large cluster are nearer 1. As such the regularization term will be higher for larger clusters and therefore any genomes on he edges of a large cluster may be allocated to a nearby smaller cluster instead.
+
+L is intended to represent the magnitudes of the distances being dealt with, i.\+e. it makes the regularization method as a whole \textquotesingle{}scale free\textquotesingle{}. The calculation for L used in this class differs from that used in the paper referred to above, but the intention is the same, i.\+e. to obtain some stable value that is representative of the magnitude of the distances being dealt with.
+
+In the referred to paper L is taken to be the maximum distance between any genome and any specie centroid. In this class we take the maximum distance between any two species centroids, this should result in a scale free distance that serves the same purpose, but that is faster to compute. This version of L will tend to be smaller that the version used in the paper, but we can adjust alpha (the constant scaling factor) accordingly.
+
+At time of writing this class is experimental and has not been scientifically examined for suitability or efficacy in particular in comparison to the standard k-\/means method. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Neural net numeric data type.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930_a2a717c06ca0c8ce8405cddfe01963c7c}\label{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930_a2a717c06ca0c8ce8405cddfe01963c7c}} 
+\index{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$}!RegularizedGeneticKMeansSpeciationStrategy@{RegularizedGeneticKMeansSpeciationStrategy}}
+\index{RegularizedGeneticKMeansSpeciationStrategy@{RegularizedGeneticKMeansSpeciationStrategy}!SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RegularizedGeneticKMeansSpeciationStrategy()}{RegularizedGeneticKMeansSpeciationStrategy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930}{Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Parallelized.\+Regularized\+Genetic\+K\+Means\+Speciation\+Strategy}}$<$ T $>$.\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930}{Regularized\+Genetic\+K\+Means\+Speciation\+Strategy}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_neat_1_1_distance_metrics_1_1_i_distance_metric}{I\+Distance\+Metric}}$<$ T $>$}]{distance\+Metric,  }\item[{int}]{max\+K\+Means\+Iters,  }\item[{double}]{regularization\+Constant,  }\item[{int}]{degree\+Of\+Parallelism }\end{DoxyParamCaption})}
+
+
+
+Construct with the provided distance metric and k-\/means settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance\+Metric} & Distance metric.\\
+\hline
+{\em max\+K\+Means\+Iters} & Maximum number of k-\/means iterations.\\
+\hline
+{\em regularization\+Constant} & Regularization constant.\\
+\hline
+{\em degree\+Of\+Parallelism} & The number of C\+PU threads to distribute work to.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930_a3a0f9cc645df7d60599df8be65b69c0b}\label{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930_a3a0f9cc645df7d60599df8be65b69c0b}} 
+\index{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$}!SpeciateAdd@{SpeciateAdd}}
+\index{SpeciateAdd@{SpeciateAdd}!SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SpeciateAdd()}{SpeciateAdd()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930}{Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Parallelized.\+Regularized\+Genetic\+K\+Means\+Speciation\+Strategy}}$<$ T $>$.Speciate\+Add (\begin{DoxyParamCaption}\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$$>$}]{genome\+List,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_species}{Species}}$<$ T $>$\mbox{[}$\,$\mbox{]}}]{species\+Arr,  }\item[{I\+Random\+Source}]{rng }\end{DoxyParamCaption})}
+
+
+
+Merge new genomes into an existing set of species. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+List} & A list of genomes that have not yet been assigned a species.\\
+\hline
+{\em species\+Arr} & An array of pre-\/existing species\\
+\hline
+{\em rng} & Random source.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930_aebbd383ae2d5ea5274f4a8c7d0b5413a}\label{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930_aebbd383ae2d5ea5274f4a8c7d0b5413a}} 
+\index{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$}!SpeciateAll@{SpeciateAll}}
+\index{SpeciateAll@{SpeciateAll}!SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$@{SharpNeat.Neat.Speciation.GeneticKMeans.Parallelized.RegularizedGeneticKMeansSpeciationStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SpeciateAll()}{SpeciateAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_species}{Species}}$<$T$>$ \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_parallelized_1_1_regularized_ge47f7214ba888e23aae1494e98308d930}{Sharp\+Neat.\+Neat.\+Speciation.\+Genetic\+K\+Means.\+Parallelized.\+Regularized\+Genetic\+K\+Means\+Speciation\+Strategy}}$<$ T $>$.Speciate\+All (\begin{DoxyParamCaption}\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_genome_1_1_neat_genome}{Neat\+Genome}}$<$ T $>$$>$}]{genome\+List,  }\item[{int}]{species\+Count,  }\item[{I\+Random\+Source}]{rng }\end{DoxyParamCaption})}
+
+
+
+Initialise a new set of species based on the provided population of genomes and the speciation method in use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+List} & The genomes to speciate.\\
+\hline
+{\em species\+Count} & The number of required species.\\
+\hline
+{\em rng} & Random source.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new array of species.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Speciation/\+Genetic\+K\+Means/\+Parallelized/Regularized\+Genetic\+K\+Means\+Speciation\+Strategy.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,155 @@
+\hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings}{}\doxysection{Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings Class Reference}
+\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings}\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+
+
+N\+E\+AT evolution algorithm settings.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_af4b3eebc6b3a6ad2dae7222e21869670}{Neat\+Evolution\+Algorithm\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a2520c43009417631a1be32d20f3e37d6}{Neat\+Evolution\+Algorithm\+Settings}} (\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings}{Neat\+Evolution\+Algorithm\+Settings}} copy\+From)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings}{Neat\+Evolution\+Algorithm\+Settings}} \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a2e5c30e555263a610903e353a8aee4a7}{Create\+Simplifying\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new settings object based on the current settings object but modified to be suitable for use when the evolution algorithm is in simplifying mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a7571ee12b97f8ddef369c968381a9740}{Species\+Count}} = 10\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The species count. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a2d48366f5f4b3159759df2e38d1a0406}{Elitism\+Proportion}} = 0.\+2\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Elitism proportion. We sort species genomes by fitness and keep the top N\%, the other genomes are removed to make way for the offspring. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_ae495ffd1046ebc20b55467319c5bf6b3}{Selection\+Proportion}} = 0.\+2\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selection proportion. We sort species genomes by fitness and select parent genomes for producing offspring from the top N\%. Selection is performed prior to elitism being applied, therefore selecting from more genomes than will be made elite is possible. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_ae287b16a4c152b7cab98ab64183ac1e8}{Offspring\+Asexual\+Proportion}} = 0.\+5\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The proportion of offspring to be produced from asexual reproduction (mutation). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a30608060f8b69e49e984d69a508c95bc}{Offspring\+Sexual\+Proportion}} = 0.\+5\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The proportion of offspring to be produced from sexual reproduction. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a51875143a04b05908711c67427d864b5}{Interspecies\+Mating\+Proportion}} = 0.\+01\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The proportion of sexual reproductions that will use genomes from different species. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a5a3dbaa064a1c58efa3f0057aceae3c9}{Statistics\+Moving\+Average\+History\+Length}} = 100\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Length of the history buffer used for calculating the moving average for best fitness, mean fitness and mean complexity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+N\+E\+AT evolution algorithm settings. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_af4b3eebc6b3a6ad2dae7222e21869670}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_af4b3eebc6b3a6ad2dae7222e21869670}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!NeatEvolutionAlgorithmSettings@{NeatEvolutionAlgorithmSettings}}
+\index{NeatEvolutionAlgorithmSettings@{NeatEvolutionAlgorithmSettings}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{NeatEvolutionAlgorithmSettings()}{NeatEvolutionAlgorithmSettings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Neat\+Evolution\+Algorithm\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a2520c43009417631a1be32d20f3e37d6}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a2520c43009417631a1be32d20f3e37d6}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!NeatEvolutionAlgorithmSettings@{NeatEvolutionAlgorithmSettings}}
+\index{NeatEvolutionAlgorithmSettings@{NeatEvolutionAlgorithmSettings}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{NeatEvolutionAlgorithmSettings()}{NeatEvolutionAlgorithmSettings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Neat\+Evolution\+Algorithm\+Settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings}{Neat\+Evolution\+Algorithm\+Settings}}}]{copy\+From }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a2e5c30e555263a610903e353a8aee4a7}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a2e5c30e555263a610903e353a8aee4a7}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!CreateSimplifyingSettings@{CreateSimplifyingSettings}}
+\index{CreateSimplifyingSettings@{CreateSimplifyingSettings}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{CreateSimplifyingSettings()}{CreateSimplifyingSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings}{Neat\+Evolution\+Algorithm\+Settings}} Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Create\+Simplifying\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new settings object based on the current settings object but modified to be suitable for use when the evolution algorithm is in simplifying mode. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a2d48366f5f4b3159759df2e38d1a0406}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a2d48366f5f4b3159759df2e38d1a0406}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!ElitismProportion@{ElitismProportion}}
+\index{ElitismProportion@{ElitismProportion}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{ElitismProportion}{ElitismProportion}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Elitism\+Proportion = 0.\+2\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Elitism proportion. We sort species genomes by fitness and keep the top N\%, the other genomes are removed to make way for the offspring. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a51875143a04b05908711c67427d864b5}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a51875143a04b05908711c67427d864b5}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!InterspeciesMatingProportion@{InterspeciesMatingProportion}}
+\index{InterspeciesMatingProportion@{InterspeciesMatingProportion}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{InterspeciesMatingProportion}{InterspeciesMatingProportion}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Interspecies\+Mating\+Proportion = 0.\+01\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The proportion of sexual reproductions that will use genomes from different species. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_ae287b16a4c152b7cab98ab64183ac1e8}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_ae287b16a4c152b7cab98ab64183ac1e8}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!OffspringAsexualProportion@{OffspringAsexualProportion}}
+\index{OffspringAsexualProportion@{OffspringAsexualProportion}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{OffspringAsexualProportion}{OffspringAsexualProportion}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Offspring\+Asexual\+Proportion = 0.\+5\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The proportion of offspring to be produced from asexual reproduction (mutation). 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a30608060f8b69e49e984d69a508c95bc}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a30608060f8b69e49e984d69a508c95bc}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!OffspringSexualProportion@{OffspringSexualProportion}}
+\index{OffspringSexualProportion@{OffspringSexualProportion}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{OffspringSexualProportion}{OffspringSexualProportion}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Offspring\+Sexual\+Proportion = 0.\+5\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The proportion of offspring to be produced from sexual reproduction. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_ae495ffd1046ebc20b55467319c5bf6b3}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_ae495ffd1046ebc20b55467319c5bf6b3}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!SelectionProportion@{SelectionProportion}}
+\index{SelectionProportion@{SelectionProportion}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{SelectionProportion}{SelectionProportion}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Selection\+Proportion = 0.\+2\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Selection proportion. We sort species genomes by fitness and select parent genomes for producing offspring from the top N\%. Selection is performed prior to elitism being applied, therefore selecting from more genomes than will be made elite is possible. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a7571ee12b97f8ddef369c968381a9740}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a7571ee12b97f8ddef369c968381a9740}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!SpeciesCount@{SpeciesCount}}
+\index{SpeciesCount@{SpeciesCount}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{SpeciesCount}{SpeciesCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Species\+Count = 10\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The species count. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a5a3dbaa064a1c58efa3f0057aceae3c9}\label{class_sharp_neat_1_1_neat_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_a5a3dbaa064a1c58efa3f0057aceae3c9}} 
+\index{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}!StatisticsMovingAverageHistoryLength@{StatisticsMovingAverageHistoryLength}}
+\index{StatisticsMovingAverageHistoryLength@{StatisticsMovingAverageHistoryLength}!SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings@{SharpNeat.Neat.EvolutionAlgorithm.NeatEvolutionAlgorithmSettings}}
+\doxysubsubsection{\texorpdfstring{StatisticsMovingAverageHistoryLength}{StatisticsMovingAverageHistoryLength}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Neat.\+Evolution\+Algorithm.\+Neat\+Evolution\+Algorithm\+Settings.\+Statistics\+Moving\+Average\+History\+Length = 100\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Length of the history buffer used for calculating the moving average for best fitness, mean fitness and mean complexity. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neat/\+Evolution\+Algorithm/Neat\+Evolution\+Algorithm\+Settings.\+cs\end{DoxyCompactItemize}

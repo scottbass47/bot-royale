@@ -1,0 +1,156 @@
+\hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic}{}\doxysection{Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic Class Reference}
+\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic}\index{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}}
+
+
+A version of \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_acyclic}{Double.\+Neural\+Net\+Acyclic}} that utilises some vectorized operations for improved performance on hardware platforms that support them.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a7d8258c572449abb9ba63428f0d69d0c}{Neural\+Net\+Acyclic}} (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_weighted_directed_graph_acyclic}{Weighted\+Directed\+Graph\+Acyclic}}$<$ double $>$ digraph, Vec\+Fn\+Segment$<$ double $>$ activation\+Fn)
+\begin{DoxyCompactList}\small\item\em Constructs a Acyclic\+Neural\+Net with the provided neural net definition parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a93516b281000638ab698159e5184078d}{Neural\+Net\+Acyclic}} (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_directed_graph_acyclic}{Directed\+Graph\+Acyclic}} digraph, double\mbox{[}$\,$\mbox{]} weight\+Arr, Vec\+Fn\+Segment$<$ double $>$ activation\+Fn)
+\begin{DoxyCompactList}\small\item\em Constructs a Acyclic\+Neural\+Net with the provided neural net definition parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_abb098e9cc92c797607acca5abd9ca9e2}{Activate}} ()
+\begin{DoxyCompactList}\small\item\em Activate the network. Activation reads input signals from Input\+Signal\+Array and writes output signals to Output\+Signal\+Array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a631b1380c53c96156ddf1ec4155c006e}{Reset\+State}} ()
+\begin{DoxyCompactList}\small\item\em Reset the network\textquotesingle{}s internal state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_af5337b8dea5e155964c06cc82a4243c4}{Input\+Count}} =$>$ \+\_\+input\+Count
+\begin{DoxyCompactList}\small\item\em Gets the number of input nodes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a68516db5a6b42bcc09320fdbeab5ac78}{Output\+Count}} =$>$ \+\_\+output\+Count
+\begin{DoxyCompactList}\small\item\em Gets the number of output nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$ double $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a078dd560f1d33dc76d63f5aecb4117d9}{Input\+Vector}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array for used for passing input signals to the network, i.\+e. the network input vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$ double $>$ \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a1640f91d1b808cc9dd02f9c9d1424ecd}{Output\+Vector}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array of output signals from the network, i.\+e. the network output vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A version of \mbox{\hyperlink{class_sharp_neat_1_1_neural_net_1_1_double_1_1_neural_net_acyclic}{Double.\+Neural\+Net\+Acyclic}} that utilises some vectorized operations for improved performance on hardware platforms that support them. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a7d8258c572449abb9ba63428f0d69d0c}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a7d8258c572449abb9ba63428f0d69d0c}} 
+\index{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}!NeuralNetAcyclic@{NeuralNetAcyclic}}
+\index{NeuralNetAcyclic@{NeuralNetAcyclic}!SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}}
+\doxysubsubsection{\texorpdfstring{NeuralNetAcyclic()}{NeuralNetAcyclic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic.\+Neural\+Net\+Acyclic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_weighted_directed_graph_acyclic}{Weighted\+Directed\+Graph\+Acyclic}}$<$ double $>$}]{digraph,  }\item[{Vec\+Fn\+Segment$<$ double $>$}]{activation\+Fn }\end{DoxyParamCaption})}
+
+
+
+Constructs a Acyclic\+Neural\+Net with the provided neural net definition parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digraph} & \mbox{\hyperlink{namespace_sharp_neat_1_1_network}{Network}} structure definition\\
+\hline
+{\em activation\+Fn} & Node activation function.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a93516b281000638ab698159e5184078d}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a93516b281000638ab698159e5184078d}} 
+\index{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}!NeuralNetAcyclic@{NeuralNetAcyclic}}
+\index{NeuralNetAcyclic@{NeuralNetAcyclic}!SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}}
+\doxysubsubsection{\texorpdfstring{NeuralNetAcyclic()}{NeuralNetAcyclic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic.\+Neural\+Net\+Acyclic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_acyclic_1_1_directed_graph_acyclic}{Directed\+Graph\+Acyclic}}}]{digraph,  }\item[{double\mbox{[}$\,$\mbox{]}}]{weight\+Arr,  }\item[{Vec\+Fn\+Segment$<$ double $>$}]{activation\+Fn }\end{DoxyParamCaption})}
+
+
+
+Constructs a Acyclic\+Neural\+Net with the provided neural net definition parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digraph} & \mbox{\hyperlink{namespace_sharp_neat_1_1_network}{Network}} structure definition\\
+\hline
+{\em weight\+Arr} & Connection weights array.\\
+\hline
+{\em activation\+Fn} & Node activation function.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_abb098e9cc92c797607acca5abd9ca9e2}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_abb098e9cc92c797607acca5abd9ca9e2}} 
+\index{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}!Activate@{Activate}}
+\index{Activate@{Activate}!SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}}
+\doxysubsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic.\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activate the network. Activation reads input signals from Input\+Signal\+Array and writes output signals to Output\+Signal\+Array. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a631b1380c53c96156ddf1ec4155c006e}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a631b1380c53c96156ddf1ec4155c006e}} 
+\index{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}!ResetState@{ResetState}}
+\index{ResetState@{ResetState}!SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}}
+\doxysubsubsection{\texorpdfstring{ResetState()}{ResetState()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic.\+Reset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the network\textquotesingle{}s internal state. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_af5337b8dea5e155964c06cc82a4243c4}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_af5337b8dea5e155964c06cc82a4243c4}} 
+\index{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}!InputCount@{InputCount}}
+\index{InputCount@{InputCount}!SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}}
+\doxysubsubsection{\texorpdfstring{InputCount}{InputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic.\+Input\+Count =$>$ \+\_\+input\+Count}
+
+
+
+Gets the number of input nodes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a68516db5a6b42bcc09320fdbeab5ac78}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a68516db5a6b42bcc09320fdbeab5ac78}} 
+\index{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}!OutputCount@{OutputCount}}
+\index{OutputCount@{OutputCount}!SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}}
+\doxysubsubsection{\texorpdfstring{OutputCount}{OutputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic.\+Output\+Count =$>$ \+\_\+output\+Count}
+
+
+
+Gets the number of output nodes. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a078dd560f1d33dc76d63f5aecb4117d9}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a078dd560f1d33dc76d63f5aecb4117d9}} 
+\index{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}!InputVector@{InputVector}}
+\index{InputVector@{InputVector}!SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}}
+\doxysubsubsection{\texorpdfstring{InputVector}{InputVector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$double$>$ Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic.\+Input\+Vector\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array for used for passing input signals to the network, i.\+e. the network input vector. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a1640f91d1b808cc9dd02f9c9d1424ecd}\label{class_sharp_neat_1_1_neural_net_1_1_double_1_1_vectorized_1_1_neural_net_acyclic_a1640f91d1b808cc9dd02f9c9d1424ecd}} 
+\index{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}!OutputVector@{OutputVector}}
+\index{OutputVector@{OutputVector}!SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic@{SharpNeat.NeuralNet.Double.Vectorized.NeuralNetAcyclic}}
+\doxysubsubsection{\texorpdfstring{OutputVector}{OutputVector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_black_box_1_1_i_vector}{I\+Vector}}$<$double$>$ Sharp\+Neat.\+Neural\+Net.\+Double.\+Vectorized.\+Neural\+Net\+Acyclic.\+Output\+Vector\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array of output signals from the network, i.\+e. the network output vector. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Neural\+Net/\+Double/\+Vectorized/Neural\+Net\+Acyclic.\+cs\end{DoxyCompactItemize}

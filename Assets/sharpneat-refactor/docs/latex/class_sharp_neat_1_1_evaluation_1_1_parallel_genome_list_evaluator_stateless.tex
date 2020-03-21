@@ -1,0 +1,130 @@
+\hypertarget{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless}{}\doxysection{Sharp\+Neat.\+Evaluation.\+Parallel\+Genome\+List\+Evaluator\+Stateless$<$ T\+Genome, T\+Phenome $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless}\index{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}}
+
+
+An implementation of I\+Genome\+List\+Evaluator$<$\+T\+Genome$>$ that evaluates genomes in parallel on multiple C\+PU threads.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Evaluation.\+Parallel\+Genome\+List\+Evaluator\+Stateless$<$ T\+Genome, T\+Phenome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_af789b0805cd0cce849aae761a505740e}{Parallel\+Genome\+List\+Evaluator\+Stateless}} (\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}{I\+Genome\+Decoder}}$<$ T\+Genome, T\+Phenome $>$ genome\+Decoder, \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$ phenome\+Evaluator\+Scheme, int degree\+Of\+Parallelism)
+\begin{DoxyCompactList}\small\item\em Construct with the provided \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}{I\+Genome\+Decoder}} and \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_a04264584d0eea0bde6aba74aa9d35b3d}{Evaluate}} (I\+Collection$<$ T\+Genome $>$ genome\+List)
+\begin{DoxyCompactList}\small\item\em Evaluates a collection of genomes and assigns fitness info to each. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_ae1da44137288568ced5650922953a467}{Test\+For\+Stop\+Condition}} (\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} fitness\+Info)
+\begin{DoxyCompactList}\small\item\em Accepts a \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_a102f80e7a61658e076bfc04ccb7c0fd9}{Is\+Deterministic}} =$>$ \+\_\+phenome\+Evaluation\+Scheme.\+Is\+Deterministic
+\begin{DoxyCompactList}\small\item\em Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. \end{DoxyCompactList}\item 
+I\+Comparer$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_ab13ecb75cd5ba1e03c1decb97c15a84f}{Fitness\+Comparer}} =$>$ \+\_\+phenome\+Evaluation\+Scheme.\+Fitness\+Comparer
+\begin{DoxyCompactList}\small\item\em The evaluation scheme\textquotesingle{}s fitness comparer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An implementation of I\+Genome\+List\+Evaluator$<$\+T\+Genome$>$ that evaluates genomes in parallel on multiple C\+PU threads. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Genome} & The genome type that is decoded.\\
+\hline
+{\em T\+Phenome} & The phenome type that is decoded to and then evaluated.\\
+\hline
+\end{DoxyTemplParams}
+
+
+Genome decoding to a phenome is performed by a I\+Genome\+Decoder$<$\+T\+Genome, T\+Phenome$>$. Phenome fitness evaluation is performed by a I\+Phenome\+Evaluator$<$\+T\+Phenome$>$.
+
+This class is for use with a stateless (and therefore thread safe) phenome evaluator, i.\+e. one phenome evaluator is created and the is used concurrently by multiple threads. \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em I\+Genome}]\item[{\em T\+Phenome} : {\em class}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_af789b0805cd0cce849aae761a505740e}\label{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_af789b0805cd0cce849aae761a505740e}} 
+\index{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}!ParallelGenomeListEvaluatorStateless@{ParallelGenomeListEvaluatorStateless}}
+\index{ParallelGenomeListEvaluatorStateless@{ParallelGenomeListEvaluatorStateless}!SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{ParallelGenomeListEvaluatorStateless()}{ParallelGenomeListEvaluatorStateless()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless}{Sharp\+Neat.\+Evaluation.\+Parallel\+Genome\+List\+Evaluator\+Stateless}}$<$ T\+Genome, T\+Phenome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless}{Parallel\+Genome\+List\+Evaluator\+Stateless}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}{I\+Genome\+Decoder}}$<$ T\+Genome, T\+Phenome $>$}]{genome\+Decoder,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluation_scheme}{I\+Phenome\+Evaluation\+Scheme}}$<$ T\+Phenome $>$}]{phenome\+Evaluator\+Scheme,  }\item[{int}]{degree\+Of\+Parallelism }\end{DoxyParamCaption})}
+
+
+
+Construct with the provided \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_decoder}{I\+Genome\+Decoder}} and \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_a04264584d0eea0bde6aba74aa9d35b3d}\label{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_a04264584d0eea0bde6aba74aa9d35b3d}} 
+\index{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless}{Sharp\+Neat.\+Evaluation.\+Parallel\+Genome\+List\+Evaluator\+Stateless}}$<$ T\+Genome, T\+Phenome $>$.Evaluate (\begin{DoxyParamCaption}\item[{I\+Collection$<$ T\+Genome $>$}]{genome\+List }\end{DoxyParamCaption})}
+
+
+
+Evaluates a collection of genomes and assigns fitness info to each. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_list_evaluator_a0511ee087db26d0c3ba130479200d50c}{Sharp\+Neat.\+Evaluation.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_ae1da44137288568ced5650922953a467}\label{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_ae1da44137288568ced5650922953a467}} 
+\index{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}!TestForStopCondition@{TestForStopCondition}}
+\index{TestForStopCondition@{TestForStopCondition}!SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{TestForStopCondition()}{TestForStopCondition()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless}{Sharp\+Neat.\+Evaluation.\+Parallel\+Genome\+List\+Evaluator\+Stateless}}$<$ T\+Genome, T\+Phenome $>$.Test\+For\+Stop\+Condition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}}]{fitness\+Info }\end{DoxyParamCaption})}
+
+
+
+Accepts a \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}, which is intended to be from the fittest genome in the population, and returns a boolean that indicates if the evolution algorithm can stop, i.\+e. because the fitness is the best that can be achieved (or good enough). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness\+Info} & The fitness info object to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the fitness is good enough to signal the evolution algorithm to stop.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_evaluation_1_1_i_genome_list_evaluator_aadecbfd90b6c478aacc8dd42213ce5e4}{Sharp\+Neat.\+Evaluation.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_ab13ecb75cd5ba1e03c1decb97c15a84f}\label{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_ab13ecb75cd5ba1e03c1decb97c15a84f}} 
+\index{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}!FitnessComparer@{FitnessComparer}}
+\index{FitnessComparer@{FitnessComparer}!SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{FitnessComparer}{FitnessComparer}}
+{\footnotesize\ttfamily I\+Comparer$<$\mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}$>$ \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless}{Sharp\+Neat.\+Evaluation.\+Parallel\+Genome\+List\+Evaluator\+Stateless}}$<$ T\+Genome, T\+Phenome $>$.Fitness\+Comparer =$>$ \+\_\+phenome\+Evaluation\+Scheme.\+Fitness\+Comparer}
+
+
+
+The evaluation scheme\textquotesingle{}s fitness comparer. 
+
+Typically there is a single fitness score and a higher score is considered better/fitter. However, if there are multiple fitness values assigned to a genome (e.\+g. where multiple measures of fitness are in use) then we need a task specific comparer to determine the relative fitness between two instances of \mbox{\hyperlink{struct_sharp_neat_1_1_evaluation_1_1_fitness_info}{Fitness\+Info}}. \mbox{\Hypertarget{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_a102f80e7a61658e076bfc04ccb7c0fd9}\label{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless_a102f80e7a61658e076bfc04ccb7c0fd9}} 
+\index{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}!IsDeterministic@{IsDeterministic}}
+\index{IsDeterministic@{IsDeterministic}!SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$@{SharpNeat.Evaluation.ParallelGenomeListEvaluatorStateless$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{IsDeterministic}{IsDeterministic}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_sharp_neat_1_1_evaluation_1_1_parallel_genome_list_evaluator_stateless}{Sharp\+Neat.\+Evaluation.\+Parallel\+Genome\+List\+Evaluator\+Stateless}}$<$ T\+Genome, T\+Phenome $>$.Is\+Deterministic =$>$ \+\_\+phenome\+Evaluation\+Scheme.\+Is\+Deterministic}
+
+
+
+Indicates if the evaluation scheme is deterministic, i.\+e. will always return the same fitness score for a given genome. 
+
+An evaluation scheme that has some random/stochastic characteristics may give a different fitness score at each invocation for the same genome, such a scheme is non-\/deterministic. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evaluation/Parallel\+Genome\+List\+Evaluator\+Stateless.\+cs\end{DoxyCompactItemize}
