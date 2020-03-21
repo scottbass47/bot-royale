@@ -1,0 +1,368 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+
+
+A genome class for Neuro Evolution of Augmenting Topologies (N\+E\+AT).  
+
+
+Inheritance diagram for Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ab0b4d27495f838d646f4178531ea2d54}{Neat\+Genome}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}} genome\+Factory, uint id, uint birth\+Generation, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}{Neuron\+Gene\+List}} neuron\+Gene\+List, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{Connection\+Gene\+List}} connection\+Gene\+List, int input\+Neuron\+Count, int output\+Neuron\+Count, bool rebuild\+Neuron\+Gene\+Connection\+Info)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided ID, birth generation and gene lists. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a10045278371ce11d33add592e3037cbf}{Neat\+Genome}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} copy\+From, uint id, uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a635362bda6ed11171bc1e75d2ce861ce}{Create\+Offspring}} (uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Asexual reproduction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_aaeabcb647dd95b5778165106b785a33a}{Create\+Offspring}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} parent, uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Sexual reproduction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a80cb6958c91f85f471f5cdf0ee634b24}{Perform\+Integrity\+Check}} ()
+\begin{DoxyCompactList}\small\item\em Performs an integrity check on the genome\textquotesingle{}s internal data. Returns true if OK. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_connectivity_data}{Network\+Connectivity\+Data}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_af2ae67ff648df5b80b6b355425822602}{Get\+Connectivity\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Gets Network\+Connectivity\+Data for the network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a808987f8ec53689e228d60d6a3ec879e}{Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the genome\textquotesingle{}s unique ID. I\+Ds are unique across all genomes created from a single I\+Genome\+Factory and all ancestor genomes spawned from those genomes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a66423500d57deaeb8be8bcf9eeb54c6e}{Specie\+Idx}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a specie index. This is the index of the species that the genome is in. Implementing this is required only when using evolution algorithms that speciate genomes. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a68f38b50add032efde32c2591f4e6ca1}{Birth\+Generation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the generation that this genome was born/created in. Used to track genome age. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info}{Evaluation\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ab234750a42aa1f1f396b3cff1521520b}{Evaluation\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets evaluation information for the genome, including its fitness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a73546c09355c859e61414d30bd8060e3}{Complexity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value that indicates the magnitude of a genome\textquotesingle{}s complexity. For a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} we return the number of connection genes since a neural network\textquotesingle{}s complexity is approximately proportional to the number of connections -\/ the number of neurons is less important and can be viewed as being a limit on the possible number of connections. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a81e8ae2954b4d2fe43ce4b73c2cf3ab9}{Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a coordinate that represents the genome\textquotesingle{}s position in the search space (also known as the genetic encoding space). This allows speciation/clustering algorithms to operate on an abstract coordinate data type rather than being coded against specific I\+Genome types. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a0a3022ca8a36e3e49a9839c025039869}{Cached\+Phenome}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a cached phenome obtained from decoding the genome. \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes}{Genomes}} are typically decoded to \mbox{\hyperlink{namespace_sharp_neat_1_1_phenomes}{Phenomes}} for evaluation. This property allows decoders to cache the phenome in order to avoid decoding on each re-\/evaluation; However, this is optional. The phenome is untyped to prevent the class framework from becoming overly complex. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a025c9bbb79a55580264bfe990eb7c003}{Genome\+Factory}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}} associated with the genome. A reference to the factory is passed to spawned genomes, this allows all genomes within a population to have access to common data such as \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and an ID generator. Setting the genome factory after construction is allowed in order to resolve chicken-\/and-\/egg scenarios when loading genomes from storage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}{Neuron\+Gene\+List}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a4643f69345122135ec489332d7e42d42}{Neuron\+Gene\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the genome\textquotesingle{}s list of neuron genes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{Connection\+Gene\+List}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_abdea1c5ee2f1643346896bee188299e8}{Connection\+Gene\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the genome\textquotesingle{}s list of connection genes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a2737177ef0f90ad9d7a41620b155a02e}{Input\+Neuron\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of input neurons represented by the genome. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a24643bab2c0c05127738655938d3b3c8}{Input\+And\+Bias\+Neuron\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of input and bias neurons represented by the genome. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a05705c9ded85a4111d1e3ff175ef17a2}{Output\+Neuron\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of output neurons represented by the genome. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a88752c1afe4110965b73846be6f720ad}{Input\+Bias\+Output\+Neuron\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number total number of neurons represented by the genome. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ad135b5e9d76a85a123b59bc2651b4555}{Input\+Node\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of input nodes. This does not include the bias node which is always present. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a768086a88562e6af6af8d90301d84ea1}{Output\+Node\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of output nodes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a40715b62ba103b655a726323a4db1d06}{Activation\+Fn\+Library}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the network\textquotesingle{}s activation function library. The activation function at each node is represented by an integer ID, which refers to a function in this activation function library. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_af6e5ab676d56f53b8ddf955011750ac8}{Is\+Acyclic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a bool flag that indicates if the network is acyclic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list}{I\+Node\+List}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_abbb5df1c5952d9e1811671a9146341aa}{Node\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of network nodes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_connection_list}{I\+Connection\+List}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ab71ef339425f147d498cbbb26f707b44}{Connection\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of network connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A genome class for Neuro Evolution of Augmenting Topologies (N\+E\+AT). 
+
+Note that neuron genes must be arranged according to the following layout plan. Bias -\/ single neuron. Innovation ID = 0 Input neurons. Output neurons. Hidden neurons.
+
+This allows us to add and remove hidden neurons without affecting the position of the bias, input and output neurons; This is convenient because bias and input and output neurons are fixed, they cannot be added to or removed and so remain constant throughout a given run. In fact they are only stored in the same list as hidden nodes as an efficiency measure when producing offspring and decoding genomes, otherwise it would probably make sense to store them in read-\/only lists.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ab0b4d27495f838d646f4178531ea2d54}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ab0b4d27495f838d646f4178531ea2d54}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!NeatGenome@{NeatGenome}}
+\index{NeatGenome@{NeatGenome}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{NeatGenome()}{NeatGenome()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Neat\+Genome (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}}}]{genome\+Factory,  }\item[{uint}]{id,  }\item[{uint}]{birth\+Generation,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}{Neuron\+Gene\+List}}}]{neuron\+Gene\+List,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{Connection\+Gene\+List}}}]{connection\+Gene\+List,  }\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{bool}]{rebuild\+Neuron\+Gene\+Connection\+Info }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided ID, birth generation and gene lists. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a10045278371ce11d33add592e3037cbf}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a10045278371ce11d33add592e3037cbf}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!NeatGenome@{NeatGenome}}
+\index{NeatGenome@{NeatGenome}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{NeatGenome()}{NeatGenome()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Neat\+Genome (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}}]{copy\+From,  }\item[{uint}]{id,  }\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_aaeabcb647dd95b5778165106b785a33a}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_aaeabcb647dd95b5778165106b785a33a}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!CreateOffspring@{CreateOffspring}}
+\index{CreateOffspring@{CreateOffspring}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{CreateOffspring()}{CreateOffspring()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Create\+Offspring (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}}]{parent,  }\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})}
+
+
+
+Sexual reproduction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The other parent genome (mates with the current genome).\\
+\hline
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genome at its birth generation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a635362bda6ed11171bc1e75d2ce861ce}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a635362bda6ed11171bc1e75d2ce861ce}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!CreateOffspring@{CreateOffspring}}
+\index{CreateOffspring@{CreateOffspring}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{CreateOffspring()}{CreateOffspring()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Create\+Offspring (\begin{DoxyParamCaption}\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})}
+
+
+
+Asexual reproduction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genome at its birth generation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_af2ae67ff648df5b80b6b355425822602}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_af2ae67ff648df5b80b6b355425822602}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!GetConnectivityData@{GetConnectivityData}}
+\index{GetConnectivityData@{GetConnectivityData}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{GetConnectivityData()}{GetConnectivityData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_connectivity_data}{Network\+Connectivity\+Data}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Get\+Connectivity\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets Network\+Connectivity\+Data for the network. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition_af591ea747d161b6a0abbd2b94ebdce94}{Sharp\+Neat.\+Network.\+I\+Network\+Definition}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a80cb6958c91f85f471f5cdf0ee634b24}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a80cb6958c91f85f471f5cdf0ee634b24}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!PerformIntegrityCheck@{PerformIntegrityCheck}}
+\index{PerformIntegrityCheck@{PerformIntegrityCheck}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{PerformIntegrityCheck()}{PerformIntegrityCheck()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Perform\+Integrity\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs an integrity check on the genome\textquotesingle{}s internal data. Returns true if OK. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a40715b62ba103b655a726323a4db1d06}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a40715b62ba103b655a726323a4db1d06}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!ActivationFnLibrary@{ActivationFnLibrary}}
+\index{ActivationFnLibrary@{ActivationFnLibrary}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{ActivationFnLibrary}{ActivationFnLibrary}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Activation\+Fn\+Library\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the network\textquotesingle{}s activation function library. The activation function at each node is represented by an integer ID, which refers to a function in this activation function library. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a68f38b50add032efde32c2591f4e6ca1}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a68f38b50add032efde32c2591f4e6ca1}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!BirthGeneration@{BirthGeneration}}
+\index{BirthGeneration@{BirthGeneration}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{BirthGeneration}{BirthGeneration}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Birth\+Generation\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the generation that this genome was born/created in. Used to track genome age. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a0a3022ca8a36e3e49a9839c025039869}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a0a3022ca8a36e3e49a9839c025039869}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!CachedPhenome@{CachedPhenome}}
+\index{CachedPhenome@{CachedPhenome}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{CachedPhenome}{CachedPhenome}}
+{\footnotesize\ttfamily object Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Cached\+Phenome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a cached phenome obtained from decoding the genome. \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes}{Genomes}} are typically decoded to \mbox{\hyperlink{namespace_sharp_neat_1_1_phenomes}{Phenomes}} for evaluation. This property allows decoders to cache the phenome in order to avoid decoding on each re-\/evaluation; However, this is optional. The phenome is untyped to prevent the class framework from becoming overly complex. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a73546c09355c859e61414d30bd8060e3}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a73546c09355c859e61414d30bd8060e3}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!Complexity@{Complexity}}
+\index{Complexity@{Complexity}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{Complexity}{Complexity}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Complexity\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value that indicates the magnitude of a genome\textquotesingle{}s complexity. For a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} we return the number of connection genes since a neural network\textquotesingle{}s complexity is approximately proportional to the number of connections -\/ the number of neurons is less important and can be viewed as being a limit on the possible number of connections. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_abdea1c5ee2f1643346896bee188299e8}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_abdea1c5ee2f1643346896bee188299e8}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!ConnectionGeneList@{ConnectionGeneList}}
+\index{ConnectionGeneList@{ConnectionGeneList}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{ConnectionGeneList}{ConnectionGeneList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{Connection\+Gene\+List}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Connection\+Gene\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the genome\textquotesingle{}s list of connection genes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ab71ef339425f147d498cbbb26f707b44}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ab71ef339425f147d498cbbb26f707b44}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!ConnectionList@{ConnectionList}}
+\index{ConnectionList@{ConnectionList}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{ConnectionList}{ConnectionList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_connection_list}{I\+Connection\+List}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Connection\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of network connections. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ab234750a42aa1f1f396b3cff1521520b}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ab234750a42aa1f1f396b3cff1521520b}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!EvaluationInfo@{EvaluationInfo}}
+\index{EvaluationInfo@{EvaluationInfo}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{EvaluationInfo}{EvaluationInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info}{Evaluation\+Info}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Evaluation\+Info\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets evaluation information for the genome, including its fitness. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a025c9bbb79a55580264bfe990eb7c003}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a025c9bbb79a55580264bfe990eb7c003}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!GenomeFactory@{GenomeFactory}}
+\index{GenomeFactory@{GenomeFactory}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{GenomeFactory}{GenomeFactory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Genome\+Factory\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}} associated with the genome. A reference to the factory is passed to spawned genomes, this allows all genomes within a population to have access to common data such as \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and an ID generator. Setting the genome factory after construction is allowed in order to resolve chicken-\/and-\/egg scenarios when loading genomes from storage. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a808987f8ec53689e228d60d6a3ec879e}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a808987f8ec53689e228d60d6a3ec879e}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!Id@{Id}}
+\index{Id@{Id}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the genome\textquotesingle{}s unique ID. I\+Ds are unique across all genomes created from a single I\+Genome\+Factory and all ancestor genomes spawned from those genomes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a24643bab2c0c05127738655938d3b3c8}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a24643bab2c0c05127738655938d3b3c8}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!InputAndBiasNeuronCount@{InputAndBiasNeuronCount}}
+\index{InputAndBiasNeuronCount@{InputAndBiasNeuronCount}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{InputAndBiasNeuronCount}{InputAndBiasNeuronCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Input\+And\+Bias\+Neuron\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of input and bias neurons represented by the genome. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a88752c1afe4110965b73846be6f720ad}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a88752c1afe4110965b73846be6f720ad}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!InputBiasOutputNeuronCount@{InputBiasOutputNeuronCount}}
+\index{InputBiasOutputNeuronCount@{InputBiasOutputNeuronCount}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{InputBiasOutputNeuronCount}{InputBiasOutputNeuronCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Input\+Bias\+Output\+Neuron\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number total number of neurons represented by the genome. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a2737177ef0f90ad9d7a41620b155a02e}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a2737177ef0f90ad9d7a41620b155a02e}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!InputNeuronCount@{InputNeuronCount}}
+\index{InputNeuronCount@{InputNeuronCount}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{InputNeuronCount}{InputNeuronCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Input\+Neuron\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of input neurons represented by the genome. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ad135b5e9d76a85a123b59bc2651b4555}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_ad135b5e9d76a85a123b59bc2651b4555}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!InputNodeCount@{InputNodeCount}}
+\index{InputNodeCount@{InputNodeCount}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{InputNodeCount}{InputNodeCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Input\+Node\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of input nodes. This does not include the bias node which is always present. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_af6e5ab676d56f53b8ddf955011750ac8}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_af6e5ab676d56f53b8ddf955011750ac8}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!IsAcyclic@{IsAcyclic}}
+\index{IsAcyclic@{IsAcyclic}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{IsAcyclic}{IsAcyclic}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Is\+Acyclic\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a bool flag that indicates if the network is acyclic. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a4643f69345122135ec489332d7e42d42}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a4643f69345122135ec489332d7e42d42}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!NeuronGeneList@{NeuronGeneList}}
+\index{NeuronGeneList@{NeuronGeneList}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{NeuronGeneList}{NeuronGeneList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}{Neuron\+Gene\+List}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Neuron\+Gene\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the genome\textquotesingle{}s list of neuron genes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_abbb5df1c5952d9e1811671a9146341aa}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_abbb5df1c5952d9e1811671a9146341aa}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!NodeList@{NodeList}}
+\index{NodeList@{NodeList}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{NodeList}{NodeList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list}{I\+Node\+List}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Node\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of network nodes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a05705c9ded85a4111d1e3ff175ef17a2}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a05705c9ded85a4111d1e3ff175ef17a2}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!OutputNeuronCount@{OutputNeuronCount}}
+\index{OutputNeuronCount@{OutputNeuronCount}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{OutputNeuronCount}{OutputNeuronCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Output\+Neuron\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of output neurons represented by the genome. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a768086a88562e6af6af8d90301d84ea1}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a768086a88562e6af6af8d90301d84ea1}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!OutputNodeCount@{OutputNodeCount}}
+\index{OutputNodeCount@{OutputNodeCount}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{OutputNodeCount}{OutputNodeCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Output\+Node\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of output nodes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a81e8ae2954b4d2fe43ce4b73c2cf3ab9}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a81e8ae2954b4d2fe43ce4b73c2cf3ab9}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!Position@{Position}}
+\index{Position@{Position}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Position\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a coordinate that represents the genome\textquotesingle{}s position in the search space (also known as the genetic encoding space). This allows speciation/clustering algorithms to operate on an abstract coordinate data type rather than being coded against specific I\+Genome types. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a66423500d57deaeb8be8bcf9eeb54c6e}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_a66423500d57deaeb8be8bcf9eeb54c6e}} 
+\index{SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}!SpecieIdx@{SpecieIdx}}
+\index{SpecieIdx@{SpecieIdx}!SharpNeat.Genomes.Neat.NeatGenome@{SharpNeat.Genomes.Neat.NeatGenome}}
+\doxysubsubsection{\texorpdfstring{SpecieIdx}{SpecieIdx}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome.\+Specie\+Idx\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a specie index. This is the index of the species that the genome is in. Implementing this is required only when using evolution algorithms that speciate genomes. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Neat\+Genome.\+cs\end{DoxyCompactItemize}

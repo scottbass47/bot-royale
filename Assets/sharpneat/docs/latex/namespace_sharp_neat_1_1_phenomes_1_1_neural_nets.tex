@@ -1,0 +1,23 @@
+\hypertarget{namespace_sharp_neat_1_1_phenomes_1_1_neural_nets}{}\doxysection{Sharp\+Neat.\+Phenomes.\+Neural\+Nets Namespace Reference}
+\label{namespace_sharp_neat_1_1_phenomes_1_1_neural_nets}\index{SharpNeat.Phenomes.NeuralNets@{SharpNeat.Phenomes.NeuralNets}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_connection}{Connection}}
+\begin{DoxyCompactList}\small\item\em Represents a single connection between two neurons in a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}}
+\begin{DoxyCompactList}\small\item\em This class is provided for debugging and educational purposes. \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} is functionally equivalent and is much faster and therefore should be used instead of \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}} in most circumstances. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network}{Fast\+Acyclic\+Network}}
+\begin{DoxyCompactList}\small\item\em A neural network implementation for acyclic networks. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_connection}{Fast\+Connection}}
+\begin{DoxyCompactList}\small\item\em Working data struct for use in \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} and sub-\/classes. Represents a single connection -\/ its weight and source/target neurons. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}}
+\begin{DoxyCompactList}\small\item\em A neural network class that represents a network with recurrent (cyclic) connections. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network}{Fast\+Relaxing\+Cyclic\+Network}}
+\begin{DoxyCompactList}\small\item\em A version of \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} that activates a network until it becomes \textquotesingle{}relaxed\textquotesingle{} rather than for some fixed number of iterations. This class is exactly the same as \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} in all other respects; See that class for more detailed info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_layer_info}{Layer\+Info}}
+\begin{DoxyCompactList}\small\item\em Stores a node and connection index that represent a layer within the network (the nodes and connections at a given depth in a network). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_neuron}{Neuron}}
+\begin{DoxyCompactList}\small\item\em Represents a single neuron in a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_relaxing_cyclic_network}{Relaxing\+Cyclic\+Network}}
+\begin{DoxyCompactList}\small\item\em A version of \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}} that activates a network until it becomes \textquotesingle{}relaxed\textquotesingle{} rather than for some fixed number of iterations. This class is exactly the same as \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}} in all other respects; See that class for more detailed info. \end{DoxyCompactList}\end{DoxyCompactItemize}

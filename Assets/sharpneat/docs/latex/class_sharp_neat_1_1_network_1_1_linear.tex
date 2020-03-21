@@ -1,0 +1,165 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_linear}{}\doxysection{Sharp\+Neat.\+Network.\+Linear Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_linear}\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+
+
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear}{Linear}} activation function with clipping. By \textquotesingle{}clipping\textquotesingle{} we mean the output value is linear between x = -\/1 and x = 1. Below -\/1 and above +1 the output is clipped at -\/1 and +1 respectively.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Linear\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_linear}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a724d8bb23211b76bc4f44792b586d99a}{Calculate}} (double x, double\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a8799f818b13d6e181fb8cfd2a2544559}{Calculate}} (float x, float\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a724d8bb23211b76bc4f44792b586d99a}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a96c541182acaec4aa2123ba6a08b34a9}{Get\+Random\+Aux\+Args}} (I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a4f3692da1e1ea8aad19c265ef13f03bb}{Mutate\+Aux\+Args}} (double\mbox{[}$\,$\mbox{]} aux\+Args, I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em Genetic mutation for auxiliary argument data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a7a3d11cdf8b426bde4b1610bb80ccaf5}{\+\_\+\+\_\+\+Default\+Instance}} = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear}{Linear}}()
+\begin{DoxyCompactList}\small\item\em Default instance provided as a public static field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a404584817c011e8124780c44f11f01f7}{Function\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_abeccc0965923e2e474032f5801ed2610}{Function\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a1cb818189bf7fc12f64da0abede84964}{Function\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable verbose description of the activation function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a2a20686ae55f0dda8c5815fa7d0dc3d3}{Accepts\+Aux\+Args}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a flag that indicates if the activation function accepts auxiliary arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear}{Linear}} activation function with clipping. By \textquotesingle{}clipping\textquotesingle{} we mean the output value is linear between x = -\/1 and x = 1. Below -\/1 and above +1 the output is clipped at -\/1 and +1 respectively. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_linear_a724d8bb23211b76bc4f44792b586d99a}\label{class_sharp_neat_1_1_network_1_1_linear_a724d8bb23211b76bc4f44792b586d99a}} 
+\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Network.\+Linear.\+Calculate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6230550f91b00cf7ac384e8a885dd11a}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_linear_a8799f818b13d6e181fb8cfd2a2544559}\label{class_sharp_neat_1_1_network_1_1_linear_a8799f818b13d6e181fb8cfd2a2544559}} 
+\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Network.\+Linear.\+Calculate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear_a724d8bb23211b76bc4f44792b586d99a}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a17e6d971ff650f3f9ab7863ce0e555c3}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_linear_a96c541182acaec4aa2123ba6a08b34a9}\label{class_sharp_neat_1_1_network_1_1_linear_a96c541182acaec4aa2123ba6a08b34a9}} 
+\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}!GetRandomAuxArgs@{GetRandomAuxArgs}}
+\index{GetRandomAuxArgs@{GetRandomAuxArgs}!SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+\doxysubsubsection{\texorpdfstring{GetRandomAuxArgs()}{GetRandomAuxArgs()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+Linear.\+Get\+Random\+Aux\+Args (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6bf5c2eb7a6b09deb280a6e3653700db}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_linear_a4f3692da1e1ea8aad19c265ef13f03bb}\label{class_sharp_neat_1_1_network_1_1_linear_a4f3692da1e1ea8aad19c265ef13f03bb}} 
+\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}!MutateAuxArgs@{MutateAuxArgs}}
+\index{MutateAuxArgs@{MutateAuxArgs}!SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+\doxysubsubsection{\texorpdfstring{MutateAuxArgs()}{MutateAuxArgs()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Network.\+Linear.\+Mutate\+Aux\+Args (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args,  }\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+Genetic mutation for auxiliary argument data. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a2943116b401f4dff51448228ec9a6b71}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_linear_a7a3d11cdf8b426bde4b1610bb80ccaf5}\label{class_sharp_neat_1_1_network_1_1_linear_a7a3d11cdf8b426bde4b1610bb80ccaf5}} 
+\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}!\_\_DefaultInstance@{\_\_DefaultInstance}}
+\index{\_\_DefaultInstance@{\_\_DefaultInstance}!SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+\doxysubsubsection{\texorpdfstring{\_\_DefaultInstance}{\_\_DefaultInstance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+Linear.\+\_\+\+\_\+\+Default\+Instance = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear}{Linear}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default instance provided as a public static field. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_linear_a2a20686ae55f0dda8c5815fa7d0dc3d3}\label{class_sharp_neat_1_1_network_1_1_linear_a2a20686ae55f0dda8c5815fa7d0dc3d3}} 
+\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}!AcceptsAuxArgs@{AcceptsAuxArgs}}
+\index{AcceptsAuxArgs@{AcceptsAuxArgs}!SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+\doxysubsubsection{\texorpdfstring{AcceptsAuxArgs}{AcceptsAuxArgs}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Linear.\+Accepts\+Aux\+Args\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a flag that indicates if the activation function accepts auxiliary arguments. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_linear_a1cb818189bf7fc12f64da0abede84964}\label{class_sharp_neat_1_1_network_1_1_linear_a1cb818189bf7fc12f64da0abede84964}} 
+\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}!FunctionDescription@{FunctionDescription}}
+\index{FunctionDescription@{FunctionDescription}!SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+\doxysubsubsection{\texorpdfstring{FunctionDescription}{FunctionDescription}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Linear.\+Function\+Description\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable verbose description of the activation function. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_linear_a404584817c011e8124780c44f11f01f7}\label{class_sharp_neat_1_1_network_1_1_linear_a404584817c011e8124780c44f11f01f7}} 
+\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}!FunctionId@{FunctionId}}
+\index{FunctionId@{FunctionId}!SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+\doxysubsubsection{\texorpdfstring{FunctionId}{FunctionId}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Linear.\+Function\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_linear_abeccc0965923e2e474032f5801ed2610}\label{class_sharp_neat_1_1_network_1_1_linear_abeccc0965923e2e474032f5801ed2610}} 
+\index{SharpNeat.Network.Linear@{SharpNeat.Network.Linear}!FunctionString@{FunctionString}}
+\index{FunctionString@{FunctionString}!SharpNeat.Network.Linear@{SharpNeat.Network.Linear}}
+\doxysubsubsection{\texorpdfstring{FunctionString}{FunctionString}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Linear.\+Function\+String\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Activation\+Functions/\+Bipolar/Linear.\+cs\end{DoxyCompactItemize}

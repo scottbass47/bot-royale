@@ -1,0 +1,79 @@
+\hypertarget{interface_sharp_neat_1_1_core_1_1_i_distance_metric}{}\doxysection{Sharp\+Neat.\+Core.\+I\+Distance\+Metric Interface Reference}
+\label{interface_sharp_neat_1_1_core_1_1_i_distance_metric}\index{SharpNeat.Core.IDistanceMetric@{SharpNeat.Core.IDistanceMetric}}
+
+
+Represents a metric for measuring the distance between two genome positions in an encoding space, and thus the compatibility of the two genomes with respect to the probability of creating fit offspring.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Core.\+I\+Distance\+Metric\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.733746cm]{interface_sharp_neat_1_1_core_1_1_i_distance_metric}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric_aef3a5ef9b4f8f206b3f23aa97fd2ccde}{Test\+Distance}} (\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} p1, \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} p2, double threshold)
+\begin{DoxyCompactList}\small\item\em Tests if the distance between the two positions is greater than some threshold. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric_aadd233f05f07c6bef78c3318f9f5b60f}{Get\+Distance}} (\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} p1, \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} p2)
+\begin{DoxyCompactList}\small\item\em Gets the distance between two positions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric_a9805a811de29befeda581d883777563b}{Calculate\+Centroid}} (I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} $>$ coord\+List)
+\begin{DoxyCompactList}\small\item\em Calculates the centroid for the given set of points. The centroid is a central position within a set of points that minimizes the sum of the squared distance between each of those points and the centroid. As such it can also be thought of as being an exemplar for a set of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a metric for measuring the distance between two genome positions in an encoding space, and thus the compatibility of the two genomes with respect to the probability of creating fit offspring. 
+
+What makes a good or ideal compatibility metric is an open question at the time of writing (August-\/2009).
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_distance_metric_a9805a811de29befeda581d883777563b}\label{interface_sharp_neat_1_1_core_1_1_i_distance_metric_a9805a811de29befeda581d883777563b}} 
+\index{SharpNeat.Core.IDistanceMetric@{SharpNeat.Core.IDistanceMetric}!CalculateCentroid@{CalculateCentroid}}
+\index{CalculateCentroid@{CalculateCentroid}!SharpNeat.Core.IDistanceMetric@{SharpNeat.Core.IDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{CalculateCentroid()}{CalculateCentroid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} Sharp\+Neat.\+Core.\+I\+Distance\+Metric.\+Calculate\+Centroid (\begin{DoxyParamCaption}\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} $>$}]{coord\+List }\end{DoxyParamCaption})}
+
+
+
+Calculates the centroid for the given set of points. The centroid is a central position within a set of points that minimizes the sum of the squared distance between each of those points and the centroid. As such it can also be thought of as being an exemplar for a set of points. 
+
+The centroid calculation is dependent on the distance metric, hence this method is defined on \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric}{I\+Distance\+Metric}}. For some distance metrics the centroid may not be a unique point, in those cases one of the possible centroids is returned.
+
+A centroid is used in k-\/means clustering to define the center of a cluster.
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_manhattan_distance_metric_a86ecf687701b4cff18ec8a25dfe8a7ee}{Sharp\+Neat.\+Distance\+Metrics.\+Manhattan\+Distance\+Metric}}, and \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_a894a7e17fdb722a1814bc73b7a9d1250}{Sharp\+Neat.\+Distance\+Metrics.\+Euclidean\+Distance\+Metric}}.
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_distance_metric_aadd233f05f07c6bef78c3318f9f5b60f}\label{interface_sharp_neat_1_1_core_1_1_i_distance_metric_aadd233f05f07c6bef78c3318f9f5b60f}} 
+\index{SharpNeat.Core.IDistanceMetric@{SharpNeat.Core.IDistanceMetric}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!SharpNeat.Core.IDistanceMetric@{SharpNeat.Core.IDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Core.\+I\+Distance\+Metric.\+Get\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}}}]{p1,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}}}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Gets the distance between two positions. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_manhattan_distance_metric_a3455e0787bb550f3e4261798d1d77368}{Sharp\+Neat.\+Distance\+Metrics.\+Manhattan\+Distance\+Metric}}, and \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_ab4a70f2545d99fbd9458bc89cea9e086}{Sharp\+Neat.\+Distance\+Metrics.\+Euclidean\+Distance\+Metric}}.
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_distance_metric_aef3a5ef9b4f8f206b3f23aa97fd2ccde}\label{interface_sharp_neat_1_1_core_1_1_i_distance_metric_aef3a5ef9b4f8f206b3f23aa97fd2ccde}} 
+\index{SharpNeat.Core.IDistanceMetric@{SharpNeat.Core.IDistanceMetric}!TestDistance@{TestDistance}}
+\index{TestDistance@{TestDistance}!SharpNeat.Core.IDistanceMetric@{SharpNeat.Core.IDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{TestDistance()}{TestDistance()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Core.\+I\+Distance\+Metric.\+Test\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}}}]{p1,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}}}]{p2,  }\item[{double}]{threshold }\end{DoxyParamCaption})}
+
+
+
+Tests if the distance between the two positions is greater than some threshold. 
+
+A simple way of implementing this method would be to calculate the distance between the two genomes and test if it is over the threshold. That approach requires that the internal data of both positions be fully compared. However, it is faster to compare the contents of the two positions maintaining an accumulated distance value as we progress through the comparison, and to exit the method when and if the threshold is passed.
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_manhattan_distance_metric_a2b75f09273beedd2ef290c67c446f064}{Sharp\+Neat.\+Distance\+Metrics.\+Manhattan\+Distance\+Metric}}, and \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_af1687cc3b763c00cca9674239ae9fd43}{Sharp\+Neat.\+Distance\+Metrics.\+Euclidean\+Distance\+Metric}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/I\+Distance\+Metric.\+cs\end{DoxyCompactItemize}

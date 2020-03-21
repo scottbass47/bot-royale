@@ -1,0 +1,134 @@
+\hypertarget{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{}\doxysection{Sharp\+Neat.\+Phenomes.\+I\+Black\+Box Interface Reference}
+\label{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}\index{SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}}
+
+
+\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}} represents an abstract device, system or function which has inputs and outputs. The internal workings and state of the box are not relevant to any method or class that accepts an \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}} -\/ only that it has inputs and outputs and a means of activation. In N\+E\+AT the neural network implementations generally fit this pattern, that is\+:  
+
+
+Inheritance diagram for Sharp\+Neat.\+Phenomes.\+I\+Black\+Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.525886cm]{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a8b5d9624743a1dc3b0bf416a57496103}{Activate}} ()
+\begin{DoxyCompactList}\small\item\em Activate the black box. This is a request for the box to accept its inputs and produce output signals ready for reading from \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_output_signal_array}{Output\+Signal\+Array}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a7079f2f2a4f0b64e4e365207407bcdc6}{Reset\+State}} ()
+\begin{DoxyCompactList}\small\item\em Reset any internal state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a3d4c020f9113a2e65602d6039f12fb15}{Input\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of inputs to the blackbox. This is assumed to be fixed for the lifetime of the \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_ae5144095f451d03ffc8acca98a07435b}{Output\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of outputs from the blackbox. This is assumed to be fixed for the lifetime of the \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_acec46e752b830a11f63748cacef06518}{Input\+Signal\+Array}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array of input values that feed into the black box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_ab646ea895a7fc0a8a9f473008d31f108}{Output\+Signal\+Array}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array of output values that feed out from the black box. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_afa0142c4b631e7a45ad7832585b61e47}{Is\+State\+Valid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether the black box\textquotesingle{}s internal state is valid. It may become invalid if e.\+g. we ask a recurrent neural network to relax and it is unable to do so. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}} represents an abstract device, system or function which has inputs and outputs. The internal workings and state of the box are not relevant to any method or class that accepts an \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}} -\/ only that it has inputs and outputs and a means of activation. In N\+E\+AT the neural network implementations generally fit this pattern, that is\+: 
+
+
+\begin{DoxyItemize}
+\item inputs are fed to a network.
+\item The network is activated (e.\+g. some fixed number of timesteps or to relaxation).
+\item The network outputs are read and fed into the evaluation/scoring/fitness scheme.
+\end{DoxyItemize}
+
+From wikipedia\+: Black box is a technical term for a device or system or object when it is viewed primarily in terms of its input and output characteristics. Almost anything might occasionally be referred to as a black box -\/ a transistor, an algorithm, humans, the Internet.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a8b5d9624743a1dc3b0bf416a57496103}\label{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a8b5d9624743a1dc3b0bf416a57496103}} 
+\index{SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}!Activate@{Activate}}
+\index{Activate@{Activate}!SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}}
+\doxysubsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+I\+Black\+Box.\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activate the black box. This is a request for the box to accept its inputs and produce output signals ready for reading from \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_output_signal_array}{Output\+Signal\+Array}}. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_aa104bbb60365183a7ab93c8a9f90f249}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network}}, \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network_a4fb1541528fe238261c798d47f07f528}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Cyclic\+Network}}, \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ab2c186054ce66a9a31d300b995ae6807}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network}}, \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_a1e405b1917b7739da0166dc1e014d203}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Relaxing\+Cyclic\+Network}}, and \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_relaxing_cyclic_network_adf57bf057fe4fc3bd90f7aaf56341a9b}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Relaxing\+Cyclic\+Network}}.
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a7079f2f2a4f0b64e4e365207407bcdc6}\label{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a7079f2f2a4f0b64e4e365207407bcdc6}} 
+\index{SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}!ResetState@{ResetState}}
+\index{ResetState@{ResetState}!SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}}
+\doxysubsubsection{\texorpdfstring{ResetState()}{ResetState()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+I\+Black\+Box.\+Reset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset any internal state. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a94fa8a91738d7ed08b0eda5e6cbb9f9b}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network}}, \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network_a13a5648f37ae5757d2eaba01c72ce513}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Cyclic\+Network}}, \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a9c3ccd270f68b243a9db8b08696985ac}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network}}, and \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_relaxing_cyclic_network_a95fc2d88a3943d6ef2d5c1d40cdf79c8}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Relaxing\+Cyclic\+Network}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a3d4c020f9113a2e65602d6039f12fb15}\label{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a3d4c020f9113a2e65602d6039f12fb15}} 
+\index{SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}!InputCount@{InputCount}}
+\index{InputCount@{InputCount}!SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}}
+\doxysubsubsection{\texorpdfstring{InputCount}{InputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Phenomes.\+I\+Black\+Box.\+Input\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of inputs to the blackbox. This is assumed to be fixed for the lifetime of the \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}}. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_acec46e752b830a11f63748cacef06518}\label{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_acec46e752b830a11f63748cacef06518}} 
+\index{SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}!InputSignalArray@{InputSignalArray}}
+\index{InputSignalArray@{InputSignalArray}!SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}}
+\doxysubsubsection{\texorpdfstring{InputSignalArray}{InputSignalArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} Sharp\+Neat.\+Phenomes.\+I\+Black\+Box.\+Input\+Signal\+Array\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array of input values that feed into the black box. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_afa0142c4b631e7a45ad7832585b61e47}\label{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_afa0142c4b631e7a45ad7832585b61e47}} 
+\index{SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}!IsStateValid@{IsStateValid}}
+\index{IsStateValid@{IsStateValid}!SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}}
+\doxysubsubsection{\texorpdfstring{IsStateValid}{IsStateValid}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Phenomes.\+I\+Black\+Box.\+Is\+State\+Valid\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether the black box\textquotesingle{}s internal state is valid. It may become invalid if e.\+g. we ask a recurrent neural network to relax and it is unable to do so. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_ae5144095f451d03ffc8acca98a07435b}\label{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_ae5144095f451d03ffc8acca98a07435b}} 
+\index{SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}!OutputCount@{OutputCount}}
+\index{OutputCount@{OutputCount}!SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}}
+\doxysubsubsection{\texorpdfstring{OutputCount}{OutputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Phenomes.\+I\+Black\+Box.\+Output\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of outputs from the blackbox. This is assumed to be fixed for the lifetime of the \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}}. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_ab646ea895a7fc0a8a9f473008d31f108}\label{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_ab646ea895a7fc0a8a9f473008d31f108}} 
+\index{SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}!OutputSignalArray@{OutputSignalArray}}
+\index{OutputSignalArray@{OutputSignalArray}!SharpNeat.Phenomes.IBlackBox@{SharpNeat.Phenomes.IBlackBox}}
+\doxysubsubsection{\texorpdfstring{OutputSignalArray}{OutputSignalArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} Sharp\+Neat.\+Phenomes.\+I\+Black\+Box.\+Output\+Signal\+Array\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array of output values that feed out from the black box. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Phenomes/I\+Black\+Box.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List\+Builder Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder}\index{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}}
+
+
+Used for building a list of connection genes.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a757848705c66a50a6b649de3ff612e37}{Connection\+Gene\+List\+Builder}} (int connection\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs the builder with the provided capacity. The capacity should be chosen to limit the number of memory re-\/allocations that occur within the contained connection list dictionary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a9dd29b17d81b6251707d8176fdebe2c3}{Try\+Add\+Gene}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} connection\+Gene, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} parent\+Genome, bool overwrite\+Existing)
+\begin{DoxyCompactList}\small\item\em Add a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} to the builder, but only if the connection is not already present (as determined by it\textquotesingle{}s neuron ID endpoints). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a3829fd219cb4519cc5e8a2ef318c4ffe}{Is\+Connection\+Cyclic}} (uint src\+Neuron\+Id, uint tgt\+Neuron\+Id)
+\begin{DoxyCompactList}\small\item\em Tests if adding the specified connection would cause a cyclic pathway in the network connectivity. Returns true if the connection would form a cycle. Note. This same logic is implemented on Neat\+Genome.\+Is\+Connection\+Cyclic() but against slightly different data structures, hence the method is re-\/implemented here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{Connection\+Gene\+List}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a7eca813568de88b459a953d70160223f}{Connection\+Gene\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the contained list of connection genes. \end{DoxyCompactList}\item 
+Dictionary$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_connection_endpoints_struct}{Connection\+Endpoints\+Struct}}, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_ad7245feee37f1f007b3edd922cdb829f}{Connection\+Gene\+Dictionary}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the builder\textquotesingle{}s dictionary of connection genes keyed on Connection\+Endpoints\+Struct. \end{DoxyCompactList}\item 
+Sorted\+Dictionary$<$ uint, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a66878f43a734134117be60e58265aeaa}{Neuron\+Dictionary}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the builder\textquotesingle{}s dictionary of neuron I\+Ds obtained from contained connection gene endpoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used for building a list of connection genes. 
+
+Connection genes are added one by one to a list and a dictionary of added connection genes is maintained keyed on Connection\+Endpoints\+Struct to allow a caller to check if a connection with the same end points (and potentially a different innovation ID) already exists in the list.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a757848705c66a50a6b649de3ff612e37}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a757848705c66a50a6b649de3ff612e37}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}!ConnectionGeneListBuilder@{ConnectionGeneListBuilder}}
+\index{ConnectionGeneListBuilder@{ConnectionGeneListBuilder}!SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}}
+\doxysubsubsection{\texorpdfstring{ConnectionGeneListBuilder()}{ConnectionGeneListBuilder()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List\+Builder.\+Connection\+Gene\+List\+Builder (\begin{DoxyParamCaption}\item[{int}]{connection\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs the builder with the provided capacity. The capacity should be chosen to limit the number of memory re-\/allocations that occur within the contained connection list dictionary. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a3829fd219cb4519cc5e8a2ef318c4ffe}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a3829fd219cb4519cc5e8a2ef318c4ffe}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}!IsConnectionCyclic@{IsConnectionCyclic}}
+\index{IsConnectionCyclic@{IsConnectionCyclic}!SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}}
+\doxysubsubsection{\texorpdfstring{IsConnectionCyclic()}{IsConnectionCyclic()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List\+Builder.\+Is\+Connection\+Cyclic (\begin{DoxyParamCaption}\item[{uint}]{src\+Neuron\+Id,  }\item[{uint}]{tgt\+Neuron\+Id }\end{DoxyParamCaption})}
+
+
+
+Tests if adding the specified connection would cause a cyclic pathway in the network connectivity. Returns true if the connection would form a cycle. Note. This same logic is implemented on Neat\+Genome.\+Is\+Connection\+Cyclic() but against slightly different data structures, hence the method is re-\/implemented here. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a9dd29b17d81b6251707d8176fdebe2c3}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a9dd29b17d81b6251707d8176fdebe2c3}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}!TryAddGene@{TryAddGene}}
+\index{TryAddGene@{TryAddGene}!SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}}
+\doxysubsubsection{\texorpdfstring{TryAddGene()}{TryAddGene()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List\+Builder.\+Try\+Add\+Gene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}}}]{connection\+Gene,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}}]{parent\+Genome,  }\item[{bool}]{overwrite\+Existing }\end{DoxyParamCaption})}
+
+
+
+Add a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} to the builder, but only if the connection is not already present (as determined by it\textquotesingle{}s neuron ID endpoints). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection\+Gene} & The connection to add.\\
+\hline
+{\em parent\+Genome} & The connection\textquotesingle{}s parent genome. This is used to obtain Neuron\+Gene(s) for the connection endpoints.\\
+\hline
+{\em overwrite\+Existing} & A flag that indicates if this connection should take precedence over an existing connection with the same endpoints.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_ad7245feee37f1f007b3edd922cdb829f}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_ad7245feee37f1f007b3edd922cdb829f}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}!ConnectionGeneDictionary@{ConnectionGeneDictionary}}
+\index{ConnectionGeneDictionary@{ConnectionGeneDictionary}!SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}}
+\doxysubsubsection{\texorpdfstring{ConnectionGeneDictionary}{ConnectionGeneDictionary}}
+{\footnotesize\ttfamily Dictionary$<$\mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_connection_endpoints_struct}{Connection\+Endpoints\+Struct}},\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}}$>$ Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List\+Builder.\+Connection\+Gene\+Dictionary\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the builder\textquotesingle{}s dictionary of connection genes keyed on Connection\+Endpoints\+Struct. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a7eca813568de88b459a953d70160223f}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a7eca813568de88b459a953d70160223f}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}!ConnectionGeneList@{ConnectionGeneList}}
+\index{ConnectionGeneList@{ConnectionGeneList}!SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}}
+\doxysubsubsection{\texorpdfstring{ConnectionGeneList}{ConnectionGeneList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{Connection\+Gene\+List}} Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List\+Builder.\+Connection\+Gene\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the contained list of connection genes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a66878f43a734134117be60e58265aeaa}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder_a66878f43a734134117be60e58265aeaa}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}!NeuronDictionary@{NeuronDictionary}}
+\index{NeuronDictionary@{NeuronDictionary}!SharpNeat.Genomes.Neat.ConnectionGeneListBuilder@{SharpNeat.Genomes.Neat.ConnectionGeneListBuilder}}
+\doxysubsubsection{\texorpdfstring{NeuronDictionary}{NeuronDictionary}}
+{\footnotesize\ttfamily Sorted\+Dictionary$<$uint,\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}}$>$ Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List\+Builder.\+Neuron\+Dictionary\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the builder\textquotesingle{}s dictionary of neuron I\+Ds obtained from contained connection gene endpoints. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Connection\+Gene\+List\+Builder.\+cs\end{DoxyCompactItemize}

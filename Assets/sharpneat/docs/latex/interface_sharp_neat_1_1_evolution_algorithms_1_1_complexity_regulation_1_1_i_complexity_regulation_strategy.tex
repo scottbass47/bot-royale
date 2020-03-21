@@ -1,0 +1,47 @@
+\hypertarget{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}{}\doxysection{Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+I\+Complexity\+Regulation\+Strategy Interface Reference}
+\label{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}\index{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.IComplexityRegulationStrategy@{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.IComplexityRegulationStrategy}}
+
+
+Represents a complexity regulation strategy.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+I\+Complexity\+Regulation\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.056604cm]{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a636dd33f0677ae06ac6bc24486ecfd7f}{Complexity\+Regulation\+Mode}} \mbox{\hyperlink{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_a4a0005fc6b82cb1dff2abde7d3fde5c9}{Determine\+Mode}} (\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats}{Neat\+Algorithm\+Stats}} stats)
+\begin{DoxyCompactList}\small\item\em Determine which complexity regulation mode the search should be in given the provided N\+E\+AT algorithm stats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a complexity regulation strategy. 
+
+\mbox{\hyperlink{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_a4a0005fc6b82cb1dff2abde7d3fde5c9}{Determine\+Mode()}} is called once per generation. The strategy can determine (and return) which mode the overall search should be in by examining the stats passed to the method. Thus the simplest strategy is to just return \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a636dd33f0677ae06ac6bc24486ecfd7fa0839c8f3dfc4a4256ae6ff9018158f7f}{Complexity\+Regulation\+Mode.\+Complexifying}}; this results in no complexity regulation.
+
+Complexity regulation was known as phased search in Sharp\+N\+E\+AT Version 1. For more information see\+: Phased Searching with N\+E\+AT\+: Alternating Between Complexification And Simplification, Colin Green, 2004 (\href{http://sharpneat.sourceforge.net/phasedsearch.html}{\texttt{ http\+://sharpneat.\+sourceforge.\+net/phasedsearch.\+html}})
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_a4a0005fc6b82cb1dff2abde7d3fde5c9}\label{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_a4a0005fc6b82cb1dff2abde7d3fde5c9}} 
+\index{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.IComplexityRegulationStrategy@{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.IComplexityRegulationStrategy}!DetermineMode@{DetermineMode}}
+\index{DetermineMode@{DetermineMode}!SharpNeat.EvolutionAlgorithms.ComplexityRegulation.IComplexityRegulationStrategy@{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.IComplexityRegulationStrategy}}
+\doxysubsubsection{\texorpdfstring{DetermineMode()}{DetermineMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a636dd33f0677ae06ac6bc24486ecfd7f}{Complexity\+Regulation\+Mode}} Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+I\+Complexity\+Regulation\+Strategy.\+Determine\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats}{Neat\+Algorithm\+Stats}}}]{stats }\end{DoxyParamCaption})}
+
+
+
+Determine which complexity regulation mode the search should be in given the provided N\+E\+AT algorithm stats. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy_a2451a81d8c36f08f998cd0c38e1ff013}{Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+Default\+Complexity\+Regulation\+Strategy}}, and \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_null_complexity_regulation_strategy_a65a5b162b720385f3a3b9b52b3a0ce55}{Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+Null\+Complexity\+Regulation\+Strategy}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evolution\+Algorithms/\+Complexity\+Regulation/I\+Complexity\+Regulation\+Strategy.\+cs\end{DoxyCompactItemize}

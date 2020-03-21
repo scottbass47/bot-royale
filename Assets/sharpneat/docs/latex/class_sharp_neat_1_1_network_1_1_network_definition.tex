@@ -1,0 +1,162 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_network_definition}{}\doxysection{Sharp\+Neat.\+Network.\+Network\+Definition Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_network_definition}\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+
+
+Concrete implementation of \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}}. This class represents network definitions independently of any other requirements, e.\+g. a Neat\+Genome is also an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} but with additional baggage. This class is useful for representing network definitions, e.\+g. when creating a network instance from a Hyper\+N\+E\+AT substrate.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Network\+Definition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_network_definition}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_aa6f9905aba831dda969de65049133b40}{Network\+Definition}} (int input\+Node\+Count, int output\+Node\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Lib, \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list}{Node\+List}} node\+List, \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_connection_list}{Connection\+List}} connection\+List)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided input/output node count, activation function library, node and connection lists. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_a0b94a695fa55b2c47ca7fe33097b5450}{Network\+Definition}} (int input\+Node\+Count, int output\+Node\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Lib, \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list}{Node\+List}} node\+List, \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_connection_list}{Connection\+List}} connection\+List, bool is\+Acyclic)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided input/output node count, activation function library, node and connection lists. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_connectivity_data}{Network\+Connectivity\+Data}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_a1d7b830bd5bd86d7cb40f45ef1c55e9d}{Get\+Connectivity\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Gets \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_connectivity_data}{Network\+Connectivity\+Data}} for the network. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_ab0439d85c74e88894600761ce33dab1b}{Perform\+Integrity\+Check}} ()
+\begin{DoxyCompactList}\small\item\em Performs an integrity check on the network definition. Returns true if OK. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_a9ebca140515f5a5616f9086ced455e09}{Input\+Node\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of input nodes. This does not include the bias node which is always present. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_a57ccb0887fafd09c65cc7ac51ac7591e}{Output\+Node\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of output nodes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_ade74f74447a1f72475af679842d19651}{Is\+Acyclic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a bool flag that indicates if the network is acyclic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_a93cb9902bde372ed2745701f7c196cd5}{Activation\+Fn\+Library}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the network\textquotesingle{}s activation function library. The activation function at each node is represented by an integer ID, which refers to a function in this library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list}{I\+Node\+List}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_a2a44cebaa2255f8370ca967d95d71000}{Node\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of network nodes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_connection_list}{I\+Connection\+List}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_definition_af22ba7e18db43818a458f3dcd259a2b3}{Connection\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of network connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete implementation of \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}}. This class represents network definitions independently of any other requirements, e.\+g. a Neat\+Genome is also an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} but with additional baggage. This class is useful for representing network definitions, e.\+g. when creating a network instance from a Hyper\+N\+E\+AT substrate. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_aa6f9905aba831dda969de65049133b40}\label{class_sharp_neat_1_1_network_1_1_network_definition_aa6f9905aba831dda969de65049133b40}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!NetworkDefinition@{NetworkDefinition}}
+\index{NetworkDefinition@{NetworkDefinition}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{NetworkDefinition()}{NetworkDefinition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Network.\+Network\+Definition.\+Network\+Definition (\begin{DoxyParamCaption}\item[{int}]{input\+Node\+Count,  }\item[{int}]{output\+Node\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Lib,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list}{Node\+List}}}]{node\+List,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_connection_list}{Connection\+List}}}]{connection\+List }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided input/output node count, activation function library, node and connection lists. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_a0b94a695fa55b2c47ca7fe33097b5450}\label{class_sharp_neat_1_1_network_1_1_network_definition_a0b94a695fa55b2c47ca7fe33097b5450}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!NetworkDefinition@{NetworkDefinition}}
+\index{NetworkDefinition@{NetworkDefinition}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{NetworkDefinition()}{NetworkDefinition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Network.\+Network\+Definition.\+Network\+Definition (\begin{DoxyParamCaption}\item[{int}]{input\+Node\+Count,  }\item[{int}]{output\+Node\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Lib,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list}{Node\+List}}}]{node\+List,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_connection_list}{Connection\+List}}}]{connection\+List,  }\item[{bool}]{is\+Acyclic }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided input/output node count, activation function library, node and connection lists. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_a1d7b830bd5bd86d7cb40f45ef1c55e9d}\label{class_sharp_neat_1_1_network_1_1_network_definition_a1d7b830bd5bd86d7cb40f45ef1c55e9d}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!GetConnectivityData@{GetConnectivityData}}
+\index{GetConnectivityData@{GetConnectivityData}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{GetConnectivityData()}{GetConnectivityData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_connectivity_data}{Network\+Connectivity\+Data}} Sharp\+Neat.\+Network.\+Network\+Definition.\+Get\+Connectivity\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_connectivity_data}{Network\+Connectivity\+Data}} for the network. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition_af591ea747d161b6a0abbd2b94ebdce94}{Sharp\+Neat.\+Network.\+I\+Network\+Definition}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_ab0439d85c74e88894600761ce33dab1b}\label{class_sharp_neat_1_1_network_1_1_network_definition_ab0439d85c74e88894600761ce33dab1b}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!PerformIntegrityCheck@{PerformIntegrityCheck}}
+\index{PerformIntegrityCheck@{PerformIntegrityCheck}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{PerformIntegrityCheck()}{PerformIntegrityCheck()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Network\+Definition.\+Perform\+Integrity\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs an integrity check on the network definition. Returns true if OK. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_a93cb9902bde372ed2745701f7c196cd5}\label{class_sharp_neat_1_1_network_1_1_network_definition_a93cb9902bde372ed2745701f7c196cd5}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!ActivationFnLibrary@{ActivationFnLibrary}}
+\index{ActivationFnLibrary@{ActivationFnLibrary}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{ActivationFnLibrary}{ActivationFnLibrary}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} Sharp\+Neat.\+Network.\+Network\+Definition.\+Activation\+Fn\+Library\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the network\textquotesingle{}s activation function library. The activation function at each node is represented by an integer ID, which refers to a function in this library. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_af22ba7e18db43818a458f3dcd259a2b3}\label{class_sharp_neat_1_1_network_1_1_network_definition_af22ba7e18db43818a458f3dcd259a2b3}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!ConnectionList@{ConnectionList}}
+\index{ConnectionList@{ConnectionList}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{ConnectionList}{ConnectionList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_connection_list}{I\+Connection\+List}} Sharp\+Neat.\+Network.\+Network\+Definition.\+Connection\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of network connections. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_a9ebca140515f5a5616f9086ced455e09}\label{class_sharp_neat_1_1_network_1_1_network_definition_a9ebca140515f5a5616f9086ced455e09}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!InputNodeCount@{InputNodeCount}}
+\index{InputNodeCount@{InputNodeCount}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{InputNodeCount}{InputNodeCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Network.\+Network\+Definition.\+Input\+Node\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of input nodes. This does not include the bias node which is always present. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_ade74f74447a1f72475af679842d19651}\label{class_sharp_neat_1_1_network_1_1_network_definition_ade74f74447a1f72475af679842d19651}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!IsAcyclic@{IsAcyclic}}
+\index{IsAcyclic@{IsAcyclic}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{IsAcyclic}{IsAcyclic}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Network\+Definition.\+Is\+Acyclic\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a bool flag that indicates if the network is acyclic. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_a2a44cebaa2255f8370ca967d95d71000}\label{class_sharp_neat_1_1_network_1_1_network_definition_a2a44cebaa2255f8370ca967d95d71000}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!NodeList@{NodeList}}
+\index{NodeList@{NodeList}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{NodeList}{NodeList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list}{I\+Node\+List}} Sharp\+Neat.\+Network.\+Network\+Definition.\+Node\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of network nodes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_definition_a57ccb0887fafd09c65cc7ac51ac7591e}\label{class_sharp_neat_1_1_network_1_1_network_definition_a57ccb0887fafd09c65cc7ac51ac7591e}} 
+\index{SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}!OutputNodeCount@{OutputNodeCount}}
+\index{OutputNodeCount@{OutputNodeCount}!SharpNeat.Network.NetworkDefinition@{SharpNeat.Network.NetworkDefinition}}
+\doxysubsubsection{\texorpdfstring{OutputNodeCount}{OutputNodeCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Network.\+Network\+Definition.\+Output\+Node\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of output nodes. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/Network\+Definition.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\hypertarget{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy}{}\doxysection{Sharp\+Neat.\+Core.\+I\+Speciation\+Strategy$<$ T\+Genome $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy}\index{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$@{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$}}
+
+
+Represents a strategy for dividing genomes into distinct species.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Core.\+I\+Speciation\+Strategy$<$ T\+Genome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.789288cm]{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$ $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_aa45848dcb55ab4f14377b3fda8026888}{Initialize\+Speciation}} (I\+List$<$ T\+Genome $>$ genome\+List, int specie\+Count)
+\begin{DoxyCompactList}\small\item\em Speciates the genomes in genome\+List into the number of species specified by specie\+Count and returns a newly constructed list of \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}} objects containing the speciated genomes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_accf33587b0ef0339a388228cbe5cefa0}{Speciate\+Genomes}} (I\+List$<$ T\+Genome $>$ genome\+List, I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$$>$ specie\+List)
+\begin{DoxyCompactList}\small\item\em Speciates the genomes in genome\+List into the provided species. It is assumed that the genome\+List represents all of the required genomes and that the species are currently empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_a36e42694aaf454d9d5ee7161ad24a9a4}{Speciate\+Offspring}} (I\+List$<$ T\+Genome $>$ genome\+List, I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$$>$ specie\+List)
+\begin{DoxyCompactList}\small\item\em Speciates the offspring genomes in genome\+List into the provided species. In contrast to \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_accf33587b0ef0339a388228cbe5cefa0}{Speciate\+Genomes()}} genome\+List is taken to be a list of new genomes (e.\+g. offspring) that should be added to existing species. That is, the specie\+List contain genomes that are not in genome\+List that we wish to keep; typically these would be elite genomes that are the parents of the offspring. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a strategy for dividing genomes into distinct species. 
+
+Speciation in N\+E\+AT is the process of dividing genomes in the population into distinct sub-\/populations (species) based on genome similarity, that is, we want similar genomes to be in the same specie so that they form a gene pool that is more likely to produce fit offspring. This type of speciation is very much like the concept of clustering as used in the fields of computer science and data mining. This interface allows us to abstract the implementation of the speciation/clustering algorithm away from the main N\+E\+AT algorithm.
+
+Each cluster/specie is assigned an ID that is in turn assigned to the genomes in the cluster. In addition each instance of the \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}} class contains a list of all genomes within that specie.\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em class}]\item[{\em T\+Genome} : {\em \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}}$<$T\+Genome$>$}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_aa45848dcb55ab4f14377b3fda8026888}\label{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_aa45848dcb55ab4f14377b3fda8026888}} 
+\index{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$@{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$}!InitializeSpeciation@{InitializeSpeciation}}
+\index{InitializeSpeciation@{InitializeSpeciation}!SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$@{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{InitializeSpeciation()}{InitializeSpeciation()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$T\+Genome$>$ $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy}{Sharp\+Neat.\+Core.\+I\+Speciation\+Strategy}}$<$ T\+Genome $>$.Initialize\+Speciation (\begin{DoxyParamCaption}\item[{I\+List$<$ T\+Genome $>$}]{genome\+List,  }\item[{int}]{specie\+Count }\end{DoxyParamCaption})}
+
+
+
+Speciates the genomes in genome\+List into the number of species specified by specie\+Count and returns a newly constructed list of \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}} objects containing the speciated genomes. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_a82095b54b1fee3218d8c54cab8a6565b}{Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy$<$ T\+Genome $>$}}, \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_k_means_clustering_strategy_ac46e60e48f4e453e929dd2bee91be858}{Sharp\+Neat.\+Speciation\+Strategies.\+K\+Means\+Clustering\+Strategy$<$ T\+Genome $>$}}, and \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_random_clustering_strategy_a91d93c71a8233dddf0a5e79477dfde63}{Sharp\+Neat.\+Speciation\+Strategies.\+Random\+Clustering\+Strategy$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_accf33587b0ef0339a388228cbe5cefa0}\label{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_accf33587b0ef0339a388228cbe5cefa0}} 
+\index{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$@{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$}!SpeciateGenomes@{SpeciateGenomes}}
+\index{SpeciateGenomes@{SpeciateGenomes}!SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$@{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{SpeciateGenomes()}{SpeciateGenomes()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy}{Sharp\+Neat.\+Core.\+I\+Speciation\+Strategy}}$<$ T\+Genome $>$.Speciate\+Genomes (\begin{DoxyParamCaption}\item[{I\+List$<$ T\+Genome $>$}]{genome\+List,  }\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$$>$}]{specie\+List }\end{DoxyParamCaption})}
+
+
+
+Speciates the genomes in genome\+List into the provided species. It is assumed that the genome\+List represents all of the required genomes and that the species are currently empty. 
+
+This method can be used for initialization or completely re-\/speciating an existing genome population.
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_abcede60c7e77a148139d364aa2e7e828}{Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy$<$ T\+Genome $>$}}, \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_k_means_clustering_strategy_abc2329125f8e9a61731a07a24f98f150}{Sharp\+Neat.\+Speciation\+Strategies.\+K\+Means\+Clustering\+Strategy$<$ T\+Genome $>$}}, and \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_random_clustering_strategy_a7d7383921ffa05cba8be7e2bdb25a084}{Sharp\+Neat.\+Speciation\+Strategies.\+Random\+Clustering\+Strategy$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_a36e42694aaf454d9d5ee7161ad24a9a4}\label{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_a36e42694aaf454d9d5ee7161ad24a9a4}} 
+\index{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$@{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$}!SpeciateOffspring@{SpeciateOffspring}}
+\index{SpeciateOffspring@{SpeciateOffspring}!SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$@{SharpNeat.Core.ISpeciationStrategy$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{SpeciateOffspring()}{SpeciateOffspring()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy}{Sharp\+Neat.\+Core.\+I\+Speciation\+Strategy}}$<$ T\+Genome $>$.Speciate\+Offspring (\begin{DoxyParamCaption}\item[{I\+List$<$ T\+Genome $>$}]{genome\+List,  }\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$$>$}]{specie\+List }\end{DoxyParamCaption})}
+
+
+
+Speciates the offspring genomes in genome\+List into the provided species. In contrast to \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_accf33587b0ef0339a388228cbe5cefa0}{Speciate\+Genomes()}} genome\+List is taken to be a list of new genomes (e.\+g. offspring) that should be added to existing species. That is, the specie\+List contain genomes that are not in genome\+List that we wish to keep; typically these would be elite genomes that are the parents of the offspring. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_a0c5047e334ba4541db3e41a5d3a602ea}{Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy$<$ T\+Genome $>$}}, \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_k_means_clustering_strategy_a10e858cd0ff5dc35a2bd8433caaaeaac}{Sharp\+Neat.\+Speciation\+Strategies.\+K\+Means\+Clustering\+Strategy$<$ T\+Genome $>$}}, and \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_random_clustering_strategy_a2cc7e09db03acf69310b2cb50c0a7c1e}{Sharp\+Neat.\+Speciation\+Strategies.\+Random\+Clustering\+Strategy$<$ T\+Genome $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/I\+Speciation\+Strategy.\+cs\end{DoxyCompactItemize}

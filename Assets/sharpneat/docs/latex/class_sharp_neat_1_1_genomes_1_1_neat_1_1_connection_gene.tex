@@ -1,0 +1,134 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}\index{SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}}
+
+
+A gene that represents a single connection between neurons in N\+E\+AT.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a96a1e1f0ef3d566b46291222fa2018ea}{Connection\+Gene}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} copy\+From)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a6b19121e27ff81d852a166c840b0a77b}{Connection\+Gene}} (uint innovation\+Id, uint source\+Node\+Id, uint target\+Node\+Id, double weight)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} with the specified source and target neurons and connection weight. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a1056b1680d898ddb898fa88865050f43}{Create\+Copy}} ()
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current gene. Virtual method that can be overridden by sub-\/types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a63913de73d576a3eca245e50dc5df926}{Innovation\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the gene\textquotesingle{}s innovation ID. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_adb38d8edec666d87bb079a2369b29150}{Source\+Node\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the gene\textquotesingle{}s source neuron/node ID. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a27a7b3b1ad3cdb6a1e59099eb5afb205}{Target\+Node\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the gene\textquotesingle{}s target neuron/node ID. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a9e74b0e6bd558ea15bdebac0f9a28194}{Weight}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the gene\textquotesingle{}s connection weight. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_abfddf8f1bfa680bffba5898a0a83ec2b}{Is\+Mutated}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a value indicating whether this gene has been mutated. This allows the mutation routine to avoid mutating genes it has already operated on. These flags are reset for all Connection genes within a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} on exiting the mutation routine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A gene that represents a single connection between neurons in N\+E\+AT. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a96a1e1f0ef3d566b46291222fa2018ea}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a96a1e1f0ef3d566b46291222fa2018ea}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}!ConnectionGene@{ConnectionGene}}
+\index{ConnectionGene@{ConnectionGene}!SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}}
+\doxysubsubsection{\texorpdfstring{ConnectionGene()}{ConnectionGene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene.\+Connection\+Gene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}}}]{copy\+From }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a6b19121e27ff81d852a166c840b0a77b}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a6b19121e27ff81d852a166c840b0a77b}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}!ConnectionGene@{ConnectionGene}}
+\index{ConnectionGene@{ConnectionGene}!SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}}
+\doxysubsubsection{\texorpdfstring{ConnectionGene()}{ConnectionGene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene.\+Connection\+Gene (\begin{DoxyParamCaption}\item[{uint}]{innovation\+Id,  }\item[{uint}]{source\+Node\+Id,  }\item[{uint}]{target\+Node\+Id,  }\item[{double}]{weight }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} with the specified source and target neurons and connection weight. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a1056b1680d898ddb898fa88865050f43}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a1056b1680d898ddb898fa88865050f43}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}!CreateCopy@{CreateCopy}}
+\index{CreateCopy@{CreateCopy}!SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}}
+\doxysubsubsection{\texorpdfstring{CreateCopy()}{CreateCopy()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene.\+Create\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a copy of the current gene. Virtual method that can be overridden by sub-\/types. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a63913de73d576a3eca245e50dc5df926}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a63913de73d576a3eca245e50dc5df926}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}!InnovationId@{InnovationId}}
+\index{InnovationId@{InnovationId}!SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}}
+\doxysubsubsection{\texorpdfstring{InnovationId}{InnovationId}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene.\+Innovation\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the gene\textquotesingle{}s innovation ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_abfddf8f1bfa680bffba5898a0a83ec2b}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_abfddf8f1bfa680bffba5898a0a83ec2b}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}!IsMutated@{IsMutated}}
+\index{IsMutated@{IsMutated}!SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}}
+\doxysubsubsection{\texorpdfstring{IsMutated}{IsMutated}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene.\+Is\+Mutated\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a value indicating whether this gene has been mutated. This allows the mutation routine to avoid mutating genes it has already operated on. These flags are reset for all Connection genes within a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} on exiting the mutation routine. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_adb38d8edec666d87bb079a2369b29150}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_adb38d8edec666d87bb079a2369b29150}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}!SourceNodeId@{SourceNodeId}}
+\index{SourceNodeId@{SourceNodeId}!SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}}
+\doxysubsubsection{\texorpdfstring{SourceNodeId}{SourceNodeId}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene.\+Source\+Node\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the gene\textquotesingle{}s source neuron/node ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a27a7b3b1ad3cdb6a1e59099eb5afb205}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a27a7b3b1ad3cdb6a1e59099eb5afb205}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}!TargetNodeId@{TargetNodeId}}
+\index{TargetNodeId@{TargetNodeId}!SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}}
+\doxysubsubsection{\texorpdfstring{TargetNodeId}{TargetNodeId}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene.\+Target\+Node\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the gene\textquotesingle{}s target neuron/node ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a9e74b0e6bd558ea15bdebac0f9a28194}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_a9e74b0e6bd558ea15bdebac0f9a28194}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}!Weight@{Weight}}
+\index{Weight@{Weight}!SharpNeat.Genomes.Neat.ConnectionGene@{SharpNeat.Genomes.Neat.ConnectionGene}}
+\doxysubsubsection{\texorpdfstring{Weight}{Weight}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene.\+Weight\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the gene\textquotesingle{}s connection weight. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Connection\+Gene.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,149 @@
+\hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome}{}\doxysection{Sharp\+Neat.\+Core.\+I\+Genome$<$ T\+Genome $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_core_1_1_i_genome}\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+
+
+Generic interface for genome classes.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T\+Genome \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_aaa6484beaf3243a4759c72565dc3f8f0}{Create\+Offspring}} (uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Asexual reproduction. \end{DoxyCompactList}\item 
+T\+Genome \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_a8e767c30df32fbdeb6dbc830d3a5d329}{Create\+Offspring}} (T\+Genome parent, uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Sexual reproduction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_adc456248b1a46c5f2c3f4da2b493d1dc}{Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the genome\textquotesingle{}s unique ID. I\+Ds are unique across all genomes created from a single \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_af17ce924810fe124cfe2fe434d095858}{Specie\+Idx}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a specie index. An implementation of this is required only when using evolution algorithms that speciate genomes. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_a1132e35f19e4a786bc2e0fc307900c0f}{Birth\+Generation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the generation that this genome was born/created in. Used to track genome age. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info}{Evaluation\+Info}} \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_af9ddaffb9fe4bc7684ec2f35dd362bc6}{Evaluation\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the evaluation information for the genome, including its fitness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_aa2df78508b0656bef8aab3ce10d6bbca}{Complexity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value that indicates the magnitude of a genome\textquotesingle{}s complexity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_a3e7c6cc60adbd5883c56bc7de347abe7}{Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a coordinate that represents the genome\textquotesingle{}s position in the search space (also known as the genetic encoding space). This allows speciation/clustering algorithms to operate on an abstract coordinate data type rather than being coded against specific \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}} types. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_a61984c8cc113697a1304d99262bca962}{Cached\+Phenome}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a cached phenome obtained from decoding the genome. \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes}{Genomes}} are typically decoded to \mbox{\hyperlink{namespace_sharp_neat_1_1_phenomes}{Phenomes}} for evaluation. This property allows decoders to cache the phenome in order to avoid decoding on each re-\/evaluation; However, this is optional. The phenome in un-\/typed to prevent the class framework from becoming overly complex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic interface for genome classes. 
+
+Concrete \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}} classes are expected to be given a reference to their concrete \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}} class even if they are spawned from another \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}}. This allows all genomes to use the same set of parameters for spawning -\/ which may change during evolution, e.\+g. in the case of phased searching in N\+E\+AT.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_a8e767c30df32fbdeb6dbc830d3a5d329}\label{interface_sharp_neat_1_1_core_1_1_i_genome_a8e767c30df32fbdeb6dbc830d3a5d329}} 
+\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}!CreateOffspring@{CreateOffspring}}
+\index{CreateOffspring@{CreateOffspring}!SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CreateOffspring()}{CreateOffspring()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T\+Genome \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{Sharp\+Neat.\+Core.\+I\+Genome}}$<$ T\+Genome $>$.Create\+Offspring (\begin{DoxyParamCaption}\item[{T\+Genome}]{parent,  }\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})}
+
+
+
+Sexual reproduction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The other parent genome.\\
+\hline
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genome at its birth generation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_aaa6484beaf3243a4759c72565dc3f8f0}\label{interface_sharp_neat_1_1_core_1_1_i_genome_aaa6484beaf3243a4759c72565dc3f8f0}} 
+\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}!CreateOffspring@{CreateOffspring}}
+\index{CreateOffspring@{CreateOffspring}!SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CreateOffspring()}{CreateOffspring()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T\+Genome \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{Sharp\+Neat.\+Core.\+I\+Genome}}$<$ T\+Genome $>$.Create\+Offspring (\begin{DoxyParamCaption}\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})}
+
+
+
+Asexual reproduction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genome at its birth generation.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_a1132e35f19e4a786bc2e0fc307900c0f}\label{interface_sharp_neat_1_1_core_1_1_i_genome_a1132e35f19e4a786bc2e0fc307900c0f}} 
+\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}!BirthGeneration@{BirthGeneration}}
+\index{BirthGeneration@{BirthGeneration}!SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{BirthGeneration}{BirthGeneration}}
+{\footnotesize\ttfamily uint \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{Sharp\+Neat.\+Core.\+I\+Genome}}$<$ T\+Genome $>$.Birth\+Generation\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the generation that this genome was born/created in. Used to track genome age. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_a61984c8cc113697a1304d99262bca962}\label{interface_sharp_neat_1_1_core_1_1_i_genome_a61984c8cc113697a1304d99262bca962}} 
+\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}!CachedPhenome@{CachedPhenome}}
+\index{CachedPhenome@{CachedPhenome}!SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CachedPhenome}{CachedPhenome}}
+{\footnotesize\ttfamily object \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{Sharp\+Neat.\+Core.\+I\+Genome}}$<$ T\+Genome $>$.Cached\+Phenome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a cached phenome obtained from decoding the genome. \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes}{Genomes}} are typically decoded to \mbox{\hyperlink{namespace_sharp_neat_1_1_phenomes}{Phenomes}} for evaluation. This property allows decoders to cache the phenome in order to avoid decoding on each re-\/evaluation; However, this is optional. The phenome in un-\/typed to prevent the class framework from becoming overly complex. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_aa2df78508b0656bef8aab3ce10d6bbca}\label{interface_sharp_neat_1_1_core_1_1_i_genome_aa2df78508b0656bef8aab3ce10d6bbca}} 
+\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}!Complexity@{Complexity}}
+\index{Complexity@{Complexity}!SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Complexity}{Complexity}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{Sharp\+Neat.\+Core.\+I\+Genome}}$<$ T\+Genome $>$.Complexity\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value that indicates the magnitude of a genome\textquotesingle{}s complexity. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_af9ddaffb9fe4bc7684ec2f35dd362bc6}\label{interface_sharp_neat_1_1_core_1_1_i_genome_af9ddaffb9fe4bc7684ec2f35dd362bc6}} 
+\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}!EvaluationInfo@{EvaluationInfo}}
+\index{EvaluationInfo@{EvaluationInfo}!SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluationInfo}{EvaluationInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info}{Evaluation\+Info}} \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{Sharp\+Neat.\+Core.\+I\+Genome}}$<$ T\+Genome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info}{Evaluation\+Info}}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the evaluation information for the genome, including its fitness. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_adc456248b1a46c5f2c3f4da2b493d1dc}\label{interface_sharp_neat_1_1_core_1_1_i_genome_adc456248b1a46c5f2c3f4da2b493d1dc}} 
+\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}!Id@{Id}}
+\index{Id@{Id}!SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily uint \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{Sharp\+Neat.\+Core.\+I\+Genome}}$<$ T\+Genome $>$.Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the genome\textquotesingle{}s unique ID. I\+Ds are unique across all genomes created from a single \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_a3e7c6cc60adbd5883c56bc7de347abe7}\label{interface_sharp_neat_1_1_core_1_1_i_genome_a3e7c6cc60adbd5883c56bc7de347abe7}} 
+\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}!Position@{Position}}
+\index{Position@{Position}!SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{Sharp\+Neat.\+Core.\+I\+Genome}}$<$ T\+Genome $>$.Position\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a coordinate that represents the genome\textquotesingle{}s position in the search space (also known as the genetic encoding space). This allows speciation/clustering algorithms to operate on an abstract coordinate data type rather than being coded against specific \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}} types. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_af17ce924810fe124cfe2fe434d095858}\label{interface_sharp_neat_1_1_core_1_1_i_genome_af17ce924810fe124cfe2fe434d095858}} 
+\index{SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}!SpecieIdx@{SpecieIdx}}
+\index{SpecieIdx@{SpecieIdx}!SharpNeat.Core.IGenome$<$ TGenome $>$@{SharpNeat.Core.IGenome$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{SpecieIdx}{SpecieIdx}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{Sharp\+Neat.\+Core.\+I\+Genome}}$<$ T\+Genome $>$.Specie\+Idx\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a specie index. An implementation of this is required only when using evolution algorithms that speciate genomes. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/I\+Genome.\+cs\end{DoxyCompactItemize}

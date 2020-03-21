@@ -1,0 +1,179 @@
+\hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{}\doxysection{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network Class Reference}
+\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}\index{SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}}
+
+
+This class is provided for debugging and educational purposes. \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} is functionally equivalent and is much faster and therefore should be used instead of \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}} in most circumstances.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_aa10e7290af8b39811ee00963ec6452bb}{Cyclic\+Network}} (List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_neuron}{Neuron}} $>$ neuron\+List, List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_connection}{Connection}} $>$ connection\+List, int input\+Neuron\+Count, int output\+Neuron\+Count, int timesteps\+Per\+Activation, bool bounded\+Output)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}} with the provided pre-\/built neurons and connections. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ab2c186054ce66a9a31d300b995ae6807}{Activate}} ()
+\begin{DoxyCompactList}\small\item\em Activate the network for a fixed number of timesteps defined by max\+Timesteps is reached. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a9c3ccd270f68b243a9db8b08696985ac}{Reset\+State}} ()
+\begin{DoxyCompactList}\small\item\em Reset the network\textquotesingle{}s internal state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a657cd6f681df9332459f25776f015fac}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a657cd6f681df9332459f25776f015fac}} 
+readonly List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_neuron}{Neuron}} $>$ {\bfseries \+\_\+neuron\+List}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a658778257a65574ff16b1d9e207fab61}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a658778257a65574ff16b1d9e207fab61}} 
+readonly List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_connection}{Connection}} $>$ {\bfseries \+\_\+connection\+List}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af4f05d85fb5f1c60f808aa06c0115360}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af4f05d85fb5f1c60f808aa06c0115360}} 
+readonly int {\bfseries \+\_\+input\+Neuron\+Count}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af2b8de0f0eb7ad0ce0ae5b021404eac0}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af2b8de0f0eb7ad0ce0ae5b021404eac0}} 
+readonly int {\bfseries \+\_\+output\+Neuron\+Count}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a5e663b54aaa0909a85c5b52f92192176}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a5e663b54aaa0909a85c5b52f92192176}} 
+readonly int {\bfseries \+\_\+input\+And\+Bias\+Neuron\+Count}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ac0e33e4ab6d832c670c8801a2c57bb51}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ac0e33e4ab6d832c670c8801a2c57bb51}} 
+readonly int {\bfseries \+\_\+timesteps\+Per\+Activation}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_adb1e3288ac5959c6e1d78cb3c135cc2c}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_adb1e3288ac5959c6e1d78cb3c135cc2c}} 
+readonly double\mbox{[}$\,$\mbox{]} {\bfseries \+\_\+input\+Signal\+Array}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a58c50495006dd9169a1f42113291a236}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a58c50495006dd9169a1f42113291a236}} 
+readonly double\mbox{[}$\,$\mbox{]} {\bfseries \+\_\+output\+Signal\+Array}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af2aae94e559ec4b9ba8971730b2c3e74}{Input\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of inputs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a487c10b5833809bd112fa9a3260f43cb}{Output\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of outputs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ae77d46d50ae9aceeff5ecd72bce41138}{Input\+Signal\+Array}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array for feeding input signals to the network. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ab1b913dd7a180e215dc4f213d4e58c24}{Output\+Signal\+Array}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array of output signals from the network. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af655d38ac695770ec29583edb968895b}{Is\+State\+Valid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether the internal state is valid. Always returns true for this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is provided for debugging and educational purposes. \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} is functionally equivalent and is much faster and therefore should be used instead of \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}} in most circumstances. 
+
+A neural network class that represents a network with recurrent (cyclic) connections. Recurrent connections are handled by each neuron storing two values, a pre-\/ and post-\/activation value (Input\+Value and Output\+Value). This allows us to calculate the output value for the current iteration/timestep without modifying the output values from the previous iteration. That is, we calculate all of this timestep\textquotesingle{}s state based on state from the previous timestep.
+
+When activating networks of this class the network\textquotesingle{}s state is updated for a fixed number of timesteps, the number of which is specified by the max\+Iterations parameter on the constructor. See \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_relaxing_cyclic_network}{Relaxing\+Cyclic\+Network}} for an alternative activation scheme.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_aa10e7290af8b39811ee00963ec6452bb}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_aa10e7290af8b39811ee00963ec6452bb}} 
+\index{SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}!CyclicNetwork@{CyclicNetwork}}
+\index{CyclicNetwork@{CyclicNetwork}!SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{CyclicNetwork()}{CyclicNetwork()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network.\+Cyclic\+Network (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_neuron}{Neuron}} $>$}]{neuron\+List,  }\item[{List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_connection}{Connection}} $>$}]{connection\+List,  }\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{int}]{timesteps\+Per\+Activation,  }\item[{bool}]{bounded\+Output }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network}{Cyclic\+Network}} with the provided pre-\/built neurons and connections. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ab2c186054ce66a9a31d300b995ae6807}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ab2c186054ce66a9a31d300b995ae6807}} 
+\index{SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}!Activate@{Activate}}
+\index{Activate@{Activate}!SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily virtual void Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network.\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Activate the network for a fixed number of timesteps defined by max\+Timesteps is reached. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a8b5d9624743a1dc3b0bf416a57496103}{Sharp\+Neat.\+Phenomes.\+I\+Black\+Box}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_relaxing_cyclic_network_adf57bf057fe4fc3bd90f7aaf56341a9b}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Relaxing\+Cyclic\+Network}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a9c3ccd270f68b243a9db8b08696985ac}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a9c3ccd270f68b243a9db8b08696985ac}} 
+\index{SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}!ResetState@{ResetState}}
+\index{ResetState@{ResetState}!SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{ResetState()}{ResetState()}}
+{\footnotesize\ttfamily virtual void Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network.\+Reset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reset the network\textquotesingle{}s internal state. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a7079f2f2a4f0b64e4e365207407bcdc6}{Sharp\+Neat.\+Phenomes.\+I\+Black\+Box}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_relaxing_cyclic_network_a95fc2d88a3943d6ef2d5c1d40cdf79c8}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Relaxing\+Cyclic\+Network}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af2aae94e559ec4b9ba8971730b2c3e74}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af2aae94e559ec4b9ba8971730b2c3e74}} 
+\index{SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}!InputCount@{InputCount}}
+\index{InputCount@{InputCount}!SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{InputCount}{InputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network.\+Input\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of inputs. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ae77d46d50ae9aceeff5ecd72bce41138}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ae77d46d50ae9aceeff5ecd72bce41138}} 
+\index{SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}!InputSignalArray@{InputSignalArray}}
+\index{InputSignalArray@{InputSignalArray}!SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{InputSignalArray}{InputSignalArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network.\+Input\+Signal\+Array\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array for feeding input signals to the network. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af655d38ac695770ec29583edb968895b}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_af655d38ac695770ec29583edb968895b}} 
+\index{SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}!IsStateValid@{IsStateValid}}
+\index{IsStateValid@{IsStateValid}!SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{IsStateValid}{IsStateValid}}
+{\footnotesize\ttfamily virtual bool Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network.\+Is\+State\+Valid\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether the internal state is valid. Always returns true for this class. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a487c10b5833809bd112fa9a3260f43cb}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_a487c10b5833809bd112fa9a3260f43cb}} 
+\index{SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}!OutputCount@{OutputCount}}
+\index{OutputCount@{OutputCount}!SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{OutputCount}{OutputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network.\+Output\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of outputs. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ab1b913dd7a180e215dc4f213d4e58c24}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_cyclic_network_ab1b913dd7a180e215dc4f213d4e58c24}} 
+\index{SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}!OutputSignalArray@{OutputSignalArray}}
+\index{OutputSignalArray@{OutputSignalArray}!SharpNeat.Phenomes.NeuralNets.CyclicNetwork@{SharpNeat.Phenomes.NeuralNets.CyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{OutputSignalArray}{OutputSignalArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Cyclic\+Network.\+Output\+Signal\+Array\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array of output signals from the network. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Phenomes/\+Neural\+Nets/\+Cyclic\+Network/Cyclic\+Network.\+cs\end{DoxyCompactItemize}

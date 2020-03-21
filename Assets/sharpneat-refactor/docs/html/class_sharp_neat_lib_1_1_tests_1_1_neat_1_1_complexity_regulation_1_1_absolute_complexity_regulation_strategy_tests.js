@@ -1,6 +1,0 @@
-var class_sharp_neat_lib_1_1_tests_1_1_neat_1_1_complexity_regulation_1_1_absolute_complexity_regulation_strategy_tests =
-[
-    [ "TestInitialisation", "class_sharp_neat_lib_1_1_tests_1_1_neat_1_1_complexity_regulation_1_1_absolute_complexity_regulation_strategy_tests.html#a570933e8e761cfc426d8f85ccf1ce53e", null ],
-    [ "TestTransitionToComplexifying", "class_sharp_neat_lib_1_1_tests_1_1_neat_1_1_complexity_regulation_1_1_absolute_complexity_regulation_strategy_tests.html#a3d4ea8a90af0b562fef2f78edff44e57", null ],
-    [ "TestTransitionToSimplifying", "class_sharp_neat_lib_1_1_tests_1_1_neat_1_1_complexity_regulation_1_1_absolute_complexity_regulation_strategy_tests.html#a0392b2abda9da1cd251e8d121009a46b", null ]
-];

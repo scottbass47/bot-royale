@@ -1,0 +1,173 @@
+\hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network}{}\doxysection{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network Class Reference}
+\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network}\index{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}}
+
+
+A neural network implementation for acyclic networks.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a7c28b82fff3eff9d35a17a4a24dea778}{Fast\+Acyclic\+Network}} (\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}}\mbox{[}$\,$\mbox{]} node\+Activation\+Fn\+Arr, double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} node\+Aux\+Args\+Arr, \mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_connection}{Fast\+Connection}}\mbox{[}$\,$\mbox{]} connection\+Arr, \mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_layer_info}{Layer\+Info}}\mbox{[}$\,$\mbox{]} layer\+Info\+Arr, int\mbox{[}$\,$\mbox{]} output\+Node\+Idx\+Arr, int node\+Count, int input\+Node\+Count, int output\+Node\+Count, bool bounded\+Output)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network}{Fast\+Acyclic\+Network}} with provided network definition data structures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_aa104bbb60365183a7ab93c8a9f90f249}{Activate}} ()
+\begin{DoxyCompactList}\small\item\em Activate the network. Activation reads input signals from Input\+Signal\+Array and writes output signals to \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_output_signal_array}{Output\+Signal\+Array}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a94fa8a91738d7ed08b0eda5e6cbb9f9b}{Reset\+State}} ()
+\begin{DoxyCompactList}\small\item\em Reset the network\textquotesingle{}s internal state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a708192824d7e81e7b2c89c4883d3e61e}{Input\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of inputs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a51038b1c7ba1b6bea42b9a366f0b9012}{Output\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of outputs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_aaf8235ae3fde78c5ea111dd0d45611b5}{Input\+Signal\+Array}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array for feeding input signals to the network. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a42791121f61ca60ebd0435bbe4bfaa63}{Output\+Signal\+Array}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an array of output signals from the network. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a7aa40734686e6d574814497cb7fdd6f8}{Is\+State\+Valid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether the internal state is valid. Always returns true for this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A neural network implementation for acyclic networks. 
+
+Activation of acyclic networks can be far more efficient than cyclic networks because we can activate the network by propagating a signal \textquotesingle{}wave\textquotesingle{} from the input nodes through each depth layer through to the output nodes, thus each node requires activating only once at most, whereas in cyclic networks we have to activate each node multiple times and we must have a scheme for determining when to stop activating.
+
+Algorithm Overview. 1) The nodes are assigned a depth number based on how many connection hops they are from an input node. Where multiple paths to a node exist the longest path determines the node\textquotesingle{}s depth.
+
+2) Connections are similarly assigned a depth value which is defined as the depth of a connection\textquotesingle{}s source node.
+
+Note. Steps 1 and 2 are actually performed by Fast\+Acyclic\+Network\+Factory.
+
+3) Reset all node activation values to zero. This resets any state from a previous activation.
+
+4) Each layer of the network can now be activated in turn to propagate the signals on the input nodes through the network. Input nodes do no apply an activation function so we start by activating the connections on the first layer (depth == 0), this accumulates node pre-\/activation signals on all of the target nodes which can be anywhere from depth 1 to the highest depth level. Having done this we apply the node activation function for all nodes at the layer 1 because we can now guarantee that there will be no more incoming signals to those nodes. Repeat for all remaining layers in turn.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a7c28b82fff3eff9d35a17a4a24dea778}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a7c28b82fff3eff9d35a17a4a24dea778}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}!FastAcyclicNetwork@{FastAcyclicNetwork}}
+\index{FastAcyclicNetwork@{FastAcyclicNetwork}!SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{FastAcyclicNetwork()}{FastAcyclicNetwork()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network.\+Fast\+Acyclic\+Network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}}\mbox{[}$\,$\mbox{]}}]{node\+Activation\+Fn\+Arr,  }\item[{double}]{node\+Aux\+Args\+Arr\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_connection}{Fast\+Connection}}\mbox{[}$\,$\mbox{]}}]{connection\+Arr,  }\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_layer_info}{Layer\+Info}}\mbox{[}$\,$\mbox{]}}]{layer\+Info\+Arr,  }\item[{int\mbox{[}$\,$\mbox{]}}]{output\+Node\+Idx\+Arr,  }\item[{int}]{node\+Count,  }\item[{int}]{input\+Node\+Count,  }\item[{int}]{output\+Node\+Count,  }\item[{bool}]{bounded\+Output }\end{DoxyParamCaption})}
+
+
+
+Construct a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network}{Fast\+Acyclic\+Network}} with provided network definition data structures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Activation\+Fn\+Arr} & Array of neuron activation functions.\\
+\hline
+{\em node\+Aux\+Args\+Arr} & Array of neuron activation function arguments.\\
+\hline
+{\em connection\+Arr} & Array of connections.\\
+\hline
+{\em layer\+Info\+Arr} & Array of layer information.\\
+\hline
+{\em output\+Node\+Idx\+Arr} & An array that specifies the index of each output neuron within \+\_\+activation\+Arr. This is necessary because the neurons have been sorted by their depth in the network structure and are therefore no longer in their original positions. Note however that the bias and input neurons {\itshape are} in their original positions as they are defined as being at depth zero.\\
+\hline
+{\em node\+Count} & Number of nodes in the network.\\
+\hline
+{\em input\+Node\+Count} & Number of input nodes in the network.\\
+\hline
+{\em output\+Node\+Count} & Number of output nodes in the network.\\
+\hline
+{\em bounded\+Output} & Indicates that the output values at the output nodes should be bounded to the interval \mbox{[}0,1\mbox{]}\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_aa104bbb60365183a7ab93c8a9f90f249}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_aa104bbb60365183a7ab93c8a9f90f249}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}!Activate@{Activate}}
+\index{Activate@{Activate}!SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network.\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activate the network. Activation reads input signals from Input\+Signal\+Array and writes output signals to \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_output_signal_array}{Output\+Signal\+Array}}. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a8b5d9624743a1dc3b0bf416a57496103}{Sharp\+Neat.\+Phenomes.\+I\+Black\+Box}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a94fa8a91738d7ed08b0eda5e6cbb9f9b}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a94fa8a91738d7ed08b0eda5e6cbb9f9b}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}!ResetState@{ResetState}}
+\index{ResetState@{ResetState}!SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{ResetState()}{ResetState()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network.\+Reset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the network\textquotesingle{}s internal state. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box_a7079f2f2a4f0b64e4e365207407bcdc6}{Sharp\+Neat.\+Phenomes.\+I\+Black\+Box}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a708192824d7e81e7b2c89c4883d3e61e}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a708192824d7e81e7b2c89c4883d3e61e}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}!InputCount@{InputCount}}
+\index{InputCount@{InputCount}!SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{InputCount}{InputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network.\+Input\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of inputs. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_aaf8235ae3fde78c5ea111dd0d45611b5}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_aaf8235ae3fde78c5ea111dd0d45611b5}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}!InputSignalArray@{InputSignalArray}}
+\index{InputSignalArray@{InputSignalArray}!SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{InputSignalArray}{InputSignalArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network.\+Input\+Signal\+Array\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array for feeding input signals to the network. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a7aa40734686e6d574814497cb7fdd6f8}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a7aa40734686e6d574814497cb7fdd6f8}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}!IsStateValid@{IsStateValid}}
+\index{IsStateValid@{IsStateValid}!SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{IsStateValid}{IsStateValid}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network.\+Is\+State\+Valid\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether the internal state is valid. Always returns true for this class. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a51038b1c7ba1b6bea42b9a366f0b9012}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a51038b1c7ba1b6bea42b9a366f0b9012}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}!OutputCount@{OutputCount}}
+\index{OutputCount@{OutputCount}!SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{OutputCount}{OutputCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network.\+Output\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of outputs. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a42791121f61ca60ebd0435bbe4bfaa63}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_acyclic_network_a42791121f61ca60ebd0435bbe4bfaa63}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}!OutputSignalArray@{OutputSignalArray}}
+\index{OutputSignalArray@{OutputSignalArray}!SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastAcyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{OutputSignalArray}{OutputSignalArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}} Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Acyclic\+Network.\+Output\+Signal\+Array\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an array of output signals from the network. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Phenomes/\+Neural\+Nets/\+Acyclic\+Network/Fast\+Acyclic\+Network.\+cs\end{DoxyCompactItemize}

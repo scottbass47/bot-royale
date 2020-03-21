@@ -1,0 +1,239 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+
+
+Represents parameters specific to N\+E\+AT genomes. E.\+g. parameters that describe probabilities for the different types of mutation and the proportion of possible connections to instantiate between input and output neurons within the initial population.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a84aa31c9047d53eca0151d435cd420f8}{Neat\+Genome\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em Construct with default set of parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_ab5393c35d7c812aea80a8e2e4a86b192}{Neat\+Genome\+Parameters}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} copy\+From)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a22e1107be78c887e65cba81b1bc261cc}{Create\+Simplifying\+Parameters}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} copy\+From)
+\begin{DoxyCompactList}\small\item\em Creates parameters suitable for use during the simplifying mode of a N\+E\+AT search. Addition mutations are disabled, deletion and weight mutation rates are increased. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a02d0685e0cac6daa940ea47ac01b023e}{Feedforward\+Only}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a boolean that indicates if N\+E\+AT should produce only feed-\/forward networks (no recurrent/cyclic connection paths). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a0eb399747cb0a64e9b1a218104e05348}{Activation\+Fn}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the neuron activation function to use in evolved networks. N\+E\+AT uses the same activation function at each node. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a6e094afb2c12cadd7e71dce43ca657bc}{Connection\+Weight\+Range}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the connection weight range to use in N\+E\+AT genomes. E.\+g. a value of 5 defines a weight range of -\/5 to 5. The weight range is strictly enforced -\/ e.\+g. when creating new connections and mutating existing ones. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a53b329c661e33ba201714db918240e11}{Initial\+Interconnections\+Proportion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a proportion that specifies the number of interconnections to make between input and output neurons in an initial random population. This is a proportion of the total number of possible interconnections. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_ae0208a31e87ea0e8aa68277102d6a735}{Disjoint\+Excess\+Genes\+Recombined\+Probability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the probability that all excess and disjoint genes are copied into an offspring genome during sexual reproduction. Currently the excess/disjoint genes are copied in an all or nothing strategy. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_af8efe9ddbb55f3f2fa0f11b290e5581f}{Connection\+Weight\+Mutation\+Probability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the probability that a genome mutation operates on genome connection weights. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a989d67744eaa839f8c9c586f36d4529b}{Add\+Node\+Mutation\+Probability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the probability that a genome mutation is an \textquotesingle{}add node\textquotesingle{} mutation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a0342050ab2863653518081fe5c6d0761}{Add\+Connection\+Mutation\+Probability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the probability that a genome mutation is an \textquotesingle{}add connection\textquotesingle{} mutation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a819e9069bc29c4cdb84a8662e1d2bbdc}{Node\+Aux\+State\+Mutation\+Probability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the probability that a genome mutation is a \textquotesingle{}node auxiliary state\textquotesingle{} mutation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a462a7e922fcedec768e80a88a86960d0}{Delete\+Connection\+Mutation\+Probability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the probability that a genome mutation is a \textquotesingle{}delete connection\textquotesingle{} mutation. \end{DoxyCompactList}\item 
+Discrete\+Distribution \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_ab302982ae122806821f0dfdaffb6c7d5}{Roulette\+Wheel\+Layout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a Roulette\+Wheel\+Layout that represents the probabilities of each type of genome mutation. \end{DoxyCompactList}\item 
+Discrete\+Distribution \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a8a513b6d308698acafb1d22c7275dc2e}{Roulette\+Wheel\+Layout\+Non\+Destructive}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets an alternative Roulette\+Wheel\+Layout for use when we wish to avoid deletion mutations, e.\+g. when mutating a genome with just one connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list}{Connection\+Mutation\+Info\+List}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_af92629d34700a0d9eeacd4ac5730df07}{Connection\+Mutation\+Info\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} objects that drives the types of connection mutation that occur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a4cecc6313b621a6a5c6daab4eb2e6745}{Fitness\+History\+Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the fitness history length to be used by genomes when recording their fitness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents parameters specific to N\+E\+AT genomes. E.\+g. parameters that describe probabilities for the different types of mutation and the proportion of possible connections to instantiate between input and output neurons within the initial population. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a84aa31c9047d53eca0151d435cd420f8}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a84aa31c9047d53eca0151d435cd420f8}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!NeatGenomeParameters@{NeatGenomeParameters}}
+\index{NeatGenomeParameters@{NeatGenomeParameters}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{NeatGenomeParameters()}{NeatGenomeParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Neat\+Genome\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct with default set of parameters. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_ab5393c35d7c812aea80a8e2e4a86b192}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_ab5393c35d7c812aea80a8e2e4a86b192}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!NeatGenomeParameters@{NeatGenomeParameters}}
+\index{NeatGenomeParameters@{NeatGenomeParameters}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{NeatGenomeParameters()}{NeatGenomeParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Neat\+Genome\+Parameters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{copy\+From }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a22e1107be78c887e65cba81b1bc261cc}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a22e1107be78c887e65cba81b1bc261cc}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!CreateSimplifyingParameters@{CreateSimplifyingParameters}}
+\index{CreateSimplifyingParameters@{CreateSimplifyingParameters}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{CreateSimplifyingParameters()}{CreateSimplifyingParameters()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Create\+Simplifying\+Parameters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{copy\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates parameters suitable for use during the simplifying mode of a N\+E\+AT search. Addition mutations are disabled, deletion and weight mutation rates are increased. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a0eb399747cb0a64e9b1a218104e05348}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a0eb399747cb0a64e9b1a218104e05348}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!ActivationFn@{ActivationFn}}
+\index{ActivationFn@{ActivationFn}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{ActivationFn}{ActivationFn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Activation\+Fn\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the neuron activation function to use in evolved networks. N\+E\+AT uses the same activation function at each node. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a0342050ab2863653518081fe5c6d0761}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a0342050ab2863653518081fe5c6d0761}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!AddConnectionMutationProbability@{AddConnectionMutationProbability}}
+\index{AddConnectionMutationProbability@{AddConnectionMutationProbability}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{AddConnectionMutationProbability}{AddConnectionMutationProbability}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Add\+Connection\+Mutation\+Probability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the probability that a genome mutation is an \textquotesingle{}add connection\textquotesingle{} mutation. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a989d67744eaa839f8c9c586f36d4529b}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a989d67744eaa839f8c9c586f36d4529b}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!AddNodeMutationProbability@{AddNodeMutationProbability}}
+\index{AddNodeMutationProbability@{AddNodeMutationProbability}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{AddNodeMutationProbability}{AddNodeMutationProbability}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Add\+Node\+Mutation\+Probability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the probability that a genome mutation is an \textquotesingle{}add node\textquotesingle{} mutation. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_af92629d34700a0d9eeacd4ac5730df07}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_af92629d34700a0d9eeacd4ac5730df07}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!ConnectionMutationInfoList@{ConnectionMutationInfoList}}
+\index{ConnectionMutationInfoList@{ConnectionMutationInfoList}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{ConnectionMutationInfoList}{ConnectionMutationInfoList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list}{Connection\+Mutation\+Info\+List}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Connection\+Mutation\+Info\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} objects that drives the types of connection mutation that occur. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_af8efe9ddbb55f3f2fa0f11b290e5581f}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_af8efe9ddbb55f3f2fa0f11b290e5581f}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!ConnectionWeightMutationProbability@{ConnectionWeightMutationProbability}}
+\index{ConnectionWeightMutationProbability@{ConnectionWeightMutationProbability}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{ConnectionWeightMutationProbability}{ConnectionWeightMutationProbability}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Connection\+Weight\+Mutation\+Probability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the probability that a genome mutation operates on genome connection weights. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a6e094afb2c12cadd7e71dce43ca657bc}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a6e094afb2c12cadd7e71dce43ca657bc}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!ConnectionWeightRange@{ConnectionWeightRange}}
+\index{ConnectionWeightRange@{ConnectionWeightRange}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{ConnectionWeightRange}{ConnectionWeightRange}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Connection\+Weight\+Range\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the connection weight range to use in N\+E\+AT genomes. E.\+g. a value of 5 defines a weight range of -\/5 to 5. The weight range is strictly enforced -\/ e.\+g. when creating new connections and mutating existing ones. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a462a7e922fcedec768e80a88a86960d0}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a462a7e922fcedec768e80a88a86960d0}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!DeleteConnectionMutationProbability@{DeleteConnectionMutationProbability}}
+\index{DeleteConnectionMutationProbability@{DeleteConnectionMutationProbability}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{DeleteConnectionMutationProbability}{DeleteConnectionMutationProbability}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Delete\+Connection\+Mutation\+Probability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the probability that a genome mutation is a \textquotesingle{}delete connection\textquotesingle{} mutation. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_ae0208a31e87ea0e8aa68277102d6a735}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_ae0208a31e87ea0e8aa68277102d6a735}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!DisjointExcessGenesRecombinedProbability@{DisjointExcessGenesRecombinedProbability}}
+\index{DisjointExcessGenesRecombinedProbability@{DisjointExcessGenesRecombinedProbability}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{DisjointExcessGenesRecombinedProbability}{DisjointExcessGenesRecombinedProbability}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Disjoint\+Excess\+Genes\+Recombined\+Probability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the probability that all excess and disjoint genes are copied into an offspring genome during sexual reproduction. Currently the excess/disjoint genes are copied in an all or nothing strategy. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a02d0685e0cac6daa940ea47ac01b023e}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a02d0685e0cac6daa940ea47ac01b023e}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!FeedforwardOnly@{FeedforwardOnly}}
+\index{FeedforwardOnly@{FeedforwardOnly}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{FeedforwardOnly}{FeedforwardOnly}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Feedforward\+Only\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a boolean that indicates if N\+E\+AT should produce only feed-\/forward networks (no recurrent/cyclic connection paths). 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a4cecc6313b621a6a5c6daab4eb2e6745}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a4cecc6313b621a6a5c6daab4eb2e6745}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!FitnessHistoryLength@{FitnessHistoryLength}}
+\index{FitnessHistoryLength@{FitnessHistoryLength}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{FitnessHistoryLength}{FitnessHistoryLength}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Fitness\+History\+Length\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the fitness history length to be used by genomes when recording their fitness. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a53b329c661e33ba201714db918240e11}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a53b329c661e33ba201714db918240e11}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!InitialInterconnectionsProportion@{InitialInterconnectionsProportion}}
+\index{InitialInterconnectionsProportion@{InitialInterconnectionsProportion}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{InitialInterconnectionsProportion}{InitialInterconnectionsProportion}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Initial\+Interconnections\+Proportion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a proportion that specifies the number of interconnections to make between input and output neurons in an initial random population. This is a proportion of the total number of possible interconnections. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a819e9069bc29c4cdb84a8662e1d2bbdc}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a819e9069bc29c4cdb84a8662e1d2bbdc}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!NodeAuxStateMutationProbability@{NodeAuxStateMutationProbability}}
+\index{NodeAuxStateMutationProbability@{NodeAuxStateMutationProbability}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{NodeAuxStateMutationProbability}{NodeAuxStateMutationProbability}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Node\+Aux\+State\+Mutation\+Probability\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the probability that a genome mutation is a \textquotesingle{}node auxiliary state\textquotesingle{} mutation. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_ab302982ae122806821f0dfdaffb6c7d5}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_ab302982ae122806821f0dfdaffb6c7d5}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!RouletteWheelLayout@{RouletteWheelLayout}}
+\index{RouletteWheelLayout@{RouletteWheelLayout}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{RouletteWheelLayout}{RouletteWheelLayout}}
+{\footnotesize\ttfamily Discrete\+Distribution Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Roulette\+Wheel\+Layout\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a Roulette\+Wheel\+Layout that represents the probabilities of each type of genome mutation. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a8a513b6d308698acafb1d22c7275dc2e}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a8a513b6d308698acafb1d22c7275dc2e}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}!RouletteWheelLayoutNonDestructive@{RouletteWheelLayoutNonDestructive}}
+\index{RouletteWheelLayoutNonDestructive@{RouletteWheelLayoutNonDestructive}!SharpNeat.Genomes.Neat.NeatGenomeParameters@{SharpNeat.Genomes.Neat.NeatGenomeParameters}}
+\doxysubsubsection{\texorpdfstring{RouletteWheelLayoutNonDestructive}{RouletteWheelLayoutNonDestructive}}
+{\footnotesize\ttfamily Discrete\+Distribution Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Parameters.\+Roulette\+Wheel\+Layout\+Non\+Destructive\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets an alternative Roulette\+Wheel\+Layout for use when we wish to avoid deletion mutations, e.\+g. when mutating a genome with just one connection. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Neat\+Genome\+Parameters.\+cs\end{DoxyCompactItemize}

@@ -1,5 +1,0 @@
-var namespace_sharp_neat_lib_1_1_tests_1_1_evolution_algorithm =
-[
-    [ "MockGenome", "class_sharp_neat_lib_1_1_tests_1_1_evolution_algorithm_1_1_mock_genome.html", "class_sharp_neat_lib_1_1_tests_1_1_evolution_algorithm_1_1_mock_genome" ],
-    [ "NeatEvolutionAlgorithmSettingsJsonReaderTests", "class_sharp_neat_lib_1_1_tests_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_json_reader_tests.html", "class_sharp_neat_lib_1_1_tests_1_1_evolution_algorithm_1_1_neat_evolution_algorithm_settings_json_reader_tests" ]
-];

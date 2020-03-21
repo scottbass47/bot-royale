@@ -1,0 +1,76 @@
+\hypertarget{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function}{}\doxysection{Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Default\+Node\+Set\+Mapping\+Function Class Reference}
+\label{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function}\index{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction@{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction}}
+
+
+Defines a mapping between two node sets based on mapping all source nodes to all target nodes, but with an option to omit mappings where the distance between source and target node is over some threshold.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Default\+Node\+Set\+Mapping\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a0c44be55902b6c8a4d205ceb2ff46230}{Default\+Node\+Set\+Mapping\+Function}} (double? maximum\+Connection\+Distance, bool allow\+Local\+Recurrent\+Connections)
+\begin{DoxyCompactList}\small\item\em Construct with the specified maximum connection distance (optional/nullable) and flag indicating if local recurrent connections should be generated when generating connections within a single node set (same source and target nodeset). \end{DoxyCompactList}\item 
+I\+Enumerable$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_connection}{Substrate\+Connection}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a117f153465832ace2c98eefae93e8ca5}{Generate\+Connections}} (\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}} src\+Node\+Set, \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}} tgt\+Node\+Set)
+\begin{DoxyCompactList}\small\item\em Returns an I\+Enumerable that yields the mappings/connections defined by the mapping function (from the source nodes to the target nodes) as a sequence. The alternative of returning a list would require a very long list in extreme scenarios; this approach minimizes down memory usage. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a84b3e0f3e157154a6b8f7d6ae1e1b385}{Get\+Connection\+Count\+Hint}} (\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}} src\+Node\+Set, \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}} tgt\+Node\+Set)
+\begin{DoxyCompactList}\small\item\em Returns an estimate/hint for the number of connections that would be created between the provided source and target node sets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a mapping between two node sets based on mapping all source nodes to all target nodes, but with an option to omit mappings where the distance between source and target node is over some threshold. 
+
+In addition the same nodeset can be passed to the \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a117f153465832ace2c98eefae93e8ca5}{Generate\+Connections()}} method as both source and target. This allows for creating connections between nodes within a layer. The optional max distance still applies and an additional boolean option indicates if the local recurrent connection for each node (from its output back to its input) should be generated.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a0c44be55902b6c8a4d205ceb2ff46230}\label{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a0c44be55902b6c8a4d205ceb2ff46230}} 
+\index{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction@{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction}!DefaultNodeSetMappingFunction@{DefaultNodeSetMappingFunction}}
+\index{DefaultNodeSetMappingFunction@{DefaultNodeSetMappingFunction}!SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction@{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction}}
+\doxysubsubsection{\texorpdfstring{DefaultNodeSetMappingFunction()}{DefaultNodeSetMappingFunction()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Default\+Node\+Set\+Mapping\+Function.\+Default\+Node\+Set\+Mapping\+Function (\begin{DoxyParamCaption}\item[{double?}]{maximum\+Connection\+Distance,  }\item[{bool}]{allow\+Local\+Recurrent\+Connections }\end{DoxyParamCaption})}
+
+
+
+Construct with the specified maximum connection distance (optional/nullable) and flag indicating if local recurrent connections should be generated when generating connections within a single node set (same source and target nodeset). 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a117f153465832ace2c98eefae93e8ca5}\label{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a117f153465832ace2c98eefae93e8ca5}} 
+\index{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction@{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction}!GenerateConnections@{GenerateConnections}}
+\index{GenerateConnections@{GenerateConnections}!SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction@{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction}}
+\doxysubsubsection{\texorpdfstring{GenerateConnections()}{GenerateConnections()}}
+{\footnotesize\ttfamily I\+Enumerable$<$\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_connection}{Substrate\+Connection}}$>$ Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Default\+Node\+Set\+Mapping\+Function.\+Generate\+Connections (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}}}]{src\+Node\+Set,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}}}]{tgt\+Node\+Set }\end{DoxyParamCaption})}
+
+
+
+Returns an I\+Enumerable that yields the mappings/connections defined by the mapping function (from the source nodes to the target nodes) as a sequence. The alternative of returning a list would require a very long list in extreme scenarios; this approach minimizes down memory usage. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_i_node_set_mapping_function_a1e390269641540279475c25709e36960}{Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+I\+Node\+Set\+Mapping\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a84b3e0f3e157154a6b8f7d6ae1e1b385}\label{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function_a84b3e0f3e157154a6b8f7d6ae1e1b385}} 
+\index{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction@{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction}!GetConnectionCountHint@{GetConnectionCountHint}}
+\index{GetConnectionCountHint@{GetConnectionCountHint}!SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction@{SharpNeat.Decoders.HyperNeat.DefaultNodeSetMappingFunction}}
+\doxysubsubsection{\texorpdfstring{GetConnectionCountHint()}{GetConnectionCountHint()}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Default\+Node\+Set\+Mapping\+Function.\+Get\+Connection\+Count\+Hint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}}}]{src\+Node\+Set,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}}}]{tgt\+Node\+Set }\end{DoxyParamCaption})}
+
+
+
+Returns an estimate/hint for the number of connections that would be created between the provided source and target node sets. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_i_node_set_mapping_function_a0ef8689991c7dd0193e45c04d86e1b20}{Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+I\+Node\+Set\+Mapping\+Function}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Decoders/\+Hyper\+Neat/Default\+Node\+Set\+Mapping\+Function.\+cs\end{DoxyCompactItemize}

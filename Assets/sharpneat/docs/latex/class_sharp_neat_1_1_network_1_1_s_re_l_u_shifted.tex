@@ -1,0 +1,127 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted}{}\doxysection{Sharp\+Neat.\+Network.\+S\+Re\+L\+U\+Shifted Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted}\index{SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}}
+
+
+S-\/shaped rectified linear activation unit (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u}{S\+Re\+LU}}). Shifted on the x-\/axis so that x=0 gives y=0.\+5, in keeping with the logistic sigmoid. From\+: \href{https://en.wikipedia.org/wiki/Activation_function}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Activation\+\_\+function}} \href{https://arxiv.org/abs/1512.07030}{\texttt{ https\+://arxiv.\+org/abs/1512.\+07030}} \mbox{[}Deep Learning with S-\/shaped Rectified \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear}{Linear}} Activation Units\mbox{]}  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+S\+Re\+L\+U\+Shifted\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_aab5b1d6f6a56e23686168dc4d9b60ce0}{Calculate}} (double x, double\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a11d18332b5ef19c79855146f5ebfc21e}{Calculate}} (float x, float\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_aab5b1d6f6a56e23686168dc4d9b60ce0}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a45d8b257fc582204030d25590d275561}{Get\+Random\+Aux\+Args}} (I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a6a5d55536ac3281790581b6d981a670a}{Mutate\+Aux\+Args}} (double\mbox{[}$\,$\mbox{]} aux\+Args, I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em Genetic mutation for auxiliary argument data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a0dfaee3902778fe96db5b170068ce1c3}\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a0dfaee3902778fe96db5b170068ce1c3}} 
+string {\bfseries Function\+Id} =$>$ this.\+Get\+Type().Name
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a80b383aacc70947816cd42de28f69c4a}\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a80b383aacc70947816cd42de28f69c4a}} 
+string {\bfseries Function\+String} =$>$ \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_aa1cb33ba6ebe2439979a14b1452a1315}\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_aa1cb33ba6ebe2439979a14b1452a1315}} 
+string {\bfseries Function\+Description} =$>$ \char`\"{}S-\/Shaped Rectified \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear}{Linear}} Unit (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_re_l_u}{Re\+LU}}) with X-\/axis translation.\char`\"{}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a5e4b0572f6ac0a97a55b2be24711cb80}\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a5e4b0572f6ac0a97a55b2be24711cb80}} 
+bool {\bfseries Accepts\+Aux\+Args} =$>$ false
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_acaf0e0ff64bbce65f97c4dc4dcba0879}{\+\_\+\+\_\+\+Default\+Instance}} = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted}{S\+Re\+L\+U\+Shifted}}()
+\begin{DoxyCompactList}\small\item\em Default instance provided as a public static field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+S-\/shaped rectified linear activation unit (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u}{S\+Re\+LU}}). Shifted on the x-\/axis so that x=0 gives y=0.\+5, in keeping with the logistic sigmoid. From\+: \href{https://en.wikipedia.org/wiki/Activation_function}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Activation\+\_\+function}} \href{https://arxiv.org/abs/1512.07030}{\texttt{ https\+://arxiv.\+org/abs/1512.\+07030}} \mbox{[}Deep Learning with S-\/shaped Rectified \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear}{Linear}} Activation Units\mbox{]} 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_aab5b1d6f6a56e23686168dc4d9b60ce0}\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_aab5b1d6f6a56e23686168dc4d9b60ce0}} 
+\index{SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Network.\+S\+Re\+L\+U\+Shifted.\+Calculate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6230550f91b00cf7ac384e8a885dd11a}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a11d18332b5ef19c79855146f5ebfc21e}\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a11d18332b5ef19c79855146f5ebfc21e}} 
+\index{SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Network.\+S\+Re\+L\+U\+Shifted.\+Calculate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_aab5b1d6f6a56e23686168dc4d9b60ce0}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a17e6d971ff650f3f9ab7863ce0e555c3}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a45d8b257fc582204030d25590d275561}\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a45d8b257fc582204030d25590d275561}} 
+\index{SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}!GetRandomAuxArgs@{GetRandomAuxArgs}}
+\index{GetRandomAuxArgs@{GetRandomAuxArgs}!SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}}
+\doxysubsubsection{\texorpdfstring{GetRandomAuxArgs()}{GetRandomAuxArgs()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+S\+Re\+L\+U\+Shifted.\+Get\+Random\+Aux\+Args (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6bf5c2eb7a6b09deb280a6e3653700db}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a6a5d55536ac3281790581b6d981a670a}\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_a6a5d55536ac3281790581b6d981a670a}} 
+\index{SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}!MutateAuxArgs@{MutateAuxArgs}}
+\index{MutateAuxArgs@{MutateAuxArgs}!SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}}
+\doxysubsubsection{\texorpdfstring{MutateAuxArgs()}{MutateAuxArgs()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Network.\+S\+Re\+L\+U\+Shifted.\+Mutate\+Aux\+Args (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args,  }\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+Genetic mutation for auxiliary argument data. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a2943116b401f4dff51448228ec9a6b71}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_acaf0e0ff64bbce65f97c4dc4dcba0879}\label{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted_acaf0e0ff64bbce65f97c4dc4dcba0879}} 
+\index{SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}!\_\_DefaultInstance@{\_\_DefaultInstance}}
+\index{\_\_DefaultInstance@{\_\_DefaultInstance}!SharpNeat.Network.SReLUShifted@{SharpNeat.Network.SReLUShifted}}
+\doxysubsubsection{\texorpdfstring{\_\_DefaultInstance}{\_\_DefaultInstance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+S\+Re\+L\+U\+Shifted.\+\_\+\+\_\+\+Default\+Instance = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_s_re_l_u_shifted}{S\+Re\+L\+U\+Shifted}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default instance provided as a public static field. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Activation\+Functions/\+Unipolar/S\+Re\+L\+U\+Shifted.\+cs\end{DoxyCompactItemize}

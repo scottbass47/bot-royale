@@ -1,6 +1,0 @@
-var class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_regularized_genetic_k_means_speciation_strategy =
-[
-    [ "RegularizedGeneticKMeansSpeciationStrategy", "class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_regularized_genetic_k_means_speciation_strategy.html#ad6120084a6c405c8ab29c30b014440bc", null ],
-    [ "SpeciateAdd", "class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_regularized_genetic_k_means_speciation_strategy.html#a3f2952b81f8e395e9938a584827b607d", null ],
-    [ "SpeciateAll", "class_sharp_neat_1_1_neat_1_1_speciation_1_1_genetic_k_means_1_1_regularized_genetic_k_means_speciation_strategy.html#a41d2745b0ffeb39cee0f59ced0185af6", null ]
-];

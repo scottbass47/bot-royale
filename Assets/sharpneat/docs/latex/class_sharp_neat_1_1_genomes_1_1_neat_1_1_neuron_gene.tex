@@ -1,0 +1,194 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+
+
+A gene that represents a single neuron in N\+E\+AT.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_ad07e69328dba15cf3e55f1ef51c15f07}{Neuron\+Gene}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} copy\+From, bool copy\+Connectivity\+Data)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_ac450a1d63968157d1c923314a7b58c3b}{Neuron\+Gene}} (uint innovation\+Id, \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} neuron\+Type, int activation\+Fn\+Id)
+\begin{DoxyCompactList}\small\item\em Construct new \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} with the specified innovation\+Id, neuron type and activation function ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_ac4d015705617364f0356f694ce4b9b41}{Neuron\+Gene}} (uint innovation\+Id, \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} neuron\+Type, int activation\+Fn\+Id, double\mbox{[}$\,$\mbox{]} aux\+State)
+\begin{DoxyCompactList}\small\item\em Construct new \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} with the specified innovation\+Id, neuron type activation function ID and auxiliary state data. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a6410ce059aa7e5815b9941f1118000b7}{Create\+Copy}} ()
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current gene. Virtual method that can be overridden by sub-\/types. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_acd943f40dd70c9ffd9908c0ef0bd030b}{Create\+Copy}} (bool copy\+Connectivity\+Data)
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current gene. Virtual method that can be overridden by sub-\/types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a12a043c67717205cc93ce429d55a417e}{Innovation\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the neuron\textquotesingle{}s innovation ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a98194923930f2e3589c33147a444332f}{Node\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the neuron\textquotesingle{}s type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a0cced09b4141bf1b9b18af6b13fadf65}{Activation\+Fn\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the neuron\textquotesingle{}s activation function ID. For N\+E\+AT this is not used and will always be zero. For C\+P\+P\+Ns/\+Hyper\+N\+E\+AT this ID corresponds to an entry in the I\+Activation\+Function\+Library present in the current genome factory. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a281b39ab41b9767ad7e9263efa794ffc}{Aux\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional auxiliary node state. Null if no aux state is present. Note. Radial Basis Function center and epsilon values are stored here. \end{DoxyCompactList}\item 
+Hash\+Set$<$ uint $>$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a2e795bada6bc689383d5cd537da4d442}{Source\+Neurons}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a set of I\+Ds for the source neurons that directly connect into this neuron. \end{DoxyCompactList}\item 
+Hash\+Set$<$ uint $>$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a9a66da5b67ffa092a81d72117acce686}{Target\+Neurons}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a set of I\+Ds for the target neurons this neuron directly connects out to. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a8b1e1ea8f02f2b24db56a842f5c879b5}{Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the network node\textquotesingle{}s ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A gene that represents a single neuron in N\+E\+AT. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_ad07e69328dba15cf3e55f1ef51c15f07}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_ad07e69328dba15cf3e55f1ef51c15f07}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!NeuronGene@{NeuronGene}}
+\index{NeuronGene@{NeuronGene}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{NeuronGene()}{NeuronGene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Neuron\+Gene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}}}]{copy\+From,  }\item[{bool}]{copy\+Connectivity\+Data }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy\+From} & \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} to copy from.\\
+\hline
+{\em copy\+Connectivity\+Data} & Indicates whether or not top copy connectivity data for the neuron.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_ac450a1d63968157d1c923314a7b58c3b}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_ac450a1d63968157d1c923314a7b58c3b}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!NeuronGene@{NeuronGene}}
+\index{NeuronGene@{NeuronGene}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{NeuronGene()}{NeuronGene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Neuron\+Gene (\begin{DoxyParamCaption}\item[{uint}]{innovation\+Id,  }\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}}}]{neuron\+Type,  }\item[{int}]{activation\+Fn\+Id }\end{DoxyParamCaption})}
+
+
+
+Construct new \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} with the specified innovation\+Id, neuron type and activation function ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_ac4d015705617364f0356f694ce4b9b41}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_ac4d015705617364f0356f694ce4b9b41}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!NeuronGene@{NeuronGene}}
+\index{NeuronGene@{NeuronGene}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{NeuronGene()}{NeuronGene()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Neuron\+Gene (\begin{DoxyParamCaption}\item[{uint}]{innovation\+Id,  }\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}}}]{neuron\+Type,  }\item[{int}]{activation\+Fn\+Id,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+State }\end{DoxyParamCaption})}
+
+
+
+Construct new \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} with the specified innovation\+Id, neuron type activation function ID and auxiliary state data. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a6410ce059aa7e5815b9941f1118000b7}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a6410ce059aa7e5815b9941f1118000b7}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!CreateCopy@{CreateCopy}}
+\index{CreateCopy@{CreateCopy}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{CreateCopy()}{CreateCopy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Create\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a copy of the current gene. Virtual method that can be overridden by sub-\/types. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_acd943f40dd70c9ffd9908c0ef0bd030b}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_acd943f40dd70c9ffd9908c0ef0bd030b}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!CreateCopy@{CreateCopy}}
+\index{CreateCopy@{CreateCopy}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{CreateCopy()}{CreateCopy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Create\+Copy (\begin{DoxyParamCaption}\item[{bool}]{copy\+Connectivity\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a copy of the current gene. Virtual method that can be overridden by sub-\/types. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy\+Connectivity\+Data} & Indicates whether or not top copy connectivity data for the neuron.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a0cced09b4141bf1b9b18af6b13fadf65}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a0cced09b4141bf1b9b18af6b13fadf65}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!ActivationFnId@{ActivationFnId}}
+\index{ActivationFnId@{ActivationFnId}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{ActivationFnId}{ActivationFnId}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Activation\+Fn\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the neuron\textquotesingle{}s activation function ID. For N\+E\+AT this is not used and will always be zero. For C\+P\+P\+Ns/\+Hyper\+N\+E\+AT this ID corresponds to an entry in the I\+Activation\+Function\+Library present in the current genome factory. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a281b39ab41b9767ad7e9263efa794ffc}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a281b39ab41b9767ad7e9263efa794ffc}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!AuxState@{AuxState}}
+\index{AuxState@{AuxState}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{AuxState}{AuxState}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Aux\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Optional auxiliary node state. Null if no aux state is present. Note. Radial Basis Function center and epsilon values are stored here. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a8b1e1ea8f02f2b24db56a842f5c879b5}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a8b1e1ea8f02f2b24db56a842f5c879b5}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!Id@{Id}}
+\index{Id@{Id}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the network node\textquotesingle{}s ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a12a043c67717205cc93ce429d55a417e}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a12a043c67717205cc93ce429d55a417e}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!InnovationId@{InnovationId}}
+\index{InnovationId@{InnovationId}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{InnovationId}{InnovationId}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Innovation\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the neuron\textquotesingle{}s innovation ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a98194923930f2e3589c33147a444332f}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a98194923930f2e3589c33147a444332f}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!NodeType@{NodeType}}
+\index{NodeType@{NodeType}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{NodeType}{NodeType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Node\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the neuron\textquotesingle{}s type. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a2e795bada6bc689383d5cd537da4d442}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a2e795bada6bc689383d5cd537da4d442}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!SourceNeurons@{SourceNeurons}}
+\index{SourceNeurons@{SourceNeurons}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{SourceNeurons}{SourceNeurons}}
+{\footnotesize\ttfamily Hash\+Set$<$uint$>$ Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Source\+Neurons\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a set of I\+Ds for the source neurons that directly connect into this neuron. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a9a66da5b67ffa092a81d72117acce686}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_a9a66da5b67ffa092a81d72117acce686}} 
+\index{SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}!TargetNeurons@{TargetNeurons}}
+\index{TargetNeurons@{TargetNeurons}!SharpNeat.Genomes.Neat.NeuronGene@{SharpNeat.Genomes.Neat.NeuronGene}}
+\doxysubsubsection{\texorpdfstring{TargetNeurons}{TargetNeurons}}
+{\footnotesize\ttfamily Hash\+Set$<$uint$>$ Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene.\+Target\+Neurons\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a set of I\+Ds for the target neurons this neuron directly connects out to. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Neuron\+Gene.\+cs\end{DoxyCompactItemize}

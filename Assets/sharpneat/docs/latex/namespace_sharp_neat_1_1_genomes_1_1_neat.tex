@@ -1,0 +1,127 @@
+\hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat Namespace Reference}
+\label{namespace_sharp_neat_1_1_genomes_1_1_neat}\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sharp_neat_1_1_genomes_1_1_neat_1_1_added_neuron_gene_struct}{Added\+Neuron\+Gene\+Struct}}
+\begin{DoxyCompactList}\small\item\em Represents an added neuron. When a neuron is added to a neural network in N\+E\+AT an existing connection between two neurons is discarded and replaced with the new neuron and two new connections, one connection between the source neuron and the new neuron and another from the new neuron to the target neuron. This struct represents those three I\+Ds. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}}
+\begin{DoxyCompactList}\small\item\em A gene that represents a single connection between neurons in N\+E\+AT. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_comparer}{Connection\+Gene\+Comparer}}
+\begin{DoxyCompactList}\small\item\em Compares the innovation ID of Connection\+Genes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{Connection\+Gene\+List}}
+\begin{DoxyCompactList}\small\item\em Represents a sorted list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} objects. The sorting of the items is done on request rather than being strictly enforced at all times (e.\+g. as part of adding and removing genes). This approach is currently more convenient for use in some of the routines that work with N\+E\+AT genomes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_builder}{Connection\+Gene\+List\+Builder}}
+\begin{DoxyCompactList}\small\item\em Used for building a list of connection genes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}}
+\begin{DoxyCompactList}\small\item\em Each instance of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} describes a type of mutation and associated parameters. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list}{Connection\+Mutation\+Info\+List}}
+\begin{DoxyCompactList}\small\item\em Represents a list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_correlation_item}{Correlation\+Item}}
+\begin{DoxyCompactList}\small\item\em A single comparison item resulting from the comparison of two genomes. If the Correlation\+Item\+Type is Match then both connection gene properties will be non-\/null, otherwise one of them will be null and the other will hold a reference to a disjoint or excess connection gene. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_correlation_results}{Correlation\+Results}}
+\begin{DoxyCompactList}\small\item\em The results from comparing two N\+E\+AT genomes and correlating their connection genes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_correlation_statistics}{Correlation\+Statistics}}
+\begin{DoxyCompactList}\small\item\em Statistics resulting from the comparison of two N\+E\+AT genomes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}
+\begin{DoxyCompactList}\small\item\em A genome class for Neuro Evolution of Augmenting Topologies (N\+E\+AT). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}}
+\begin{DoxyCompactList}\small\item\em An I\+Genome\+Factory for Neat\+Genomes. We use the factory as a means of generating an initial population either randomly or using a seed genome or genomes. Subsequently all \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} objects keep a reference to this factory object for convenient access to \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} parameters and ID generator objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}
+\begin{DoxyCompactList}\small\item\em Represents parameters specific to N\+E\+AT genomes. E.\+g. parameters that describe probabilities for the different types of mutation and the proportion of possible connections to instantiate between input and output neurons within the initial population. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_stats}{Neat\+Genome\+Stats}}
+\begin{DoxyCompactList}\small\item\em Various statistics for \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}. \end{DoxyCompactList}\item 
+class {\bfseries Neat\+Genome\+Xml\+IO}
+\begin{DoxyCompactList}\small\item\em Static class for reading and writing Neat\+Genome(s) to and from X\+ML. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}}
+\begin{DoxyCompactList}\small\item\em A gene that represents a single neuron in N\+E\+AT. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}{Neuron\+Gene\+List}}
+\begin{DoxyCompactList}\small\item\em Represents a sorted list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} objects. The sorting of the items is done on request rather than being strictly enforced at all times (e.\+g. as part of adding and removing items). This approach is currently more convenient for use in some of the routines that work with N\+E\+AT genomes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586}{Connection\+Perturbance\+Type}} \{ \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586a526d688f37a86d3c3f27d0c5016eb71d}{Connection\+Perturbance\+Type.\+Reset}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586aafe800c39118294abd5b9ee037adb755}{Connection\+Perturbance\+Type.\+Jiggle\+Uniform}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586aeb7d185d79dea24535acf8f588722322}{Connection\+Perturbance\+Type.\+Jiggle\+Gaussian}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines types of weight perturbation. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bf}{Connection\+Selection\+Type}} \{ \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfaac13b33ebc8ea372dfb07e5ed4d9655f}{Connection\+Selection\+Type.\+Proportional}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfa197c4dc5aa138a24c6d807fc3f16fbc0}{Connection\+Selection\+Type.\+Fixed\+Quantity}}
+ \}
+\begin{DoxyCompactList}\small\item\em Different methods of determining which connection weights will be selected for mutation. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95e}{Correlation\+Item\+Type}} \{ \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95ea6da89265a9a8b0b28eb4946bb2ec0c6d}{Correlation\+Item\+Type.\+Match}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95ea283bfcf8a8bdcf8394b2b04307cc7896}{Correlation\+Item\+Type.\+Disjoint}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95ead1d25b9ff7906919775079068a81aee7}{Correlation\+Item\+Type.\+Excess}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumeration of connection gene correlation types. Mismatched genes can be disjoint or excess. This distinction is defined by original N\+E\+AT but is probably redundant for most genome comparison/distance metrics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586}} 
+\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!ConnectionPerturbanceType@{ConnectionPerturbanceType}}
+\index{ConnectionPerturbanceType@{ConnectionPerturbanceType}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}
+\doxysubsubsection{\texorpdfstring{ConnectionPerturbanceType}{ConnectionPerturbanceType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586}{Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Perturbance\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Defines types of weight perturbation. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Reset@{Reset}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!Reset@{Reset}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586a526d688f37a86d3c3f27d0c5016eb71d}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586a526d688f37a86d3c3f27d0c5016eb71d}} 
+Reset&Reset weight. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{JiggleUniform@{JiggleUniform}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!JiggleUniform@{JiggleUniform}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586aafe800c39118294abd5b9ee037adb755}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586aafe800c39118294abd5b9ee037adb755}} 
+Jiggle\+Uniform&Jiggle weight using deltas from a uniform distribution. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{JiggleGaussian@{JiggleGaussian}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!JiggleGaussian@{JiggleGaussian}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586aeb7d185d79dea24535acf8f588722322}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586aeb7d185d79dea24535acf8f588722322}} 
+Jiggle\+Gaussian&Jiggle weight using deltas from a Gaussian distribution. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bf}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bf}} 
+\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!ConnectionSelectionType@{ConnectionSelectionType}}
+\index{ConnectionSelectionType@{ConnectionSelectionType}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}
+\doxysubsubsection{\texorpdfstring{ConnectionSelectionType}{ConnectionSelectionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bf}{Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Selection\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Different methods of determining which connection weights will be selected for mutation. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Proportional@{Proportional}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!Proportional@{Proportional}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfaac13b33ebc8ea372dfb07e5ed4d9655f}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfaac13b33ebc8ea372dfb07e5ed4d9655f}} 
+Proportional&Select a proportion of the weights in a genome. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FixedQuantity@{FixedQuantity}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!FixedQuantity@{FixedQuantity}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfa197c4dc5aa138a24c6d807fc3f16fbc0}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfa197c4dc5aa138a24c6d807fc3f16fbc0}} 
+Fixed\+Quantity&Select a fixed number of weights in a genome. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95e}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95e}} 
+\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!CorrelationItemType@{CorrelationItemType}}
+\index{CorrelationItemType@{CorrelationItemType}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}
+\doxysubsubsection{\texorpdfstring{CorrelationItemType}{CorrelationItemType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95e}{Sharp\+Neat.\+Genomes.\+Neat.\+Correlation\+Item\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+An enumeration of connection gene correlation types. Mismatched genes can be disjoint or excess. This distinction is defined by original N\+E\+AT but is probably redundant for most genome comparison/distance metrics. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Match@{Match}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!Match@{Match}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95ea6da89265a9a8b0b28eb4946bb2ec0c6d}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95ea6da89265a9a8b0b28eb4946bb2ec0c6d}} 
+Match&A match between two connections in two distinct genomes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disjoint@{Disjoint}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!Disjoint@{Disjoint}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95ea283bfcf8a8bdcf8394b2b04307cc7896}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95ea283bfcf8a8bdcf8394b2b04307cc7896}} 
+Disjoint&A connection with no match in the other genome (that we are comparing with) and that has an innovation ID less than the highest innovation ID in the other genome, \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Excess@{Excess}!SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}}\index{SharpNeat.Genomes.Neat@{SharpNeat.Genomes.Neat}!Excess@{Excess}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95ead1d25b9ff7906919775079068a81aee7}\label{namespace_sharp_neat_1_1_genomes_1_1_neat_a4168702bb9241f1d8352600439f9c95ead1d25b9ff7906919775079068a81aee7}} 
+Excess&A connection with no match in the other genome (that we are comparing with) and that has an innovation ID higher than the highest innovation ID in the other genome. \\
+\hline
+
+\end{DoxyEnumFields}

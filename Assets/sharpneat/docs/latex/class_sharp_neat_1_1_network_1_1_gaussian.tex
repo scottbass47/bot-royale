@@ -1,0 +1,165 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_gaussian}{}\doxysection{Sharp\+Neat.\+Network.\+Gaussian Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_gaussian}\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+
+
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian}{Gaussian}} activation function. Output range is 0 to 1, that is, the tails of the \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian}{Gaussian}} distribution curve tend towards 0 as abs(x) -\/$>$ Infinity and the \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian}{Gaussian}} peak is at x = 0.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Gaussian\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_gaussian}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_a329fb4012f4c63592e7d3eef3aceba55}{Calculate}} (double x, double\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_a609a38abdf5af235cf783c0b2a2bc25f}{Calculate}} (float x, float\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_a329fb4012f4c63592e7d3eef3aceba55}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_a973fb294dddd7951b3e50068b001bf00}{Get\+Random\+Aux\+Args}} (I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_a5930ce6d2592813b73b8e9f47b173a3f}{Mutate\+Aux\+Args}} (double\mbox{[}$\,$\mbox{]} aux\+Args, I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em Genetic mutation for auxiliary argument data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_aeba659bd5a703c3c1b3864ffe180ac87}{\+\_\+\+\_\+\+Default\+Instance}} = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian}{Gaussian}}()
+\begin{DoxyCompactList}\small\item\em Default instance provided as a public static field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_acd07e788ad95b1d70e1b17267e336e2c}{Function\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_a3513152ab84e0de5f6e01061e267002b}{Function\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_a1674252df1a90dc378749f66633bf744}{Function\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable verbose description of the activation function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_aeec8eb8d814fb761a6707a288780807f}{Accepts\+Aux\+Args}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a flag that indicates if the activation function accepts auxiliary arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian}{Gaussian}} activation function. Output range is 0 to 1, that is, the tails of the \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian}{Gaussian}} distribution curve tend towards 0 as abs(x) -\/$>$ Infinity and the \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian}{Gaussian}} peak is at x = 0. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_gaussian_a329fb4012f4c63592e7d3eef3aceba55}\label{class_sharp_neat_1_1_network_1_1_gaussian_a329fb4012f4c63592e7d3eef3aceba55}} 
+\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Network.\+Gaussian.\+Calculate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6230550f91b00cf7ac384e8a885dd11a}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_gaussian_a609a38abdf5af235cf783c0b2a2bc25f}\label{class_sharp_neat_1_1_network_1_1_gaussian_a609a38abdf5af235cf783c0b2a2bc25f}} 
+\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Network.\+Gaussian.\+Calculate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian_a329fb4012f4c63592e7d3eef3aceba55}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a17e6d971ff650f3f9ab7863ce0e555c3}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_gaussian_a973fb294dddd7951b3e50068b001bf00}\label{class_sharp_neat_1_1_network_1_1_gaussian_a973fb294dddd7951b3e50068b001bf00}} 
+\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}!GetRandomAuxArgs@{GetRandomAuxArgs}}
+\index{GetRandomAuxArgs@{GetRandomAuxArgs}!SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+\doxysubsubsection{\texorpdfstring{GetRandomAuxArgs()}{GetRandomAuxArgs()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+Gaussian.\+Get\+Random\+Aux\+Args (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6bf5c2eb7a6b09deb280a6e3653700db}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_gaussian_a5930ce6d2592813b73b8e9f47b173a3f}\label{class_sharp_neat_1_1_network_1_1_gaussian_a5930ce6d2592813b73b8e9f47b173a3f}} 
+\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}!MutateAuxArgs@{MutateAuxArgs}}
+\index{MutateAuxArgs@{MutateAuxArgs}!SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+\doxysubsubsection{\texorpdfstring{MutateAuxArgs()}{MutateAuxArgs()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Network.\+Gaussian.\+Mutate\+Aux\+Args (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args,  }\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+Genetic mutation for auxiliary argument data. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a2943116b401f4dff51448228ec9a6b71}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_gaussian_aeba659bd5a703c3c1b3864ffe180ac87}\label{class_sharp_neat_1_1_network_1_1_gaussian_aeba659bd5a703c3c1b3864ffe180ac87}} 
+\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}!\_\_DefaultInstance@{\_\_DefaultInstance}}
+\index{\_\_DefaultInstance@{\_\_DefaultInstance}!SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+\doxysubsubsection{\texorpdfstring{\_\_DefaultInstance}{\_\_DefaultInstance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+Gaussian.\+\_\+\+\_\+\+Default\+Instance = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_gaussian}{Gaussian}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default instance provided as a public static field. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_gaussian_aeec8eb8d814fb761a6707a288780807f}\label{class_sharp_neat_1_1_network_1_1_gaussian_aeec8eb8d814fb761a6707a288780807f}} 
+\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}!AcceptsAuxArgs@{AcceptsAuxArgs}}
+\index{AcceptsAuxArgs@{AcceptsAuxArgs}!SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+\doxysubsubsection{\texorpdfstring{AcceptsAuxArgs}{AcceptsAuxArgs}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Gaussian.\+Accepts\+Aux\+Args\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a flag that indicates if the activation function accepts auxiliary arguments. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_gaussian_a1674252df1a90dc378749f66633bf744}\label{class_sharp_neat_1_1_network_1_1_gaussian_a1674252df1a90dc378749f66633bf744}} 
+\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}!FunctionDescription@{FunctionDescription}}
+\index{FunctionDescription@{FunctionDescription}!SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+\doxysubsubsection{\texorpdfstring{FunctionDescription}{FunctionDescription}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Gaussian.\+Function\+Description\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable verbose description of the activation function. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_gaussian_acd07e788ad95b1d70e1b17267e336e2c}\label{class_sharp_neat_1_1_network_1_1_gaussian_acd07e788ad95b1d70e1b17267e336e2c}} 
+\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}!FunctionId@{FunctionId}}
+\index{FunctionId@{FunctionId}!SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+\doxysubsubsection{\texorpdfstring{FunctionId}{FunctionId}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Gaussian.\+Function\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_gaussian_a3513152ab84e0de5f6e01061e267002b}\label{class_sharp_neat_1_1_network_1_1_gaussian_a3513152ab84e0de5f6e01061e267002b}} 
+\index{SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}!FunctionString@{FunctionString}}
+\index{FunctionString@{FunctionString}!SharpNeat.Network.Gaussian@{SharpNeat.Network.Gaussian}}
+\doxysubsubsection{\texorpdfstring{FunctionString}{FunctionString}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Gaussian.\+Function\+String\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Activation\+Functions/\+Unipolar/Gaussian.\+cs\end{DoxyCompactItemize}

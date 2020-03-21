@@ -1,0 +1,35 @@
+\hypertarget{class_sharp_neat_1_1_distance_metrics_1_1_distance_metric_utils}{}\doxysection{Sharp\+Neat.\+Distance\+Metrics.\+Distance\+Metric\+Utils Class Reference}
+\label{class_sharp_neat_1_1_distance_metrics_1_1_distance_metric_utils}\index{SharpNeat.DistanceMetrics.DistanceMetricUtils@{SharpNeat.DistanceMetrics.DistanceMetricUtils}}
+
+
+Static helper methods for distance metrics.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_distance_metric_utils_a98a4da53c252bbaab1ddab7f84badb43}{Calculate\+Centroid}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric}{I\+Distance\+Metric}} distance\+Metric, I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} $>$ coord\+List)
+\begin{DoxyCompactList}\small\item\em Calculates a centroid by comparing each coordinate with every other coordinate. The coord with the lowest average distance from all other coords is the most central coord (the centroid). This method uses an inefficient N$\ast$N comparison of coords to find a centroid. It is provided only as a last resort for distance metrics for which no means exist to calculate a centroid more directly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static helper methods for distance metrics. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_distance_metrics_1_1_distance_metric_utils_a98a4da53c252bbaab1ddab7f84badb43}\label{class_sharp_neat_1_1_distance_metrics_1_1_distance_metric_utils_a98a4da53c252bbaab1ddab7f84badb43}} 
+\index{SharpNeat.DistanceMetrics.DistanceMetricUtils@{SharpNeat.DistanceMetrics.DistanceMetricUtils}!CalculateCentroid@{CalculateCentroid}}
+\index{CalculateCentroid@{CalculateCentroid}!SharpNeat.DistanceMetrics.DistanceMetricUtils@{SharpNeat.DistanceMetrics.DistanceMetricUtils}}
+\doxysubsubsection{\texorpdfstring{CalculateCentroid()}{CalculateCentroid()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} Sharp\+Neat.\+Distance\+Metrics.\+Distance\+Metric\+Utils.\+Calculate\+Centroid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric}{I\+Distance\+Metric}}}]{distance\+Metric,  }\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} $>$}]{coord\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates a centroid by comparing each coordinate with every other coordinate. The coord with the lowest average distance from all other coords is the most central coord (the centroid). This method uses an inefficient N$\ast$N comparison of coords to find a centroid. It is provided only as a last resort for distance metrics for which no means exist to calculate a centroid more directly. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Distance\+Metrics/Distance\+Metric\+Utils.\+cs\end{DoxyCompactItemize}

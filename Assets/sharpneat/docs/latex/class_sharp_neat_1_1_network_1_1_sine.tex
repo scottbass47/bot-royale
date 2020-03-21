@@ -1,0 +1,165 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_sine}{}\doxysection{Sharp\+Neat.\+Network.\+Sine Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_sine}\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+
+
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine}{Sine}} activation function with doubled period.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Sine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_sine}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_a3894f8ea9942f3cfeea0863670b301e3}{Calculate}} (double x, double\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_a7392e67ba7878955199506b15c702544}{Calculate}} (float x, float\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_a3894f8ea9942f3cfeea0863670b301e3}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_a2bb9e202ae1bf35df2facd842f7085ba}{Get\+Random\+Aux\+Args}} (I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_aa05763e08202b5714f6cb6a4e1e36ba7}{Mutate\+Aux\+Args}} (double\mbox{[}$\,$\mbox{]} aux\+Args, I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em Genetic mutation for auxiliary argument data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_a2b40b1464cae3bad25ac182f160acbed}{\+\_\+\+\_\+\+Default\+Instance}} = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine}{Sine}}()
+\begin{DoxyCompactList}\small\item\em Default instance provided as a public static field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_af5fc39f7cf6b1c2c432dcd68d25846ba}{Function\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_a00cb1011e9b97f5811a78d8cf84c263e}{Function\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_ad5ea4e9a300d65e4c3a69baf1e82ffb6}{Function\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable verbose description of the activation function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_a9cc8b948de27cacd18b68702cf3c3659}{Accepts\+Aux\+Args}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a flag that indicates if the activation function accepts auxiliary arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine}{Sine}} activation function with doubled period. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_sine_a3894f8ea9942f3cfeea0863670b301e3}\label{class_sharp_neat_1_1_network_1_1_sine_a3894f8ea9942f3cfeea0863670b301e3}} 
+\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Network.\+Sine.\+Calculate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6230550f91b00cf7ac384e8a885dd11a}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_sine_a7392e67ba7878955199506b15c702544}\label{class_sharp_neat_1_1_network_1_1_sine_a7392e67ba7878955199506b15c702544}} 
+\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Network.\+Sine.\+Calculate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine_a3894f8ea9942f3cfeea0863670b301e3}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a17e6d971ff650f3f9ab7863ce0e555c3}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_sine_a2bb9e202ae1bf35df2facd842f7085ba}\label{class_sharp_neat_1_1_network_1_1_sine_a2bb9e202ae1bf35df2facd842f7085ba}} 
+\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}!GetRandomAuxArgs@{GetRandomAuxArgs}}
+\index{GetRandomAuxArgs@{GetRandomAuxArgs}!SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+\doxysubsubsection{\texorpdfstring{GetRandomAuxArgs()}{GetRandomAuxArgs()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+Sine.\+Get\+Random\+Aux\+Args (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6bf5c2eb7a6b09deb280a6e3653700db}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_sine_aa05763e08202b5714f6cb6a4e1e36ba7}\label{class_sharp_neat_1_1_network_1_1_sine_aa05763e08202b5714f6cb6a4e1e36ba7}} 
+\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}!MutateAuxArgs@{MutateAuxArgs}}
+\index{MutateAuxArgs@{MutateAuxArgs}!SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+\doxysubsubsection{\texorpdfstring{MutateAuxArgs()}{MutateAuxArgs()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Network.\+Sine.\+Mutate\+Aux\+Args (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args,  }\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+Genetic mutation for auxiliary argument data. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a2943116b401f4dff51448228ec9a6b71}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_sine_a2b40b1464cae3bad25ac182f160acbed}\label{class_sharp_neat_1_1_network_1_1_sine_a2b40b1464cae3bad25ac182f160acbed}} 
+\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}!\_\_DefaultInstance@{\_\_DefaultInstance}}
+\index{\_\_DefaultInstance@{\_\_DefaultInstance}!SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+\doxysubsubsection{\texorpdfstring{\_\_DefaultInstance}{\_\_DefaultInstance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+Sine.\+\_\+\+\_\+\+Default\+Instance = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_sine}{Sine}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default instance provided as a public static field. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_sine_a9cc8b948de27cacd18b68702cf3c3659}\label{class_sharp_neat_1_1_network_1_1_sine_a9cc8b948de27cacd18b68702cf3c3659}} 
+\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}!AcceptsAuxArgs@{AcceptsAuxArgs}}
+\index{AcceptsAuxArgs@{AcceptsAuxArgs}!SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+\doxysubsubsection{\texorpdfstring{AcceptsAuxArgs}{AcceptsAuxArgs}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Sine.\+Accepts\+Aux\+Args\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a flag that indicates if the activation function accepts auxiliary arguments. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_sine_ad5ea4e9a300d65e4c3a69baf1e82ffb6}\label{class_sharp_neat_1_1_network_1_1_sine_ad5ea4e9a300d65e4c3a69baf1e82ffb6}} 
+\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}!FunctionDescription@{FunctionDescription}}
+\index{FunctionDescription@{FunctionDescription}!SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+\doxysubsubsection{\texorpdfstring{FunctionDescription}{FunctionDescription}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Sine.\+Function\+Description\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable verbose description of the activation function. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_sine_af5fc39f7cf6b1c2c432dcd68d25846ba}\label{class_sharp_neat_1_1_network_1_1_sine_af5fc39f7cf6b1c2c432dcd68d25846ba}} 
+\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}!FunctionId@{FunctionId}}
+\index{FunctionId@{FunctionId}!SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+\doxysubsubsection{\texorpdfstring{FunctionId}{FunctionId}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Sine.\+Function\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_sine_a00cb1011e9b97f5811a78d8cf84c263e}\label{class_sharp_neat_1_1_network_1_1_sine_a00cb1011e9b97f5811a78d8cf84c263e}} 
+\index{SharpNeat.Network.Sine@{SharpNeat.Network.Sine}!FunctionString@{FunctionString}}
+\index{FunctionString@{FunctionString}!SharpNeat.Network.Sine@{SharpNeat.Network.Sine}}
+\doxysubsubsection{\texorpdfstring{FunctionString}{FunctionString}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Sine.\+Function\+String\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Activation\+Functions/\+Bipolar/Sine.\+cs\end{DoxyCompactItemize}

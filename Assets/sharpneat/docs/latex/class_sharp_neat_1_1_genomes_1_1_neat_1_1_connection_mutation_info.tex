@@ -1,0 +1,154 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+
+
+Each instance of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} describes a type of mutation and associated parameters.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_ad927d9e0d7b0847e95c4d015c5794376}{Connection\+Mutation\+Info}} (double activation\+Probability, \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586}{Connection\+Perturbance\+Type}} perturbance\+Type, \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bf}{Connection\+Selection\+Type}} selection\+Type, double selection\+Proportion, int selection\+Quantity, double perturbance\+Magnitude, double sigma)
+\begin{DoxyCompactList}\small\item\em Construct with the provided mutation type and supporting parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a1b96d0e42343b09597d41663066ff468}{Connection\+Mutation\+Info}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} copy\+From)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a485a163b682fb831d8421cddf3d14d76}{Activation\+Probability}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the probability that this type of mutation will be chosen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586}{Connection\+Perturbance\+Type}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a73a92c5b147bed7fec0660e47e19d3f2}{Perturbance\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the type of weight perturbation the info object represents. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bf}{Connection\+Selection\+Type}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_ae8512c0e6498ddab8159dae9b5e8a89d}{Selection\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the type of connection subset selection the info object represents. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a86289b7cb1665f430cc926d2ac9aa4c4}{Selection\+Proportion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the proportion of connections to select; for \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfaac13b33ebc8ea372dfb07e5ed4d9655f}{Connection\+Selection\+Type.\+Proportional}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_ac09f438ef13e2f117be49372a0545661}{Selection\+Quantity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of connections to select; for \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfa197c4dc5aa138a24c6d807fc3f16fbc0}{Connection\+Selection\+Type.\+Fixed\+Quantity}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_abccf5ad23f1738b62563ef0a3828351d}{Perturbance\+Magnitude}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the magnitude of the extents of the even distribution used for generating jiggle weight deltas; for Connection\+Perturbance\+Type.\+Jiggle\+Even. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a2d99970cbe108f27368fea02df83a703}{Sigma}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the sigma to use for the Gaussian distribution used for generating jiggle weight deltas; for \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586aeb7d185d79dea24535acf8f588722322}{Connection\+Perturbance\+Type.\+Jiggle\+Gaussian}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Each instance of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} describes a type of mutation and associated parameters. 
+
+A list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} objects describe a connection weight mutation scheme -\/ a set of a number of different types of mutation along with the probability of each type occurring when spawning offspring genomes asexually.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_ad927d9e0d7b0847e95c4d015c5794376}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_ad927d9e0d7b0847e95c4d015c5794376}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}!ConnectionMutationInfo@{ConnectionMutationInfo}}
+\index{ConnectionMutationInfo@{ConnectionMutationInfo}!SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+\doxysubsubsection{\texorpdfstring{ConnectionMutationInfo()}{ConnectionMutationInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info.\+Connection\+Mutation\+Info (\begin{DoxyParamCaption}\item[{double}]{activation\+Probability,  }\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586}{Connection\+Perturbance\+Type}}}]{perturbance\+Type,  }\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bf}{Connection\+Selection\+Type}}}]{selection\+Type,  }\item[{double}]{selection\+Proportion,  }\item[{int}]{selection\+Quantity,  }\item[{double}]{perturbance\+Magnitude,  }\item[{double}]{sigma }\end{DoxyParamCaption})}
+
+
+
+Construct with the provided mutation type and supporting parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activation\+Probability} & The probability that this type of mutation will be chosen\\
+\hline
+{\em perturbance\+Type} & The type of weight perturbation the info object represents.\\
+\hline
+{\em selection\+Type} & The type of connection subset selection the info object represents.\\
+\hline
+{\em selection\+Proportion} & For \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfaac13b33ebc8ea372dfb07e5ed4d9655f}{Connection\+Selection\+Type.\+Proportional}} this gives the proportion of connections to select.\\
+\hline
+{\em selection\+Quantity} & For \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfa197c4dc5aa138a24c6d807fc3f16fbc0}{Connection\+Selection\+Type.\+Fixed\+Quantity}} this gives the number of connections to select.\\
+\hline
+{\em perturbance\+Magnitude} & For Connection\+Perturbance\+Type.\+Jiggle\+Even this gives the magnitude of the extents of the even distribution used for generating jiggle weight deltas.\\
+\hline
+{\em sigma} & For \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586aeb7d185d79dea24535acf8f588722322}{Connection\+Perturbance\+Type.\+Jiggle\+Gaussian}} this specifies the sigma to use for the Gaussian distribution used for generating jiggle weight deltas.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a1b96d0e42343b09597d41663066ff468}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a1b96d0e42343b09597d41663066ff468}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}!ConnectionMutationInfo@{ConnectionMutationInfo}}
+\index{ConnectionMutationInfo@{ConnectionMutationInfo}!SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+\doxysubsubsection{\texorpdfstring{ConnectionMutationInfo()}{ConnectionMutationInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info.\+Connection\+Mutation\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}}}]{copy\+From }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a485a163b682fb831d8421cddf3d14d76}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a485a163b682fb831d8421cddf3d14d76}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}!ActivationProbability@{ActivationProbability}}
+\index{ActivationProbability@{ActivationProbability}!SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+\doxysubsubsection{\texorpdfstring{ActivationProbability}{ActivationProbability}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info.\+Activation\+Probability\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the probability that this type of mutation will be chosen. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_abccf5ad23f1738b62563ef0a3828351d}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_abccf5ad23f1738b62563ef0a3828351d}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}!PerturbanceMagnitude@{PerturbanceMagnitude}}
+\index{PerturbanceMagnitude@{PerturbanceMagnitude}!SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+\doxysubsubsection{\texorpdfstring{PerturbanceMagnitude}{PerturbanceMagnitude}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info.\+Perturbance\+Magnitude\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the magnitude of the extents of the even distribution used for generating jiggle weight deltas; for Connection\+Perturbance\+Type.\+Jiggle\+Even. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a73a92c5b147bed7fec0660e47e19d3f2}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a73a92c5b147bed7fec0660e47e19d3f2}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}!PerturbanceType@{PerturbanceType}}
+\index{PerturbanceType@{PerturbanceType}!SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+\doxysubsubsection{\texorpdfstring{PerturbanceType}{PerturbanceType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586}{Connection\+Perturbance\+Type}} Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info.\+Perturbance\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the type of weight perturbation the info object represents. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a86289b7cb1665f430cc926d2ac9aa4c4}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a86289b7cb1665f430cc926d2ac9aa4c4}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}!SelectionProportion@{SelectionProportion}}
+\index{SelectionProportion@{SelectionProportion}!SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+\doxysubsubsection{\texorpdfstring{SelectionProportion}{SelectionProportion}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info.\+Selection\+Proportion\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the proportion of connections to select; for \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfaac13b33ebc8ea372dfb07e5ed4d9655f}{Connection\+Selection\+Type.\+Proportional}}. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_ac09f438ef13e2f117be49372a0545661}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_ac09f438ef13e2f117be49372a0545661}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}!SelectionQuantity@{SelectionQuantity}}
+\index{SelectionQuantity@{SelectionQuantity}!SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+\doxysubsubsection{\texorpdfstring{SelectionQuantity}{SelectionQuantity}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info.\+Selection\+Quantity\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of connections to select; for \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bfa197c4dc5aa138a24c6d807fc3f16fbc0}{Connection\+Selection\+Type.\+Fixed\+Quantity}}. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_ae8512c0e6498ddab8159dae9b5e8a89d}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_ae8512c0e6498ddab8159dae9b5e8a89d}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}!SelectionType@{SelectionType}}
+\index{SelectionType@{SelectionType}!SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+\doxysubsubsection{\texorpdfstring{SelectionType}{SelectionType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_ae351b827f917efdee1ec0824b3ea50bf}{Connection\+Selection\+Type}} Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info.\+Selection\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the type of connection subset selection the info object represents. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a2d99970cbe108f27368fea02df83a703}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_a2d99970cbe108f27368fea02df83a703}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}!Sigma@{Sigma}}
+\index{Sigma@{Sigma}!SharpNeat.Genomes.Neat.ConnectionMutationInfo@{SharpNeat.Genomes.Neat.ConnectionMutationInfo}}
+\doxysubsubsection{\texorpdfstring{Sigma}{Sigma}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info.\+Sigma\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the sigma to use for the Gaussian distribution used for generating jiggle weight deltas; for \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes_1_1_neat_a1af6fa604a97b86b119c83a39bf3a586aeb7d185d79dea24535acf8f588722322}{Connection\+Perturbance\+Type.\+Jiggle\+Gaussian}}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Connection\+Mutation\+Info.\+cs\end{DoxyCompactItemize}

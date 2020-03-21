@@ -1,0 +1,207 @@
+\hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{}\doxysection{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm$<$ T\+Genome $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+
+
+Implementation of the N\+E\+AT evolution algorithm. Incorporates\+:  
+
+
+Inheritance diagram for Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm$<$ T\+Genome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a1f4fa0db49a907bf6c09c7f769abeb66}{Neat\+Evolution\+Algorithm}} ()
+\begin{DoxyCompactList}\small\item\em Constructs with the default \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_parameters}{Neat\+Evolution\+Algorithm\+Parameters}} and speciation strategy (K\+Means\+Clustering\+Strategy with Manhattan\+Distance\+Metric). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_ac87d9054474286186931dc7b0b8e5ef2}{Neat\+Evolution\+Algorithm}} (\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_parameters}{Neat\+Evolution\+Algorithm\+Parameters}} ea\+Params, \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy}{I\+Speciation\+Strategy}}$<$ T\+Genome $>$ speciation\+Strategy, \mbox{\hyperlink{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}{I\+Complexity\+Regulation\+Strategy}} complexity\+Regulation\+Strategy)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_parameters}{Neat\+Evolution\+Algorithm\+Parameters}} and I\+Speciation\+Strategy. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a01fb831482cdcd1c39c29c34920a4f9c}{Initialize}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$ genome\+List\+Evaluator, \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}$<$ T\+Genome $>$ genome\+Factory, List$<$ T\+Genome $>$ genome\+List)
+\begin{DoxyCompactList}\small\item\em Initializes the evolution algorithm with the provided I\+Genome\+List\+Evaluator, I\+Genome\+Factory and an initial population of genomes. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_ad801401d4ea1e1fcf27c082851ef02a8}{Initialize}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$ genome\+List\+Evaluator, \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}$<$ T\+Genome $>$ genome\+Factory, int population\+Size)
+\begin{DoxyCompactList}\small\item\em Initializes the evolution algorithm with the provided I\+Genome\+List\+Evaluator and an I\+Genome\+Factory that can be used to create an initial population of genomes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a78c930be5b68ad4d4a0bd5ca9c48363a}{Perform\+One\+Generation}} ()
+\begin{DoxyCompactList}\small\item\em Progress forward by one generation. Perform one generation/iteration of the evolution algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a8557ac599e1aaf071a1b1fdf01580e7e}{Update\+Best\+Genome}} ()
+\begin{DoxyCompactList}\small\item\em Updates \+\_\+current\+Best\+Genome and \+\_\+best\+Specie\+Idx, these are the fittest genome and index of the specie containing the fittest genome respectively. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+I\+List$<$ T\+Genome $>$ \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_aec9cc121f4d83ca7ecc6d962cf1f0e6e}{Genome\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a list of all current genomes. The current population of genomes. These genomes are also divided into the species available through the Species\+List property. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a0cd47f3fe0a46d28c8f131a16d1aef6d}{Specie\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a list of all current species. The genomes contained within the species are the same genomes available through the Genome\+List property. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats}{Neat\+Algorithm\+Stats}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_aee7140d83c92128b6c3c53bda69eed0c}{Statistics}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the algorithm statistics object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a636dd33f0677ae06ac6bc24486ecfd7f}{Complexity\+Regulation\+Mode}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_aeb72f0834e2b02338b6c5cbdd7dbee19}{Complexity\+Regulation\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the current complexity regulation mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the N\+E\+AT evolution algorithm. Incorporates\+: 
+
+
+\begin{DoxyItemize}
+\item Speciation with fitness sharing.
+\item Creating offspring via both sexual and asexual reproduction.
+\end{DoxyItemize}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Genome} & The genome type that the algorithm will operate on.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em class}]\item[{\em T\+Genome} : {\em I\+Genome$<$T\+Genome$>$}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a1f4fa0db49a907bf6c09c7f769abeb66}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a1f4fa0db49a907bf6c09c7f769abeb66}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!NeatEvolutionAlgorithm@{NeatEvolutionAlgorithm}}
+\index{NeatEvolutionAlgorithm@{NeatEvolutionAlgorithm}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{NeatEvolutionAlgorithm()}{NeatEvolutionAlgorithm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Neat\+Evolution\+Algorithm}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs with the default \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_parameters}{Neat\+Evolution\+Algorithm\+Parameters}} and speciation strategy (K\+Means\+Clustering\+Strategy with Manhattan\+Distance\+Metric). 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_ac87d9054474286186931dc7b0b8e5ef2}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_ac87d9054474286186931dc7b0b8e5ef2}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!NeatEvolutionAlgorithm@{NeatEvolutionAlgorithm}}
+\index{NeatEvolutionAlgorithm@{NeatEvolutionAlgorithm}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{NeatEvolutionAlgorithm()}{NeatEvolutionAlgorithm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Neat\+Evolution\+Algorithm}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_parameters}{Neat\+Evolution\+Algorithm\+Parameters}}}]{ea\+Params,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy}{I\+Speciation\+Strategy}}$<$ T\+Genome $>$}]{speciation\+Strategy,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy}{I\+Complexity\+Regulation\+Strategy}}}]{complexity\+Regulation\+Strategy }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_parameters}{Neat\+Evolution\+Algorithm\+Parameters}} and I\+Speciation\+Strategy. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_ad801401d4ea1e1fcf27c082851ef02a8}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_ad801401d4ea1e1fcf27c082851ef02a8}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$}]{genome\+List\+Evaluator,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}$<$ T\+Genome $>$}]{genome\+Factory,  }\item[{int}]{population\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the evolution algorithm with the provided I\+Genome\+List\+Evaluator and an I\+Genome\+Factory that can be used to create an initial population of genomes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+List\+Evaluator} & The genome evaluation scheme for the evolution algorithm.\\
+\hline
+{\em genome\+Factory} & The factory that was used to create the genome\+List and which is therefore referenced by the genomes.\\
+\hline
+{\em population\+Size} & The number of genomes to create for the initial population.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a4bf83f850d2919be75177f1e79cacb59}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a01fb831482cdcd1c39c29c34920a4f9c}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a01fb831482cdcd1c39c29c34920a4f9c}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$}]{genome\+List\+Evaluator,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}$<$ T\+Genome $>$}]{genome\+Factory,  }\item[{List$<$ T\+Genome $>$}]{genome\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the evolution algorithm with the provided I\+Genome\+List\+Evaluator, I\+Genome\+Factory and an initial population of genomes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+List\+Evaluator} & The genome evaluation scheme for the evolution algorithm.\\
+\hline
+{\em genome\+Factory} & The factory that was used to create the genome\+List and which is therefore referenced by the genomes.\\
+\hline
+{\em genome\+List} & An initial genome population.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a5a417167d5a70edea18be663276eafa7}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a78c930be5b68ad4d4a0bd5ca9c48363a}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a78c930be5b68ad4d4a0bd5ca9c48363a}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!PerformOneGeneration@{PerformOneGeneration}}
+\index{PerformOneGeneration@{PerformOneGeneration}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{PerformOneGeneration()}{PerformOneGeneration()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.Perform\+One\+Generation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Progress forward by one generation. Perform one generation/iteration of the evolution algorithm. 
+
+
+
+Implements \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a4336e953fa75ef6abeb51940fe2006cf}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a8557ac599e1aaf071a1b1fdf01580e7e}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a8557ac599e1aaf071a1b1fdf01580e7e}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!UpdateBestGenome@{UpdateBestGenome}}
+\index{UpdateBestGenome@{UpdateBestGenome}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateBestGenome()}{UpdateBestGenome()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.Update\+Best\+Genome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Updates \+\_\+current\+Best\+Genome and \+\_\+best\+Specie\+Idx, these are the fittest genome and index of the specie containing the fittest genome respectively. 
+
+This method assumes that all specie genomes are sorted fittest first and can therefore save much work by not having to scan all genomes. Note. We may have several genomes with equal best fitness, we just select one of them in that case.
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_aeb72f0834e2b02338b6c5cbdd7dbee19}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_aeb72f0834e2b02338b6c5cbdd7dbee19}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!ComplexityRegulationMode@{ComplexityRegulationMode}}
+\index{ComplexityRegulationMode@{ComplexityRegulationMode}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{ComplexityRegulationMode}{ComplexityRegulationMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a636dd33f0677ae06ac6bc24486ecfd7f}{Complexity\+Regulation\+Mode}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a636dd33f0677ae06ac6bc24486ecfd7f}{Complexity\+Regulation\+Mode}}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the current complexity regulation mode. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_aec9cc121f4d83ca7ecc6d962cf1f0e6e}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_aec9cc121f4d83ca7ecc6d962cf1f0e6e}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!GenomeList@{GenomeList}}
+\index{GenomeList@{GenomeList}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{GenomeList}{GenomeList}}
+{\footnotesize\ttfamily I\+List$<$T\+Genome$>$ \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.Genome\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a list of all current genomes. The current population of genomes. These genomes are also divided into the species available through the Species\+List property. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a0cd47f3fe0a46d28c8f131a16d1aef6d}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a0cd47f3fe0a46d28c8f131a16d1aef6d}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!SpecieList@{SpecieList}}
+\index{SpecieList@{SpecieList}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{SpecieList}{SpecieList}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$T\+Genome$>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.Specie\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a list of all current species. The genomes contained within the species are the same genomes available through the Genome\+List property. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_aee7140d83c92128b6c3c53bda69eed0c}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_aee7140d83c92128b6c3c53bda69eed0c}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}!Statistics@{Statistics}}
+\index{Statistics@{Statistics}!SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.NeatEvolutionAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Statistics}{Statistics}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats}{Neat\+Algorithm\+Stats}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm}}$<$ T\+Genome $>$.Statistics\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the algorithm statistics object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evolution\+Algorithms/Neat\+Evolution\+Algorithm.\+cs\end{DoxyCompactItemize}

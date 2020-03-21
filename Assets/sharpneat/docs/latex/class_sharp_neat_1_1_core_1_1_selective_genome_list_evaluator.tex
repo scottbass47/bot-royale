@@ -1,0 +1,141 @@
+\hypertarget{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{}\doxysection{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator$<$ T\+Genome $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}\index{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}}
+
+
+An \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} that wraps another \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} and filters/selects the genomes that are to be passed to the wrapped evaluator based on some predicate/test.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator$<$ T\+Genome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_ad2fbaadf48b62b505e415f9293992502}{Selective\+Genome\+List\+Evaluator}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$ inner\+Evaluator, Predicate$<$ T\+Genome $>$ selection\+Predicate)
+\begin{DoxyCompactList}\small\item\em Construct with the provided \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}} and \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_aba9446813109579afe0c513af2a28f5d}{Evaluate}} (I\+List$<$ T\+Genome $>$ genome\+List)
+\begin{DoxyCompactList}\small\item\em Evaluates a list of genomes. Here we select the genomes to be evaluated before invoking \+\_\+inner\+Evaluator to evaluate them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a2b22a2092fdb0dae3d16867daf789e86}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the internal state of the evaluation scheme if any exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Predicate$<$ T\+Genome $>$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_add4eaff8b54daf84e14c859b80331b41}{Create\+Predicate\+\_\+\+Once\+Only}} ()
+\begin{DoxyCompactList}\small\item\em Test that selects genomes that have never been evaluated. \end{DoxyCompactList}\item 
+static Predicate$<$ T\+Genome $>$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a3d8168ae64d50473478dd4c957fa7076}{Create\+Predicate\+\_\+\+Periodic\+Reevaluation}} (int period)
+\begin{DoxyCompactList}\small\item\em Selects genomes for evaluation every N attempts/generations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ulong \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a81ffc0d24ad0bc7b8ee638f26c63ea92}{Evaluation\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the total number of individual genome evaluations that have been performed by this evaluator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a1e2c8fbff9ad7cdf87738271354a8cd6}{Stop\+Condition\+Satisfied}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether some goal fitness has been achieved and that the evolutionary algorithm/search should stop. This property\textquotesingle{}s value can remain false to allow the algorithm to run indefinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} that wraps another \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} and filters/selects the genomes that are to be passed to the wrapped evaluator based on some predicate/test. 
+
+This class supports evaluation schemes whereby not all genomes in a population are evaluated on each generation. E.\+g. if we wish to evaluate a genome that persists between generations (i.\+e. elite genomes) just once (deterministic fitness score), or every N generations.
+
+A typical use would be to wrap Simple\+Genome\+List\+Evaulator or \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_parallel_genome_list_evaluator}{Parallel\+Genome\+List\+Evaluator}}.
+
+\mbox{\hyperlink{namespace_sharp_neat_1_1_genomes}{Genomes}} that skip evaluation have their \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a116285471747af18babf7102522f2569}{Evaluation\+Info.\+Evaluation\+Pass\+Count}} property incremented.\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em class}]\item[{\em T\+Genome} : {\em \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}}$<$T\+Genome$>$}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_ad2fbaadf48b62b505e415f9293992502}\label{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_ad2fbaadf48b62b505e415f9293992502}} 
+\index{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}!SelectiveGenomeListEvaluator@{SelectiveGenomeListEvaluator}}
+\index{SelectiveGenomeListEvaluator@{SelectiveGenomeListEvaluator}!SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{SelectiveGenomeListEvaluator()}{SelectiveGenomeListEvaluator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{Selective\+Genome\+List\+Evaluator}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$}]{inner\+Evaluator,  }\item[{Predicate$<$ T\+Genome $>$}]{selection\+Predicate }\end{DoxyParamCaption})}
+
+
+
+Construct with the provided \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}} and \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_add4eaff8b54daf84e14c859b80331b41}\label{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_add4eaff8b54daf84e14c859b80331b41}} 
+\index{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}!CreatePredicate\_OnceOnly@{CreatePredicate\_OnceOnly}}
+\index{CreatePredicate\_OnceOnly@{CreatePredicate\_OnceOnly}!SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CreatePredicate\_OnceOnly()}{CreatePredicate\_OnceOnly()}}
+{\footnotesize\ttfamily static Predicate$<$T\+Genome$>$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Create\+Predicate\+\_\+\+Once\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Test that selects genomes that have never been evaluated. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a3d8168ae64d50473478dd4c957fa7076}\label{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a3d8168ae64d50473478dd4c957fa7076}} 
+\index{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}!CreatePredicate\_PeriodicReevaluation@{CreatePredicate\_PeriodicReevaluation}}
+\index{CreatePredicate\_PeriodicReevaluation@{CreatePredicate\_PeriodicReevaluation}!SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CreatePredicate\_PeriodicReevaluation()}{CreatePredicate\_PeriodicReevaluation()}}
+{\footnotesize\ttfamily static Predicate$<$T\+Genome$>$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Create\+Predicate\+\_\+\+Periodic\+Reevaluation (\begin{DoxyParamCaption}\item[{int}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Selects genomes for evaluation every N attempts/generations. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_aba9446813109579afe0c513af2a28f5d}\label{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_aba9446813109579afe0c513af2a28f5d}} 
+\index{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Evaluate (\begin{DoxyParamCaption}\item[{I\+List$<$ T\+Genome $>$}]{genome\+List }\end{DoxyParamCaption})}
+
+
+
+Evaluates a list of genomes. Here we select the genomes to be evaluated before invoking \+\_\+inner\+Evaluator to evaluate them. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_a2d061264497e40fbef704da262737ed1}{Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a2b22a2092fdb0dae3d16867daf789e86}\label{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a2b22a2092fdb0dae3d16867daf789e86}} 
+\index{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}!Reset@{Reset}}
+\index{Reset@{Reset}!SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the internal state of the evaluation scheme if any exists. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_ac1cd42924f02115179297f17a9069aa1}{Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a81ffc0d24ad0bc7b8ee638f26c63ea92}\label{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a81ffc0d24ad0bc7b8ee638f26c63ea92}} 
+\index{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}!EvaluationCount@{EvaluationCount}}
+\index{EvaluationCount@{EvaluationCount}!SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluationCount}{EvaluationCount}}
+{\footnotesize\ttfamily ulong \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Evaluation\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the total number of individual genome evaluations that have been performed by this evaluator. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a1e2c8fbff9ad7cdf87738271354a8cd6}\label{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a1e2c8fbff9ad7cdf87738271354a8cd6}} 
+\index{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}!StopConditionSatisfied@{StopConditionSatisfied}}
+\index{StopConditionSatisfied@{StopConditionSatisfied}!SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.SelectiveGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{StopConditionSatisfied}{StopConditionSatisfied}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Stop\+Condition\+Satisfied\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether some goal fitness has been achieved and that the evolutionary algorithm/search should stop. This property\textquotesingle{}s value can remain false to allow the algorithm to run indefinitely. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/Selective\+Genome\+List\+Evaluator.\+cs\end{DoxyCompactItemize}

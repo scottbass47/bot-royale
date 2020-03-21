@@ -1,0 +1,21 @@
+\hypertarget{namespace_sharp_neat_1_1_decoders_1_1_hyper_neat}{}\doxysection{Sharp\+Neat.\+Decoders.\+Hyper\+Neat Namespace Reference}
+\label{namespace_sharp_neat_1_1_decoders_1_1_hyper_neat}\index{SharpNeat.Decoders.HyperNeat@{SharpNeat.Decoders.HyperNeat}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_default_node_set_mapping_function}{Default\+Node\+Set\+Mapping\+Function}}
+\begin{DoxyCompactList}\small\item\em Defines a mapping between two node sets based on mapping all source nodes to all target nodes, but with an option to omit mappings where the distance between source and target node is over some threshold. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_hyper_neat_decoder}{Hyper\+Neat\+Decoder}}
+\begin{DoxyCompactList}\small\item\em Decodes C\+P\+PN Neat\+Genome\textquotesingle{}s into concrete network instances. This decoder uses a Hyper\+N\+E\+AT substrate and queries a C\+P\+PN N\+E\+AT network to generate/grow a network from the substrate. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_i_node_set_mapping_function}{I\+Node\+Set\+Mapping\+Function}}
+\begin{DoxyCompactList}\small\item\em Implementations of \mbox{\hyperlink{interface_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_i_node_set_mapping_function}{I\+Node\+Set\+Mapping\+Function}} define a mapping between source and target node sets. Each mapping is interpreted/used as a connection between the source and target node. E.\+g. the simplest such function is to map every source node to every target node (N$\ast$M connections). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_node_set_mapping}{Node\+Set\+Mapping}}
+\begin{DoxyCompactList}\small\item\em Describes a mapping between nodesets. Packages an \mbox{\hyperlink{interface_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_i_node_set_mapping_function}{I\+Node\+Set\+Mapping\+Function}} with indexes into a list of node sets that identify the source and target nodesets for the mapping. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate}{Substrate}}
+\begin{DoxyCompactList}\small\item\em Hyper\+N\+E\+AT substrate. Encapsulates substrate nodes in sets and connections. Connections can be defined explicitly or by providing mapping functions that map (connect) between nodes in sets. Node sets can be arranged as layers, however there is no limitation on node positions within the substrate -\/ nodes in a set can be distributed throughout the substrate with no restrictions based on e.\+g. where nodes in other sets are located. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_connection}{Substrate\+Connection}}
+\begin{DoxyCompactList}\small\item\em Represents a connection between two nodes in a Hyper\+N\+E\+AT substrate. The node positions are represented as arrays of numbers so as not to limit the number of dimensions that positions (and therefore substrates) can be defined within. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node}{Substrate\+Node}}
+\begin{DoxyCompactList}\small\item\em Represents a node within a Hyper\+N\+E\+AT substrate. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}}
+\begin{DoxyCompactList}\small\item\em Represents a set of nodes on a substrate. Nodesets are used to represent sets such as the input and output nodes. Hidden nodes can be represented as layers with each layer being represented by a set. This allows connection mapping to be defined between sets. \end{DoxyCompactList}\end{DoxyCompactItemize}

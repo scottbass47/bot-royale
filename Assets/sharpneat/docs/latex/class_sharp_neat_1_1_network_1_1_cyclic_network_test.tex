@@ -1,0 +1,57 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_cyclic_network_test}{}\doxysection{Sharp\+Neat.\+Network.\+Cyclic\+Network\+Test Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_cyclic_network_test}\index{SharpNeat.Network.CyclicNetworkTest@{SharpNeat.Network.CyclicNetworkTest}}
+
+
+An algorithm for testing for the presence of at least one connectivity cycle within a network.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_cyclic_network_test_aebffc8a3703b59029d3c2d5adb21181a}{Is\+Network\+Cyclic\+Internal}} (\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} network\+Def)
+\begin{DoxyCompactList}\small\item\em Returns true if there is at least one connectivity cycle within the provided \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_cyclic_network_test_abc7ef9ff019334c81b43212a224b290a}{Is\+Network\+Cyclic}} (\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} network\+Def)
+\begin{DoxyCompactList}\small\item\em Returns true if there is at least one connectivity cycle within the provided \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An algorithm for testing for the presence of at least one connectivity cycle within a network. 
+
+\hypertarget{class_sharp_neat_1_1_network_1_1_cyclic_network_test_autotoc_md0}{}\doxysubsection{Method.}\label{class_sharp_neat_1_1_network_1_1_cyclic_network_test_autotoc_md0}
+1) We loop over all nodes in the network and perform a depth-\/first traversal from each node. (Note. the order that the nodes are traversed does not affect the correctness of the method)
+
+2) Each traversal keeps track of its ancestor nodes (the path to the current node) for each step in the traversal. Thus if the traversal encounters an ancestor node then a cycle has been detected.
+
+3) A set of visited nodes is maintained. This persists between traversals and allows each traversal to avoid traversing into nodes that have already been traversed.
+
+Note. We must traverse from each node rather then just e.\+g. the input nodes, because the network may have connectivity dead ends or even isolated connectivity that therefore would not be traversed into by following connectivity from the input nodes only, hence we perform a traversal from each node and attempt to maintain algorithmic efficiency by avoiding traversal into nodes that have already been traversed into.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_cyclic_network_test_abc7ef9ff019334c81b43212a224b290a}\label{class_sharp_neat_1_1_network_1_1_cyclic_network_test_abc7ef9ff019334c81b43212a224b290a}} 
+\index{SharpNeat.Network.CyclicNetworkTest@{SharpNeat.Network.CyclicNetworkTest}!IsNetworkCyclic@{IsNetworkCyclic}}
+\index{IsNetworkCyclic@{IsNetworkCyclic}!SharpNeat.Network.CyclicNetworkTest@{SharpNeat.Network.CyclicNetworkTest}}
+\doxysubsubsection{\texorpdfstring{IsNetworkCyclic()}{IsNetworkCyclic()}}
+{\footnotesize\ttfamily static bool Sharp\+Neat.\+Network.\+Cyclic\+Network\+Test.\+Is\+Network\+Cyclic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}}}]{network\+Def }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns true if there is at least one connectivity cycle within the provided \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}}. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_cyclic_network_test_aebffc8a3703b59029d3c2d5adb21181a}\label{class_sharp_neat_1_1_network_1_1_cyclic_network_test_aebffc8a3703b59029d3c2d5adb21181a}} 
+\index{SharpNeat.Network.CyclicNetworkTest@{SharpNeat.Network.CyclicNetworkTest}!IsNetworkCyclicInternal@{IsNetworkCyclicInternal}}
+\index{IsNetworkCyclicInternal@{IsNetworkCyclicInternal}!SharpNeat.Network.CyclicNetworkTest@{SharpNeat.Network.CyclicNetworkTest}}
+\doxysubsubsection{\texorpdfstring{IsNetworkCyclicInternal()}{IsNetworkCyclicInternal()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Cyclic\+Network\+Test.\+Is\+Network\+Cyclic\+Internal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}}}]{network\+Def }\end{DoxyParamCaption})}
+
+
+
+Returns true if there is at least one connectivity cycle within the provided \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/Cyclic\+Network\+Test.\+cs\end{DoxyCompactItemize}

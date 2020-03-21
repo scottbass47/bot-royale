@@ -1,0 +1,60 @@
+\hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy}{}\doxysection{Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+Default\+Complexity\+Regulation\+Strategy Class Reference}
+\label{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy}\index{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy@{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy}}
+
+
+Default complexity regulation strategy. This strategy provides a choice of hard/absolute complexity ceiling or a ceiling relative to the complexity at the end of the most recent simplification phase. The strategy transitions from complexifying to simplifying when the ceiling is reached. Transitioning from simplifying to complexifying occurs when complexity is no longer falling {\itshape and} complexity is below the ceiling. This is determined by tracking a complexity moving average calculated over the past N generations.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+Default\+Complexity\+Regulation\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy_af3b8982e023ca20b475775d9f0ab3ee5}{Default\+Complexity\+Regulation\+Strategy}} (\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a175fc67b7bc27eab6e08332c908d435d}{Complexity\+Ceiling\+Type}} ceiling\+Type, double ceiling\+Value)
+\begin{DoxyCompactList}\small\item\em Construct the complexity regulation strategy with the provided regulation parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a636dd33f0677ae06ac6bc24486ecfd7f}{Complexity\+Regulation\+Mode}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy_a2451a81d8c36f08f998cd0c38e1ff013}{Determine\+Mode}} (\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats}{Neat\+Algorithm\+Stats}} stats)
+\begin{DoxyCompactList}\small\item\em Determine which complexity regulation mode the search should be in given the provided N\+E\+AT algorithm stats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default complexity regulation strategy. This strategy provides a choice of hard/absolute complexity ceiling or a ceiling relative to the complexity at the end of the most recent simplification phase. The strategy transitions from complexifying to simplifying when the ceiling is reached. Transitioning from simplifying to complexifying occurs when complexity is no longer falling {\itshape and} complexity is below the ceiling. This is determined by tracking a complexity moving average calculated over the past N generations. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy_af3b8982e023ca20b475775d9f0ab3ee5}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy_af3b8982e023ca20b475775d9f0ab3ee5}} 
+\index{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy@{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy}!DefaultComplexityRegulationStrategy@{DefaultComplexityRegulationStrategy}}
+\index{DefaultComplexityRegulationStrategy@{DefaultComplexityRegulationStrategy}!SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy@{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy}}
+\doxysubsubsection{\texorpdfstring{DefaultComplexityRegulationStrategy()}{DefaultComplexityRegulationStrategy()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+Default\+Complexity\+Regulation\+Strategy.\+Default\+Complexity\+Regulation\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a175fc67b7bc27eab6e08332c908d435d}{Complexity\+Ceiling\+Type}}}]{ceiling\+Type,  }\item[{double}]{ceiling\+Value }\end{DoxyParamCaption})}
+
+
+
+Construct the complexity regulation strategy with the provided regulation parameters. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy_a2451a81d8c36f08f998cd0c38e1ff013}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_default_complexity_regulation_strategy_a2451a81d8c36f08f998cd0c38e1ff013}} 
+\index{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy@{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy}!DetermineMode@{DetermineMode}}
+\index{DetermineMode@{DetermineMode}!SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy@{SharpNeat.EvolutionAlgorithms.ComplexityRegulation.DefaultComplexityRegulationStrategy}}
+\doxysubsubsection{\texorpdfstring{DetermineMode()}{DetermineMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_a636dd33f0677ae06ac6bc24486ecfd7f}{Complexity\+Regulation\+Mode}} Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+Default\+Complexity\+Regulation\+Strategy.\+Determine\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats}{Neat\+Algorithm\+Stats}}}]{stats }\end{DoxyParamCaption})}
+
+
+
+Determine which complexity regulation mode the search should be in given the provided N\+E\+AT algorithm stats. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_evolution_algorithms_1_1_complexity_regulation_1_1_i_complexity_regulation_strategy_a4a0005fc6b82cb1dff2abde7d3fde5c9}{Sharp\+Neat.\+Evolution\+Algorithms.\+Complexity\+Regulation.\+I\+Complexity\+Regulation\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evolution\+Algorithms/\+Complexity\+Regulation/Default\+Complexity\+Regulation\+Strategy.\+cs\end{DoxyCompactItemize}

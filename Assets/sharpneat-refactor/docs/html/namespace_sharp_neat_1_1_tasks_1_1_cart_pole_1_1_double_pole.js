@@ -1,7 +1,0 @@
-var namespace_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole =
-[
-    [ "CartDoublePoleEvaluationScheme", "class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluation_scheme.html", "class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluation_scheme" ],
-    [ "CartDoublePoleEvaluator", "class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator.html", "class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_evaluator" ],
-    [ "CartDoublePoleExperimentFactory", "class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_experiment_factory.html", "class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_experiment_factory" ],
-    [ "CartDoublePolePhysicsRK4", "class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_physics_r_k4.html", "class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_physics_r_k4" ]
-];

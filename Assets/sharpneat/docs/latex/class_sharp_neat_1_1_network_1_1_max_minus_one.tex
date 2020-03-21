@@ -1,0 +1,127 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one}{}\doxysection{Sharp\+Neat.\+Network.\+Max\+Minus\+One Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_max_minus_one}\index{SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}}
+
+
+y = max(-\/1, x). i.\+e. a rectified linear activation unit (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_re_l_u}{Re\+LU}}) variant.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Max\+Minus\+One\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_max_minus_one}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_max_minus_one_af30adce5e873b64c3b307991decb497a}{Calculate}} (double x, double\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_max_minus_one_a352244a798c4a02bc3dde0c00bcaab9e}{Calculate}} (float x, float\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_max_minus_one_af30adce5e873b64c3b307991decb497a}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_max_minus_one_ac66fbe22cbf8298a8c2d0fbca1302331}{Get\+Random\+Aux\+Args}} (I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_max_minus_one_a68d827af6c1077b753cf2c5639b703fa}{Mutate\+Aux\+Args}} (double\mbox{[}$\,$\mbox{]} aux\+Args, I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em Genetic mutation for auxiliary argument data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one_ae57f6724e1717a30870815bd8a15e2aa}\label{class_sharp_neat_1_1_network_1_1_max_minus_one_ae57f6724e1717a30870815bd8a15e2aa}} 
+string {\bfseries Function\+Id} =$>$ this.\+Get\+Type().Name
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one_aa89bcf1414fa9189f4a5caff8706eea7}\label{class_sharp_neat_1_1_network_1_1_max_minus_one_aa89bcf1414fa9189f4a5caff8706eea7}} 
+string {\bfseries Function\+String} =$>$ \char`\"{}y = max(-\/1, x)\char`\"{}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one_a9e2f9bbff1f299a6307b24b773b574b3}\label{class_sharp_neat_1_1_network_1_1_max_minus_one_a9e2f9bbff1f299a6307b24b773b574b3}} 
+string {\bfseries Function\+Description} =$>$ \char`\"{}A variant of Shifted Rectified \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_linear}{Linear}} Unit (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_re_l_u}{Re\+LU}}).\char`\"{}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one_aae11bb9a25109edde75b2a6d7a72eed1}\label{class_sharp_neat_1_1_network_1_1_max_minus_one_aae11bb9a25109edde75b2a6d7a72eed1}} 
+bool {\bfseries Accepts\+Aux\+Args} =$>$ false
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_max_minus_one_a76e1628d792872bca46df02946343434}{\+\_\+\+\_\+\+Default\+Instance}} = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_max_minus_one}{Max\+Minus\+One}}()
+\begin{DoxyCompactList}\small\item\em Default instance provided as a public static field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+y = max(-\/1, x). i.\+e. a rectified linear activation unit (\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_re_l_u}{Re\+LU}}) variant. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one_af30adce5e873b64c3b307991decb497a}\label{class_sharp_neat_1_1_network_1_1_max_minus_one_af30adce5e873b64c3b307991decb497a}} 
+\index{SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Network.\+Max\+Minus\+One.\+Calculate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6230550f91b00cf7ac384e8a885dd11a}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one_a352244a798c4a02bc3dde0c00bcaab9e}\label{class_sharp_neat_1_1_network_1_1_max_minus_one_a352244a798c4a02bc3dde0c00bcaab9e}} 
+\index{SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Network.\+Max\+Minus\+One.\+Calculate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_max_minus_one_af30adce5e873b64c3b307991decb497a}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a17e6d971ff650f3f9ab7863ce0e555c3}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one_ac66fbe22cbf8298a8c2d0fbca1302331}\label{class_sharp_neat_1_1_network_1_1_max_minus_one_ac66fbe22cbf8298a8c2d0fbca1302331}} 
+\index{SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}!GetRandomAuxArgs@{GetRandomAuxArgs}}
+\index{GetRandomAuxArgs@{GetRandomAuxArgs}!SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}}
+\doxysubsubsection{\texorpdfstring{GetRandomAuxArgs()}{GetRandomAuxArgs()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+Max\+Minus\+One.\+Get\+Random\+Aux\+Args (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6bf5c2eb7a6b09deb280a6e3653700db}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one_a68d827af6c1077b753cf2c5639b703fa}\label{class_sharp_neat_1_1_network_1_1_max_minus_one_a68d827af6c1077b753cf2c5639b703fa}} 
+\index{SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}!MutateAuxArgs@{MutateAuxArgs}}
+\index{MutateAuxArgs@{MutateAuxArgs}!SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}}
+\doxysubsubsection{\texorpdfstring{MutateAuxArgs()}{MutateAuxArgs()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Network.\+Max\+Minus\+One.\+Mutate\+Aux\+Args (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args,  }\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+Genetic mutation for auxiliary argument data. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a2943116b401f4dff51448228ec9a6b71}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_max_minus_one_a76e1628d792872bca46df02946343434}\label{class_sharp_neat_1_1_network_1_1_max_minus_one_a76e1628d792872bca46df02946343434}} 
+\index{SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}!\_\_DefaultInstance@{\_\_DefaultInstance}}
+\index{\_\_DefaultInstance@{\_\_DefaultInstance}!SharpNeat.Network.MaxMinusOne@{SharpNeat.Network.MaxMinusOne}}
+\doxysubsubsection{\texorpdfstring{\_\_DefaultInstance}{\_\_DefaultInstance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+Max\+Minus\+One.\+\_\+\+\_\+\+Default\+Instance = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_max_minus_one}{Max\+Minus\+One}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default instance provided as a public static field. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Activation\+Functions/\+Unipolar/Max\+Minus\+One.\+cs\end{DoxyCompactItemize}

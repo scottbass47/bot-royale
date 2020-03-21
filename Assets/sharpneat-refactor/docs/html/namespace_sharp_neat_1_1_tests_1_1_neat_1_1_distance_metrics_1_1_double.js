@@ -1,6 +1,0 @@
-var namespace_sharp_neat_1_1_tests_1_1_neat_1_1_distance_metrics_1_1_double =
-[
-    [ "DistanceMetricsUtilsTests", "class_sharp_neat_1_1_tests_1_1_neat_1_1_distance_metrics_1_1_double_1_1_distance_metrics_utils_tests.html", "class_sharp_neat_1_1_tests_1_1_neat_1_1_distance_metrics_1_1_double_1_1_distance_metrics_utils_tests" ],
-    [ "EuclideanDistanceMetricTests", "class_sharp_neat_1_1_tests_1_1_neat_1_1_distance_metrics_1_1_double_1_1_euclidean_distance_metric_tests.html", "class_sharp_neat_1_1_tests_1_1_neat_1_1_distance_metrics_1_1_double_1_1_euclidean_distance_metric_tests" ],
-    [ "ManhattanDistanceMetricTests", "class_sharp_neat_1_1_tests_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_tests.html", "class_sharp_neat_1_1_tests_1_1_neat_1_1_distance_metrics_1_1_double_1_1_manhattan_distance_metric_tests" ]
-];

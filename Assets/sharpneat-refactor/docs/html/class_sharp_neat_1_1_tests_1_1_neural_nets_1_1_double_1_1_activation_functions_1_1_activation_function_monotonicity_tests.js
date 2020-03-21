@@ -1,4 +1,0 @@
-var class_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_activation_functions_1_1_activation_function_monotonicity_tests =
-[
-    [ "TestMonotonicity", "class_sharp_neat_1_1_tests_1_1_neural_nets_1_1_double_1_1_activation_functions_1_1_activation_function_monotonicity_tests.html#a568308e0505900843c10dca349d0d982", null ]
-];

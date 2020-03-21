@@ -1,0 +1,85 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory}{}\doxysection{Sharp\+Neat.\+Genomes.\+Rbf\+Neat.\+Rbf\+Genome\+Factory Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory}\index{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory@{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory}}
+
+
+A sub-\/class of Neat\+Genome\+Factory for creating R\+B\+F-\/\+Neat genomes. R\+BF = Radial Basis Functions.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Genomes.\+Rbf\+Neat.\+Rbf\+Genome\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_afba6ad001a9c29da638b6fcd6bf3fded}{Rbf\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library)
+\begin{DoxyCompactList}\small\item\em Constructs with default Neat\+Genome\+Parameters, ID generators initialized to zero and the provided I\+Activation\+Function\+Library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_ae8340ed3525d49ef7dcf5904f309295a}{Rbf\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} neat\+Genome\+Params)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided I\+Activation\+Function\+Library and Neat\+Genome\+Parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_aa68b084a69d280fdb5a48b51facb736c}{Rbf\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} neat\+Genome\+Params, \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} genome\+Id\+Generator, \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} innovation\+Id\+Generator)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided I\+Activation\+Function\+Library, Neat\+Genome\+Parameters and ID generators. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_adac90c99951fcff08a21134f7d8f2daa}{Create\+Neuron\+Gene}} (uint innovation\+Id, \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} neuron\+Type)
+\begin{DoxyCompactList}\small\item\em Override that randomly assigns activation functions to neuron\textquotesingle{}s from an activation function library based on each library item\textquotesingle{}s selection probability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A sub-\/class of Neat\+Genome\+Factory for creating R\+B\+F-\/\+Neat genomes. R\+BF = Radial Basis Functions. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_afba6ad001a9c29da638b6fcd6bf3fded}\label{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_afba6ad001a9c29da638b6fcd6bf3fded}} 
+\index{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory@{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory}!RbfGenomeFactory@{RbfGenomeFactory}}
+\index{RbfGenomeFactory@{RbfGenomeFactory}!SharpNeat.Genomes.RbfNeat.RbfGenomeFactory@{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{RbfGenomeFactory()}{RbfGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Rbf\+Neat.\+Rbf\+Genome\+Factory.\+Rbf\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library }\end{DoxyParamCaption})}
+
+
+
+Constructs with default Neat\+Genome\+Parameters, ID generators initialized to zero and the provided I\+Activation\+Function\+Library. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_ae8340ed3525d49ef7dcf5904f309295a}\label{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_ae8340ed3525d49ef7dcf5904f309295a}} 
+\index{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory@{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory}!RbfGenomeFactory@{RbfGenomeFactory}}
+\index{RbfGenomeFactory@{RbfGenomeFactory}!SharpNeat.Genomes.RbfNeat.RbfGenomeFactory@{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{RbfGenomeFactory()}{RbfGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Rbf\+Neat.\+Rbf\+Genome\+Factory.\+Rbf\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{neat\+Genome\+Params }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided I\+Activation\+Function\+Library and Neat\+Genome\+Parameters. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_aa68b084a69d280fdb5a48b51facb736c}\label{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_aa68b084a69d280fdb5a48b51facb736c}} 
+\index{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory@{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory}!RbfGenomeFactory@{RbfGenomeFactory}}
+\index{RbfGenomeFactory@{RbfGenomeFactory}!SharpNeat.Genomes.RbfNeat.RbfGenomeFactory@{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{RbfGenomeFactory()}{RbfGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Rbf\+Neat.\+Rbf\+Genome\+Factory.\+Rbf\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{neat\+Genome\+Params,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}}}]{genome\+Id\+Generator,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}}}]{innovation\+Id\+Generator }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided I\+Activation\+Function\+Library, Neat\+Genome\+Parameters and ID generators. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_adac90c99951fcff08a21134f7d8f2daa}\label{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_adac90c99951fcff08a21134f7d8f2daa}} 
+\index{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory@{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory}!CreateNeuronGene@{CreateNeuronGene}}
+\index{CreateNeuronGene@{CreateNeuronGene}!SharpNeat.Genomes.RbfNeat.RbfGenomeFactory@{SharpNeat.Genomes.RbfNeat.RbfGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CreateNeuronGene()}{CreateNeuronGene()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} Sharp\+Neat.\+Genomes.\+Rbf\+Neat.\+Rbf\+Genome\+Factory.\+Create\+Neuron\+Gene (\begin{DoxyParamCaption}\item[{uint}]{innovation\+Id,  }\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}}}]{neuron\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Override that randomly assigns activation functions to neuron\textquotesingle{}s from an activation function library based on each library item\textquotesingle{}s selection probability. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab9ae6cf300c9650b639ddbc07c748838}{Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Rbf\+Neat/Rbf\+Genome\+Factory.\+cs\end{DoxyCompactItemize}

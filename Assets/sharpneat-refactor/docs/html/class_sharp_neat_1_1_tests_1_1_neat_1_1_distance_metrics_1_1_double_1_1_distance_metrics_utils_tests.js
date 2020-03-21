@@ -1,4 +1,0 @@
-var class_sharp_neat_1_1_tests_1_1_neat_1_1_distance_metrics_1_1_double_1_1_distance_metrics_utils_tests =
-[
-    [ "TestCalculateEuclideanCentroid", "class_sharp_neat_1_1_tests_1_1_neat_1_1_distance_metrics_1_1_double_1_1_distance_metrics_utils_tests.html#a7f3c623a2fb032a337fabb79e1f257bd", null ]
-];

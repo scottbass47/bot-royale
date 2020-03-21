@@ -1,0 +1,95 @@
+\hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{}\doxysection{Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}\index{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$}}
+
+
+Generic interface for evaluating a list of genomes. By operating on a list we allow concrete implementations of this interface to choose between evaluating each genome independently of the others, perhaps across several execution threads, or in some collective evaluation scheme such as an artificial life/world scenario.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.882585cm]{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_a2d061264497e40fbef704da262737ed1}{Evaluate}} (I\+List$<$ T\+Genome $>$ genome\+List)
+\begin{DoxyCompactList}\small\item\em Evaluates a list of genomes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_ac1cd42924f02115179297f17a9069aa1}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the internal state of the evaluation scheme if any exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ulong \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_a53df6f8e1ae1b43c47dc501e31e548bb}{Evaluation\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the total number of individual genome evaluations that have been performed by this evaluator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_ac24eac97425826585c49547fd0f63ea3}{Stop\+Condition\+Satisfied}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether some goal fitness has been achieved and that the evolutionary algorithm search should stop. This property\textquotesingle{}s value can remain false to allow the algorithm to run indefinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic interface for evaluating a list of genomes. By operating on a list we allow concrete implementations of this interface to choose between evaluating each genome independently of the others, perhaps across several execution threads, or in some collective evaluation scheme such as an artificial life/world scenario. 
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em class}]\item[{\em T\+Genome} : {\em \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}}$<$T\+Genome$>$}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_a2d061264497e40fbef704da262737ed1}\label{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_a2d061264497e40fbef704da262737ed1}} 
+\index{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Evaluate (\begin{DoxyParamCaption}\item[{I\+List$<$ T\+Genome $>$}]{genome\+List }\end{DoxyParamCaption})}
+
+
+
+Evaluates a list of genomes. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_parallel_genome_list_evaluator_a0610b5ea6685025f71554f2ef1842f9e}{Sharp\+Neat.\+Core.\+Parallel\+Genome\+List\+Evaluator$<$ T\+Genome, T\+Phenome $>$}}, \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a23979aba65c51066413514dce0c39c8a}{Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator$<$ T\+Genome, T\+Phenome $>$}}, and \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_aba9446813109579afe0c513af2a28f5d}{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_ac1cd42924f02115179297f17a9069aa1}\label{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_ac1cd42924f02115179297f17a9069aa1}} 
+\index{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$}!Reset@{Reset}}
+\index{Reset@{Reset}!SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the internal state of the evaluation scheme if any exists. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_parallel_genome_list_evaluator_a4f0b25e72c7f1d4cf816023db1666204}{Sharp\+Neat.\+Core.\+Parallel\+Genome\+List\+Evaluator$<$ T\+Genome, T\+Phenome $>$}}, \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a859c401c83c3f11cd2004555022d1f63}{Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator$<$ T\+Genome, T\+Phenome $>$}}, and \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator_a2b22a2092fdb0dae3d16867daf789e86}{Sharp\+Neat.\+Core.\+Selective\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_a53df6f8e1ae1b43c47dc501e31e548bb}\label{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_a53df6f8e1ae1b43c47dc501e31e548bb}} 
+\index{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$}!EvaluationCount@{EvaluationCount}}
+\index{EvaluationCount@{EvaluationCount}!SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluationCount}{EvaluationCount}}
+{\footnotesize\ttfamily ulong \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Evaluation\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the total number of individual genome evaluations that have been performed by this evaluator. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_ac24eac97425826585c49547fd0f63ea3}\label{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_ac24eac97425826585c49547fd0f63ea3}} 
+\index{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$}!StopConditionSatisfied@{StopConditionSatisfied}}
+\index{StopConditionSatisfied@{StopConditionSatisfied}!SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$@{SharpNeat.Core.IGenomeListEvaluator$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{StopConditionSatisfied}{StopConditionSatisfied}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$.Stop\+Condition\+Satisfied\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether some goal fitness has been achieved and that the evolutionary algorithm search should stop. This property\textquotesingle{}s value can remain false to allow the algorithm to run indefinitely. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/I\+Genome\+List\+Evaluator.\+cs\end{DoxyCompactItemize}

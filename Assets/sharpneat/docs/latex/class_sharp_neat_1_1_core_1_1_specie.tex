@@ -1,0 +1,160 @@
+\hypertarget{class_sharp_neat_1_1_core_1_1_specie}{}\doxysection{Sharp\+Neat.\+Core.\+Specie$<$ T\+Genome $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_core_1_1_specie}\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+
+
+Represents a single specie within a speciated population.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_a48c3b8efa94a391333177c1e020ab3a8}{Specie}} (uint id, int idx)
+\begin{DoxyCompactList}\small\item\em Construct a specie with the specified ID and index in its parent list/array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_a4a252e972686b082f661301995ac68c8}{Specie}} (uint id, int idx, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a specie with the specified ID, index; and creates an empty genome list with a specified capacity. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_af9e8cbd62e0c26cf8878bd773754f8bd}{Calc\+Total\+Fitness}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total fitness of all genomes within the specie. Implemented as a method rather than a property as an indication that this method does significant work to calculate the value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_a260e9a51905bec1b54a73a19240f831a}{Calc\+Mean\+Fitness}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the mean fitness of genomes within the specie. Implemented as a method rather than a property as an indication that this method does significant work to calculate the value. ~\newline
+ \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_ab7f9bd7de53f4391d578eec4e65e0c66}{Calc\+Total\+Complexity}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total complexity of all genomes within the specie. Implemented as a method rather than a property as an indication that this method does significant work to calculate the value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_a475f6d0e118657914e045cfc2030eee0}{Calc\+Mean\+Complexity}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the mean complexity of genomes within the specie. Implemented as a method rather than a property as an indication that this method does significant work to calculate the value. ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_a09cf6ba5f674d6acdd75bc6853c77a8e}{Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the specie\textquotesingle{}s ID. \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}} I\+Ds are unique within a population. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_a917c3cf5ca598f88f5e77f7015698367}{Idx}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the index of the specie in its containing list. This is a working variable that typically will be the same as the specie ID but is not guaranteed to be e.\+g. in a distributed N\+E\+AT environment where specie I\+Ds may become non-\/contiguous. \end{DoxyCompactList}\item 
+List$<$ T\+Genome $>$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_aaac3876444400b863a97bc3735513b68}{Genome\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of all genomes in the specie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie_a3119446f0f96236eb6dc028d20649724}{Centroid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the centroid position for all genomes within the specie. Note that this may be out of date, it is the responsibility of code external to this class to recalculate and set a new centroid if the set of genomes in the specie has changed and therefore the specie\+List centroid has also changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single specie within a speciated population. 
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em class}]\item[{\em T\+Genome} : {\em \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}}$<$T\+Genome$>$}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_a48c3b8efa94a391333177c1e020ab3a8}\label{class_sharp_neat_1_1_core_1_1_specie_a48c3b8efa94a391333177c1e020ab3a8}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!Specie@{Specie}}
+\index{Specie@{Specie}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Specie()}{Specie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}} (\begin{DoxyParamCaption}\item[{uint}]{id,  }\item[{int}]{idx }\end{DoxyParamCaption})}
+
+
+
+Construct a specie with the specified ID and index in its parent list/array. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_a4a252e972686b082f661301995ac68c8}\label{class_sharp_neat_1_1_core_1_1_specie_a4a252e972686b082f661301995ac68c8}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!Specie@{Specie}}
+\index{Specie@{Specie}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Specie()}{Specie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}} (\begin{DoxyParamCaption}\item[{uint}]{id,  }\item[{int}]{idx,  }\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Construct a specie with the specified ID, index; and creates an empty genome list with a specified capacity. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_a475f6d0e118657914e045cfc2030eee0}\label{class_sharp_neat_1_1_core_1_1_specie_a475f6d0e118657914e045cfc2030eee0}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!CalcMeanComplexity@{CalcMeanComplexity}}
+\index{CalcMeanComplexity@{CalcMeanComplexity}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CalcMeanComplexity()}{CalcMeanComplexity()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.Calc\+Mean\+Complexity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the mean complexity of genomes within the specie. Implemented as a method rather than a property as an indication that this method does significant work to calculate the value. ~\newline
+ 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_a260e9a51905bec1b54a73a19240f831a}\label{class_sharp_neat_1_1_core_1_1_specie_a260e9a51905bec1b54a73a19240f831a}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!CalcMeanFitness@{CalcMeanFitness}}
+\index{CalcMeanFitness@{CalcMeanFitness}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CalcMeanFitness()}{CalcMeanFitness()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.Calc\+Mean\+Fitness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the mean fitness of genomes within the specie. Implemented as a method rather than a property as an indication that this method does significant work to calculate the value. ~\newline
+ 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_ab7f9bd7de53f4391d578eec4e65e0c66}\label{class_sharp_neat_1_1_core_1_1_specie_ab7f9bd7de53f4391d578eec4e65e0c66}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!CalcTotalComplexity@{CalcTotalComplexity}}
+\index{CalcTotalComplexity@{CalcTotalComplexity}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CalcTotalComplexity()}{CalcTotalComplexity()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.Calc\+Total\+Complexity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the total complexity of all genomes within the specie. Implemented as a method rather than a property as an indication that this method does significant work to calculate the value. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_af9e8cbd62e0c26cf8878bd773754f8bd}\label{class_sharp_neat_1_1_core_1_1_specie_af9e8cbd62e0c26cf8878bd773754f8bd}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!CalcTotalFitness@{CalcTotalFitness}}
+\index{CalcTotalFitness@{CalcTotalFitness}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CalcTotalFitness()}{CalcTotalFitness()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.Calc\+Total\+Fitness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the total fitness of all genomes within the specie. Implemented as a method rather than a property as an indication that this method does significant work to calculate the value. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_a3119446f0f96236eb6dc028d20649724}\label{class_sharp_neat_1_1_core_1_1_specie_a3119446f0f96236eb6dc028d20649724}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!Centroid@{Centroid}}
+\index{Centroid@{Centroid}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Centroid}{Centroid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.Centroid\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the centroid position for all genomes within the specie. Note that this may be out of date, it is the responsibility of code external to this class to recalculate and set a new centroid if the set of genomes in the specie has changed and therefore the specie\+List centroid has also changed. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_aaac3876444400b863a97bc3735513b68}\label{class_sharp_neat_1_1_core_1_1_specie_aaac3876444400b863a97bc3735513b68}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!GenomeList@{GenomeList}}
+\index{GenomeList@{GenomeList}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{GenomeList}{GenomeList}}
+{\footnotesize\ttfamily List$<$T\+Genome$>$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.Genome\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of all genomes in the specie. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_a09cf6ba5f674d6acdd75bc6853c77a8e}\label{class_sharp_neat_1_1_core_1_1_specie_a09cf6ba5f674d6acdd75bc6853c77a8e}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!Id@{Id}}
+\index{Id@{Id}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily uint \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the specie\textquotesingle{}s ID. \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}} I\+Ds are unique within a population. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_specie_a917c3cf5ca598f88f5e77f7015698367}\label{class_sharp_neat_1_1_core_1_1_specie_a917c3cf5ca598f88f5e77f7015698367}} 
+\index{SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}!Idx@{Idx}}
+\index{Idx@{Idx}!SharpNeat.Core.Specie$<$ TGenome $>$@{SharpNeat.Core.Specie$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Idx}{Idx}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Sharp\+Neat.\+Core.\+Specie}}$<$ T\+Genome $>$.Idx\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the index of the specie in its containing list. This is a working variable that typically will be the same as the specie ID but is not guaranteed to be e.\+g. in a distributed N\+E\+AT environment where specie I\+Ds may become non-\/contiguous. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/Specie.\+cs\end{DoxyCompactItemize}

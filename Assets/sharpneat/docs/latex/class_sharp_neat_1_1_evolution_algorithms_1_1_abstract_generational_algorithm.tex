@@ -1,0 +1,298 @@
+\hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{}\doxysection{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm$<$ T\+Genome $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+
+
+Abstract class providing some common/baseline data and methods for implementations of I\+Evolution\+Algorithm.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm$<$ T\+Genome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a5a417167d5a70edea18be663276eafa7}{Initialize}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$ genome\+List\+Evaluator, \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}$<$ T\+Genome $>$ genome\+Factory, List$<$ T\+Genome $>$ genome\+List)
+\begin{DoxyCompactList}\small\item\em Initializes the evolution algorithm with the provided I\+Genome\+List\+Evaluator, I\+Genome\+Factory and an initial population of genomes. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a4bf83f850d2919be75177f1e79cacb59}{Initialize}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$ genome\+List\+Evaluator, \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}$<$ T\+Genome $>$ genome\+Factory, int population\+Size)
+\begin{DoxyCompactList}\small\item\em Initializes the evolution algorithm with the provided I\+Genome\+List\+Evaluator and an I\+Genome\+Factory that can be used to create an initial population of genomes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a59893b15285ebec9416ac21099d1111d}{Start\+Continue}} ()
+\begin{DoxyCompactList}\small\item\em Starts the algorithm running. The algorithm will switch to the Running state from either the Ready or Paused states. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a446bc472c7ec5d09c72693218abd1546}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Alias for \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a5b9f15e824274dce7f9d3602fba69dbd}{Request\+Pause()}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a5b9f15e824274dce7f9d3602fba69dbd}{Request\+Pause}} ()
+\begin{DoxyCompactList}\small\item\em Requests that the algorithm pauses but doesn\textquotesingle{}t wait for the algorithm thread to stop. The algorithm thread will pause when it is next convenient to do so, and will notify listeners via an Update\+Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a56dc0e844d3d64f4f87084ecdb68512b}{Request\+Pause\+And\+Wait}} ()
+\begin{DoxyCompactList}\small\item\em Request that the algorithm pause and waits for the algorithm to do so. The algorithm thread will pause when it is next convenient to do so and notifies any Update\+Event listeners prior to returning control to the caller. Therefore it\textquotesingle{}s generally a bad idea to call this method from a G\+UI thread that also has code that may be called by the Update\+Event -\/ doing so will result in deadlocked threads. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a77c8205dd15e2c768728a21d9392c301}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a77c8205dd15e2c768728a21d9392c301}} 
+void {\bfseries Request\+Terminate\+And\+Wait} ()
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_ab6b2acc51b62a83bd416eee03a4373db}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_ab6b2acc51b62a83bd416eee03a4373db}} 
+void {\bfseries Dispose} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a4336e953fa75ef6abeb51940fe2006cf}{Perform\+One\+Generation}} ()
+\begin{DoxyCompactList}\small\item\em Progress forward by one generation. Perform one generation/cycle of the evolution algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_af4aa9e82c9640d2a7315e0f23cf5db4f}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_af4aa9e82c9640d2a7315e0f23cf5db4f}} 
+\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$ {\bfseries \+\_\+genome\+List\+Evaluator}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_adf1a2bdae822b137c9ef8abbc44fca02}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_adf1a2bdae822b137c9ef8abbc44fca02}} 
+\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}$<$ T\+Genome $>$ {\bfseries \+\_\+genome\+Factory}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a93c9e0511766a412e2141955a5067690}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a93c9e0511766a412e2141955a5067690}} 
+List$<$ T\+Genome $>$ {\bfseries \+\_\+genome\+List}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_ab1cb5a80022da50a571f29f2cd4379aa}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_ab1cb5a80022da50a571f29f2cd4379aa}} 
+int {\bfseries \+\_\+population\+Size}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a276589f3c5329f2944dbd8b19cb5c988}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a276589f3c5329f2944dbd8b19cb5c988}} 
+T\+Genome {\bfseries \+\_\+current\+Best\+Genome}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a193fbe4adf7aabcb4d999ae7f78147eb}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a193fbe4adf7aabcb4d999ae7f78147eb}} 
+volatile uint {\bfseries \+\_\+current\+Generation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a402f347f0af0c756c78f4452e710712a}{Current\+Generation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the current generation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_update_scheme}{Update\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_adf17b303ab63c90293ae32dd39b04aa1}{Update\+Scheme}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the algorithm\textquotesingle{}s update scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770}{Run\+State}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a69780d29ea7d15adaa2df6791f645a44}{Run\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the current execution/run state of the I\+Evolution\+Algorithm. \end{DoxyCompactList}\item 
+T\+Genome \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a550d501598d8c3ec67431866302ddebe}{Current\+Champ\+Genome}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the population\textquotesingle{}s current champion genome. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_ab0f7f04620ee62e88a7bb451e38346f9}{Stop\+Condition\+Satisfied}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether some goal fitness has been achieved and that the algorithm has therefore stopped. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_aba5340305d4f18ce7184bb3e864feb16}{Update\+Event}}
+\begin{DoxyCompactList}\small\item\em Notifies listeners that some state change has occurred. \end{DoxyCompactList}\item 
+Event\+Handler \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_aa145172c0fd18f394217e181b28a2816}{Paused\+Event}}
+\begin{DoxyCompactList}\small\item\em Notifies listeners that the algorithm has paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class providing some common/baseline data and methods for implementations of I\+Evolution\+Algorithm. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Genome} & The genome type that the algorithm will operate on.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em class}]\item[{\em T\+Genome} : {\em I\+Genome$<$T\+Genome$>$}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a4bf83f850d2919be75177f1e79cacb59}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a4bf83f850d2919be75177f1e79cacb59}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$}]{genome\+List\+Evaluator,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}$<$ T\+Genome $>$}]{genome\+Factory,  }\item[{int}]{population\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the evolution algorithm with the provided I\+Genome\+List\+Evaluator and an I\+Genome\+Factory that can be used to create an initial population of genomes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+List\+Evaluator} & The genome evaluation scheme for the evolution algorithm.\\
+\hline
+{\em genome\+Factory} & The factory that was used to create the genome\+List and which is therefore referenced by the genomes.\\
+\hline
+{\em population\+Size} & The number of genomes to create for the initial population.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm_a26a2fe351a4f7e918a94a125d6b4413e}{Sharp\+Neat.\+Core.\+I\+Evolution\+Algorithm$<$ T\+Genome $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_ad801401d4ea1e1fcf27c082851ef02a8}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a5a417167d5a70edea18be663276eafa7}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a5a417167d5a70edea18be663276eafa7}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}$<$ T\+Genome $>$}]{genome\+List\+Evaluator,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}$<$ T\+Genome $>$}]{genome\+Factory,  }\item[{List$<$ T\+Genome $>$}]{genome\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the evolution algorithm with the provided I\+Genome\+List\+Evaluator, I\+Genome\+Factory and an initial population of genomes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+List\+Evaluator} & The genome evaluation scheme for the evolution algorithm.\\
+\hline
+{\em genome\+Factory} & The factory that was used to create the genome\+List and which is therefore referenced by the genomes.\\
+\hline
+{\em genome\+List} & An initial genome population.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm_a201f6a444e40017c4c29f881666f0313}{Sharp\+Neat.\+Core.\+I\+Evolution\+Algorithm$<$ T\+Genome $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a01fb831482cdcd1c39c29c34920a4f9c}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a4336e953fa75ef6abeb51940fe2006cf}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a4336e953fa75ef6abeb51940fe2006cf}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!PerformOneGeneration@{PerformOneGeneration}}
+\index{PerformOneGeneration@{PerformOneGeneration}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{PerformOneGeneration()}{PerformOneGeneration()}}
+{\footnotesize\ttfamily abstract void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Perform\+One\+Generation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Progress forward by one generation. Perform one generation/cycle of the evolution algorithm. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_a78c930be5b68ad4d4a0bd5ca9c48363a}{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Evolution\+Algorithm$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a5b9f15e824274dce7f9d3602fba69dbd}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a5b9f15e824274dce7f9d3602fba69dbd}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!RequestPause@{RequestPause}}
+\index{RequestPause@{RequestPause}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{RequestPause()}{RequestPause()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Request\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Requests that the algorithm pauses but doesn\textquotesingle{}t wait for the algorithm thread to stop. The algorithm thread will pause when it is next convenient to do so, and will notify listeners via an Update\+Event. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm_ad5a32785ea3d36e59a9b45bf33189d0d}{Sharp\+Neat.\+Core.\+I\+Evolution\+Algorithm$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a56dc0e844d3d64f4f87084ecdb68512b}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a56dc0e844d3d64f4f87084ecdb68512b}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!RequestPauseAndWait@{RequestPauseAndWait}}
+\index{RequestPauseAndWait@{RequestPauseAndWait}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{RequestPauseAndWait()}{RequestPauseAndWait()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Request\+Pause\+And\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Request that the algorithm pause and waits for the algorithm to do so. The algorithm thread will pause when it is next convenient to do so and notifies any Update\+Event listeners prior to returning control to the caller. Therefore it\textquotesingle{}s generally a bad idea to call this method from a G\+UI thread that also has code that may be called by the Update\+Event -\/ doing so will result in deadlocked threads. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm_a78d6a1e6d9cddf23ae62bef69c426127}{Sharp\+Neat.\+Core.\+I\+Evolution\+Algorithm$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a59893b15285ebec9416ac21099d1111d}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a59893b15285ebec9416ac21099d1111d}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!StartContinue@{StartContinue}}
+\index{StartContinue@{StartContinue}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{StartContinue()}{StartContinue()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Start\+Continue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the algorithm running. The algorithm will switch to the Running state from either the Ready or Paused states. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm_af2c72816768967948ab059754cda3d36}{Sharp\+Neat.\+Core.\+I\+Evolution\+Algorithm$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a446bc472c7ec5d09c72693218abd1546}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a446bc472c7ec5d09c72693218abd1546}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!Stop@{Stop}}
+\index{Stop@{Stop}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Alias for \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a5b9f15e824274dce7f9d3602fba69dbd}{Request\+Pause()}}. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a550d501598d8c3ec67431866302ddebe}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a550d501598d8c3ec67431866302ddebe}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!CurrentChampGenome@{CurrentChampGenome}}
+\index{CurrentChampGenome@{CurrentChampGenome}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CurrentChampGenome}{CurrentChampGenome}}
+{\footnotesize\ttfamily T\+Genome \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Current\+Champ\+Genome\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the population\textquotesingle{}s current champion genome. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a402f347f0af0c756c78f4452e710712a}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a402f347f0af0c756c78f4452e710712a}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!CurrentGeneration@{CurrentGeneration}}
+\index{CurrentGeneration@{CurrentGeneration}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CurrentGeneration}{CurrentGeneration}}
+{\footnotesize\ttfamily uint \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Current\+Generation\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the current generation. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a69780d29ea7d15adaa2df6791f645a44}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_a69780d29ea7d15adaa2df6791f645a44}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!RunState@{RunState}}
+\index{RunState@{RunState}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{RunState}{RunState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770}{Run\+State}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.\mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770}{Run\+State}}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the current execution/run state of the I\+Evolution\+Algorithm. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_ab0f7f04620ee62e88a7bb451e38346f9}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_ab0f7f04620ee62e88a7bb451e38346f9}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!StopConditionSatisfied@{StopConditionSatisfied}}
+\index{StopConditionSatisfied@{StopConditionSatisfied}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{StopConditionSatisfied}{StopConditionSatisfied}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Stop\+Condition\+Satisfied\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether some goal fitness has been achieved and that the algorithm has therefore stopped. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_adf17b303ab63c90293ae32dd39b04aa1}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_adf17b303ab63c90293ae32dd39b04aa1}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!UpdateScheme@{UpdateScheme}}
+\index{UpdateScheme@{UpdateScheme}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateScheme}{UpdateScheme}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_update_scheme}{Update\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_update_scheme}{Update\+Scheme}}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the algorithm\textquotesingle{}s update scheme. 
+
+
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_aa145172c0fd18f394217e181b28a2816}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_aa145172c0fd18f394217e181b28a2816}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!PausedEvent@{PausedEvent}}
+\index{PausedEvent@{PausedEvent}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{PausedEvent}{PausedEvent}}
+{\footnotesize\ttfamily Event\+Handler \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Paused\+Event}
+
+
+
+Notifies listeners that the algorithm has paused. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_aba5340305d4f18ce7184bb3e864feb16}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm_aba5340305d4f18ce7184bb3e864feb16}} 
+\index{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}!UpdateEvent@{UpdateEvent}}
+\index{UpdateEvent@{UpdateEvent}!SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$@{SharpNeat.EvolutionAlgorithms.AbstractGenerationalAlgorithm$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateEvent}{UpdateEvent}}
+{\footnotesize\ttfamily Event\+Handler \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_abstract_generational_algorithm}{Sharp\+Neat.\+Evolution\+Algorithms.\+Abstract\+Generational\+Algorithm}}$<$ T\+Genome $>$.Update\+Event}
+
+
+
+Notifies listeners that some state change has occurred. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evolution\+Algorithms/Abstract\+Generational\+Algorithm.\+cs\end{DoxyCompactItemize}

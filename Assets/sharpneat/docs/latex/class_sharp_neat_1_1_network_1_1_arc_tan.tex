@@ -1,0 +1,117 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan}{}\doxysection{Sharp\+Neat.\+Network.\+Arc\+Tan Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_arc_tan}\index{SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}}
+Inheritance diagram for Sharp\+Neat.\+Network.\+Arc\+Tan\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_arc_tan}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_arc_tan_a538565fcde220fe51da4f3ec90a90b1b}{Calculate}} (double x, double\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_arc_tan_a065e102231206e1b76d6dcf3c662e0f8}{Calculate}} (float x, float\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_arc_tan_a538565fcde220fe51da4f3ec90a90b1b}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_arc_tan_ae5c60538e68c9931608edd9bddf8ce6c}{Get\+Random\+Aux\+Args}} (I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_arc_tan_aef1b1316ed9f3d4f0ad494920ab4a7be}{Mutate\+Aux\+Args}} (double\mbox{[}$\,$\mbox{]} aux\+Args, I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em Genetic mutation for auxiliary argument data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan_abc94e1d8357b3eee2f27ff1e3f89d912}\label{class_sharp_neat_1_1_network_1_1_arc_tan_abc94e1d8357b3eee2f27ff1e3f89d912}} 
+string {\bfseries Function\+Id} =$>$ this.\+Get\+Type().Name
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan_a50a6dedf011caf4ea4949c4cdca5bdef}\label{class_sharp_neat_1_1_network_1_1_arc_tan_a50a6dedf011caf4ea4949c4cdca5bdef}} 
+string {\bfseries Function\+String} =$>$ \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan_a2b56431e9c4ae9552149f6be7f48313a}\label{class_sharp_neat_1_1_network_1_1_arc_tan_a2b56431e9c4ae9552149f6be7f48313a}} 
+string {\bfseries Function\+Description} =$>$ this.\+Get\+Type().Name
+\item 
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan_a07f1dead1ac8a6d7d7e37ffbf178ea1b}\label{class_sharp_neat_1_1_network_1_1_arc_tan_a07f1dead1ac8a6d7d7e37ffbf178ea1b}} 
+bool {\bfseries Accepts\+Aux\+Args} =$>$ false
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_arc_tan_a9d0878e498e14083818b34f44f5b88ae}{\+\_\+\+\_\+\+Default\+Instance}} = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_arc_tan}{Arc\+Tan}}()
+\begin{DoxyCompactList}\small\item\em Default instance provided as a public static field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan_a538565fcde220fe51da4f3ec90a90b1b}\label{class_sharp_neat_1_1_network_1_1_arc_tan_a538565fcde220fe51da4f3ec90a90b1b}} 
+\index{SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Network.\+Arc\+Tan.\+Calculate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6230550f91b00cf7ac384e8a885dd11a}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan_a065e102231206e1b76d6dcf3c662e0f8}\label{class_sharp_neat_1_1_network_1_1_arc_tan_a065e102231206e1b76d6dcf3c662e0f8}} 
+\index{SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Network.\+Arc\+Tan.\+Calculate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_arc_tan_a538565fcde220fe51da4f3ec90a90b1b}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a17e6d971ff650f3f9ab7863ce0e555c3}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan_ae5c60538e68c9931608edd9bddf8ce6c}\label{class_sharp_neat_1_1_network_1_1_arc_tan_ae5c60538e68c9931608edd9bddf8ce6c}} 
+\index{SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}!GetRandomAuxArgs@{GetRandomAuxArgs}}
+\index{GetRandomAuxArgs@{GetRandomAuxArgs}!SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}}
+\doxysubsubsection{\texorpdfstring{GetRandomAuxArgs()}{GetRandomAuxArgs()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+Arc\+Tan.\+Get\+Random\+Aux\+Args (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6bf5c2eb7a6b09deb280a6e3653700db}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan_aef1b1316ed9f3d4f0ad494920ab4a7be}\label{class_sharp_neat_1_1_network_1_1_arc_tan_aef1b1316ed9f3d4f0ad494920ab4a7be}} 
+\index{SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}!MutateAuxArgs@{MutateAuxArgs}}
+\index{MutateAuxArgs@{MutateAuxArgs}!SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}}
+\doxysubsubsection{\texorpdfstring{MutateAuxArgs()}{MutateAuxArgs()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Network.\+Arc\+Tan.\+Mutate\+Aux\+Args (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args,  }\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+Genetic mutation for auxiliary argument data. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a2943116b401f4dff51448228ec9a6b71}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_arc_tan_a9d0878e498e14083818b34f44f5b88ae}\label{class_sharp_neat_1_1_network_1_1_arc_tan_a9d0878e498e14083818b34f44f5b88ae}} 
+\index{SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}!\_\_DefaultInstance@{\_\_DefaultInstance}}
+\index{\_\_DefaultInstance@{\_\_DefaultInstance}!SharpNeat.Network.ArcTan@{SharpNeat.Network.ArcTan}}
+\doxysubsubsection{\texorpdfstring{\_\_DefaultInstance}{\_\_DefaultInstance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+Arc\+Tan.\+\_\+\+\_\+\+Default\+Instance = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_arc_tan}{Arc\+Tan}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default instance provided as a public static field. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Activation\+Functions/\+Unipolar/Arc\+Tan.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,151 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+
+
+Represents a sorted list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} objects. The sorting of the items is done on request rather than being strictly enforced at all times (e.\+g. as part of adding and removing items). This approach is currently more convenient for use in some of the routines that work with N\+E\+AT genomes.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a80154fdbaf30744e00c068c95143749d}{Neuron\+Gene\+List}} ()
+\begin{DoxyCompactList}\small\item\em Construct an empty list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a0ee6270e755bcdeba4eeed2b273b8f41}{Neuron\+Gene\+List}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Construct an empty list with the specified capacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a4da5b56164c6cd59017dc3251468e293}{Neuron\+Gene\+List}} (I\+Collection$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} $>$ copy\+From)
+\begin{DoxyCompactList}\small\item\em Copy constructor. The newly allocated list has a capacity 1 larger than copy\+From allowing for a single add node mutation to occur without reallocation of memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a6c91ac1d3efa4ad10c7d30e32d821dd5}{Insert\+Into\+Position}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} neuron\+Gene)
+\begin{DoxyCompactList}\small\item\em Inserts a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} into its correct (sorted) location within the gene list. Normally neuron genes can safely be assumed to have a new Innovation ID higher than all existing I\+Ds, and so we can just call Add(). This routine handles genes with older I\+Ds that need placing correctly. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a50c0c34076c51ab9e034a0bcaf295518}{Remove}} (uint neuron\+Id)
+\begin{DoxyCompactList}\small\item\em Remove the neuron gene with the specified innovation ID. Returns the removed gene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_afdaa103deae4922d89d8e6b277c71395}{Get\+Neuron\+By\+Id}} (uint neuron\+Id)
+\begin{DoxyCompactList}\small\item\em Gets the neuron gene with the specified innovation ID using a fast binary search. Returns null if no such gene is in the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_af3510ef47a31e4ed41d6ca9360c3b985}{Sort\+By\+Innovation\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Sort neuron gene\textquotesingle{}s into ascending order by their innovation I\+Ds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a1140eaac94fd07f3fe770dffb00bfdf7}{Binary\+Search}} (uint id)
+\begin{DoxyCompactList}\small\item\em Obtain the index of the gene with the specified ID by performing a binary search. Binary search is fast and can be performed so long as the genes are sorted by ID. If the genes are not sorted then the behaviour of this method is undefined. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_aa1eb143064c0205977a8f55279d4affb}{Is\+Sorted}} ()
+\begin{DoxyCompactList}\small\item\em For debug purposes only. Don\textquotesingle{}t call this method in normal circumstances as it is an expensive O(n) operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a sorted list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} objects. The sorting of the items is done on request rather than being strictly enforced at all times (e.\+g. as part of adding and removing items). This approach is currently more convenient for use in some of the routines that work with N\+E\+AT genomes. 
+
+Because we are not using a strictly sorted list such as the generic class Sorted\+List\mbox{[}K,V\mbox{]} a customised \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a1140eaac94fd07f3fe770dffb00bfdf7}{Binary\+Search()}} method is provided for fast lookup of items if the list is known to be sorted. If the list is not sorted then the Binary\+Search method\textquotesingle{}s behaviour is undefined. This is potentially a source of bugs and thus this class should probably migrate to Sorted\+List\mbox{[}K,V\mbox{]} or be modified to ensure items are sorted prior to a binary search.
+
+Sort order is with respect to connection gene innovation ID.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a80154fdbaf30744e00c068c95143749d}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a80154fdbaf30744e00c068c95143749d}} 
+\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}!NeuronGeneList@{NeuronGeneList}}
+\index{NeuronGeneList@{NeuronGeneList}!SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+\doxysubsubsection{\texorpdfstring{NeuronGeneList()}{NeuronGeneList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List.\+Neuron\+Gene\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct an empty list. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a0ee6270e755bcdeba4eeed2b273b8f41}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a0ee6270e755bcdeba4eeed2b273b8f41}} 
+\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}!NeuronGeneList@{NeuronGeneList}}
+\index{NeuronGeneList@{NeuronGeneList}!SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+\doxysubsubsection{\texorpdfstring{NeuronGeneList()}{NeuronGeneList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List.\+Neuron\+Gene\+List (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Construct an empty list with the specified capacity. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a4da5b56164c6cd59017dc3251468e293}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a4da5b56164c6cd59017dc3251468e293}} 
+\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}!NeuronGeneList@{NeuronGeneList}}
+\index{NeuronGeneList@{NeuronGeneList}!SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+\doxysubsubsection{\texorpdfstring{NeuronGeneList()}{NeuronGeneList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List.\+Neuron\+Gene\+List (\begin{DoxyParamCaption}\item[{I\+Collection$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} $>$}]{copy\+From }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. The newly allocated list has a capacity 1 larger than copy\+From allowing for a single add node mutation to occur without reallocation of memory. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a1140eaac94fd07f3fe770dffb00bfdf7}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a1140eaac94fd07f3fe770dffb00bfdf7}} 
+\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}!BinarySearch@{BinarySearch}}
+\index{BinarySearch@{BinarySearch}!SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+\doxysubsubsection{\texorpdfstring{BinarySearch()}{BinarySearch()}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List.\+Binary\+Search (\begin{DoxyParamCaption}\item[{uint}]{id }\end{DoxyParamCaption})}
+
+
+
+Obtain the index of the gene with the specified ID by performing a binary search. Binary search is fast and can be performed so long as the genes are sorted by ID. If the genes are not sorted then the behaviour of this method is undefined. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_ad7e882c53b79a260df9783aa2c5d4ead}{Sharp\+Neat.\+Network.\+I\+Node\+List}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_afdaa103deae4922d89d8e6b277c71395}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_afdaa103deae4922d89d8e6b277c71395}} 
+\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}!GetNeuronById@{GetNeuronById}}
+\index{GetNeuronById@{GetNeuronById}!SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+\doxysubsubsection{\texorpdfstring{GetNeuronById()}{GetNeuronById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List.\+Get\+Neuron\+By\+Id (\begin{DoxyParamCaption}\item[{uint}]{neuron\+Id }\end{DoxyParamCaption})}
+
+
+
+Gets the neuron gene with the specified innovation ID using a fast binary search. Returns null if no such gene is in the list. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a6c91ac1d3efa4ad10c7d30e32d821dd5}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a6c91ac1d3efa4ad10c7d30e32d821dd5}} 
+\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}!InsertIntoPosition@{InsertIntoPosition}}
+\index{InsertIntoPosition@{InsertIntoPosition}!SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+\doxysubsubsection{\texorpdfstring{InsertIntoPosition()}{InsertIntoPosition()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List.\+Insert\+Into\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}}}]{neuron\+Gene }\end{DoxyParamCaption})}
+
+
+
+Inserts a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} into its correct (sorted) location within the gene list. Normally neuron genes can safely be assumed to have a new Innovation ID higher than all existing I\+Ds, and so we can just call Add(). This routine handles genes with older I\+Ds that need placing correctly. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_aa1eb143064c0205977a8f55279d4affb}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_aa1eb143064c0205977a8f55279d4affb}} 
+\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}!IsSorted@{IsSorted}}
+\index{IsSorted@{IsSorted}!SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+\doxysubsubsection{\texorpdfstring{IsSorted()}{IsSorted()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List.\+Is\+Sorted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+For debug purposes only. Don\textquotesingle{}t call this method in normal circumstances as it is an expensive O(n) operation. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_a2ca206e8f2c34706ace09d42437971ad}{Sharp\+Neat.\+Network.\+I\+Node\+List}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a50c0c34076c51ab9e034a0bcaf295518}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a50c0c34076c51ab9e034a0bcaf295518}} 
+\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}!Remove@{Remove}}
+\index{Remove@{Remove}!SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List.\+Remove (\begin{DoxyParamCaption}\item[{uint}]{neuron\+Id }\end{DoxyParamCaption})}
+
+
+
+Remove the neuron gene with the specified innovation ID. Returns the removed gene. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_af3510ef47a31e4ed41d6ca9360c3b985}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_af3510ef47a31e4ed41d6ca9360c3b985}} 
+\index{SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}!SortByInnovationId@{SortByInnovationId}}
+\index{SortByInnovationId@{SortByInnovationId}!SharpNeat.Genomes.Neat.NeuronGeneList@{SharpNeat.Genomes.Neat.NeuronGeneList}}
+\doxysubsubsection{\texorpdfstring{SortByInnovationId()}{SortByInnovationId()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List.\+Sort\+By\+Innovation\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sort neuron gene\textquotesingle{}s into ascending order by their innovation I\+Ds. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Neuron\+Gene\+List.\+cs\end{DoxyCompactItemize}

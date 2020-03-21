@@ -1,0 +1,161 @@
+\hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{}\doxysection{Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme Class Reference}
+\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+
+
+Represents network activation schemes. E.\+g. fixed number of activation timesteps or activation until the network becomes \textquotesingle{}relaxed\textquotesingle{}. Relaxed here means that no node\textquotesingle{}s output value changed by more than some threshold value.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a58c8b732f8171c40d5058273812336c4}{Create\+Acyclic\+Scheme}} ()
+\begin{DoxyCompactList}\small\item\em Create an activation scheme for acyclic networks. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ad5fce049315be10897de35a563fabd70}{Create\+Cyclic\+Fixed\+Timesteps\+Scheme}} (int timesteps\+Per\+Activation)
+\begin{DoxyCompactList}\small\item\em Create an activation scheme with a fixed number of activation timesteps (suitable for cyclic networks only). \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a43f162948b969cdd89602343eb086cc8}{Create\+Cyclic\+Fixed\+Timesteps\+Scheme}} (int timesteps\+Per\+Activation, bool fast\+Flag)
+\begin{DoxyCompactList}\small\item\em Create an activation scheme with a fixed number of activation timesteps (suitable for cyclic networks only). \textquotesingle{}fast\+Flag\textquotesingle{} indicates if a fast network implementation should be used. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a5dff6019012b547463d63faab3411e66}{Create\+Cyclic\+Relaxing\+Activation\+Scheme}} (double signal\+Delta\+Threshold, int max\+Timesteps)
+\begin{DoxyCompactList}\small\item\em Create a relaxing activation scheme (suitable for cyclic networks only). \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_adc98309cd6f0317e83c637cd191b25e4}{Create\+Cyclic\+Relaxing\+Activation\+Scheme}} (double signal\+Delta\+Threshold, int max\+Timesteps, bool fast\+Flag)
+\begin{DoxyCompactList}\small\item\em Create a relaxing activation scheme (suitable for cyclic networks only). \textquotesingle{}fast\+Flag\textquotesingle{} indicates if a fast network implementation should be used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ac3f1722db80610c55832d71872708c1e}{Acyclic\+Network}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether the network is acyclic or not (cyclic). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a698b701c2d18196896d330d8439a4701}{Relaxing\+Activation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether the scheme is a relaxing activation scheme. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ac93049d909b897f118605b10cf5e3299}{Timesteps\+Per\+Activation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a fixed number of activation timesteps. Non-\/relaxing activation scheme. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a26769296965bc2c7acd3c9a408c1f9c0}{Signal\+Delta\+Threshold}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a maximum signal delta threshold used to determine if a network is relaxed. Relaxing activation scheme. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a7cd76b9c5931a0410146f0e394ae2dbb}{Max\+Timesteps}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the maximum number of activation timesteps before stopping. Relaxing activation scheme. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ac0f36cdd1d6e0326b160defaae018e71}{Fast\+Flag}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether a fast version of the network should be created when decoding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents network activation schemes. E.\+g. fixed number of activation timesteps or activation until the network becomes \textquotesingle{}relaxed\textquotesingle{}. Relaxed here means that no node\textquotesingle{}s output value changed by more than some threshold value. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a58c8b732f8171c40d5058273812336c4}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a58c8b732f8171c40d5058273812336c4}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!CreateAcyclicScheme@{CreateAcyclicScheme}}
+\index{CreateAcyclicScheme@{CreateAcyclicScheme}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{CreateAcyclicScheme()}{CreateAcyclicScheme()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Create\+Acyclic\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an activation scheme for acyclic networks. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ad5fce049315be10897de35a563fabd70}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ad5fce049315be10897de35a563fabd70}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!CreateCyclicFixedTimestepsScheme@{CreateCyclicFixedTimestepsScheme}}
+\index{CreateCyclicFixedTimestepsScheme@{CreateCyclicFixedTimestepsScheme}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{CreateCyclicFixedTimestepsScheme()}{CreateCyclicFixedTimestepsScheme()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Create\+Cyclic\+Fixed\+Timesteps\+Scheme (\begin{DoxyParamCaption}\item[{int}]{timesteps\+Per\+Activation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an activation scheme with a fixed number of activation timesteps (suitable for cyclic networks only). 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a43f162948b969cdd89602343eb086cc8}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a43f162948b969cdd89602343eb086cc8}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!CreateCyclicFixedTimestepsScheme@{CreateCyclicFixedTimestepsScheme}}
+\index{CreateCyclicFixedTimestepsScheme@{CreateCyclicFixedTimestepsScheme}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{CreateCyclicFixedTimestepsScheme()}{CreateCyclicFixedTimestepsScheme()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Create\+Cyclic\+Fixed\+Timesteps\+Scheme (\begin{DoxyParamCaption}\item[{int}]{timesteps\+Per\+Activation,  }\item[{bool}]{fast\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an activation scheme with a fixed number of activation timesteps (suitable for cyclic networks only). \textquotesingle{}fast\+Flag\textquotesingle{} indicates if a fast network implementation should be used. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a5dff6019012b547463d63faab3411e66}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a5dff6019012b547463d63faab3411e66}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!CreateCyclicRelaxingActivationScheme@{CreateCyclicRelaxingActivationScheme}}
+\index{CreateCyclicRelaxingActivationScheme@{CreateCyclicRelaxingActivationScheme}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{CreateCyclicRelaxingActivationScheme()}{CreateCyclicRelaxingActivationScheme()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Create\+Cyclic\+Relaxing\+Activation\+Scheme (\begin{DoxyParamCaption}\item[{double}]{signal\+Delta\+Threshold,  }\item[{int}]{max\+Timesteps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a relaxing activation scheme (suitable for cyclic networks only). 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_adc98309cd6f0317e83c637cd191b25e4}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_adc98309cd6f0317e83c637cd191b25e4}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!CreateCyclicRelaxingActivationScheme@{CreateCyclicRelaxingActivationScheme}}
+\index{CreateCyclicRelaxingActivationScheme@{CreateCyclicRelaxingActivationScheme}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{CreateCyclicRelaxingActivationScheme()}{CreateCyclicRelaxingActivationScheme()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme}{Network\+Activation\+Scheme}} Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Create\+Cyclic\+Relaxing\+Activation\+Scheme (\begin{DoxyParamCaption}\item[{double}]{signal\+Delta\+Threshold,  }\item[{int}]{max\+Timesteps,  }\item[{bool}]{fast\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a relaxing activation scheme (suitable for cyclic networks only). \textquotesingle{}fast\+Flag\textquotesingle{} indicates if a fast network implementation should be used. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ac3f1722db80610c55832d71872708c1e}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ac3f1722db80610c55832d71872708c1e}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!AcyclicNetwork@{AcyclicNetwork}}
+\index{AcyclicNetwork@{AcyclicNetwork}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{AcyclicNetwork}{AcyclicNetwork}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Acyclic\+Network\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether the network is acyclic or not (cyclic). 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ac0f36cdd1d6e0326b160defaae018e71}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ac0f36cdd1d6e0326b160defaae018e71}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!FastFlag@{FastFlag}}
+\index{FastFlag@{FastFlag}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{FastFlag}{FastFlag}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Fast\+Flag\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether a fast version of the network should be created when decoding. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a7cd76b9c5931a0410146f0e394ae2dbb}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a7cd76b9c5931a0410146f0e394ae2dbb}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!MaxTimesteps@{MaxTimesteps}}
+\index{MaxTimesteps@{MaxTimesteps}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{MaxTimesteps}{MaxTimesteps}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Max\+Timesteps\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the maximum number of activation timesteps before stopping. Relaxing activation scheme. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a698b701c2d18196896d330d8439a4701}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a698b701c2d18196896d330d8439a4701}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!RelaxingActivation@{RelaxingActivation}}
+\index{RelaxingActivation@{RelaxingActivation}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{RelaxingActivation}{RelaxingActivation}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Relaxing\+Activation\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether the scheme is a relaxing activation scheme. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a26769296965bc2c7acd3c9a408c1f9c0}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_a26769296965bc2c7acd3c9a408c1f9c0}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!SignalDeltaThreshold@{SignalDeltaThreshold}}
+\index{SignalDeltaThreshold@{SignalDeltaThreshold}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{SignalDeltaThreshold}{SignalDeltaThreshold}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Signal\+Delta\+Threshold\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a maximum signal delta threshold used to determine if a network is relaxed. Relaxing activation scheme. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ac93049d909b897f118605b10cf5e3299}\label{class_sharp_neat_1_1_decoders_1_1_network_activation_scheme_ac93049d909b897f118605b10cf5e3299}} 
+\index{SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}!TimestepsPerActivation@{TimestepsPerActivation}}
+\index{TimestepsPerActivation@{TimestepsPerActivation}!SharpNeat.Decoders.NetworkActivationScheme@{SharpNeat.Decoders.NetworkActivationScheme}}
+\doxysubsubsection{\texorpdfstring{TimestepsPerActivation}{TimestepsPerActivation}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Decoders.\+Network\+Activation\+Scheme.\+Timesteps\+Per\+Activation\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a fixed number of activation timesteps. Non-\/relaxing activation scheme. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Decoders/Network\+Activation\+Scheme.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+\hypertarget{namespace_sharp_neat_1_1_phenomes}{}\doxysection{Sharp\+Neat.\+Phenomes Namespace Reference}
+\label{namespace_sharp_neat_1_1_phenomes}\index{SharpNeat.Phenomes@{SharpNeat.Phenomes}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}} represents an abstract device, system or function which has inputs and outputs. The internal workings and state of the box are not relevant to any method or class that accepts an \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}} -\/ only that it has inputs and outputs and a means of activation. In N\+E\+AT the neural network implementations generally fit this pattern, that is\+: \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array}{I\+Signal\+Array}}
+\begin{DoxyCompactList}\small\item\em An abstraction of the \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} class. Provided to allow custom implementations of a signal array if required. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_mapping_signal_array}{Mapping\+Signal\+Array}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_mapping_signal_array}{Mapping\+Signal\+Array}} wraps a native array along with an indirection/mapping array. See \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} for more info. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_output_mapping_signal_array}{Output\+Mapping\+Signal\+Array}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_mapping_signal_array}{Mapping\+Signal\+Array}} that applies the bounds interval \mbox{[}0,1\mbox{]} to returned values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_output_signal_array}{Output\+Signal\+Array}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} that applies the bounds interval \mbox{[}0,1\mbox{]} to returned values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} wraps a native array along with an offset into that array. The resulting \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} provides offset indexed access to the underlying native array. \end{DoxyCompactList}\end{DoxyCompactItemize}

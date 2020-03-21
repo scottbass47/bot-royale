@@ -1,0 +1,107 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_network_node}{}\doxysection{Sharp\+Neat.\+Network.\+Network\+Node Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_network_node}\index{SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}}
+
+
+Concrete implementation of an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}}.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Network\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_network_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_node_adddc95c85af271c92daac0d3508d7763}{Network\+Node}} (uint id, \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} node\+Type, int activation\+Fn\+Id)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided node ID, type and activation function ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_node_a115fd81481b31451a1df19e0610893c5}{Network\+Node}} (uint id, \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} node\+Type, int activation\+Fn\+Id, double\mbox{[}$\,$\mbox{]} aux\+State)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided node ID, type, activation function ID and auxiliary state data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_node_a321bf5e98f2baeafe2089e18656b7281}{Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the node\textquotesingle{}s unique ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_node_a31ff7bf24d1553cfca55c40e0340b652}{Node\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the node\textquotesingle{}s type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_node_a8b138b20018c55f86c7320c7d4e408c8}{Activation\+Fn\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the node\textquotesingle{}s activation function ID. This is an ID into an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} associated with the network as a whole. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_network_node_a7c4310b8d873e9ec95876e243298e232}{Aux\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional auxiliary node state. Null if no aux state is present. Note. Radial Basis Function center and epsilon values are stored here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete implementation of an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_node_adddc95c85af271c92daac0d3508d7763}\label{class_sharp_neat_1_1_network_1_1_network_node_adddc95c85af271c92daac0d3508d7763}} 
+\index{SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}!NetworkNode@{NetworkNode}}
+\index{NetworkNode@{NetworkNode}!SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}}
+\doxysubsubsection{\texorpdfstring{NetworkNode()}{NetworkNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Network.\+Network\+Node.\+Network\+Node (\begin{DoxyParamCaption}\item[{uint}]{id,  }\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}}}]{node\+Type,  }\item[{int}]{activation\+Fn\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided node ID, type and activation function ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_node_a115fd81481b31451a1df19e0610893c5}\label{class_sharp_neat_1_1_network_1_1_network_node_a115fd81481b31451a1df19e0610893c5}} 
+\index{SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}!NetworkNode@{NetworkNode}}
+\index{NetworkNode@{NetworkNode}!SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}}
+\doxysubsubsection{\texorpdfstring{NetworkNode()}{NetworkNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Network.\+Network\+Node.\+Network\+Node (\begin{DoxyParamCaption}\item[{uint}]{id,  }\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}}}]{node\+Type,  }\item[{int}]{activation\+Fn\+Id,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+State }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided node ID, type, activation function ID and auxiliary state data. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_node_a8b138b20018c55f86c7320c7d4e408c8}\label{class_sharp_neat_1_1_network_1_1_network_node_a8b138b20018c55f86c7320c7d4e408c8}} 
+\index{SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}!ActivationFnId@{ActivationFnId}}
+\index{ActivationFnId@{ActivationFnId}!SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}}
+\doxysubsubsection{\texorpdfstring{ActivationFnId}{ActivationFnId}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Network.\+Network\+Node.\+Activation\+Fn\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the node\textquotesingle{}s activation function ID. This is an ID into an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} associated with the network as a whole. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_node_a7c4310b8d873e9ec95876e243298e232}\label{class_sharp_neat_1_1_network_1_1_network_node_a7c4310b8d873e9ec95876e243298e232}} 
+\index{SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}!AuxState@{AuxState}}
+\index{AuxState@{AuxState}!SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}}
+\doxysubsubsection{\texorpdfstring{AuxState}{AuxState}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+Network\+Node.\+Aux\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Optional auxiliary node state. Null if no aux state is present. Note. Radial Basis Function center and epsilon values are stored here. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_node_a321bf5e98f2baeafe2089e18656b7281}\label{class_sharp_neat_1_1_network_1_1_network_node_a321bf5e98f2baeafe2089e18656b7281}} 
+\index{SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}!Id@{Id}}
+\index{Id@{Id}!SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Network.\+Network\+Node.\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the node\textquotesingle{}s unique ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_network_node_a31ff7bf24d1553cfca55c40e0340b652}\label{class_sharp_neat_1_1_network_1_1_network_node_a31ff7bf24d1553cfca55c40e0340b652}} 
+\index{SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}!NodeType@{NodeType}}
+\index{NodeType@{NodeType}!SharpNeat.Network.NetworkNode@{SharpNeat.Network.NetworkNode}}
+\doxysubsubsection{\texorpdfstring{NodeType}{NodeType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} Sharp\+Neat.\+Network.\+Network\+Node.\+Node\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the node\textquotesingle{}s type. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/Network\+Node.\+cs\end{DoxyCompactItemize}

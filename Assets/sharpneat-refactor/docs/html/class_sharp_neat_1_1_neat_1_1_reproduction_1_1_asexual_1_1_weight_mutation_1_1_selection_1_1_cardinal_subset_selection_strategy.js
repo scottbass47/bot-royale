@@ -1,5 +1,0 @@
-var class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_weight_mutation_1_1_selection_1_1_cardinal_subset_selection_strategy =
-[
-    [ "CardinalSubsetSelectionStrategy", "class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_weight_mutation_1_1_selection_1_1_cardinal_subset_selection_strategy.html#a2ee07b9919c9ef93ad8dbb28bd551e97", null ],
-    [ "SelectSubset", "class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_weight_mutation_1_1_selection_1_1_cardinal_subset_selection_strategy.html#a83c88ee3a29d80fc55ede3184b715f8c", null ]
-];

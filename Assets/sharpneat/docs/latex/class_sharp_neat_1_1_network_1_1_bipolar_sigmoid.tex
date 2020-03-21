@@ -1,0 +1,165 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid}{}\doxysection{Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid}\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+
+
+Bipolar sigmoid activation function. Output range is -\/1 to 1 instead of the more normal 0 to 1.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a837c4269f092b93ddf7433a6dc3bf622}{Calculate}} (double x, double\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_adfab36bc1d0b4cabfeaf387886f9706c}{Calculate}} (float x, float\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a837c4269f092b93ddf7433a6dc3bf622}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a16126ee75e3c1277d7a1ffa2022b17ea}{Get\+Random\+Aux\+Args}} (I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a87a7a2ed6d7f833e18fe35056354e3a3}{Mutate\+Aux\+Args}} (double\mbox{[}$\,$\mbox{]} aux\+Args, I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em Genetic mutation for auxiliary argument data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_aad814f43089c72c45a0ec9d2a751de0a}{\+\_\+\+\_\+\+Default\+Instance}} = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid}{Bipolar\+Sigmoid}}()
+\begin{DoxyCompactList}\small\item\em Default instance provided as a public static field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a8cf0a51a4bd55b61cfa413ad77d6005e}{Function\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_ad8e5cde186999191de76ea473a6ee1d4}{Function\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a0cdaf04b0659935490c93c1a087f1718}{Function\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable verbose description of the activation function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_afd8bef9528f80d675955f3c43d35e14d}{Accepts\+Aux\+Args}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a flag that indicates if the activation function accepts auxiliary arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Bipolar sigmoid activation function. Output range is -\/1 to 1 instead of the more normal 0 to 1. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a837c4269f092b93ddf7433a6dc3bf622}\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a837c4269f092b93ddf7433a6dc3bf622}} 
+\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid.\+Calculate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6230550f91b00cf7ac384e8a885dd11a}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_adfab36bc1d0b4cabfeaf387886f9706c}\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_adfab36bc1d0b4cabfeaf387886f9706c}} 
+\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid.\+Calculate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a837c4269f092b93ddf7433a6dc3bf622}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a17e6d971ff650f3f9ab7863ce0e555c3}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a16126ee75e3c1277d7a1ffa2022b17ea}\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a16126ee75e3c1277d7a1ffa2022b17ea}} 
+\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}!GetRandomAuxArgs@{GetRandomAuxArgs}}
+\index{GetRandomAuxArgs@{GetRandomAuxArgs}!SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+\doxysubsubsection{\texorpdfstring{GetRandomAuxArgs()}{GetRandomAuxArgs()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid.\+Get\+Random\+Aux\+Args (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6bf5c2eb7a6b09deb280a6e3653700db}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a87a7a2ed6d7f833e18fe35056354e3a3}\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a87a7a2ed6d7f833e18fe35056354e3a3}} 
+\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}!MutateAuxArgs@{MutateAuxArgs}}
+\index{MutateAuxArgs@{MutateAuxArgs}!SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+\doxysubsubsection{\texorpdfstring{MutateAuxArgs()}{MutateAuxArgs()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid.\+Mutate\+Aux\+Args (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args,  }\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+Genetic mutation for auxiliary argument data. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a2943116b401f4dff51448228ec9a6b71}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_aad814f43089c72c45a0ec9d2a751de0a}\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_aad814f43089c72c45a0ec9d2a751de0a}} 
+\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}!\_\_DefaultInstance@{\_\_DefaultInstance}}
+\index{\_\_DefaultInstance@{\_\_DefaultInstance}!SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+\doxysubsubsection{\texorpdfstring{\_\_DefaultInstance}{\_\_DefaultInstance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid.\+\_\+\+\_\+\+Default\+Instance = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid}{Bipolar\+Sigmoid}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default instance provided as a public static field. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_afd8bef9528f80d675955f3c43d35e14d}\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_afd8bef9528f80d675955f3c43d35e14d}} 
+\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}!AcceptsAuxArgs@{AcceptsAuxArgs}}
+\index{AcceptsAuxArgs@{AcceptsAuxArgs}!SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+\doxysubsubsection{\texorpdfstring{AcceptsAuxArgs}{AcceptsAuxArgs}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid.\+Accepts\+Aux\+Args\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a flag that indicates if the activation function accepts auxiliary arguments. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a0cdaf04b0659935490c93c1a087f1718}\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a0cdaf04b0659935490c93c1a087f1718}} 
+\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}!FunctionDescription@{FunctionDescription}}
+\index{FunctionDescription@{FunctionDescription}!SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+\doxysubsubsection{\texorpdfstring{FunctionDescription}{FunctionDescription}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid.\+Function\+Description\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable verbose description of the activation function. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a8cf0a51a4bd55b61cfa413ad77d6005e}\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_a8cf0a51a4bd55b61cfa413ad77d6005e}} 
+\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}!FunctionId@{FunctionId}}
+\index{FunctionId@{FunctionId}!SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+\doxysubsubsection{\texorpdfstring{FunctionId}{FunctionId}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid.\+Function\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_ad8e5cde186999191de76ea473a6ee1d4}\label{class_sharp_neat_1_1_network_1_1_bipolar_sigmoid_ad8e5cde186999191de76ea473a6ee1d4}} 
+\index{SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}!FunctionString@{FunctionString}}
+\index{FunctionString@{FunctionString}!SharpNeat.Network.BipolarSigmoid@{SharpNeat.Network.BipolarSigmoid}}
+\doxysubsubsection{\texorpdfstring{FunctionString}{FunctionString}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Bipolar\+Sigmoid.\+Function\+String\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Activation\+Functions/\+Bipolar/Bipolar\+Sigmoid.\+cs\end{DoxyCompactItemize}

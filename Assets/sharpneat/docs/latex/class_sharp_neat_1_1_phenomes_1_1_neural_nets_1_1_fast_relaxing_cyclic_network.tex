@@ -1,0 +1,79 @@
+\hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network}{}\doxysection{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Relaxing\+Cyclic\+Network Class Reference}
+\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network}\index{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork}}
+
+
+A version of \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} that activates a network until it becomes \textquotesingle{}relaxed\textquotesingle{} rather than for some fixed number of iterations. This class is exactly the same as \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} in all other respects; See that class for more detailed info.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Relaxing\+Cyclic\+Network\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_abf3a8b25ba2559c915b49b973ba74644}{Fast\+Relaxing\+Cyclic\+Network}} (\mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_connection}{Fast\+Connection}}\mbox{[}$\,$\mbox{]} connection\+Array, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}}\mbox{[}$\,$\mbox{]} neuron\+Activation\+Fn\+Array, double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} neuron\+Aux\+Args\+Array, int neuron\+Count, int input\+Neuron\+Count, int output\+Neuron\+Count, int max\+Timesteps, double signal\+Delta\+Threshold, bool bounded\+Output)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network}{Fast\+Relaxing\+Cyclic\+Network}} with the provided pre-\/built \mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_connection}{Fast\+Connection}} array and associated data. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_a1e405b1917b7739da0166dc1e014d203}{Activate}} ()
+\begin{DoxyCompactList}\small\item\em Activate the network until it becomes \textquotesingle{}relaxed\textquotesingle{} or until max\+Iterations is reached. If max\+Iterations is reached without the network relaxing then the Is\+Valid\+State property will return false, although the network outputs are still provided and can be read as normal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_ad2b0944979f8ab9801d7b57170cfac1a}{Is\+State\+Valid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether the internal state is valid. Returns false if the network did not relax within the maximum number of timesteps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A version of \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} that activates a network until it becomes \textquotesingle{}relaxed\textquotesingle{} rather than for some fixed number of iterations. This class is exactly the same as \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network}{Fast\+Cyclic\+Network}} in all other respects; See that class for more detailed info. 
+
+A network is defined as being relaxed when the change in output signal value between two successive update iterations is less than some threshold value (defined by max\+Allowed\+Signal\+Delta on the constructor) for all hidden and output neurons (input and bias neurons have a fixed output value).
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_abf3a8b25ba2559c915b49b973ba74644}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_abf3a8b25ba2559c915b49b973ba74644}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork}!FastRelaxingCyclicNetwork@{FastRelaxingCyclicNetwork}}
+\index{FastRelaxingCyclicNetwork@{FastRelaxingCyclicNetwork}!SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{FastRelaxingCyclicNetwork()}{FastRelaxingCyclicNetwork()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Relaxing\+Cyclic\+Network.\+Fast\+Relaxing\+Cyclic\+Network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_connection}{Fast\+Connection}}\mbox{[}$\,$\mbox{]}}]{connection\+Array,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}}\mbox{[}$\,$\mbox{]}}]{neuron\+Activation\+Fn\+Array,  }\item[{double}]{neuron\+Aux\+Args\+Array\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{neuron\+Count,  }\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{int}]{max\+Timesteps,  }\item[{double}]{signal\+Delta\+Threshold,  }\item[{bool}]{bounded\+Output }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network}{Fast\+Relaxing\+Cyclic\+Network}} with the provided pre-\/built \mbox{\hyperlink{struct_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_connection}{Fast\+Connection}} array and associated data. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_a1e405b1917b7739da0166dc1e014d203}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_a1e405b1917b7739da0166dc1e014d203}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork}!Activate@{Activate}}
+\index{Activate@{Activate}!SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily override void Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Relaxing\+Cyclic\+Network.\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Activate the network until it becomes \textquotesingle{}relaxed\textquotesingle{} or until max\+Iterations is reached. If max\+Iterations is reached without the network relaxing then the Is\+Valid\+State property will return false, although the network outputs are still provided and can be read as normal. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_cyclic_network_a4fb1541528fe238261c798d47f07f528}{Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Cyclic\+Network}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_ad2b0944979f8ab9801d7b57170cfac1a}\label{class_sharp_neat_1_1_phenomes_1_1_neural_nets_1_1_fast_relaxing_cyclic_network_ad2b0944979f8ab9801d7b57170cfac1a}} 
+\index{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork}!IsStateValid@{IsStateValid}}
+\index{IsStateValid@{IsStateValid}!SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork@{SharpNeat.Phenomes.NeuralNets.FastRelaxingCyclicNetwork}}
+\doxysubsubsection{\texorpdfstring{IsStateValid}{IsStateValid}}
+{\footnotesize\ttfamily override bool Sharp\+Neat.\+Phenomes.\+Neural\+Nets.\+Fast\+Relaxing\+Cyclic\+Network.\+Is\+State\+Valid\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether the internal state is valid. Returns false if the network did not relax within the maximum number of timesteps. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Phenomes/\+Neural\+Nets/\+Fast\+Cyclic\+Network/Fast\+Relaxing\+Cyclic\+Network.\+cs\end{DoxyCompactItemize}

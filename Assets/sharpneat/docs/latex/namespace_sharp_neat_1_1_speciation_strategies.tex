@@ -1,0 +1,15 @@
+\hypertarget{namespace_sharp_neat_1_1_speciation_strategies}{}\doxysection{Sharp\+Neat.\+Speciation\+Strategies Namespace Reference}
+\label{namespace_sharp_neat_1_1_speciation_strategies}\index{SharpNeat.SpeciationStrategies@{SharpNeat.SpeciationStrategies}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Genome\+Distance\+Pair}
+\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_k_means_clustering_strategy}{K\+Means\+Clustering\+Strategy}}
+\begin{DoxyCompactList}\small\item\em An I\+Speciation\+Strategy that speciates genomes using the k-\/means clustering method. k-\/means requires a distance metric and as such this class requires am I\+Distance\+Metric to be provided at construction time. Different distance metrics can be used including Neat\+Distance\+Metric which is equivalent to the metric used in the standard N\+E\+AT method albeit with a different clustering/speciation algorithm (Standard N\+E\+AT does not use k-\/means). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}{Parallel\+K\+Means\+Clustering\+Strategy}}
+\begin{DoxyCompactList}\small\item\em An I\+Speciation\+Strategy that speciates genomes using the k-\/means clustering method. k-\/means requires a distance metric and as such this class requires am I\+Distance\+Metric to be provided at construction time. Different distance metrics can be used including Neat\+Distance\+Metric which is equivalent to the metric used in the standard N\+E\+AT method albeit with a different clustering/speciation algorithm (Standard N\+E\+AT does not use k-\/means). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_random_clustering_strategy}{Random\+Clustering\+Strategy}}
+\begin{DoxyCompactList}\small\item\em A speciation strategy that allocates genomes to species randomly. Although allocation is random the strategy does maintain evenly sized species. Primarily used for testing/debugging and demonstrating comparative effectiveness of random allocation compared to other strategies. \end{DoxyCompactList}\item 
+class {\bfseries Speciation\+Utils}
+\begin{DoxyCompactList}\small\item\em Static helper methods for speciation. \end{DoxyCompactList}\end{DoxyCompactItemize}

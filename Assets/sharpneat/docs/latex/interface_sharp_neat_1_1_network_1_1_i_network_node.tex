@@ -1,0 +1,77 @@
+\hypertarget{interface_sharp_neat_1_1_network_1_1_i_network_node}{}\doxysection{Sharp\+Neat.\+Network.\+I\+Network\+Node Interface Reference}
+\label{interface_sharp_neat_1_1_network_1_1_i_network_node}\index{SharpNeat.Network.INetworkNode@{SharpNeat.Network.INetworkNode}}
+
+
+Represents a single network node. Part of the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} type hierarchy.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+I\+Network\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_sharp_neat_1_1_network_1_1_i_network_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node_a8b734ac590a5feeb2375b2a5c1e9d294}{Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the node\textquotesingle{}s unique ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node_ac4b1c6e3b56f26c58ee655377de80673}{Node\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the node\textquotesingle{}s type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node_a3e422e01182cd76491dc0e0df2873a41}{Activation\+Fn\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the node\textquotesingle{}s activation function ID. This is an ID into an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} associated with the network as a whole. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node_ac07c6ccca7edaf6ff3f54282bea2fcab}{Aux\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional auxiliary node state. Null if no aux state is present. Note. Radial Basis Function center and epsilon values are stored here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single network node. Part of the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} type hierarchy. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_network_1_1_i_network_node_a3e422e01182cd76491dc0e0df2873a41}\label{interface_sharp_neat_1_1_network_1_1_i_network_node_a3e422e01182cd76491dc0e0df2873a41}} 
+\index{SharpNeat.Network.INetworkNode@{SharpNeat.Network.INetworkNode}!ActivationFnId@{ActivationFnId}}
+\index{ActivationFnId@{ActivationFnId}!SharpNeat.Network.INetworkNode@{SharpNeat.Network.INetworkNode}}
+\doxysubsubsection{\texorpdfstring{ActivationFnId}{ActivationFnId}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Network.\+I\+Network\+Node.\+Activation\+Fn\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the node\textquotesingle{}s activation function ID. This is an ID into an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} associated with the network as a whole. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_network_1_1_i_network_node_ac07c6ccca7edaf6ff3f54282bea2fcab}\label{interface_sharp_neat_1_1_network_1_1_i_network_node_ac07c6ccca7edaf6ff3f54282bea2fcab}} 
+\index{SharpNeat.Network.INetworkNode@{SharpNeat.Network.INetworkNode}!AuxState@{AuxState}}
+\index{AuxState@{AuxState}!SharpNeat.Network.INetworkNode@{SharpNeat.Network.INetworkNode}}
+\doxysubsubsection{\texorpdfstring{AuxState}{AuxState}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+I\+Network\+Node.\+Aux\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Optional auxiliary node state. Null if no aux state is present. Note. Radial Basis Function center and epsilon values are stored here. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_network_1_1_i_network_node_a8b734ac590a5feeb2375b2a5c1e9d294}\label{interface_sharp_neat_1_1_network_1_1_i_network_node_a8b734ac590a5feeb2375b2a5c1e9d294}} 
+\index{SharpNeat.Network.INetworkNode@{SharpNeat.Network.INetworkNode}!Id@{Id}}
+\index{Id@{Id}!SharpNeat.Network.INetworkNode@{SharpNeat.Network.INetworkNode}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Network.\+I\+Network\+Node.\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the node\textquotesingle{}s unique ID. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_network_1_1_i_network_node_ac4b1c6e3b56f26c58ee655377de80673}\label{interface_sharp_neat_1_1_network_1_1_i_network_node_ac4b1c6e3b56f26c58ee655377de80673}} 
+\index{SharpNeat.Network.INetworkNode@{SharpNeat.Network.INetworkNode}!NodeType@{NodeType}}
+\index{NodeType@{NodeType}!SharpNeat.Network.INetworkNode@{SharpNeat.Network.INetworkNode}}
+\doxysubsubsection{\texorpdfstring{NodeType}{NodeType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} Sharp\+Neat.\+Network.\+I\+Network\+Node.\+Node\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the node\textquotesingle{}s type. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/I\+Network\+Node.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info\+List Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list}\index{SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}}
+
+
+Represents a list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} objects.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a5f0598d8bfa990d168e1fb3a0a3bbfdc}{Connection\+Mutation\+Info\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a14cae60bb934266a0f5ecea5af4244bf}{Connection\+Mutation\+Info\+List}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructs an empty list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a95cf1aaf4bb0587abf39a3c98bb66570}{Connection\+Mutation\+Info\+List}} (I\+Collection$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} $>$ copy\+From)
+\begin{DoxyCompactList}\small\item\em Copy constructor. We make individual copies of the list items (deep copy), rather than only copying the item object references. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a9229f486dde1339b32c5d5f88b84fd82}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the list. Call this after all items have been add to the list. This creates a Roulette\+Wheel\+Layout based upon the activation probability of each item in the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a6c2d9de57a82af823d314830f378a01f}{Get\+Random\+Item}} (I\+Random\+Source rng)
+\begin{DoxyCompactList}\small\item\em Gets one of the \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} items at random based upon the Activation\+Probability of the contained items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Discrete\+Distribution \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_afafb08c4e68356eb0a6c3753a940af88}{Roulette\+Wheel\+Layout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the Roulette\+Wheel\+Layout for the items in the list. This is based upon the activation probability of each item in the list at the time Initialise was called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} objects. 
+
+Also hold a Roulette\+Wheel\+Layout built from the activation probability values of the contained \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} objects. This can be used to select a mutation type to use within the \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} mutation routines.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a5f0598d8bfa990d168e1fb3a0a3bbfdc}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a5f0598d8bfa990d168e1fb3a0a3bbfdc}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}!ConnectionMutationInfoList@{ConnectionMutationInfoList}}
+\index{ConnectionMutationInfoList@{ConnectionMutationInfoList}!SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}}
+\doxysubsubsection{\texorpdfstring{ConnectionMutationInfoList()}{ConnectionMutationInfoList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info\+List.\+Connection\+Mutation\+Info\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs an empty list. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a14cae60bb934266a0f5ecea5af4244bf}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a14cae60bb934266a0f5ecea5af4244bf}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}!ConnectionMutationInfoList@{ConnectionMutationInfoList}}
+\index{ConnectionMutationInfoList@{ConnectionMutationInfoList}!SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}}
+\doxysubsubsection{\texorpdfstring{ConnectionMutationInfoList()}{ConnectionMutationInfoList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info\+List.\+Connection\+Mutation\+Info\+List (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs an empty list. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a95cf1aaf4bb0587abf39a3c98bb66570}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a95cf1aaf4bb0587abf39a3c98bb66570}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}!ConnectionMutationInfoList@{ConnectionMutationInfoList}}
+\index{ConnectionMutationInfoList@{ConnectionMutationInfoList}!SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}}
+\doxysubsubsection{\texorpdfstring{ConnectionMutationInfoList()}{ConnectionMutationInfoList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info\+List.\+Connection\+Mutation\+Info\+List (\begin{DoxyParamCaption}\item[{I\+Collection$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} $>$}]{copy\+From }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. We make individual copies of the list items (deep copy), rather than only copying the item object references. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a6c2d9de57a82af823d314830f378a01f}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a6c2d9de57a82af823d314830f378a01f}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}!GetRandomItem@{GetRandomItem}}
+\index{GetRandomItem@{GetRandomItem}!SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}}
+\doxysubsubsection{\texorpdfstring{GetRandomItem()}{GetRandomItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info\+List.\+Get\+Random\+Item (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng }\end{DoxyParamCaption})}
+
+
+
+Gets one of the \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info}{Connection\+Mutation\+Info}} items at random based upon the Activation\+Probability of the contained items. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a9229f486dde1339b32c5d5f88b84fd82}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_a9229f486dde1339b32c5d5f88b84fd82}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info\+List.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the list. Call this after all items have been add to the list. This creates a Roulette\+Wheel\+Layout based upon the activation probability of each item in the list. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_afafb08c4e68356eb0a6c3753a940af88}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_mutation_info_list_afafb08c4e68356eb0a6c3753a940af88}} 
+\index{SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}!RouletteWheelLayout@{RouletteWheelLayout}}
+\index{RouletteWheelLayout@{RouletteWheelLayout}!SharpNeat.Genomes.Neat.ConnectionMutationInfoList@{SharpNeat.Genomes.Neat.ConnectionMutationInfoList}}
+\doxysubsubsection{\texorpdfstring{RouletteWheelLayout}{RouletteWheelLayout}}
+{\footnotesize\ttfamily Discrete\+Distribution Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Mutation\+Info\+List.\+Roulette\+Wheel\+Layout\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the Roulette\+Wheel\+Layout for the items in the list. This is based upon the activation probability of each item in the list at the time Initialise was called. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Connection\+Mutation\+Info\+List.\+cs\end{DoxyCompactItemize}

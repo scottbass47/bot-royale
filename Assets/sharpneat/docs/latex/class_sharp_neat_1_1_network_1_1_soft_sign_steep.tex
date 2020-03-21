@@ -1,0 +1,165 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep}{}\doxysection{Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep}\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+
+
+The softsign sigmoid. This is a variant of softsign that has a steeper slope at and around the origin that is intended to be a similar slope to that of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_logistic_function_steep}{Logistic\+Function\+Steep}}.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_soft_sign_steep}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a3cb1bcb3f35732874a42b507f3203fd7}{Calculate}} (double x, double\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_ab58dd3f6c27a1a2b156db289feb9d0c9}{Calculate}} (float x, float\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a3cb1bcb3f35732874a42b507f3203fd7}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a0ca294f3166ff4714b2ea1de04c9ccaf}{Get\+Random\+Aux\+Args}} (I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_ae21da48cd6264dfb10bb470f2a388a26}{Mutate\+Aux\+Args}} (double\mbox{[}$\,$\mbox{]} aux\+Args, I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em Genetic mutation for auxiliary argument data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a6b473dc35a1ed2d51f9766e643bf0ebc}{\+\_\+\+\_\+\+Default\+Instance}} = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep}{Soft\+Sign\+Steep}}()
+\begin{DoxyCompactList}\small\item\em Default instance provided as a public static field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a97518749c8ef165787a2796317658c11}{Function\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a12eaf8bacf9f0b836a0e14390c346b25}{Function\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a6f8a46c418e694345cd4b9b7e2fe1c3c}{Function\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable verbose description of the activation function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a0957b918b72cb5f42915785ecf58144b}{Accepts\+Aux\+Args}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a flag that indicates if the activation function accepts auxiliary arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The softsign sigmoid. This is a variant of softsign that has a steeper slope at and around the origin that is intended to be a similar slope to that of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_logistic_function_steep}{Logistic\+Function\+Steep}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a3cb1bcb3f35732874a42b507f3203fd7}\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a3cb1bcb3f35732874a42b507f3203fd7}} 
+\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep.\+Calculate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6230550f91b00cf7ac384e8a885dd11a}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep_ab58dd3f6c27a1a2b156db289feb9d0c9}\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep_ab58dd3f6c27a1a2b156db289feb9d0c9}} 
+\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep.\+Calculate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value and optional activation function auxiliary arguments. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a3cb1bcb3f35732874a42b507f3203fd7}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a17e6d971ff650f3f9ab7863ce0e555c3}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a0ca294f3166ff4714b2ea1de04c9ccaf}\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a0ca294f3166ff4714b2ea1de04c9ccaf}} 
+\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}!GetRandomAuxArgs@{GetRandomAuxArgs}}
+\index{GetRandomAuxArgs@{GetRandomAuxArgs}!SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+\doxysubsubsection{\texorpdfstring{GetRandomAuxArgs()}{GetRandomAuxArgs()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep.\+Get\+Random\+Aux\+Args (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6bf5c2eb7a6b09deb280a6e3653700db}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep_ae21da48cd6264dfb10bb470f2a388a26}\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep_ae21da48cd6264dfb10bb470f2a388a26}} 
+\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}!MutateAuxArgs@{MutateAuxArgs}}
+\index{MutateAuxArgs@{MutateAuxArgs}!SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+\doxysubsubsection{\texorpdfstring{MutateAuxArgs()}{MutateAuxArgs()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep.\+Mutate\+Aux\+Args (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args,  }\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+Genetic mutation for auxiliary argument data. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a2943116b401f4dff51448228ec9a6b71}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a6b473dc35a1ed2d51f9766e643bf0ebc}\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a6b473dc35a1ed2d51f9766e643bf0ebc}} 
+\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}!\_\_DefaultInstance@{\_\_DefaultInstance}}
+\index{\_\_DefaultInstance@{\_\_DefaultInstance}!SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+\doxysubsubsection{\texorpdfstring{\_\_DefaultInstance}{\_\_DefaultInstance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep.\+\_\+\+\_\+\+Default\+Instance = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_soft_sign_steep}{Soft\+Sign\+Steep}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default instance provided as a public static field. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a0957b918b72cb5f42915785ecf58144b}\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a0957b918b72cb5f42915785ecf58144b}} 
+\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}!AcceptsAuxArgs@{AcceptsAuxArgs}}
+\index{AcceptsAuxArgs@{AcceptsAuxArgs}!SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+\doxysubsubsection{\texorpdfstring{AcceptsAuxArgs}{AcceptsAuxArgs}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep.\+Accepts\+Aux\+Args\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a flag that indicates if the activation function accepts auxiliary arguments. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a6f8a46c418e694345cd4b9b7e2fe1c3c}\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a6f8a46c418e694345cd4b9b7e2fe1c3c}} 
+\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}!FunctionDescription@{FunctionDescription}}
+\index{FunctionDescription@{FunctionDescription}!SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+\doxysubsubsection{\texorpdfstring{FunctionDescription}{FunctionDescription}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep.\+Function\+Description\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable verbose description of the activation function. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a97518749c8ef165787a2796317658c11}\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a97518749c8ef165787a2796317658c11}} 
+\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}!FunctionId@{FunctionId}}
+\index{FunctionId@{FunctionId}!SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+\doxysubsubsection{\texorpdfstring{FunctionId}{FunctionId}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep.\+Function\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a12eaf8bacf9f0b836a0e14390c346b25}\label{class_sharp_neat_1_1_network_1_1_soft_sign_steep_a12eaf8bacf9f0b836a0e14390c346b25}} 
+\index{SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}!FunctionString@{FunctionString}}
+\index{FunctionString@{FunctionString}!SharpNeat.Network.SoftSignSteep@{SharpNeat.Network.SoftSignSteep}}
+\doxysubsubsection{\texorpdfstring{FunctionString}{FunctionString}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Soft\+Sign\+Steep.\+Function\+String\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Activation\+Functions/\+Unipolar/Soft\+Sign\+Steep.\+cs\end{DoxyCompactItemize}

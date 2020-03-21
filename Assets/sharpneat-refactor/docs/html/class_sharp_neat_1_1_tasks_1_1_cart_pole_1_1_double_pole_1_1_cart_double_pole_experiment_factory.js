@@ -1,4 +1,0 @@
-var class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_experiment_factory =
-[
-    [ "CreateExperiment", "class_sharp_neat_1_1_tasks_1_1_cart_pole_1_1_double_pole_1_1_cart_double_pole_experiment_factory.html#a92daaf3ac6bba1088cacacb65fa2f507", null ]
-];

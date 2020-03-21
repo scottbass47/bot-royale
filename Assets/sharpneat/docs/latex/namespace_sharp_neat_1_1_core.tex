@@ -1,0 +1,112 @@
+\hypertarget{namespace_sharp_neat_1_1_core}{}\doxysection{Sharp\+Neat.\+Core Namespace Reference}
+\label{namespace_sharp_neat_1_1_core}\index{SharpNeat.Core@{SharpNeat.Core}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sharp_neat_1_1_core_1_1_aux_fitness_info}{Aux\+Fitness\+Info}}
+\begin{DoxyCompactList}\small\item\em Auxiliary fitness info, i.\+e. for evaluation metrics other than the primary fitness metric but that nonetheless we are interested in observing. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}}
+\begin{DoxyCompactList}\small\item\em General purpose representation of a point in a multidimensional space. A vector of coordinates, each coordinate defining the position within a dimension/axis defined by an ID. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info}{Evaluation\+Info}}
+\begin{DoxyCompactList}\small\item\em Encapsulates genome evaluation data; specifically whether the genome has been evaluated, the genome\textquotesingle{}s fitness, how many times the genome has been evaluated and if more than once then the mean fitness. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_sharp_neat_1_1_core_1_1_fitness_info}{Fitness\+Info}}
+\begin{DoxyCompactList}\small\item\em Wrapper struct for fitness values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_genome_fitness_comparer}{Genome\+Fitness\+Comparer}}
+\begin{DoxyCompactList}\small\item\em Sort genomes, highest fitness first. \mbox{\hyperlink{namespace_sharp_neat_1_1_genomes}{Genomes}} with equal fitness are secondary sorted by age (youngest first). Used by the selection routines to select the fittest and youngest genomes. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric}{I\+Distance\+Metric}}
+\begin{DoxyCompactList}\small\item\em Represents a metric for measuring the distance between two genome positions in an encoding space, and thus the compatibility of the two genomes with respect to the probability of creating fit offspring. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm}{I\+Evolution\+Algorithm}}
+\begin{DoxyCompactList}\small\item\em A generic interface for evolution algorithm classes. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}}
+\begin{DoxyCompactList}\small\item\em Generic interface for genome classes. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}}
+\begin{DoxyCompactList}\small\item\em Generic interface for classes that decode genomes into phenomes. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}}
+\begin{DoxyCompactList}\small\item\em Generic interface genome factory classes. Genome factories are intended to be used for creating initial populations, either random populations or from one or more seed genomes. However, genome reproduction is performed via the overloaded \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_aaa6484beaf3243a4759c72565dc3f8f0}{I\+Genome.\+Create\+Offspring()}} methods, placing these methods on \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}} gives reproduction methods direct and convenient access to internal genome data. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}}
+\begin{DoxyCompactList}\small\item\em Generic interface for evaluating a list of genomes. By operating on a list we allow concrete implementations of this interface to choose between evaluating each genome independently of the others, perhaps across several execution threads, or in some collective evaluation scheme such as an artificial life/world scenario. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}
+\begin{DoxyCompactList}\small\item\em Generic interface for phenome evaluation classes. Evaluates and assigns a fitness to individual T\+Phenome\textquotesingle{}s. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy}{I\+Speciation\+Strategy}}
+\begin{DoxyCompactList}\small\item\em Represents a strategy for dividing genomes into distinct species. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_parallel_genome_list_evaluator}{Parallel\+Genome\+List\+Evaluator}}
+\begin{DoxyCompactList}\small\item\em A concrete implementation of \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} that evaluates genomes independently of each other and in parallel (on multiple execution threads). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_selective_genome_list_evaluator}{Selective\+Genome\+List\+Evaluator}}
+\begin{DoxyCompactList}\small\item\em An \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} that wraps another \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} and filters/selects the genomes that are to be passed to the wrapped evaluator based on some predicate/test. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{Serial\+Genome\+List\+Evaluator}}
+\begin{DoxyCompactList}\small\item\em A concrete implementation of \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} that evaluates genomes independently of each other and in series on a single thread. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}
+\begin{DoxyCompactList}\small\item\em Represents a single specie within a speciated population. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_update_scheme}{Update\+Scheme}}
+\begin{DoxyCompactList}\small\item\em Represents an update scheme for an \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm}{I\+Evolution\+Algorithm}}. e.\+g. update per some time duration or some number of generations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770}{Run\+State}} \{ \newline
+\mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770add353567e8118a2b8df4e822e59084ab}{Run\+State.\+Not\+Ready}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770ae7d31fc0602fb2ede144d18cdffd816b}{Run\+State.\+Ready}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770a5bda814c4aedb126839228f1a3d92f09}{Run\+State.\+Running}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770ae99180abf47a8b3a856e0bcb2656990a}{Run\+State.\+Paused}}, 
+\newline
+\mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770afba9c4daa2dd29d1077d32d965320ac1}{Run\+State.\+Terminated}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumeration of possible execution states for an I\+Evolution\+Algorithm. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046}{Update\+Mode}} \{ \mbox{\hyperlink{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046a0e024a19f9707cc61b34570b237b9bee}{Update\+Mode.\+Timespan}}, 
+\mbox{\hyperlink{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046aa93734183819f0ffb99778d05b9fc778}{Update\+Mode.\+Generational}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumeration of update schemes, e.\+g. Fire an update event the per some time duration or some number of generations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770}\label{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770}} 
+\index{SharpNeat.Core@{SharpNeat.Core}!RunState@{RunState}}
+\index{RunState@{RunState}!SharpNeat.Core@{SharpNeat.Core}}
+\doxysubsubsection{\texorpdfstring{RunState}{RunState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770}{Sharp\+Neat.\+Core.\+Run\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+An enumeration of possible execution states for an \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm}{I\+Evolution\+Algorithm}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotReady@{NotReady}!SharpNeat.Core@{SharpNeat.Core}}\index{SharpNeat.Core@{SharpNeat.Core}!NotReady@{NotReady}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770add353567e8118a2b8df4e822e59084ab}\label{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770add353567e8118a2b8df4e822e59084ab}} 
+Not\+Ready&Not yet initialized. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ready@{Ready}!SharpNeat.Core@{SharpNeat.Core}}\index{SharpNeat.Core@{SharpNeat.Core}!Ready@{Ready}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770ae7d31fc0602fb2ede144d18cdffd816b}\label{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770ae7d31fc0602fb2ede144d18cdffd816b}} 
+Ready&Initialized and ready to start. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Running@{Running}!SharpNeat.Core@{SharpNeat.Core}}\index{SharpNeat.Core@{SharpNeat.Core}!Running@{Running}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770a5bda814c4aedb126839228f1a3d92f09}\label{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770a5bda814c4aedb126839228f1a3d92f09}} 
+Running&The algorithm is running. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Paused@{Paused}!SharpNeat.Core@{SharpNeat.Core}}\index{SharpNeat.Core@{SharpNeat.Core}!Paused@{Paused}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770ae99180abf47a8b3a856e0bcb2656990a}\label{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770ae99180abf47a8b3a856e0bcb2656990a}} 
+Paused&The algorithm has been paused, either due to a user request or because a stop condition has been met. The algorithm can be restarted if the stop condition is no longer true. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Terminated@{Terminated}!SharpNeat.Core@{SharpNeat.Core}}\index{SharpNeat.Core@{SharpNeat.Core}!Terminated@{Terminated}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770afba9c4daa2dd29d1077d32d965320ac1}\label{namespace_sharp_neat_1_1_core_a44d5d9e64f48bd7531762ad8958b8770afba9c4daa2dd29d1077d32d965320ac1}} 
+Terminated&The algorithm thread has terminated. The algorithm cannot be restarted from this state, a new algorithm object must be created and started afresh. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046}\label{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046}} 
+\index{SharpNeat.Core@{SharpNeat.Core}!UpdateMode@{UpdateMode}}
+\index{UpdateMode@{UpdateMode}!SharpNeat.Core@{SharpNeat.Core}}
+\doxysubsubsection{\texorpdfstring{UpdateMode}{UpdateMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046}{Sharp\+Neat.\+Core.\+Update\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+An enumeration of update schemes, e.\+g. Fire an update event the per some time duration or some number of generations. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Timespan@{Timespan}!SharpNeat.Core@{SharpNeat.Core}}\index{SharpNeat.Core@{SharpNeat.Core}!Timespan@{Timespan}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046a0e024a19f9707cc61b34570b237b9bee}\label{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046a0e024a19f9707cc61b34570b237b9bee}} 
+Timespan&Raise an update event at regular time intervals. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Generational@{Generational}!SharpNeat.Core@{SharpNeat.Core}}\index{SharpNeat.Core@{SharpNeat.Core}!Generational@{Generational}}}\mbox{\Hypertarget{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046aa93734183819f0ffb99778d05b9fc778}\label{namespace_sharp_neat_1_1_core_ac649598b3ade33c9af8300840b3f4046aa93734183819f0ffb99778d05b9fc778}} 
+Generational&Raise an update event at regular generation intervals. (Every N generations). \\
+\hline
+
+\end{DoxyEnumFields}

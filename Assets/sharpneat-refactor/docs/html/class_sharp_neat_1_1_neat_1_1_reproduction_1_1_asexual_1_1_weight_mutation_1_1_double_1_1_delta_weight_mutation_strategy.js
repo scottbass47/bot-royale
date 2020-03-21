@@ -1,5 +1,0 @@
-var class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_weight_mutation_1_1_double_1_1_delta_weight_mutation_strategy =
-[
-    [ "DeltaWeightMutationStrategy", "class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_weight_mutation_1_1_double_1_1_delta_weight_mutation_strategy.html#ab60dc5dd5fd803b970991849fd0e52af", null ],
-    [ "Invoke", "class_sharp_neat_1_1_neat_1_1_reproduction_1_1_asexual_1_1_weight_mutation_1_1_double_1_1_delta_weight_mutation_strategy.html#acc16ab3db986d435181692126dc55441", null ]
-];

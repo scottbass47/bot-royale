@@ -1,0 +1,91 @@
+\hypertarget{interface_sharp_neat_1_1_network_1_1_i_node_list}{}\doxysection{Sharp\+Neat.\+Network.\+I\+Node\+List Interface Reference}
+\label{interface_sharp_neat_1_1_network_1_1_i_node_list}\index{SharpNeat.Network.INodeList@{SharpNeat.Network.INodeList}}
+
+
+Represents a list of \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}}\textquotesingle{}s. Part of the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} type hierarchy.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+I\+Node\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_sharp_neat_1_1_network_1_1_i_node_list}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_ad7e882c53b79a260df9783aa2c5d4ead}{Binary\+Search}} (uint id)
+\begin{DoxyCompactList}\small\item\em Gets the index of the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}} with the specified ID. Uses a binary search for fast searching, however this assumes the nodes are sorted by ID in ascending order. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_a2ca206e8f2c34706ace09d42437971ad}{Is\+Sorted}} ()
+\begin{DoxyCompactList}\small\item\em Indicates if the nodes are sorted by ID in ascending order, as required by \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_ad7e882c53b79a260df9783aa2c5d4ead}{Binary\+Search()}}. For debug purposes only. Don\textquotesingle{}t call this method in normal circumstances as it is an expensive O(n) operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}} \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_a8a718749d1bd4c881ffdc22afbcbe0d9}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}} at the specified index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_a530eca1e02c2a234b948f1c8d28f37ac}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the count of nodes in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a list of \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}}\textquotesingle{}s. Part of the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} type hierarchy. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_network_1_1_i_node_list_ad7e882c53b79a260df9783aa2c5d4ead}\label{interface_sharp_neat_1_1_network_1_1_i_node_list_ad7e882c53b79a260df9783aa2c5d4ead}} 
+\index{SharpNeat.Network.INodeList@{SharpNeat.Network.INodeList}!BinarySearch@{BinarySearch}}
+\index{BinarySearch@{BinarySearch}!SharpNeat.Network.INodeList@{SharpNeat.Network.INodeList}}
+\doxysubsubsection{\texorpdfstring{BinarySearch()}{BinarySearch()}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Network.\+I\+Node\+List.\+Binary\+Search (\begin{DoxyParamCaption}\item[{uint}]{id }\end{DoxyParamCaption})}
+
+
+
+Gets the index of the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}} with the specified ID. Uses a binary search for fast searching, however this assumes the nodes are sorted by ID in ascending order. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_a1140eaac94fd07f3fe770dffb00bfdf7}{Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List}}, and \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list_a0d125767d15ff934ec45335e6fd2e22d}{Sharp\+Neat.\+Network.\+Node\+List}}.
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_network_1_1_i_node_list_a2ca206e8f2c34706ace09d42437971ad}\label{interface_sharp_neat_1_1_network_1_1_i_node_list_a2ca206e8f2c34706ace09d42437971ad}} 
+\index{SharpNeat.Network.INodeList@{SharpNeat.Network.INodeList}!IsSorted@{IsSorted}}
+\index{IsSorted@{IsSorted}!SharpNeat.Network.INodeList@{SharpNeat.Network.INodeList}}
+\doxysubsubsection{\texorpdfstring{IsSorted()}{IsSorted()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+I\+Node\+List.\+Is\+Sorted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indicates if the nodes are sorted by ID in ascending order, as required by \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_ad7e882c53b79a260df9783aa2c5d4ead}{Binary\+Search()}}. For debug purposes only. Don\textquotesingle{}t call this method in normal circumstances as it is an expensive O(n) operation. 
+
+
+
+Implemented in \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list_aa1eb143064c0205977a8f55279d4affb}{Sharp\+Neat.\+Genomes.\+Neat.\+Neuron\+Gene\+List}}, and \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list_a260298f957c87006c10683326e24833b}{Sharp\+Neat.\+Network.\+Node\+List}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_network_1_1_i_node_list_a530eca1e02c2a234b948f1c8d28f37ac}\label{interface_sharp_neat_1_1_network_1_1_i_node_list_a530eca1e02c2a234b948f1c8d28f37ac}} 
+\index{SharpNeat.Network.INodeList@{SharpNeat.Network.INodeList}!Count@{Count}}
+\index{Count@{Count}!SharpNeat.Network.INodeList@{SharpNeat.Network.INodeList}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Network.\+I\+Node\+List.\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the count of nodes in the list. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_network_1_1_i_node_list_a8a718749d1bd4c881ffdc22afbcbe0d9}\label{interface_sharp_neat_1_1_network_1_1_i_node_list_a8a718749d1bd4c881ffdc22afbcbe0d9}} 
+\index{SharpNeat.Network.INodeList@{SharpNeat.Network.INodeList}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!SharpNeat.Network.INodeList@{SharpNeat.Network.INodeList}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}} Sharp\+Neat.\+Network.\+I\+Node\+List.\+this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}} at the specified index. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/I\+Node\+List.\+cs\end{DoxyCompactItemize}

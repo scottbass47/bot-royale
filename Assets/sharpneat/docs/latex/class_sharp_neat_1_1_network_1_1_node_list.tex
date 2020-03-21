@@ -1,0 +1,89 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_node_list}{}\doxysection{Sharp\+Neat.\+Network.\+Node\+List Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_node_list}\index{SharpNeat.Network.NodeList@{SharpNeat.Network.NodeList}}
+
+
+Concrete implementation of \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list}{I\+Node\+List}}.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Node\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sharp_neat_1_1_network_1_1_node_list}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list_a5bbdaa42e33c55bb0257c1e75ace1f17}{Node\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list_a8e0625aa0a4e1605945491db8998e7aa}{Node\+List}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a list with the specified initial capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list_a0d125767d15ff934ec45335e6fd2e22d}{Binary\+Search}} (uint id)
+\begin{DoxyCompactList}\small\item\em Gets the index of the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}} with the specified ID. Uses a binary search for fast searching, however this assumes the nodes are sorted by ID in ascending order. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list_a260298f957c87006c10683326e24833b}{Is\+Sorted}} ()
+\begin{DoxyCompactList}\small\item\em Indicates if the nodes are sorted by ID in ascending order, as required by \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list_a0d125767d15ff934ec45335e6fd2e22d}{Binary\+Search()}}. For debug purposes only. Don\textquotesingle{}t call this method in normal circumstances as it is an expensive O(n) operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Concrete implementation of \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list}{I\+Node\+List}}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_node_list_a5bbdaa42e33c55bb0257c1e75ace1f17}\label{class_sharp_neat_1_1_network_1_1_node_list_a5bbdaa42e33c55bb0257c1e75ace1f17}} 
+\index{SharpNeat.Network.NodeList@{SharpNeat.Network.NodeList}!NodeList@{NodeList}}
+\index{NodeList@{NodeList}!SharpNeat.Network.NodeList@{SharpNeat.Network.NodeList}}
+\doxysubsubsection{\texorpdfstring{NodeList()}{NodeList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Network.\+Node\+List.\+Node\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs an empty list. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_node_list_a8e0625aa0a4e1605945491db8998e7aa}\label{class_sharp_neat_1_1_network_1_1_node_list_a8e0625aa0a4e1605945491db8998e7aa}} 
+\index{SharpNeat.Network.NodeList@{SharpNeat.Network.NodeList}!NodeList@{NodeList}}
+\index{NodeList@{NodeList}!SharpNeat.Network.NodeList@{SharpNeat.Network.NodeList}}
+\doxysubsubsection{\texorpdfstring{NodeList()}{NodeList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Network.\+Node\+List.\+Node\+List (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a list with the specified initial capacity. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_node_list_a0d125767d15ff934ec45335e6fd2e22d}\label{class_sharp_neat_1_1_network_1_1_node_list_a0d125767d15ff934ec45335e6fd2e22d}} 
+\index{SharpNeat.Network.NodeList@{SharpNeat.Network.NodeList}!BinarySearch@{BinarySearch}}
+\index{BinarySearch@{BinarySearch}!SharpNeat.Network.NodeList@{SharpNeat.Network.NodeList}}
+\doxysubsubsection{\texorpdfstring{BinarySearch()}{BinarySearch()}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Network.\+Node\+List.\+Binary\+Search (\begin{DoxyParamCaption}\item[{uint}]{id }\end{DoxyParamCaption})}
+
+
+
+Gets the index of the \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_node}{I\+Network\+Node}} with the specified ID. Uses a binary search for fast searching, however this assumes the nodes are sorted by ID in ascending order. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_ad7e882c53b79a260df9783aa2c5d4ead}{Sharp\+Neat.\+Network.\+I\+Node\+List}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_node_list_a260298f957c87006c10683326e24833b}\label{class_sharp_neat_1_1_network_1_1_node_list_a260298f957c87006c10683326e24833b}} 
+\index{SharpNeat.Network.NodeList@{SharpNeat.Network.NodeList}!IsSorted@{IsSorted}}
+\index{IsSorted@{IsSorted}!SharpNeat.Network.NodeList@{SharpNeat.Network.NodeList}}
+\doxysubsubsection{\texorpdfstring{IsSorted()}{IsSorted()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Node\+List.\+Is\+Sorted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indicates if the nodes are sorted by ID in ascending order, as required by \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_node_list_a0d125767d15ff934ec45335e6fd2e22d}{Binary\+Search()}}. For debug purposes only. Don\textquotesingle{}t call this method in normal circumstances as it is an expensive O(n) operation. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_node_list_a2ca206e8f2c34706ace09d42437971ad}{Sharp\+Neat.\+Network.\+I\+Node\+List}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/Node\+List.\+cs\end{DoxyCompactItemize}

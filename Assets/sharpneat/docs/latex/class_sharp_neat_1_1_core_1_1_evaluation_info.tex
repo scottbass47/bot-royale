@@ -1,0 +1,176 @@
+\hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info}{}\doxysection{Sharp\+Neat.\+Core.\+Evaluation\+Info Class Reference}
+\label{class_sharp_neat_1_1_core_1_1_evaluation_info}\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+
+
+Encapsulates genome evaluation data; specifically whether the genome has been evaluated, the genome\textquotesingle{}s fitness, how many times the genome has been evaluated and if more than once then the mean fitness.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a1f57fcb9a51ad6ebc2f2649608666f23}{Evaluation\+Info}} (int fitness\+History\+Length)
+\begin{DoxyCompactList}\small\item\em Construct and allocate the specified amount of memory for fitness history. Use zero if you don\textquotesingle{}t require fitness history -\/ but note that no arithmetic mean will be available. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a88df65fd27bb59b71b31e5c7e6dd8462}{Set\+Fitness}} (double fitness)
+\begin{DoxyCompactList}\small\item\em Assign a fitness. If a fitness history buffer was created then the value will be enqueued in the buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_aa4bb4a192c956562f3a21589e47532fe}{Incr\+Evaluation\+Pass\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Increments Evaluation\+Pass\+Count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+double? \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_aa88d88a773808d37ed35a7e480318ca1}{Fitness}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the fitness value to be used by the evolution algorithm for selection of genomes (for reproduction) and species fitness sharing. If a fitness buffer is in use this will be the average fitness for the last N fitness evaluations as held by the fitness history buffer, otherwise if no buffer is in use it is simply the fitness from the most recent evaluation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a61acee791b22d3ac33f0ba1f3473f455}{Most\+Recent\+Fitness}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the fitness from the most recent evaluation. This may be different to the Fitness property if a fitness history buffer is in use that averages out the reported fitness over a number of evaluations. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a1486b4848ddea0f565e3c8aa91a34d13}{Mean\+Fitness}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the arithmetic mean of the most recent fitnesses as stored in the fitness history buffer. Note that an exception will be thrown if the history buffer is not being used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_core_1_1_aux_fitness_info}{Aux\+Fitness\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_adb472d665637ca81e3afa47cae6748a8}{Aux\+Fitness\+Arr}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets auxiliary fitness info, i.\+e. for evaluation metrics other than the primary fitness metric but that nonetheless we are interested in observing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a350a9463bcc7cdd66a9af3b197f8eda4}{Is\+Evaluated}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether a genome has been evaluated at least once. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a924a8a67c42832dbfbc98e4ac4a5170b}{Evaluation\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the total number of times the genome has been evaluated. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a116285471747af18babf7102522f2569}{Evaluation\+Pass\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the total number of times the genome has skipped evaluation. Some evaluation schemes re-\/evaluate genomes that persist between generations (e.\+g. elite genomes) at each generation, whereas other schemes may chose to not re-\/evaluate or only re-\/evaluate every Nth generation/attempt. This counter tracks how many times the genome has been skipped to support such schemes. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a49921fa44568ec54b895a682b3e9df7d}{Total\+Evaluation\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets Evaluation\+Count + Evaluation\+Pass\+Count. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_evaluation_info_a0848937f684ef54c12c33e88c084c3d6}{Fitness\+History\+Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the fitness history buffer in use. Zero if no history buffer is being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates genome evaluation data; specifically whether the genome has been evaluated, the genome\textquotesingle{}s fitness, how many times the genome has been evaluated and if more than once then the mean fitness. 
+
+Mean fitness is sometimes used when evaluations are non-\/deterministic (where each evaluation with the same parameters results in a different fitness, usually following some distribution curve) or else successive evaluations use different evaluation parameters and therefore result in different fitnesses. This approach is sometimes used in order to evaluate against a very computationally expensive fitness scheme, or indeed a computationally intractable scheme -\/ i.\+e. we only execute against some subset of the problem space for each genome evaluation, and thus we obtain a more representative value for a genome\textquotesingle{}s fitness by averaging over successive evaluations.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_a1f57fcb9a51ad6ebc2f2649608666f23}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_a1f57fcb9a51ad6ebc2f2649608666f23}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!EvaluationInfo@{EvaluationInfo}}
+\index{EvaluationInfo@{EvaluationInfo}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{EvaluationInfo()}{EvaluationInfo()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Evaluation\+Info (\begin{DoxyParamCaption}\item[{int}]{fitness\+History\+Length }\end{DoxyParamCaption})}
+
+
+
+Construct and allocate the specified amount of memory for fitness history. Use zero if you don\textquotesingle{}t require fitness history -\/ but note that no arithmetic mean will be available. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_aa4bb4a192c956562f3a21589e47532fe}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_aa4bb4a192c956562f3a21589e47532fe}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!IncrEvaluationPassCount@{IncrEvaluationPassCount}}
+\index{IncrEvaluationPassCount@{IncrEvaluationPassCount}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{IncrEvaluationPassCount()}{IncrEvaluationPassCount()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Incr\+Evaluation\+Pass\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increments Evaluation\+Pass\+Count. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_a88df65fd27bb59b71b31e5c7e6dd8462}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_a88df65fd27bb59b71b31e5c7e6dd8462}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!SetFitness@{SetFitness}}
+\index{SetFitness@{SetFitness}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{SetFitness()}{SetFitness()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Set\+Fitness (\begin{DoxyParamCaption}\item[{double}]{fitness }\end{DoxyParamCaption})}
+
+
+
+Assign a fitness. If a fitness history buffer was created then the value will be enqueued in the buffer. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_adb472d665637ca81e3afa47cae6748a8}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_adb472d665637ca81e3afa47cae6748a8}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!AuxFitnessArr@{AuxFitnessArr}}
+\index{AuxFitnessArr@{AuxFitnessArr}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{AuxFitnessArr}{AuxFitnessArr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_core_1_1_aux_fitness_info}{Aux\+Fitness\+Info}} \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Aux\+Fitness\+Arr\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets auxiliary fitness info, i.\+e. for evaluation metrics other than the primary fitness metric but that nonetheless we are interested in observing. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_a924a8a67c42832dbfbc98e4ac4a5170b}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_a924a8a67c42832dbfbc98e4ac4a5170b}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!EvaluationCount@{EvaluationCount}}
+\index{EvaluationCount@{EvaluationCount}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{EvaluationCount}{EvaluationCount}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Evaluation\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the total number of times the genome has been evaluated. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_a116285471747af18babf7102522f2569}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_a116285471747af18babf7102522f2569}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!EvaluationPassCount@{EvaluationPassCount}}
+\index{EvaluationPassCount@{EvaluationPassCount}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{EvaluationPassCount}{EvaluationPassCount}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Evaluation\+Pass\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the total number of times the genome has skipped evaluation. Some evaluation schemes re-\/evaluate genomes that persist between generations (e.\+g. elite genomes) at each generation, whereas other schemes may chose to not re-\/evaluate or only re-\/evaluate every Nth generation/attempt. This counter tracks how many times the genome has been skipped to support such schemes. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_aa88d88a773808d37ed35a7e480318ca1}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_aa88d88a773808d37ed35a7e480318ca1}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!Fitness@{Fitness}}
+\index{Fitness@{Fitness}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{Fitness}{Fitness}}
+{\footnotesize\ttfamily double? Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Fitness\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the fitness value to be used by the evolution algorithm for selection of genomes (for reproduction) and species fitness sharing. If a fitness buffer is in use this will be the average fitness for the last N fitness evaluations as held by the fitness history buffer, otherwise if no buffer is in use it is simply the fitness from the most recent evaluation. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_a0848937f684ef54c12c33e88c084c3d6}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_a0848937f684ef54c12c33e88c084c3d6}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!FitnessHistoryLength@{FitnessHistoryLength}}
+\index{FitnessHistoryLength@{FitnessHistoryLength}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{FitnessHistoryLength}{FitnessHistoryLength}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Fitness\+History\+Length\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the capacity of the fitness history buffer in use. Zero if no history buffer is being used. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_a350a9463bcc7cdd66a9af3b197f8eda4}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_a350a9463bcc7cdd66a9af3b197f8eda4}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!IsEvaluated@{IsEvaluated}}
+\index{IsEvaluated@{IsEvaluated}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{IsEvaluated}{IsEvaluated}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Is\+Evaluated\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether a genome has been evaluated at least once. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_a1486b4848ddea0f565e3c8aa91a34d13}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_a1486b4848ddea0f565e3c8aa91a34d13}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!MeanFitness@{MeanFitness}}
+\index{MeanFitness@{MeanFitness}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{MeanFitness}{MeanFitness}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Mean\+Fitness\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the arithmetic mean of the most recent fitnesses as stored in the fitness history buffer. Note that an exception will be thrown if the history buffer is not being used. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_a61acee791b22d3ac33f0ba1f3473f455}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_a61acee791b22d3ac33f0ba1f3473f455}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!MostRecentFitness@{MostRecentFitness}}
+\index{MostRecentFitness@{MostRecentFitness}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{MostRecentFitness}{MostRecentFitness}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Most\+Recent\+Fitness\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the fitness from the most recent evaluation. This may be different to the Fitness property if a fitness history buffer is in use that averages out the reported fitness over a number of evaluations. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_evaluation_info_a49921fa44568ec54b895a682b3e9df7d}\label{class_sharp_neat_1_1_core_1_1_evaluation_info_a49921fa44568ec54b895a682b3e9df7d}} 
+\index{SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}!TotalEvaluationCount@{TotalEvaluationCount}}
+\index{TotalEvaluationCount@{TotalEvaluationCount}!SharpNeat.Core.EvaluationInfo@{SharpNeat.Core.EvaluationInfo}}
+\doxysubsubsection{\texorpdfstring{TotalEvaluationCount}{TotalEvaluationCount}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Core.\+Evaluation\+Info.\+Total\+Evaluation\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets Evaluation\+Count + Evaluation\+Pass\+Count. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/Evaluation\+Info.\+cs\end{DoxyCompactItemize}

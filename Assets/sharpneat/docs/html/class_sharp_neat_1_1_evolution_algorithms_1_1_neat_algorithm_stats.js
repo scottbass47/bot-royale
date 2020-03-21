@@ -1,0 +1,26 @@
+var class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats =
+[
+    [ "NeatAlgorithmStats", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#ae825ee000102d2867435f20901cf13a0", null ],
+    [ "_asexualOffspringCount", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a29ee80c4d7e3ac14de446a5756eb1f95", null ],
+    [ "_bestFitnessMA", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a1386f37ebeee032874742e9ab05f021e", null ],
+    [ "_complexityMA", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a655a8a9793f0dae25e984da889e63179", null ],
+    [ "_evalsCountAtLastUpdate", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a0831c142cc4c033460e1a1db5c954a97", null ],
+    [ "_evalsPerSecLastSampleTime", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#aac72c004b283441df110d7e16bfa1ca9", null ],
+    [ "_evaluationsPerSec", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a5cf210ba1d7836e5dc81be1be454fb51", null ],
+    [ "_generation", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a57c06ea16da4d1b9a6f7d6e2780c8605", null ],
+    [ "_interspeciesOffspringCount", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#aa411654ed6ce369ac763dc8e250f59fc", null ],
+    [ "_maxComplexity", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a384e9eb24698a3ac3da3b414efb39f13", null ],
+    [ "_maxFitness", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#ad9ba15adb3873b818d4dd1715466c01c", null ],
+    [ "_maxSpecieSize", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a1ce8d4cc3092f8ab21c4ee16152a8f97", null ],
+    [ "_meanComplexity", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a350c5615b7089ea1f07f2a6233b6fb36", null ],
+    [ "_meanFitness", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#ae4f0634eafc4862d7ac141392da82479", null ],
+    [ "_meanSpecieChampFitness", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a985cacb19a6dad80c7e97f561e6535ca", null ],
+    [ "_meanSpecieChampFitnessMA", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a42bab8c48bf9f3cb2d7e558c7af7ad7b", null ],
+    [ "_minSpecieSize", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#aaa8ff3acd35a220b60dbedf4ae95b55b", null ],
+    [ "_prevBestFitnessMA", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#ab17ffbab87d9f132d0ab61a3e484bfca", null ],
+    [ "_prevComplexityMA", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#ae122f250b549d1e5d2540d28f1364a72", null ],
+    [ "_prevMeanSpecieChampFitnessMA", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a2aafe7bba694e87c687d17b663e611fd", null ],
+    [ "_sexualOffspringCount", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#ab518387ae9a592960db54b0938966a15", null ],
+    [ "_totalEvaluationCount", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#a0e26bcfa97f43943b9a38ce8b437737c", null ],
+    [ "_totalOffspringCount", "class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats.html#ac189a1cebc5ea6ff19a617406072761b", null ]
+];

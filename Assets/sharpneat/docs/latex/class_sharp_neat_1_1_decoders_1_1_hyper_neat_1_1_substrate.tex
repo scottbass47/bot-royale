@@ -1,0 +1,120 @@
+\hypertarget{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate}{}\doxysection{Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Substrate Class Reference}
+\label{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate}\index{SharpNeat.Decoders.HyperNeat.Substrate@{SharpNeat.Decoders.HyperNeat.Substrate}}
+
+
+Hyper\+N\+E\+AT substrate. Encapsulates substrate nodes in sets and connections. Connections can be defined explicitly or by providing mapping functions that map (connect) between nodes in sets. Node sets can be arranged as layers, however there is no limitation on node positions within the substrate -\/ nodes in a set can be distributed throughout the substrate with no restrictions based on e.\+g. where nodes in other sets are located.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_afd7e416429f7b96a24a28f7a23d97a3d}{Substrate}} (List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}} $>$ node\+Set\+List, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library, int activation\+Fn\+Id, double weight\+Threshold, double max\+Weight, List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_connection}{Substrate\+Connection}} $>$ connection\+List)
+\begin{DoxyCompactList}\small\item\em Construct a substrate with the provided node sets and a predetermined set of connections. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_ada95ff295041db8485b358eeecec3c14}{Substrate}} (List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}} $>$ node\+Set\+List, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library, int activation\+Fn\+Id, double weight\+Threshold, double max\+Weight, List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_node_set_mapping}{Node\+Set\+Mapping}} $>$ node\+Set\+Mapping\+List)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided substrate nodesets and mappings that describe how the nodesets are to be connected up. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_a51a600e08c7cbe94ff6c80fae0bafd3d}{Create\+Network\+Definition}} (\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}} blackbox, bool length\+Cppn\+Input)
+\begin{DoxyCompactList}\small\item\em Create a network definition by querying the provided I\+Black\+Box (typically a C\+P\+PN) with the substrate connection endpoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_a067c541c3acaad2cf5ea217f249b5b61}{Node\+Set\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of substrate node sets. By convention the first nodeset describes the inputs nodes and the first node of that set describes the bias node. The last nodeset describes the output nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hyper\+N\+E\+AT substrate. Encapsulates substrate nodes in sets and connections. Connections can be defined explicitly or by providing mapping functions that map (connect) between nodes in sets. Node sets can be arranged as layers, however there is no limitation on node positions within the substrate -\/ nodes in a set can be distributed throughout the substrate with no restrictions based on e.\+g. where nodes in other sets are located. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_afd7e416429f7b96a24a28f7a23d97a3d}\label{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_afd7e416429f7b96a24a28f7a23d97a3d}} 
+\index{SharpNeat.Decoders.HyperNeat.Substrate@{SharpNeat.Decoders.HyperNeat.Substrate}!Substrate@{Substrate}}
+\index{Substrate@{Substrate}!SharpNeat.Decoders.HyperNeat.Substrate@{SharpNeat.Decoders.HyperNeat.Substrate}}
+\doxysubsubsection{\texorpdfstring{Substrate()}{Substrate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Substrate.\+Substrate (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}} $>$}]{node\+Set\+List,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library,  }\item[{int}]{activation\+Fn\+Id,  }\item[{double}]{weight\+Threshold,  }\item[{double}]{max\+Weight,  }\item[{List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_connection}{Substrate\+Connection}} $>$}]{connection\+List }\end{DoxyParamCaption})}
+
+
+
+Construct a substrate with the provided node sets and a predetermined set of connections. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set\+List} & \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate}{Substrate}} nodes, represented as distinct sets of nodes. By convention the first and second sets in the list represent the input and output noes respectively. All other sets represent hidden nodes.\\
+\hline
+{\em activation\+Fn\+Library} & The activation function library allocated to the networks that are \textquotesingle{}grown\textquotesingle{} from the substrate.\\
+\hline
+{\em activation\+Fn\+Id} & The ID of an activation function in activation\+Fn\+Library. This is the activation function ID assigned to all nodes in networks that are \textquotesingle{}grown\textquotesingle{} from the substrate. \\
+\hline
+{\em weight\+Threshold} & The weight threshold below which substrate connections are not created in grown networks.\\
+\hline
+{\em max\+Weight} & Defines the weight range of grown connections (+-\/max\+Weight).\\
+\hline
+{\em connection\+List} & A predetermined list of substrate connections.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_ada95ff295041db8485b358eeecec3c14}\label{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_ada95ff295041db8485b358eeecec3c14}} 
+\index{SharpNeat.Decoders.HyperNeat.Substrate@{SharpNeat.Decoders.HyperNeat.Substrate}!Substrate@{Substrate}}
+\index{Substrate@{Substrate}!SharpNeat.Decoders.HyperNeat.Substrate@{SharpNeat.Decoders.HyperNeat.Substrate}}
+\doxysubsubsection{\texorpdfstring{Substrate()}{Substrate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Substrate.\+Substrate (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}} $>$}]{node\+Set\+List,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library,  }\item[{int}]{activation\+Fn\+Id,  }\item[{double}]{weight\+Threshold,  }\item[{double}]{max\+Weight,  }\item[{List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_node_set_mapping}{Node\+Set\+Mapping}} $>$}]{node\+Set\+Mapping\+List }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided substrate nodesets and mappings that describe how the nodesets are to be connected up. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set\+List} & \mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate}{Substrate}} nodes, represented as distinct sets of nodes. By convention the first and second sets in the list represent the input and output noes respectively. All other sets represent hidden nodes.\\
+\hline
+{\em activation\+Fn\+Library} & The activation function library allocated to the networks that are \textquotesingle{}grown\textquotesingle{} from the substrate.\\
+\hline
+{\em activation\+Fn\+Id} & The ID of an activation function in activation\+Fn\+Library. This is the activation function ID assigned to all nodes in networks that are \textquotesingle{}grown\textquotesingle{} from the substrate. \\
+\hline
+{\em weight\+Threshold} & The weight threshold below which substrate connections are not created in grown networks.\\
+\hline
+{\em max\+Weight} & Defines the weight range of grown connections (+-\/max\+Weight).\\
+\hline
+\end{DoxyParams}
+/// 
+\begin{DoxyParams}{Parameters}
+{\em node\+Set\+Mapping\+List} & A list of mappings between node sets that defines what connections to create between substrate nodes.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_a51a600e08c7cbe94ff6c80fae0bafd3d}\label{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_a51a600e08c7cbe94ff6c80fae0bafd3d}} 
+\index{SharpNeat.Decoders.HyperNeat.Substrate@{SharpNeat.Decoders.HyperNeat.Substrate}!CreateNetworkDefinition@{CreateNetworkDefinition}}
+\index{CreateNetworkDefinition@{CreateNetworkDefinition}!SharpNeat.Decoders.HyperNeat.Substrate@{SharpNeat.Decoders.HyperNeat.Substrate}}
+\doxysubsubsection{\texorpdfstring{CreateNetworkDefinition()}{CreateNetworkDefinition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_network_definition}{I\+Network\+Definition}} Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Substrate.\+Create\+Network\+Definition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}}}]{blackbox,  }\item[{bool}]{length\+Cppn\+Input }\end{DoxyParamCaption})}
+
+
+
+Create a network definition by querying the provided I\+Black\+Box (typically a C\+P\+PN) with the substrate connection endpoints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em blackbox} & The Hyper\+N\+E\+AT C\+P\+PN that defines the strength of connections between nodes on the substrate.\\
+\hline
+{\em length\+Cppn\+Input} & Optionally we provide a connection length input to the C\+P\+PN.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_a067c541c3acaad2cf5ea217f249b5b61}\label{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_a067c541c3acaad2cf5ea217f249b5b61}} 
+\index{SharpNeat.Decoders.HyperNeat.Substrate@{SharpNeat.Decoders.HyperNeat.Substrate}!NodeSetList@{NodeSetList}}
+\index{NodeSetList@{NodeSetList}!SharpNeat.Decoders.HyperNeat.Substrate@{SharpNeat.Decoders.HyperNeat.Substrate}}
+\doxysubsubsection{\texorpdfstring{NodeSetList}{NodeSetList}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_sharp_neat_1_1_decoders_1_1_hyper_neat_1_1_substrate_node_set}{Substrate\+Node\+Set}}$>$ Sharp\+Neat.\+Decoders.\+Hyper\+Neat.\+Substrate.\+Node\+Set\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of substrate node sets. By convention the first nodeset describes the inputs nodes and the first node of that set describes the bias node. The last nodeset describes the output nodes. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Decoders/\+Hyper\+Neat/Substrate.\+cs\end{DoxyCompactItemize}

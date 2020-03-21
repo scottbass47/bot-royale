@@ -1,0 +1,305 @@
+\hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats}{}\doxysection{Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats Class Reference}
+\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats}\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+
+
+Neat evolution algorithm statistics.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ae825ee000102d2867435f20901cf13a0}{Neat\+Algorithm\+Stats}} (\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_parameters}{Neat\+Evolution\+Algorithm\+Parameters}} ea\+Params)
+\begin{DoxyCompactList}\small\item\em Construct a N\+E\+AT statistics object based on a specified set of N\+E\+AT parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a57c06ea16da4d1b9a6f7d6e2780c8605}{\+\_\+generation}}
+\begin{DoxyCompactList}\small\item\em The current generation number. \end{DoxyCompactList}\item 
+ulong \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a0e26bcfa97f43943b9a38ce8b437737c}{\+\_\+total\+Evaluation\+Count}}
+\begin{DoxyCompactList}\small\item\em The total number of genome evaluations for the current N\+E\+AT search. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a5cf210ba1d7836e5dc81be1be454fb51}{\+\_\+evaluations\+Per\+Sec}}
+\begin{DoxyCompactList}\small\item\em Current evaluations per second reading. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_aac72c004b283441df110d7e16bfa1ca9}{\+\_\+evals\+Per\+Sec\+Last\+Sample\+Time}} = new Date\+Time()
+\begin{DoxyCompactList}\small\item\em The clock time of the last update to \+\_\+evaluations\+Per\+Sec. \end{DoxyCompactList}\item 
+ulong \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a0831c142cc4c033460e1a1db5c954a97}{\+\_\+evals\+Count\+At\+Last\+Update}}
+\begin{DoxyCompactList}\small\item\em The total evaluation count at the last update to \+\_\+evaluations\+Per\+Sec. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ad9ba15adb3873b818d4dd1715466c01c}{\+\_\+max\+Fitness}}
+\begin{DoxyCompactList}\small\item\em The fitness of the best genome. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ae4f0634eafc4862d7ac141392da82479}{\+\_\+mean\+Fitness}}
+\begin{DoxyCompactList}\small\item\em The mean genome fitness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a985cacb19a6dad80c7e97f561e6535ca}{\+\_\+mean\+Specie\+Champ\+Fitness}}
+\begin{DoxyCompactList}\small\item\em The mean fitness of current specie champions. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a384e9eb24698a3ac3da3b414efb39f13}{\+\_\+max\+Complexity}}
+\begin{DoxyCompactList}\small\item\em The complexity of the most complex genome. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a350c5615b7089ea1f07f2a6233b6fb36}{\+\_\+mean\+Complexity}}
+\begin{DoxyCompactList}\small\item\em The mean genome complexity. \end{DoxyCompactList}\item 
+ulong \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ac189a1cebc5ea6ff19a617406072761b}{\+\_\+total\+Offspring\+Count}}
+\begin{DoxyCompactList}\small\item\em Total number of offspring created in the lifetime of a N\+E\+AT search. \end{DoxyCompactList}\item 
+ulong \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a29ee80c4d7e3ac14de446a5756eb1f95}{\+\_\+asexual\+Offspring\+Count}}
+\begin{DoxyCompactList}\small\item\em Total number of genomes created from asexual reproduction. \end{DoxyCompactList}\item 
+ulong \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ab518387ae9a592960db54b0938966a15}{\+\_\+sexual\+Offspring\+Count}}
+\begin{DoxyCompactList}\small\item\em Total number of genomes created from sexual reproduction. This includes the number of offspring created from interspecies reproduction. \end{DoxyCompactList}\item 
+ulong \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_aa411654ed6ce369ac763dc8e250f59fc}{\+\_\+interspecies\+Offspring\+Count}}
+\begin{DoxyCompactList}\small\item\em Total number of genomes created from interspecies sexual reproduction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_aaa8ff3acd35a220b60dbedf4ae95b55b}{\+\_\+min\+Specie\+Size}}
+\begin{DoxyCompactList}\small\item\em The number of genomes in the smallest specie. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a1ce8d4cc3092f8ab21c4ee16152a8f97}{\+\_\+max\+Specie\+Size}}
+\begin{DoxyCompactList}\small\item\em The number of genomes in the largest specie. \end{DoxyCompactList}\item 
+Double\+Circular\+Buffer\+With\+Stats \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a1386f37ebeee032874742e9ab05f021e}{\+\_\+best\+Fitness\+MA}} = new Double\+Circular\+Buffer\+With\+Stats(100)
+\begin{DoxyCompactList}\small\item\em A buffer of the N most recent best fitness values. Allows the calculation of a moving average. \end{DoxyCompactList}\item 
+Double\+Circular\+Buffer\+With\+Stats \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a42bab8c48bf9f3cb2d7e558c7af7ad7b}{\+\_\+mean\+Specie\+Champ\+Fitness\+MA}} = new Double\+Circular\+Buffer\+With\+Stats(100)
+\begin{DoxyCompactList}\small\item\em A buffer of the N most recent mean specie champ fitness values (the average fitness of all specie champs). Allows the calculation of a moving average. \end{DoxyCompactList}\item 
+Double\+Circular\+Buffer\+With\+Stats \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a655a8a9793f0dae25e984da889e63179}{\+\_\+complexity\+MA}} = new Double\+Circular\+Buffer\+With\+Stats(100)
+\begin{DoxyCompactList}\small\item\em A buffer of the N most recent population mean complexity values. Allows the calculation of a moving average. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ab17ffbab87d9f132d0ab61a3e484bfca}{\+\_\+prev\+Best\+Fitness\+MA}}
+\begin{DoxyCompactList}\small\item\em The previous moving average value for the \textquotesingle{}best fitness\textquotesingle{} series. Allows testing for fitness stalling by comparing with the current MA value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a2aafe7bba694e87c687d17b663e611fd}{\+\_\+prev\+Mean\+Specie\+Champ\+Fitness\+MA}}
+\begin{DoxyCompactList}\small\item\em The previous moving average value for the \textquotesingle{}mean specie champ fitness\textquotesingle{} series. Allows testing for fitness stalling by comparing with the current MA value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ae122f250b549d1e5d2540d28f1364a72}{\+\_\+prev\+Complexity\+MA}}
+\begin{DoxyCompactList}\small\item\em The previous moving average value for the complexity series. Allows testing for stalling during the simplification phase of complexity regulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Neat evolution algorithm statistics. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ae825ee000102d2867435f20901cf13a0}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ae825ee000102d2867435f20901cf13a0}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!NeatAlgorithmStats@{NeatAlgorithmStats}}
+\index{NeatAlgorithmStats@{NeatAlgorithmStats}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{NeatAlgorithmStats()}{NeatAlgorithmStats()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+Neat\+Algorithm\+Stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_evolution_algorithm_parameters}{Neat\+Evolution\+Algorithm\+Parameters}}}]{ea\+Params }\end{DoxyParamCaption})}
+
+
+
+Construct a N\+E\+AT statistics object based on a specified set of N\+E\+AT parameters. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a29ee80c4d7e3ac14de446a5756eb1f95}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a29ee80c4d7e3ac14de446a5756eb1f95}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_asexualOffspringCount@{\_asexualOffspringCount}}
+\index{\_asexualOffspringCount@{\_asexualOffspringCount}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_asexualOffspringCount}{\_asexualOffspringCount}}
+{\footnotesize\ttfamily ulong Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+asexual\+Offspring\+Count}
+
+
+
+Total number of genomes created from asexual reproduction. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a1386f37ebeee032874742e9ab05f021e}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a1386f37ebeee032874742e9ab05f021e}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_bestFitnessMA@{\_bestFitnessMA}}
+\index{\_bestFitnessMA@{\_bestFitnessMA}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_bestFitnessMA}{\_bestFitnessMA}}
+{\footnotesize\ttfamily Double\+Circular\+Buffer\+With\+Stats Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+best\+Fitness\+MA = new Double\+Circular\+Buffer\+With\+Stats(100)}
+
+
+
+A buffer of the N most recent best fitness values. Allows the calculation of a moving average. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a655a8a9793f0dae25e984da889e63179}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a655a8a9793f0dae25e984da889e63179}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_complexityMA@{\_complexityMA}}
+\index{\_complexityMA@{\_complexityMA}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_complexityMA}{\_complexityMA}}
+{\footnotesize\ttfamily Double\+Circular\+Buffer\+With\+Stats Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+complexity\+MA = new Double\+Circular\+Buffer\+With\+Stats(100)}
+
+
+
+A buffer of the N most recent population mean complexity values. Allows the calculation of a moving average. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a0831c142cc4c033460e1a1db5c954a97}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a0831c142cc4c033460e1a1db5c954a97}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_evalsCountAtLastUpdate@{\_evalsCountAtLastUpdate}}
+\index{\_evalsCountAtLastUpdate@{\_evalsCountAtLastUpdate}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_evalsCountAtLastUpdate}{\_evalsCountAtLastUpdate}}
+{\footnotesize\ttfamily ulong Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+evals\+Count\+At\+Last\+Update}
+
+
+
+The total evaluation count at the last update to \+\_\+evaluations\+Per\+Sec. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_aac72c004b283441df110d7e16bfa1ca9}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_aac72c004b283441df110d7e16bfa1ca9}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_evalsPerSecLastSampleTime@{\_evalsPerSecLastSampleTime}}
+\index{\_evalsPerSecLastSampleTime@{\_evalsPerSecLastSampleTime}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_evalsPerSecLastSampleTime}{\_evalsPerSecLastSampleTime}}
+{\footnotesize\ttfamily Date\+Time Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+evals\+Per\+Sec\+Last\+Sample\+Time = new Date\+Time()}
+
+
+
+The clock time of the last update to \+\_\+evaluations\+Per\+Sec. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a5cf210ba1d7836e5dc81be1be454fb51}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a5cf210ba1d7836e5dc81be1be454fb51}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_evaluationsPerSec@{\_evaluationsPerSec}}
+\index{\_evaluationsPerSec@{\_evaluationsPerSec}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_evaluationsPerSec}{\_evaluationsPerSec}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+evaluations\+Per\+Sec}
+
+
+
+Current evaluations per second reading. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a57c06ea16da4d1b9a6f7d6e2780c8605}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a57c06ea16da4d1b9a6f7d6e2780c8605}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_generation@{\_generation}}
+\index{\_generation@{\_generation}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_generation}{\_generation}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+generation}
+
+
+
+The current generation number. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_aa411654ed6ce369ac763dc8e250f59fc}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_aa411654ed6ce369ac763dc8e250f59fc}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_interspeciesOffspringCount@{\_interspeciesOffspringCount}}
+\index{\_interspeciesOffspringCount@{\_interspeciesOffspringCount}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_interspeciesOffspringCount}{\_interspeciesOffspringCount}}
+{\footnotesize\ttfamily ulong Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+interspecies\+Offspring\+Count}
+
+
+
+Total number of genomes created from interspecies sexual reproduction. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a384e9eb24698a3ac3da3b414efb39f13}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a384e9eb24698a3ac3da3b414efb39f13}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_maxComplexity@{\_maxComplexity}}
+\index{\_maxComplexity@{\_maxComplexity}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_maxComplexity}{\_maxComplexity}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+max\+Complexity}
+
+
+
+The complexity of the most complex genome. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ad9ba15adb3873b818d4dd1715466c01c}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ad9ba15adb3873b818d4dd1715466c01c}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_maxFitness@{\_maxFitness}}
+\index{\_maxFitness@{\_maxFitness}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_maxFitness}{\_maxFitness}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+max\+Fitness}
+
+
+
+The fitness of the best genome. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a1ce8d4cc3092f8ab21c4ee16152a8f97}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a1ce8d4cc3092f8ab21c4ee16152a8f97}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_maxSpecieSize@{\_maxSpecieSize}}
+\index{\_maxSpecieSize@{\_maxSpecieSize}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_maxSpecieSize}{\_maxSpecieSize}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+max\+Specie\+Size}
+
+
+
+The number of genomes in the largest specie. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a350c5615b7089ea1f07f2a6233b6fb36}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a350c5615b7089ea1f07f2a6233b6fb36}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_meanComplexity@{\_meanComplexity}}
+\index{\_meanComplexity@{\_meanComplexity}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_meanComplexity}{\_meanComplexity}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+mean\+Complexity}
+
+
+
+The mean genome complexity. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ae4f0634eafc4862d7ac141392da82479}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ae4f0634eafc4862d7ac141392da82479}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_meanFitness@{\_meanFitness}}
+\index{\_meanFitness@{\_meanFitness}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_meanFitness}{\_meanFitness}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+mean\+Fitness}
+
+
+
+The mean genome fitness. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a985cacb19a6dad80c7e97f561e6535ca}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a985cacb19a6dad80c7e97f561e6535ca}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_meanSpecieChampFitness@{\_meanSpecieChampFitness}}
+\index{\_meanSpecieChampFitness@{\_meanSpecieChampFitness}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_meanSpecieChampFitness}{\_meanSpecieChampFitness}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+mean\+Specie\+Champ\+Fitness}
+
+
+
+The mean fitness of current specie champions. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a42bab8c48bf9f3cb2d7e558c7af7ad7b}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a42bab8c48bf9f3cb2d7e558c7af7ad7b}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_meanSpecieChampFitnessMA@{\_meanSpecieChampFitnessMA}}
+\index{\_meanSpecieChampFitnessMA@{\_meanSpecieChampFitnessMA}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_meanSpecieChampFitnessMA}{\_meanSpecieChampFitnessMA}}
+{\footnotesize\ttfamily Double\+Circular\+Buffer\+With\+Stats Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+mean\+Specie\+Champ\+Fitness\+MA = new Double\+Circular\+Buffer\+With\+Stats(100)}
+
+
+
+A buffer of the N most recent mean specie champ fitness values (the average fitness of all specie champs). Allows the calculation of a moving average. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_aaa8ff3acd35a220b60dbedf4ae95b55b}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_aaa8ff3acd35a220b60dbedf4ae95b55b}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_minSpecieSize@{\_minSpecieSize}}
+\index{\_minSpecieSize@{\_minSpecieSize}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_minSpecieSize}{\_minSpecieSize}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+min\+Specie\+Size}
+
+
+
+The number of genomes in the smallest specie. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ab17ffbab87d9f132d0ab61a3e484bfca}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ab17ffbab87d9f132d0ab61a3e484bfca}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_prevBestFitnessMA@{\_prevBestFitnessMA}}
+\index{\_prevBestFitnessMA@{\_prevBestFitnessMA}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_prevBestFitnessMA}{\_prevBestFitnessMA}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+prev\+Best\+Fitness\+MA}
+
+
+
+The previous moving average value for the \textquotesingle{}best fitness\textquotesingle{} series. Allows testing for fitness stalling by comparing with the current MA value. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ae122f250b549d1e5d2540d28f1364a72}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ae122f250b549d1e5d2540d28f1364a72}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_prevComplexityMA@{\_prevComplexityMA}}
+\index{\_prevComplexityMA@{\_prevComplexityMA}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_prevComplexityMA}{\_prevComplexityMA}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+prev\+Complexity\+MA}
+
+
+
+The previous moving average value for the complexity series. Allows testing for stalling during the simplification phase of complexity regulation. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a2aafe7bba694e87c687d17b663e611fd}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a2aafe7bba694e87c687d17b663e611fd}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_prevMeanSpecieChampFitnessMA@{\_prevMeanSpecieChampFitnessMA}}
+\index{\_prevMeanSpecieChampFitnessMA@{\_prevMeanSpecieChampFitnessMA}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_prevMeanSpecieChampFitnessMA}{\_prevMeanSpecieChampFitnessMA}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+prev\+Mean\+Specie\+Champ\+Fitness\+MA}
+
+
+
+The previous moving average value for the \textquotesingle{}mean specie champ fitness\textquotesingle{} series. Allows testing for fitness stalling by comparing with the current MA value. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ab518387ae9a592960db54b0938966a15}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ab518387ae9a592960db54b0938966a15}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_sexualOffspringCount@{\_sexualOffspringCount}}
+\index{\_sexualOffspringCount@{\_sexualOffspringCount}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_sexualOffspringCount}{\_sexualOffspringCount}}
+{\footnotesize\ttfamily ulong Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+sexual\+Offspring\+Count}
+
+
+
+Total number of genomes created from sexual reproduction. This includes the number of offspring created from interspecies reproduction. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a0e26bcfa97f43943b9a38ce8b437737c}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_a0e26bcfa97f43943b9a38ce8b437737c}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_totalEvaluationCount@{\_totalEvaluationCount}}
+\index{\_totalEvaluationCount@{\_totalEvaluationCount}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_totalEvaluationCount}{\_totalEvaluationCount}}
+{\footnotesize\ttfamily ulong Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+total\+Evaluation\+Count}
+
+
+
+The total number of genome evaluations for the current N\+E\+AT search. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ac189a1cebc5ea6ff19a617406072761b}\label{class_sharp_neat_1_1_evolution_algorithms_1_1_neat_algorithm_stats_ac189a1cebc5ea6ff19a617406072761b}} 
+\index{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}!\_totalOffspringCount@{\_totalOffspringCount}}
+\index{\_totalOffspringCount@{\_totalOffspringCount}!SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats@{SharpNeat.EvolutionAlgorithms.NeatAlgorithmStats}}
+\doxysubsubsection{\texorpdfstring{\_totalOffspringCount}{\_totalOffspringCount}}
+{\footnotesize\ttfamily ulong Sharp\+Neat.\+Evolution\+Algorithms.\+Neat\+Algorithm\+Stats.\+\_\+total\+Offspring\+Count}
+
+
+
+Total number of offspring created in the lifetime of a N\+E\+AT search. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Evolution\+Algorithms/Neat\+Algorithm\+Stats.\+cs\end{DoxyCompactItemize}

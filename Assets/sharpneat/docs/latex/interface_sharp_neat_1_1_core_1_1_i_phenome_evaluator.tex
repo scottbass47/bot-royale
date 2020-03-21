@@ -1,0 +1,77 @@
+\hypertarget{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{}\doxysection{Sharp\+Neat.\+Core.\+I\+Phenome\+Evaluator$<$ T\+Phenome $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}\index{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$@{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$}}
+
+
+Generic interface for phenome evaluation classes. Evaluates and assigns a fitness to individual T\+Phenome\textquotesingle{}s.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_core_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_a900cafb7c5b83139248854cd0d292909}{Evaluate}} (T\+Phenome phenome)
+\begin{DoxyCompactList}\small\item\em Evaluate the provided phenome and return its fitness score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_adf10f7c09dad7ffd42ee3115010d0e88}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the internal state of the evaluation scheme if any exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ulong \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_ae043e97b17e82faf9570ba6b68d62dc2}{Evaluation\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the total number of individual genome evaluations that have been performed by this evaluator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_af2679ff0b5081e2804236aa8e0476651}{Stop\+Condition\+Satisfied}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether some goal fitness has been achieved and that the evolutionary algorithm search should stop. This property\textquotesingle{}s value can remain false to allow the algorithm to run indefinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic interface for phenome evaluation classes. Evaluates and assigns a fitness to individual T\+Phenome\textquotesingle{}s. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_a900cafb7c5b83139248854cd0d292909}\label{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_a900cafb7c5b83139248854cd0d292909}} 
+\index{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$@{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$@{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_core_1_1_fitness_info}{Fitness\+Info}} \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{Sharp\+Neat.\+Core.\+I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$.Evaluate (\begin{DoxyParamCaption}\item[{T\+Phenome}]{phenome }\end{DoxyParamCaption})}
+
+
+
+Evaluate the provided phenome and return its fitness score. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_adf10f7c09dad7ffd42ee3115010d0e88}\label{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_adf10f7c09dad7ffd42ee3115010d0e88}} 
+\index{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$@{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$}!Reset@{Reset}}
+\index{Reset@{Reset}!SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$@{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{Sharp\+Neat.\+Core.\+I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$.Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the internal state of the evaluation scheme if any exists. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_ae043e97b17e82faf9570ba6b68d62dc2}\label{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_ae043e97b17e82faf9570ba6b68d62dc2}} 
+\index{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$@{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$}!EvaluationCount@{EvaluationCount}}
+\index{EvaluationCount@{EvaluationCount}!SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$@{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluationCount}{EvaluationCount}}
+{\footnotesize\ttfamily ulong \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{Sharp\+Neat.\+Core.\+I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$.Evaluation\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the total number of individual genome evaluations that have been performed by this evaluator. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_af2679ff0b5081e2804236aa8e0476651}\label{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator_af2679ff0b5081e2804236aa8e0476651}} 
+\index{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$@{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$}!StopConditionSatisfied@{StopConditionSatisfied}}
+\index{StopConditionSatisfied@{StopConditionSatisfied}!SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$@{SharpNeat.Core.IPhenomeEvaluator$<$ TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{StopConditionSatisfied}{StopConditionSatisfied}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{Sharp\+Neat.\+Core.\+I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$.Stop\+Condition\+Satisfied\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether some goal fitness has been achieved and that the evolutionary algorithm search should stop. This property\textquotesingle{}s value can remain false to allow the algorithm to run indefinitely. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/I\+Phenome\+Evaluator.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,242 @@
+\hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array}{}\doxysection{Sharp\+Neat.\+Phenomes.\+Signal\+Array Class Reference}
+\label{class_sharp_neat_1_1_phenomes_1_1_signal_array}\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+
+
+\mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} wraps a native array along with an offset into that array. The resulting \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} provides offset indexed access to the underlying native array.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Phenomes.\+Signal\+Array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sharp_neat_1_1_phenomes_1_1_signal_array}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_a325b44e353cdb23d3f69e62d280ea349}{Signal\+Array}} (double\mbox{[}$\,$\mbox{]} wrapped\+Array, int offset, int length)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} that wraps the provided wrapped\+Array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_a67512e1a00b61244d5b91065baa8afbd}{Copy\+To}} (double\mbox{[}$\,$\mbox{]} target\+Array, int target\+Index)
+\begin{DoxyCompactList}\small\item\em Copies all elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} to the specified target array starting at the specified target Array index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_aa9f591523c0428420f4aa373e51967fe}{Copy\+To}} (double\mbox{[}$\,$\mbox{]} target\+Array, int target\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Copies {\itshape length}  elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} to the specified target array starting at the specified target Array index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_a38f2e3920b94a460f922121605448a78}{Copy\+To}} (double\mbox{[}$\,$\mbox{]} target\+Array, int target\+Index, int source\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Copies {\itshape length}  elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} to the specified target starting from {\itshape target\+Index}  on the target array and {\itshape source\+Index}  on the current source \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_a31e5e587da2aca9b028a7fc3143b292e}{Copy\+From}} (double\mbox{[}$\,$\mbox{]} source\+Array, int target\+Index)
+\begin{DoxyCompactList}\small\item\em Copies all elements from the source array writing them into the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} starting at the specified target\+Index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_a080f86ec7b6712c5fc4b401ddd664413}{Copy\+From}} (double\mbox{[}$\,$\mbox{]} source\+Array, int target\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Copies {\itshape length}  elements from the source array writing them to the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} starting at the specified target\+Index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_ad7231193f2c84601a78d5e25c0904f94}{Copy\+From}} (double\mbox{[}$\,$\mbox{]} source\+Array, int source\+Index, int target\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Copies {\itshape length}  elements starting from source\+Index on source\+Array to the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} starting at the specified target\+Index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_ae81a9fb2a23ad8d6ddb4548a0eed219e}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset all array elements to zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_a43a7a49c21d646b9f2c1b90d521d2266}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the single value at the specified index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array_a2d1ac91d6f7483efa458492b2ce2cace}{Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the length of the signal array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} wraps a native array along with an offset into that array. The resulting \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} provides offset indexed access to the underlying native array. 
+
+\mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} minimizes the amount of value copying required when setting input signal values to, and reading output values from an \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}}. E.\+g. Fast\+Cyclic\+Network requires all input, output and hidden node activation values to be stored in a single array. This class allows us to handle direct access to the input and output values through their own \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}}, thus we can set individual values in the underlying native array directly without having knowledge of that array\textquotesingle{}s structure. An alternative would be to pass arrays to Set\+Inputs() and Set\+Output() methods, requiring us to copy the complete contents of the arrays into the \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_black_box}{I\+Black\+Box}}\textquotesingle{}s working array on each call.
+
+This class is effectively a substitute for array pointer manipulation as is possible in C++, e.\+g. in C++ you might do something like\+: {\ttfamily  double\mbox{[}\mbox{]} all\+Signals = new double\mbox{[}100\mbox{]}; double\mbox{[}\mbox{]} input\+Signals = \&all\+Signals + 1; // Skip bias neuron. double\mbox{[}\mbox{]} output\+Signals = \&all\+Signals + 10; // Skip bias and input neurons. } In the above example access to the real items outside of the bounds of the sub-\/ranges is possible (e.\+g. input\+Signals\mbox{[}10\mbox{]} yields the first output signal). \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} also does not check for such out-\/of-\/bounds accesses, accept when running with a debugger attached in which case assertions will make these tests.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_a325b44e353cdb23d3f69e62d280ea349}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_a325b44e353cdb23d3f69e62d280ea349}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!SignalArray@{SignalArray}}
+\index{SignalArray@{SignalArray}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{SignalArray()}{SignalArray()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+Signal\+Array (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{wrapped\+Array,  }\item[{int}]{offset,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Construct a \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} that wraps the provided wrapped\+Array. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_ad7231193f2c84601a78d5e25c0904f94}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_ad7231193f2c84601a78d5e25c0904f94}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!CopyFrom@{CopyFrom}}
+\index{CopyFrom@{CopyFrom}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{CopyFrom()}{CopyFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+Copy\+From (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{source\+Array,  }\item[{int}]{source\+Index,  }\item[{int}]{target\+Index,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Copies {\itshape length}  elements starting from source\+Index on source\+Array to the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} starting at the specified target\+Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Array} & The array to copy elements from.\\
+\hline
+{\em source\+Index} & The source\+Array index at which copying begins.\\
+\hline
+{\em target\+Index} & The index into the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} at which copying begins.\\
+\hline
+{\em length} & The number of elements to copy.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array_aca7f28f4447b18283056f2a5806d30bc}{Sharp\+Neat.\+Phenomes.\+I\+Signal\+Array}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_a31e5e587da2aca9b028a7fc3143b292e}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_a31e5e587da2aca9b028a7fc3143b292e}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!CopyFrom@{CopyFrom}}
+\index{CopyFrom@{CopyFrom}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{CopyFrom()}{CopyFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+Copy\+From (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{source\+Array,  }\item[{int}]{target\+Index }\end{DoxyParamCaption})}
+
+
+
+Copies all elements from the source array writing them into the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} starting at the specified target\+Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Array} & The array to copy elements from.\\
+\hline
+{\em target\+Index} & The index into the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} at which copying begins.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array_acd0a88fc3aaa597c2811b9cfb6eccb63}{Sharp\+Neat.\+Phenomes.\+I\+Signal\+Array}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_a080f86ec7b6712c5fc4b401ddd664413}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_a080f86ec7b6712c5fc4b401ddd664413}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!CopyFrom@{CopyFrom}}
+\index{CopyFrom@{CopyFrom}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{CopyFrom()}{CopyFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+Copy\+From (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{source\+Array,  }\item[{int}]{target\+Index,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Copies {\itshape length}  elements from the source array writing them to the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} starting at the specified target\+Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Array} & The array to copy elements from.\\
+\hline
+{\em target\+Index} & The index into the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} at which copying begins.\\
+\hline
+{\em length} & The number of elements to copy.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array_a12697f02fec9d63629d43ee6fda4ee7c}{Sharp\+Neat.\+Phenomes.\+I\+Signal\+Array}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_a67512e1a00b61244d5b91065baa8afbd}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_a67512e1a00b61244d5b91065baa8afbd}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!CopyTo@{CopyTo}}
+\index{CopyTo@{CopyTo}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{CopyTo()}{CopyTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+Copy\+To (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{target\+Array,  }\item[{int}]{target\+Index }\end{DoxyParamCaption})}
+
+
+
+Copies all elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} to the specified target array starting at the specified target Array index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Array} & The array to copy elements to.\\
+\hline
+{\em target\+Index} & The target\+Array index at which copying to begins.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array_a4d47494708f4142920f6810ec2678461}{Sharp\+Neat.\+Phenomes.\+I\+Signal\+Array}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_aa9f591523c0428420f4aa373e51967fe}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_aa9f591523c0428420f4aa373e51967fe}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!CopyTo@{CopyTo}}
+\index{CopyTo@{CopyTo}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{CopyTo()}{CopyTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+Copy\+To (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{target\+Array,  }\item[{int}]{target\+Index,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Copies {\itshape length}  elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} to the specified target array starting at the specified target Array index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Array} & The array to copy elements to.\\
+\hline
+{\em target\+Index} & The target\+Array index at which storing begins.\\
+\hline
+{\em length} & The number of elements to copy.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array_ace779b57c8b68f8113965b41dc0e0714}{Sharp\+Neat.\+Phenomes.\+I\+Signal\+Array}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_a38f2e3920b94a460f922121605448a78}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_a38f2e3920b94a460f922121605448a78}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!CopyTo@{CopyTo}}
+\index{CopyTo@{CopyTo}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{CopyTo()}{CopyTo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+Copy\+To (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{target\+Array,  }\item[{int}]{target\+Index,  }\item[{int}]{source\+Index,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Copies {\itshape length}  elements from the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} to the specified target starting from {\itshape target\+Index}  on the target array and {\itshape source\+Index}  on the current source \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Array} & The array to copy elements to.\\
+\hline
+{\em target\+Index} & The target\+Array index at which copying begins.\\
+\hline
+{\em source\+Index} & The index into the current \mbox{\hyperlink{class_sharp_neat_1_1_phenomes_1_1_signal_array}{Signal\+Array}} at which copying begins.\\
+\hline
+{\em length} & The number of elements to copy.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array_abe4b3181bdb04514222c4b93c23a8d81}{Sharp\+Neat.\+Phenomes.\+I\+Signal\+Array}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_ae81a9fb2a23ad8d6ddb4548a0eed219e}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_ae81a9fb2a23ad8d6ddb4548a0eed219e}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!Reset@{Reset}}
+\index{Reset@{Reset}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset all array elements to zero. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_phenomes_1_1_i_signal_array_ab9e9e62799aeb96a6a08a57e3367d369}{Sharp\+Neat.\+Phenomes.\+I\+Signal\+Array}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_a2d1ac91d6f7483efa458492b2ce2cace}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_a2d1ac91d6f7483efa458492b2ce2cace}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!Length@{Length}}
+\index{Length@{Length}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{Length}{Length}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+Length\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the length of the signal array. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_phenomes_1_1_signal_array_a43a7a49c21d646b9f2c1b90d521d2266}\label{class_sharp_neat_1_1_phenomes_1_1_signal_array_a43a7a49c21d646b9f2c1b90d521d2266}} 
+\index{SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!SharpNeat.Phenomes.SignalArray@{SharpNeat.Phenomes.SignalArray}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily virtual double Sharp\+Neat.\+Phenomes.\+Signal\+Array.\+this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the single value at the specified index. 
+
+We assert that the index is within the defined range of the signal array. Throwing an exception would be more correct but the check would affect performance of problem domains with large I/O throughput.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Phenomes/Signal\+Array.\+cs\end{DoxyCompactItemize}

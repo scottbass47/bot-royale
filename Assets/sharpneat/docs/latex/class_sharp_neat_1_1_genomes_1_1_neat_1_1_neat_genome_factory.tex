@@ -1,0 +1,466 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+
+
+An I\+Genome\+Factory for Neat\+Genomes. We use the factory as a means of generating an initial population either randomly or using a seed genome or genomes. Subsequently all \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} objects keep a reference to this factory object for convenient access to \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} parameters and ID generator objects.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.584615cm]{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a2687cad6cf43e132c77462d636a08232}{Neat\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count)
+\begin{DoxyCompactList}\small\item\em Constructs with default \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and ID generators initialized to zero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a8b2729a92a0d468ac8270f15174f9395}{Neat\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} neat\+Genome\+Params)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}} with the provided \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and ID generators initialized to zero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a4d0a7f6b20fda1f6f909ebfeec220a73}{Neat\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} neat\+Genome\+Params, \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} genome\+Id\+Generator, \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} innovation\+Id\+Generator)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}} with the provided \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and ID generators. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_afdf2652603f7d67acfe3b8d3eee51d99}{Neat\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library)
+\begin{DoxyCompactList}\small\item\em Constructs with default \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}, ID generators initialized to zero and the provided I\+Activation\+Function\+Library. This overload required for C\+P\+PN support. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_abcb60c82a8649e42fb9db2fe0e1cb3ab}{Neat\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} neat\+Genome\+Params)
+\begin{DoxyCompactList}\small\item\em Constructs with ID generators initialized to zero and the provided I\+Activation\+Function\+Library and \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}. This overload required for C\+P\+PN support. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a5691cf4170a6584206cf11ed667f3103}{Neat\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} neat\+Genome\+Params, \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} genome\+Id\+Generator, \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} innovation\+Id\+Generator)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided I\+Activation\+Function\+Library, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and ID Generators. This overload required for C\+P\+PN support. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a214393cfe3b14597e70640c32c3d1056}{Create\+Genome\+List}} (int length, uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Creates a list of randomly initialised genomes. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab34c57831079709c652fdb1d5a296de6}{Create\+Genome\+List}} (int length, uint birth\+Generation, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} seed\+Genome)
+\begin{DoxyCompactList}\small\item\em Creates a list of genomes spawned from a seed genome. Spawning uses asexual reproduction. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a916ed6f9e0b61a145b6875b42ef62d16}{Create\+Genome\+List}} (int length, uint birth\+Generation, List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} $>$ seed\+Genome\+List)
+\begin{DoxyCompactList}\small\item\em Creates a list of genomes spawned from a list of seed genomes. Spawning uses asexual reproduction and typically we would simply repeatedly loop over (and spawn from) the seed genomes until we have the required number of spawned genomes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a31d79e8087e3de6a242d9df16394c7b4}{Create\+Genome}} (uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Creates a single randomly initialised genome. A random set of connections are made form the input to the output neurons, the number of connections made is based on the \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a53b329c661e33ba201714db918240e11}{Neat\+Genome\+Parameters.\+Initial\+Interconnections\+Proportion}} which specifies the proportion of all possible input-\/output connections to be made in initial genomes. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_aced90792ca9d6f1c22fd7da07cd3bae3}{Check\+Genome\+Type}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} genome)
+\begin{DoxyCompactList}\small\item\em Supports debug/integrity checks. Checks that a given genome object\textquotesingle{}s type is consistent with the genome factory. Typically the wrong type of object may occur where factories are sub-\/typed and not all of the relevant virtual methods are overridden. Returns true if OK. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_aa1cb7de645b0f22f60a82cad99aac6dc}{Next\+Genome\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Convenient method for obtaining the next genome ID. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a7b59f18a98ffa7f92c4512078750bbd9}{Next\+Innovation\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Convenient method for obtaining the next innovation ID. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab0d7bf1c44fb6739dd7ba0508918fbaf}{Generate\+Random\+Connection\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em Convenient method for generating a new random connection weight that conforms to the connection weight range defined by the \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a19811a5750939b3169ff2933c1e5aaf5}{Sample\+Gaussian\+Distribution}} (double mu, double sigma)
+\begin{DoxyCompactList}\small\item\em Gets a variable from the Gaussian distribution with the provided mean and standard deviation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a534a446d801526071993606d055a3899}{Create\+Genome}} (uint id, uint birth\+Generation, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}{Neuron\+Gene\+List}} neuron\+Gene\+List, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{Connection\+Gene\+List}} connection\+Gene\+List, int input\+Neuron\+Count, int output\+Neuron\+Count, bool rebuild\+Neuron\+Gene\+Connection\+Info)
+\begin{DoxyCompactList}\small\item\em Create a genome with the provided internal state/definition data/objects. Virtual method to allow alternative \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} sub-\/classes to be used. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a1d2ce8f323690fa6b323c106749bf55e}{Create\+Genome\+Copy}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} copy\+From, uint id, uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Create a copy of an existing \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}, substituting in the specified ID and birth generation. Virtual method to allow alternative \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} sub-\/classes to be used. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab9ae6cf300c9650b639ddbc07c748838}{Create\+Neuron\+Gene}} (uint innovation\+Id, \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} neuron\+Type)
+\begin{DoxyCompactList}\small\item\em Virtual method to allow alternative \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} sub-\/classes to be used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_adf898beb0d3640ff4cb48ff0771d2b9a}{\+\_\+neat\+Genome\+Params\+Current}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} currently in effect. \end{DoxyCompactList}\item 
+readonly I\+Random\+Source \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a3de567ca09a26cab4c3a124960e156f0}{\+\_\+rng}} = Random\+Defaults.\+Create\+Random\+Source()
+\begin{DoxyCompactList}\small\item\em Random number generator associated with this factory. \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a682eb15b4d380778ddb4ae087f6f24b9}{\+\_\+activation\+Fn\+Library}}
+\begin{DoxyCompactList}\small\item\em Activation function library associated with this factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a697024107ee07585f5f60c244fa99e72}{Genome\+Id\+Generator}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the factory\textquotesingle{}s genome ID generator. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a97933b5068f19ab8ae1c52bff8046176}{Search\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a mode value. This is intended as a means for an evolution algorithm to convey changes in search mode to genomes, and because the set of modes is specific to each concrete implementation of an I\+Evolution\+Algorithm the mode is defined as an integer (rather than an enum\mbox{[}eration\mbox{]}). E.\+g. Sharp\+N\+E\+AT\textquotesingle{}s implementation of N\+E\+AT uses an evolutionary algorithm that alternates between a complexifying and simplifying mode, in order to do this the algorithm class needs to notify the genomes of the current mode so that the Create\+Offspring() methods are able to generate offspring appropriately -\/ e.\+g. we avoid adding new nodes and connections and increase the rate of deletion mutations when in simplifying mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a9e85b54444e5dc22f720eb21b1381b6a}{Neat\+Genome\+Parameters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the factory\textquotesingle{}s \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} currently in effect. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a567af1dc769b0be5f95e3c0f5d6d07fa}{Input\+Neuron\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of input neurons expressed by the genomes related to this factory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a796cbf19cef18b5a73787ca7c1498228}{Output\+Neuron\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of output neurons expressed by the genomes related to this factory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_aaae5ae33c47b828bed6d32ece01c596a}{Activation\+Fn\+Library}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the factory\textquotesingle{}s activation function library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_abbdf025b5d334d281eea4d8b5ebc347a}{Innovation\+Id\+Generator}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the factory\textquotesingle{}s innovation ID generator. \end{DoxyCompactList}\item 
+Keyed\+Circular\+Buffer$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_connection_endpoints_struct}{Connection\+Endpoints\+Struct}}, uint?$>$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_af4e08b7819f21f92f6c6fe34e0640776}{Added\+Connection\+Buffer}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the history buffer of added connections. Used when adding new connections to check if an identical connection has been added to a genome elsewhere in the population. This allows re-\/use of the same innovation ID for like connections. \end{DoxyCompactList}\item 
+Keyed\+Circular\+Buffer$<$ uint, \mbox{\hyperlink{struct_sharp_neat_1_1_genomes_1_1_neat_1_1_added_neuron_gene_struct}{Added\+Neuron\+Gene\+Struct}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a3cdb0969b4666b803b477ea1eaf370dc}{Added\+Neuron\+Buffer}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the history buffer of added neurons. Used when adding new neurons to check if an identical neuron has been added to a genome elsewhere in the population. This allows re-\/use of the same innovation ID for like neurons. \end{DoxyCompactList}\item 
+I\+Random\+Source \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ac604ba658775d67050baf3fd548280ae}{Rng}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a random number generator associated with the factory. Note. The provided R\+NG is not thread safe, if concurrent use is required then sync locks are necessary or some other R\+NG mechanism. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_stats}{Neat\+Genome\+Stats}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a442100c63f22cc48915a8282e999ff53}{Stats}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets some statistics associated with the factory and N\+E\+AT genomes that it has spawned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An I\+Genome\+Factory for Neat\+Genomes. We use the factory as a means of generating an initial population either randomly or using a seed genome or genomes. Subsequently all \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} objects keep a reference to this factory object for convenient access to \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} parameters and ID generator objects. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a2687cad6cf43e132c77462d636a08232}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a2687cad6cf43e132c77462d636a08232}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!NeatGenomeFactory@{NeatGenomeFactory}}
+\index{NeatGenomeFactory@{NeatGenomeFactory}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{NeatGenomeFactory()}{NeatGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Neat\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count }\end{DoxyParamCaption})}
+
+
+
+Constructs with default \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and ID generators initialized to zero. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a8b2729a92a0d468ac8270f15174f9395}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a8b2729a92a0d468ac8270f15174f9395}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!NeatGenomeFactory@{NeatGenomeFactory}}
+\index{NeatGenomeFactory@{NeatGenomeFactory}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{NeatGenomeFactory()}{NeatGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Neat\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{neat\+Genome\+Params }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}} with the provided \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and ID generators initialized to zero. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a4d0a7f6b20fda1f6f909ebfeec220a73}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a4d0a7f6b20fda1f6f909ebfeec220a73}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!NeatGenomeFactory@{NeatGenomeFactory}}
+\index{NeatGenomeFactory@{NeatGenomeFactory}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{NeatGenomeFactory()}{NeatGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Neat\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{neat\+Genome\+Params,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}}}]{genome\+Id\+Generator,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}}}]{innovation\+Id\+Generator }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory}{Neat\+Genome\+Factory}} with the provided \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and ID generators. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_afdf2652603f7d67acfe3b8d3eee51d99}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_afdf2652603f7d67acfe3b8d3eee51d99}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!NeatGenomeFactory@{NeatGenomeFactory}}
+\index{NeatGenomeFactory@{NeatGenomeFactory}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{NeatGenomeFactory()}{NeatGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Neat\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library }\end{DoxyParamCaption})}
+
+
+
+Constructs with default \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}, ID generators initialized to zero and the provided I\+Activation\+Function\+Library. This overload required for C\+P\+PN support. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_abcb60c82a8649e42fb9db2fe0e1cb3ab}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_abcb60c82a8649e42fb9db2fe0e1cb3ab}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!NeatGenomeFactory@{NeatGenomeFactory}}
+\index{NeatGenomeFactory@{NeatGenomeFactory}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{NeatGenomeFactory()}{NeatGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Neat\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{neat\+Genome\+Params }\end{DoxyParamCaption})}
+
+
+
+Constructs with ID generators initialized to zero and the provided I\+Activation\+Function\+Library and \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}. This overload required for C\+P\+PN support. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a5691cf4170a6584206cf11ed667f3103}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a5691cf4170a6584206cf11ed667f3103}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!NeatGenomeFactory@{NeatGenomeFactory}}
+\index{NeatGenomeFactory@{NeatGenomeFactory}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{NeatGenomeFactory()}{NeatGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Neat\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{neat\+Genome\+Params,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}}}]{genome\+Id\+Generator,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}}}]{innovation\+Id\+Generator }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided I\+Activation\+Function\+Library, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} and ID Generators. This overload required for C\+P\+PN support. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_aced90792ca9d6f1c22fd7da07cd3bae3}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_aced90792ca9d6f1c22fd7da07cd3bae3}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!CheckGenomeType@{CheckGenomeType}}
+\index{CheckGenomeType@{CheckGenomeType}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CheckGenomeType()}{CheckGenomeType()}}
+{\footnotesize\ttfamily virtual bool Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Check\+Genome\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}}]{genome }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Supports debug/integrity checks. Checks that a given genome object\textquotesingle{}s type is consistent with the genome factory. Typically the wrong type of object may occur where factories are sub-\/typed and not all of the relevant virtual methods are overridden. Returns true if OK. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a31d79e8087e3de6a242d9df16394c7b4}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a31d79e8087e3de6a242d9df16394c7b4}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!CreateGenome@{CreateGenome}}
+\index{CreateGenome@{CreateGenome}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CreateGenome()}{CreateGenome()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Create\+Genome (\begin{DoxyParamCaption}\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})}
+
+
+
+Creates a single randomly initialised genome. A random set of connections are made form the input to the output neurons, the number of connections made is based on the \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters_a53b329c661e33ba201714db918240e11}{Neat\+Genome\+Parameters.\+Initial\+Interconnections\+Proportion}} which specifies the proportion of all possible input-\/output connections to be made in initial genomes. 
+
+The connections that are made are allocated innovation I\+Ds in a consistent manner across the initial population of genomes. To do this we allocate I\+Ds sequentially to all possible interconnections and then randomly select some proportion of connections for inclusion in the genome. In addition, for this scheme to work the innovation ID generator must be reset to zero prior to each call to \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a31d79e8087e3de6a242d9df16394c7b4}{Create\+Genome()}}, and a test is made to ensure this is the case.
+
+The consistent allocation of innovation I\+Ds ensure that equivalent connections in different genomes have the same innovation ID, and although this isn\textquotesingle{}t strictly necessary it is required for sexual reproduction to work effectively -\/ like structures are detected by comparing innovation I\+Ds only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genome as its birth generation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a534a446d801526071993606d055a3899}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a534a446d801526071993606d055a3899}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!CreateGenome@{CreateGenome}}
+\index{CreateGenome@{CreateGenome}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CreateGenome()}{CreateGenome()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Create\+Genome (\begin{DoxyParamCaption}\item[{uint}]{id,  }\item[{uint}]{birth\+Generation,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene_list}{Neuron\+Gene\+List}}}]{neuron\+Gene\+List,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{Connection\+Gene\+List}}}]{connection\+Gene\+List,  }\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{bool}]{rebuild\+Neuron\+Gene\+Connection\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create a genome with the provided internal state/definition data/objects. Virtual method to allow alternative \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} sub-\/classes to be used. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a1d2ce8f323690fa6b323c106749bf55e}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a1d2ce8f323690fa6b323c106749bf55e}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!CreateGenomeCopy@{CreateGenomeCopy}}
+\index{CreateGenomeCopy@{CreateGenomeCopy}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CreateGenomeCopy()}{CreateGenomeCopy()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Create\+Genome\+Copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}}]{copy\+From,  }\item[{uint}]{id,  }\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create a copy of an existing \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}, substituting in the specified ID and birth generation. Virtual method to allow alternative \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} sub-\/classes to be used. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a214393cfe3b14597e70640c32c3d1056}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a214393cfe3b14597e70640c32c3d1056}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!CreateGenomeList@{CreateGenomeList}}
+\index{CreateGenomeList@{CreateGenomeList}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CreateGenomeList()}{CreateGenomeList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}$>$ Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Create\+Genome\+List (\begin{DoxyParamCaption}\item[{int}]{length,  }\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})}
+
+
+
+Creates a list of randomly initialised genomes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The number of genomes to create.\\
+\hline
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genomes as their birth generation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a916ed6f9e0b61a145b6875b42ef62d16}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a916ed6f9e0b61a145b6875b42ef62d16}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!CreateGenomeList@{CreateGenomeList}}
+\index{CreateGenomeList@{CreateGenomeList}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CreateGenomeList()}{CreateGenomeList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}$>$ Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Create\+Genome\+List (\begin{DoxyParamCaption}\item[{int}]{length,  }\item[{uint}]{birth\+Generation,  }\item[{List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}} $>$}]{seed\+Genome\+List }\end{DoxyParamCaption})}
+
+
+
+Creates a list of genomes spawned from a list of seed genomes. Spawning uses asexual reproduction and typically we would simply repeatedly loop over (and spawn from) the seed genomes until we have the required number of spawned genomes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The number of genomes to create.\\
+\hline
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genomes as their birth generation.\\
+\hline
+{\em seed\+Genome\+List} & A list of seed genomes from which to spawn new genomes from.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab34c57831079709c652fdb1d5a296de6}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab34c57831079709c652fdb1d5a296de6}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!CreateGenomeList@{CreateGenomeList}}
+\index{CreateGenomeList@{CreateGenomeList}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CreateGenomeList()}{CreateGenomeList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}$>$ Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Create\+Genome\+List (\begin{DoxyParamCaption}\item[{int}]{length,  }\item[{uint}]{birth\+Generation,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome}{Neat\+Genome}}}]{seed\+Genome }\end{DoxyParamCaption})}
+
+
+
+Creates a list of genomes spawned from a seed genome. Spawning uses asexual reproduction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The number of genomes to create.\\
+\hline
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genomes as their birth generation.\\
+\hline
+{\em seed\+Genome} & The seed genome to spawn new genomes from.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab9ae6cf300c9650b639ddbc07c748838}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab9ae6cf300c9650b639ddbc07c748838}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!CreateNeuronGene@{CreateNeuronGene}}
+\index{CreateNeuronGene@{CreateNeuronGene}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CreateNeuronGene()}{CreateNeuronGene()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Create\+Neuron\+Gene (\begin{DoxyParamCaption}\item[{uint}]{innovation\+Id,  }\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}}}]{neuron\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual method to allow alternative \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} sub-\/classes to be used. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a75ad5a2ea73b7f649150c205113a208d}{Sharp\+Neat.\+Genomes.\+Hyper\+Neat.\+Cppn\+Genome\+Factory}}, and \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_rbf_neat_1_1_rbf_genome_factory_adac90c99951fcff08a21134f7d8f2daa}{Sharp\+Neat.\+Genomes.\+Rbf\+Neat.\+Rbf\+Genome\+Factory}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab0d7bf1c44fb6739dd7ba0508918fbaf}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab0d7bf1c44fb6739dd7ba0508918fbaf}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!GenerateRandomConnectionWeight@{GenerateRandomConnectionWeight}}
+\index{GenerateRandomConnectionWeight@{GenerateRandomConnectionWeight}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{GenerateRandomConnectionWeight()}{GenerateRandomConnectionWeight()}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Generate\+Random\+Connection\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convenient method for generating a new random connection weight that conforms to the connection weight range defined by the \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_aa1cb7de645b0f22f60a82cad99aac6dc}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_aa1cb7de645b0f22f60a82cad99aac6dc}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!NextGenomeId@{NextGenomeId}}
+\index{NextGenomeId@{NextGenomeId}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{NextGenomeId()}{NextGenomeId()}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Next\+Genome\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convenient method for obtaining the next genome ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a7b59f18a98ffa7f92c4512078750bbd9}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a7b59f18a98ffa7f92c4512078750bbd9}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!NextInnovationId@{NextInnovationId}}
+\index{NextInnovationId@{NextInnovationId}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{NextInnovationId()}{NextInnovationId()}}
+{\footnotesize\ttfamily uint Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Next\+Innovation\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convenient method for obtaining the next innovation ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a19811a5750939b3169ff2933c1e5aaf5}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a19811a5750939b3169ff2933c1e5aaf5}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!SampleGaussianDistribution@{SampleGaussianDistribution}}
+\index{SampleGaussianDistribution@{SampleGaussianDistribution}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{SampleGaussianDistribution()}{SampleGaussianDistribution()}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Sample\+Gaussian\+Distribution (\begin{DoxyParamCaption}\item[{double}]{mu,  }\item[{double}]{sigma }\end{DoxyParamCaption})}
+
+
+
+Gets a variable from the Gaussian distribution with the provided mean and standard deviation. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a682eb15b4d380778ddb4ae087f6f24b9}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a682eb15b4d380778ddb4ae087f6f24b9}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!\_activationFnLibrary@{\_activationFnLibrary}}
+\index{\_activationFnLibrary@{\_activationFnLibrary}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{\_activationFnLibrary}{\_activationFnLibrary}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+\_\+activation\+Fn\+Library\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Activation function library associated with this factory. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_adf898beb0d3640ff4cb48ff0771d2b9a}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_adf898beb0d3640ff4cb48ff0771d2b9a}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!\_neatGenomeParamsCurrent@{\_neatGenomeParamsCurrent}}
+\index{\_neatGenomeParamsCurrent@{\_neatGenomeParamsCurrent}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{\_neatGenomeParamsCurrent}{\_neatGenomeParamsCurrent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+\_\+neat\+Genome\+Params\+Current\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} currently in effect. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a3de567ca09a26cab4c3a124960e156f0}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a3de567ca09a26cab4c3a124960e156f0}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!\_rng@{\_rng}}
+\index{\_rng@{\_rng}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{\_rng}{\_rng}}
+{\footnotesize\ttfamily readonly I\+Random\+Source Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+\_\+rng = Random\+Defaults.\+Create\+Random\+Source()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Random number generator associated with this factory. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_aaae5ae33c47b828bed6d32ece01c596a}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_aaae5ae33c47b828bed6d32ece01c596a}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!ActivationFnLibrary@{ActivationFnLibrary}}
+\index{ActivationFnLibrary@{ActivationFnLibrary}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{ActivationFnLibrary}{ActivationFnLibrary}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Activation\+Fn\+Library\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the factory\textquotesingle{}s activation function library. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_af4e08b7819f21f92f6c6fe34e0640776}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_af4e08b7819f21f92f6c6fe34e0640776}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!AddedConnectionBuffer@{AddedConnectionBuffer}}
+\index{AddedConnectionBuffer@{AddedConnectionBuffer}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{AddedConnectionBuffer}{AddedConnectionBuffer}}
+{\footnotesize\ttfamily Keyed\+Circular\+Buffer$<$\mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_connection_endpoints_struct}{Connection\+Endpoints\+Struct}},uint?$>$ Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Added\+Connection\+Buffer\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the history buffer of added connections. Used when adding new connections to check if an identical connection has been added to a genome elsewhere in the population. This allows re-\/use of the same innovation ID for like connections. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a3cdb0969b4666b803b477ea1eaf370dc}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a3cdb0969b4666b803b477ea1eaf370dc}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!AddedNeuronBuffer@{AddedNeuronBuffer}}
+\index{AddedNeuronBuffer@{AddedNeuronBuffer}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{AddedNeuronBuffer}{AddedNeuronBuffer}}
+{\footnotesize\ttfamily Keyed\+Circular\+Buffer$<$uint,\mbox{\hyperlink{struct_sharp_neat_1_1_genomes_1_1_neat_1_1_added_neuron_gene_struct}{Added\+Neuron\+Gene\+Struct}}$>$ Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Added\+Neuron\+Buffer\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the history buffer of added neurons. Used when adding new neurons to check if an identical neuron has been added to a genome elsewhere in the population. This allows re-\/use of the same innovation ID for like neurons. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a697024107ee07585f5f60c244fa99e72}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a697024107ee07585f5f60c244fa99e72}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!GenomeIdGenerator@{GenomeIdGenerator}}
+\index{GenomeIdGenerator@{GenomeIdGenerator}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{GenomeIdGenerator}{GenomeIdGenerator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Genome\+Id\+Generator\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the factory\textquotesingle{}s genome ID generator. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_abbdf025b5d334d281eea4d8b5ebc347a}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_abbdf025b5d334d281eea4d8b5ebc347a}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!InnovationIdGenerator@{InnovationIdGenerator}}
+\index{InnovationIdGenerator@{InnovationIdGenerator}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{InnovationIdGenerator}{InnovationIdGenerator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Innovation\+Id\+Generator\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the factory\textquotesingle{}s innovation ID generator. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a567af1dc769b0be5f95e3c0f5d6d07fa}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a567af1dc769b0be5f95e3c0f5d6d07fa}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!InputNeuronCount@{InputNeuronCount}}
+\index{InputNeuronCount@{InputNeuronCount}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{InputNeuronCount}{InputNeuronCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Input\+Neuron\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of input neurons expressed by the genomes related to this factory. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a9e85b54444e5dc22f720eb21b1381b6a}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a9e85b54444e5dc22f720eb21b1381b6a}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!NeatGenomeParameters@{NeatGenomeParameters}}
+\index{NeatGenomeParameters@{NeatGenomeParameters}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{NeatGenomeParameters}{NeatGenomeParameters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Neat\+Genome\+Parameters\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the factory\textquotesingle{}s \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} currently in effect. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a796cbf19cef18b5a73787ca7c1498228}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a796cbf19cef18b5a73787ca7c1498228}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!OutputNeuronCount@{OutputNeuronCount}}
+\index{OutputNeuronCount@{OutputNeuronCount}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{OutputNeuronCount}{OutputNeuronCount}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Output\+Neuron\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of output neurons expressed by the genomes related to this factory. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ac604ba658775d67050baf3fd548280ae}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ac604ba658775d67050baf3fd548280ae}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!Rng@{Rng}}
+\index{Rng@{Rng}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{Rng}{Rng}}
+{\footnotesize\ttfamily I\+Random\+Source Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Rng\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a random number generator associated with the factory. Note. The provided R\+NG is not thread safe, if concurrent use is required then sync locks are necessary or some other R\+NG mechanism. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a97933b5068f19ab8ae1c52bff8046176}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a97933b5068f19ab8ae1c52bff8046176}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!SearchMode@{SearchMode}}
+\index{SearchMode@{SearchMode}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{SearchMode}{SearchMode}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Search\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a mode value. This is intended as a means for an evolution algorithm to convey changes in search mode to genomes, and because the set of modes is specific to each concrete implementation of an I\+Evolution\+Algorithm the mode is defined as an integer (rather than an enum\mbox{[}eration\mbox{]}). E.\+g. Sharp\+N\+E\+AT\textquotesingle{}s implementation of N\+E\+AT uses an evolutionary algorithm that alternates between a complexifying and simplifying mode, in order to do this the algorithm class needs to notify the genomes of the current mode so that the Create\+Offspring() methods are able to generate offspring appropriately -\/ e.\+g. we avoid adding new nodes and connections and increase the rate of deletion mutations when in simplifying mode. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a442100c63f22cc48915a8282e999ff53}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_a442100c63f22cc48915a8282e999ff53}} 
+\index{SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}!Stats@{Stats}}
+\index{Stats@{Stats}!SharpNeat.Genomes.Neat.NeatGenomeFactory@{SharpNeat.Genomes.Neat.NeatGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{Stats}{Stats}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_stats}{Neat\+Genome\+Stats}} Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory.\+Stats\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets some statistics associated with the factory and N\+E\+AT genomes that it has spawned. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Neat\+Genome\+Factory.\+cs\end{DoxyCompactItemize}

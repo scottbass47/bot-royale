@@ -1,0 +1,143 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}{}\doxysection{Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+
+
+Represents a sorted list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} objects. The sorting of the items is done on request rather than being strictly enforced at all times (e.\+g. as part of adding and removing genes). This approach is currently more convenient for use in some of the routines that work with N\+E\+AT genomes.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.968198cm]{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a3955ba9b0aba198103377f6f43dff964}{Connection\+Gene\+List}} ()
+\begin{DoxyCompactList}\small\item\em Construct an empty list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a5e5b59bd274854dc9fd84acc84c592e1}{Connection\+Gene\+List}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Construct an empty list with the specified capacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a32945c2a51afddbef81fc57987855de6}{Connection\+Gene\+List}} (I\+Collection$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} $>$ copy\+From)
+\begin{DoxyCompactList}\small\item\em Copy constructor. The newly allocated list has a capacity 2 larger than copy\+From allowing addition mutations to occur without reallocation of memory. Note that a single add node mutation adds two connections and a single add connection mutation adds one. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a995385991dfbac46debb47f1d65ef6a4}{Insert\+Into\+Position}} (\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} connection\+Gene)
+\begin{DoxyCompactList}\small\item\em Inserts a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} into its correct (sorted) location within the gene list. Normally connection genes can safely be assumed to have a new Innovation ID higher than all existing I\+Ds, and so we can just call Add(). This routine handles genes with older I\+Ds that need placing correctly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a1febce18213d6432a90302086cc3a958}{Remove}} (uint innovation\+Id)
+\begin{DoxyCompactList}\small\item\em Remove the connection gene with the specified innovation ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a612d386156847c7a0e6226dffedcec29}{Sort\+By\+Innovation\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Sort connection genes into ascending order by their innovation I\+Ds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a26ab0ba82e9715a2da237a31448a6fe8}{Binary\+Search}} (uint innovation\+Id)
+\begin{DoxyCompactList}\small\item\em Obtain the index of the gene with the specified innovation ID by performing a binary search. Binary search is fast and can be performed so long as we know the genes are sorted by innovation ID. If the genes are not sorted then the behaviour of this method is undefined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_ab7c922ef7db17643384e6dbf539baebc}{Reset\+Is\+Mutated\+Flags}} ()
+\begin{DoxyCompactList}\small\item\em Resets the Is\+Mutated flag on all Connection\+Genes in the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_abce4052ca0c54b39283ef42315bb9427}{Is\+Sorted}} ()
+\begin{DoxyCompactList}\small\item\em For debug purposes only. Don\textquotesingle{}t call this method in normal circumstances as it is an expensive O(n) operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a sorted list of \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} objects. The sorting of the items is done on request rather than being strictly enforced at all times (e.\+g. as part of adding and removing genes). This approach is currently more convenient for use in some of the routines that work with N\+E\+AT genomes. 
+
+Because we are not using a strictly sorted list such as the generic class Sorted\+List\mbox{[}K,V\mbox{]} a customised \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a26ab0ba82e9715a2da237a31448a6fe8}{Binary\+Search()}} method is provided for fast lookup of items if the list is known to be sorted. If the list is not sorted then the Binary\+Search method\textquotesingle{}s behaviour is undefined. This is potentially a source of bugs and thus this class should probably migrate to Sorted\+List\mbox{[}K,V\mbox{]} or be modified to ensure items are sorted prior to a binary search.
+
+Sort order is with respect to connection gene innovation ID.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a3955ba9b0aba198103377f6f43dff964}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a3955ba9b0aba198103377f6f43dff964}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}!ConnectionGeneList@{ConnectionGeneList}}
+\index{ConnectionGeneList@{ConnectionGeneList}!SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+\doxysubsubsection{\texorpdfstring{ConnectionGeneList()}{ConnectionGeneList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List.\+Connection\+Gene\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct an empty list. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a5e5b59bd274854dc9fd84acc84c592e1}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a5e5b59bd274854dc9fd84acc84c592e1}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}!ConnectionGeneList@{ConnectionGeneList}}
+\index{ConnectionGeneList@{ConnectionGeneList}!SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+\doxysubsubsection{\texorpdfstring{ConnectionGeneList()}{ConnectionGeneList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List.\+Connection\+Gene\+List (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Construct an empty list with the specified capacity. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a32945c2a51afddbef81fc57987855de6}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a32945c2a51afddbef81fc57987855de6}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}!ConnectionGeneList@{ConnectionGeneList}}
+\index{ConnectionGeneList@{ConnectionGeneList}!SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+\doxysubsubsection{\texorpdfstring{ConnectionGeneList()}{ConnectionGeneList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List.\+Connection\+Gene\+List (\begin{DoxyParamCaption}\item[{I\+Collection$<$ \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} $>$}]{copy\+From }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. The newly allocated list has a capacity 2 larger than copy\+From allowing addition mutations to occur without reallocation of memory. Note that a single add node mutation adds two connections and a single add connection mutation adds one. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a26ab0ba82e9715a2da237a31448a6fe8}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a26ab0ba82e9715a2da237a31448a6fe8}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}!BinarySearch@{BinarySearch}}
+\index{BinarySearch@{BinarySearch}!SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+\doxysubsubsection{\texorpdfstring{BinarySearch()}{BinarySearch()}}
+{\footnotesize\ttfamily int Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List.\+Binary\+Search (\begin{DoxyParamCaption}\item[{uint}]{innovation\+Id }\end{DoxyParamCaption})}
+
+
+
+Obtain the index of the gene with the specified innovation ID by performing a binary search. Binary search is fast and can be performed so long as we know the genes are sorted by innovation ID. If the genes are not sorted then the behaviour of this method is undefined. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a995385991dfbac46debb47f1d65ef6a4}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a995385991dfbac46debb47f1d65ef6a4}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}!InsertIntoPosition@{InsertIntoPosition}}
+\index{InsertIntoPosition@{InsertIntoPosition}!SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+\doxysubsubsection{\texorpdfstring{InsertIntoPosition()}{InsertIntoPosition()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List.\+Insert\+Into\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}}}]{connection\+Gene }\end{DoxyParamCaption})}
+
+
+
+Inserts a \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene}{Connection\+Gene}} into its correct (sorted) location within the gene list. Normally connection genes can safely be assumed to have a new Innovation ID higher than all existing I\+Ds, and so we can just call Add(). This routine handles genes with older I\+Ds that need placing correctly. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_abce4052ca0c54b39283ef42315bb9427}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_abce4052ca0c54b39283ef42315bb9427}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}!IsSorted@{IsSorted}}
+\index{IsSorted@{IsSorted}!SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+\doxysubsubsection{\texorpdfstring{IsSorted()}{IsSorted()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List.\+Is\+Sorted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+For debug purposes only. Don\textquotesingle{}t call this method in normal circumstances as it is an expensive O(n) operation. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a1febce18213d6432a90302086cc3a958}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a1febce18213d6432a90302086cc3a958}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}!Remove@{Remove}}
+\index{Remove@{Remove}!SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List.\+Remove (\begin{DoxyParamCaption}\item[{uint}]{innovation\+Id }\end{DoxyParamCaption})}
+
+
+
+Remove the connection gene with the specified innovation ID. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_ab7c922ef7db17643384e6dbf539baebc}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_ab7c922ef7db17643384e6dbf539baebc}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}!ResetIsMutatedFlags@{ResetIsMutatedFlags}}
+\index{ResetIsMutatedFlags@{ResetIsMutatedFlags}!SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+\doxysubsubsection{\texorpdfstring{ResetIsMutatedFlags()}{ResetIsMutatedFlags()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List.\+Reset\+Is\+Mutated\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the Is\+Mutated flag on all Connection\+Genes in the list. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a612d386156847c7a0e6226dffedcec29}\label{class_sharp_neat_1_1_genomes_1_1_neat_1_1_connection_gene_list_a612d386156847c7a0e6226dffedcec29}} 
+\index{SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}!SortByInnovationId@{SortByInnovationId}}
+\index{SortByInnovationId@{SortByInnovationId}!SharpNeat.Genomes.Neat.ConnectionGeneList@{SharpNeat.Genomes.Neat.ConnectionGeneList}}
+\doxysubsubsection{\texorpdfstring{SortByInnovationId()}{SortByInnovationId()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Genomes.\+Neat.\+Connection\+Gene\+List.\+Sort\+By\+Innovation\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sort connection genes into ascending order by their innovation I\+Ds. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Neat/Connection\+Gene\+List.\+cs\end{DoxyCompactItemize}

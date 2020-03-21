@@ -1,0 +1,150 @@
+\hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{}\doxysection{Sharp\+Neat.\+Core.\+I\+Genome\+Factory$<$ T\+Genome $>$ Interface Template Reference}
+\label{interface_sharp_neat_1_1_core_1_1_i_genome_factory}\index{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}}
+
+
+Generic interface genome factory classes. Genome factories are intended to be used for creating initial populations, either random populations or from one or more seed genomes. However, genome reproduction is performed via the overloaded \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_aaa6484beaf3243a4759c72565dc3f8f0}{I\+Genome.\+Create\+Offspring()}} methods, placing these methods on \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}} gives reproduction methods direct and convenient access to internal genome data.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ T\+Genome $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a47d22f3ce6dfe7f9fd393c81b1f4f13c}{Create\+Genome\+List}} (int length, uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Creates a list of randomly initialised genomes. \end{DoxyCompactList}\item 
+List$<$ T\+Genome $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a1cfabba2e3a0b6174f4f0a587772b156}{Create\+Genome\+List}} (int length, uint birth\+Generation, T\+Genome seed\+Genome)
+\begin{DoxyCompactList}\small\item\em Creates a list of genomes spawned from a seed genome. Spawning uses asexual reproduction. \end{DoxyCompactList}\item 
+List$<$ T\+Genome $>$ \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory_ae7b812d5db2865e014eb3be4bea5c965}{Create\+Genome\+List}} (int length, uint birth\+Generation, List$<$ T\+Genome $>$ seed\+Genome\+List)
+\begin{DoxyCompactList}\small\item\em Creates a list of genomes spawned from a list of seed genomes. Spawning uses asexual reproduction and typically we repeatedly loop over (and spawn from) the seed genomes until we have the required number of spawned genomes. \end{DoxyCompactList}\item 
+T\+Genome \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a1f3ddfcadc6b12058c1fb26979e9aeef}{Create\+Genome}} (uint birth\+Generation)
+\begin{DoxyCompactList}\small\item\em Creates a single randomly initialised genome. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory_add8c960645eac51380418beaf7192acc}{Check\+Genome\+Type}} (T\+Genome genome)
+\begin{DoxyCompactList}\small\item\em Supports debug/integrity checks. Checks that a given genome object\textquotesingle{}s type is consistent with the genome factory. Typically the wrong type of object may occur where factories are subtypes and not all of the relevant virtual methods are overridden. Returns true if type is correct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory_ad71e38da603c3880b15999ae8b1570c3}{Genome\+Id\+Generator}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the genome ID generator for the factory. This is used internally when creating new genomes and is exposed as a public property so that genomes that are spawning offspring can generate I\+Ds in the same ID space. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a4fcdd583d67e991e7df18906dd35ec4d}{Search\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a mode value. This is intended as a means for an evolution algorithm to convey changes in search mode to genomes, and because the set of modes is specific to each concrete implementation of an \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm}{I\+Evolution\+Algorithm}} the mode is defined as an integer (rather than an enum\mbox{[}eration\mbox{]}). E.\+g. Sharp\+N\+E\+AT\textquotesingle{}s implementation of N\+E\+AT uses an evolutionary algorithm that alternates between a complexifying and simplifying mode, in order to do this the algorithm class needs to notify the genomes of the current mode so that the Create\+Offspring() methods are able to generate offspring appropriately -\/ e.\+g. we avoid adding new nodes and connections and increase the rate of deletion mutations when in simplifying mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic interface genome factory classes. Genome factories are intended to be used for creating initial populations, either random populations or from one or more seed genomes. However, genome reproduction is performed via the overloaded \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_aaa6484beaf3243a4759c72565dc3f8f0}{I\+Genome.\+Create\+Offspring()}} methods, placing these methods on \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}} gives reproduction methods direct and convenient access to internal genome data. 
+
+Concrete \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{I\+Genome\+Factory}} classes are expected to contain all parameters used for creating and breeding genomes such as (in N\+E\+AT) the number of input/output neurons, connection weight range and mutation rate. Concrete I\+Genomes are therefore expected to be given a reference to their concrete factory class upon construction, this gives them access to parameters for use in \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_aaa6484beaf3243a4759c72565dc3f8f0}{I\+Genome.\+Create\+Offspring()}} -\/ which may change during evolution, e.\+g. in the case of phased searching in N\+E\+AT.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Genome} & The genome type to act as a factory for.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_factory_add8c960645eac51380418beaf7192acc}\label{interface_sharp_neat_1_1_core_1_1_i_genome_factory_add8c960645eac51380418beaf7192acc}} 
+\index{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}!CheckGenomeType@{CheckGenomeType}}
+\index{CheckGenomeType@{CheckGenomeType}!SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CheckGenomeType()}{CheckGenomeType()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{Sharp\+Neat.\+Core.\+I\+Genome\+Factory}}$<$ T\+Genome $>$.Check\+Genome\+Type (\begin{DoxyParamCaption}\item[{T\+Genome}]{genome }\end{DoxyParamCaption})}
+
+
+
+Supports debug/integrity checks. Checks that a given genome object\textquotesingle{}s type is consistent with the genome factory. Typically the wrong type of object may occur where factories are subtypes and not all of the relevant virtual methods are overridden. Returns true if type is correct. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a1f3ddfcadc6b12058c1fb26979e9aeef}\label{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a1f3ddfcadc6b12058c1fb26979e9aeef}} 
+\index{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}!CreateGenome@{CreateGenome}}
+\index{CreateGenome@{CreateGenome}!SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CreateGenome()}{CreateGenome()}}
+{\footnotesize\ttfamily T\+Genome \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{Sharp\+Neat.\+Core.\+I\+Genome\+Factory}}$<$ T\+Genome $>$.Create\+Genome (\begin{DoxyParamCaption}\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})}
+
+
+
+Creates a single randomly initialised genome. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genome as its birth generation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a47d22f3ce6dfe7f9fd393c81b1f4f13c}\label{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a47d22f3ce6dfe7f9fd393c81b1f4f13c}} 
+\index{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}!CreateGenomeList@{CreateGenomeList}}
+\index{CreateGenomeList@{CreateGenomeList}!SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CreateGenomeList()}{CreateGenomeList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily List$<$T\+Genome$>$ \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{Sharp\+Neat.\+Core.\+I\+Genome\+Factory}}$<$ T\+Genome $>$.Create\+Genome\+List (\begin{DoxyParamCaption}\item[{int}]{length,  }\item[{uint}]{birth\+Generation }\end{DoxyParamCaption})}
+
+
+
+Creates a list of randomly initialised genomes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The number of genomes to create.\\
+\hline
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genomes as their birth generation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_factory_ae7b812d5db2865e014eb3be4bea5c965}\label{interface_sharp_neat_1_1_core_1_1_i_genome_factory_ae7b812d5db2865e014eb3be4bea5c965}} 
+\index{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}!CreateGenomeList@{CreateGenomeList}}
+\index{CreateGenomeList@{CreateGenomeList}!SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CreateGenomeList()}{CreateGenomeList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily List$<$T\+Genome$>$ \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{Sharp\+Neat.\+Core.\+I\+Genome\+Factory}}$<$ T\+Genome $>$.Create\+Genome\+List (\begin{DoxyParamCaption}\item[{int}]{length,  }\item[{uint}]{birth\+Generation,  }\item[{List$<$ T\+Genome $>$}]{seed\+Genome\+List }\end{DoxyParamCaption})}
+
+
+
+Creates a list of genomes spawned from a list of seed genomes. Spawning uses asexual reproduction and typically we repeatedly loop over (and spawn from) the seed genomes until we have the required number of spawned genomes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The number of genomes to create.\\
+\hline
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genomes as their birth generation.\\
+\hline
+{\em seed\+Genome\+List} & A list of seed genomes.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a1cfabba2e3a0b6174f4f0a587772b156}\label{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a1cfabba2e3a0b6174f4f0a587772b156}} 
+\index{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}!CreateGenomeList@{CreateGenomeList}}
+\index{CreateGenomeList@{CreateGenomeList}!SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{CreateGenomeList()}{CreateGenomeList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily List$<$T\+Genome$>$ \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{Sharp\+Neat.\+Core.\+I\+Genome\+Factory}}$<$ T\+Genome $>$.Create\+Genome\+List (\begin{DoxyParamCaption}\item[{int}]{length,  }\item[{uint}]{birth\+Generation,  }\item[{T\+Genome}]{seed\+Genome }\end{DoxyParamCaption})}
+
+
+
+Creates a list of genomes spawned from a seed genome. Spawning uses asexual reproduction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The number of genomes to create.\\
+\hline
+{\em birth\+Generation} & The current evolution algorithm generation. Assigned to the new genomes as their birth generation.\\
+\hline
+{\em seed\+Genome} & The seed genome.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_factory_ad71e38da603c3880b15999ae8b1570c3}\label{interface_sharp_neat_1_1_core_1_1_i_genome_factory_ad71e38da603c3880b15999ae8b1570c3}} 
+\index{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}!GenomeIdGenerator@{GenomeIdGenerator}}
+\index{GenomeIdGenerator@{GenomeIdGenerator}!SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{GenomeIdGenerator}{GenomeIdGenerator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{Sharp\+Neat.\+Core.\+I\+Genome\+Factory}}$<$ T\+Genome $>$.Genome\+Id\+Generator\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the genome ID generator for the factory. This is used internally when creating new genomes and is exposed as a public property so that genomes that are spawning offspring can generate I\+Ds in the same ID space. 
+
+\mbox{\Hypertarget{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a4fcdd583d67e991e7df18906dd35ec4d}\label{interface_sharp_neat_1_1_core_1_1_i_genome_factory_a4fcdd583d67e991e7df18906dd35ec4d}} 
+\index{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}!SearchMode@{SearchMode}}
+\index{SearchMode@{SearchMode}!SharpNeat.Core.IGenomeFactory$<$ TGenome $>$@{SharpNeat.Core.IGenomeFactory$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{SearchMode}{SearchMode}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_factory}{Sharp\+Neat.\+Core.\+I\+Genome\+Factory}}$<$ T\+Genome $>$.Search\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a mode value. This is intended as a means for an evolution algorithm to convey changes in search mode to genomes, and because the set of modes is specific to each concrete implementation of an \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_evolution_algorithm}{I\+Evolution\+Algorithm}} the mode is defined as an integer (rather than an enum\mbox{[}eration\mbox{]}). E.\+g. Sharp\+N\+E\+AT\textquotesingle{}s implementation of N\+E\+AT uses an evolutionary algorithm that alternates between a complexifying and simplifying mode, in order to do this the algorithm class needs to notify the genomes of the current mode so that the Create\+Offspring() methods are able to generate offspring appropriately -\/ e.\+g. we avoid adding new nodes and connections and increase the rate of deletion mutations when in simplifying mode. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/I\+Genome\+Factory.\+cs\end{DoxyCompactItemize}

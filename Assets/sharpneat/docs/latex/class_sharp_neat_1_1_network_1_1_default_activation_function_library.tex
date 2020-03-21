@@ -1,0 +1,131 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_default_activation_function_library}{}\doxysection{Sharp\+Neat.\+Network.\+Default\+Activation\+Function\+Library Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_default_activation_function_library}\index{SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}}
+
+
+Default implementation of an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}. Also provides static factory methods to create libraries with commonly used activation functions.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Default\+Activation\+Function\+Library\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_default_activation_function_library}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a147d4e35dec469745640db11e8a20882}{Default\+Activation\+Function\+Library}} (I\+List$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_activation_function_info}{Activation\+Function\+Info}} $>$ fn\+List)
+\begin{DoxyCompactList}\small\item\em Constructs an activation function library with the provided list of activation functions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_default_activation_function_library_acbf20652f2ef0c50e4dcfb061ca8e993}{Get\+Function}} (int id)
+\begin{DoxyCompactList}\small\item\em Gets the function with the specified integer ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_activation_function_info}{Activation\+Function\+Info}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a359a98433818eb36f90f124c8b705534}{Get\+Random\+Function}} (I\+Random\+Source rng)
+\begin{DoxyCompactList}\small\item\em Randomly select a function based on each function\textquotesingle{}s selection probability. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_activation_function_info}{Activation\+Function\+Info}} $>$ \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_default_activation_function_library_aa664524d2d5fdd3df433a65e9d53aaae}{Get\+Function\+List}} ()
+\begin{DoxyCompactList}\small\item\em Gets a list of all functions in the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a8de65cc33ccbe64fd8e9d2cd2d438a54}{Create\+Library\+Neat}} (\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} activation\+Fn)
+\begin{DoxyCompactList}\small\item\em Create an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} for use with N\+E\+AT. N\+E\+AT uses the same activation function for all neurons/nodes therefore this factory method creates an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} containing only the single provided \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a0ff91ddfd955902ef41e757ceeebc5ae}{Create\+Library\+Cppn}} ()
+\begin{DoxyCompactList}\small\item\em Create an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} for use with C\+P\+P\+Ns. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a0f238ccda568c187ac2c56652ae23ae8}{Create\+Library\+Rbf}} (\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} activation\+Fn, double aux\+Args\+Mutation\+Sigma\+Center, double aux\+Args\+Mutation\+Sigma\+Radius)
+\begin{DoxyCompactList}\small\item\em Create an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} for use with Radial Basis Function N\+E\+AT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default implementation of an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}. Also provides static factory methods to create libraries with commonly used activation functions. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a147d4e35dec469745640db11e8a20882}\label{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a147d4e35dec469745640db11e8a20882}} 
+\index{SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}!DefaultActivationFunctionLibrary@{DefaultActivationFunctionLibrary}}
+\index{DefaultActivationFunctionLibrary@{DefaultActivationFunctionLibrary}!SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}}
+\doxysubsubsection{\texorpdfstring{DefaultActivationFunctionLibrary()}{DefaultActivationFunctionLibrary()}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Network.\+Default\+Activation\+Function\+Library.\+Default\+Activation\+Function\+Library (\begin{DoxyParamCaption}\item[{I\+List$<$ \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_activation_function_info}{Activation\+Function\+Info}} $>$}]{fn\+List }\end{DoxyParamCaption})}
+
+
+
+Constructs an activation function library with the provided list of activation functions. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a0ff91ddfd955902ef41e757ceeebc5ae}\label{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a0ff91ddfd955902ef41e757ceeebc5ae}} 
+\index{SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}!CreateLibraryCppn@{CreateLibraryCppn}}
+\index{CreateLibraryCppn@{CreateLibraryCppn}!SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}}
+\doxysubsubsection{\texorpdfstring{CreateLibraryCppn()}{CreateLibraryCppn()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} Sharp\+Neat.\+Network.\+Default\+Activation\+Function\+Library.\+Create\+Library\+Cppn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} for use with C\+P\+P\+Ns. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a8de65cc33ccbe64fd8e9d2cd2d438a54}\label{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a8de65cc33ccbe64fd8e9d2cd2d438a54}} 
+\index{SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}!CreateLibraryNeat@{CreateLibraryNeat}}
+\index{CreateLibraryNeat@{CreateLibraryNeat}!SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}}
+\doxysubsubsection{\texorpdfstring{CreateLibraryNeat()}{CreateLibraryNeat()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} Sharp\+Neat.\+Network.\+Default\+Activation\+Function\+Library.\+Create\+Library\+Neat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}}}]{activation\+Fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} for use with N\+E\+AT. N\+E\+AT uses the same activation function for all neurons/nodes therefore this factory method creates an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} containing only the single provided \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}}. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a0f238ccda568c187ac2c56652ae23ae8}\label{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a0f238ccda568c187ac2c56652ae23ae8}} 
+\index{SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}!CreateLibraryRbf@{CreateLibraryRbf}}
+\index{CreateLibraryRbf@{CreateLibraryRbf}!SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}}
+\doxysubsubsection{\texorpdfstring{CreateLibraryRbf()}{CreateLibraryRbf()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} Sharp\+Neat.\+Network.\+Default\+Activation\+Function\+Library.\+Create\+Library\+Rbf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}}}]{activation\+Fn,  }\item[{double}]{aux\+Args\+Mutation\+Sigma\+Center,  }\item[{double}]{aux\+Args\+Mutation\+Sigma\+Radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} for use with Radial Basis Function N\+E\+AT. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_default_activation_function_library_acbf20652f2ef0c50e4dcfb061ca8e993}\label{class_sharp_neat_1_1_network_1_1_default_activation_function_library_acbf20652f2ef0c50e4dcfb061ca8e993}} 
+\index{SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}!GetFunction@{GetFunction}}
+\index{GetFunction@{GetFunction}!SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}}
+\doxysubsubsection{\texorpdfstring{GetFunction()}{GetFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+Default\+Activation\+Function\+Library.\+Get\+Function (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Gets the function with the specified integer ID. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library_a10f4e13a23594b928bdd934ed1dc0256}{Sharp\+Neat.\+Network.\+I\+Activation\+Function\+Library}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_default_activation_function_library_aa664524d2d5fdd3df433a65e9d53aaae}\label{class_sharp_neat_1_1_network_1_1_default_activation_function_library_aa664524d2d5fdd3df433a65e9d53aaae}} 
+\index{SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}!GetFunctionList@{GetFunctionList}}
+\index{GetFunctionList@{GetFunctionList}!SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}}
+\doxysubsubsection{\texorpdfstring{GetFunctionList()}{GetFunctionList()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_activation_function_info}{Activation\+Function\+Info}}$>$ Sharp\+Neat.\+Network.\+Default\+Activation\+Function\+Library.\+Get\+Function\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a list of all functions in the library. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library_a8d6a06c6e1204b958a1fcc16d1f6cdb9}{Sharp\+Neat.\+Network.\+I\+Activation\+Function\+Library}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a359a98433818eb36f90f124c8b705534}\label{class_sharp_neat_1_1_network_1_1_default_activation_function_library_a359a98433818eb36f90f124c8b705534}} 
+\index{SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}!GetRandomFunction@{GetRandomFunction}}
+\index{GetRandomFunction@{GetRandomFunction}!SharpNeat.Network.DefaultActivationFunctionLibrary@{SharpNeat.Network.DefaultActivationFunctionLibrary}}
+\doxysubsubsection{\texorpdfstring{GetRandomFunction()}{GetRandomFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sharp_neat_1_1_network_1_1_activation_function_info}{Activation\+Function\+Info}} Sharp\+Neat.\+Network.\+Default\+Activation\+Function\+Library.\+Get\+Random\+Function (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng }\end{DoxyParamCaption})}
+
+
+
+Randomly select a function based on each function\textquotesingle{}s selection probability. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library_a2d78aa6d8eb634bf60e110217269e8de}{Sharp\+Neat.\+Network.\+I\+Activation\+Function\+Library}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/Default\+Activation\+Function\+Library.\+cs\end{DoxyCompactItemize}

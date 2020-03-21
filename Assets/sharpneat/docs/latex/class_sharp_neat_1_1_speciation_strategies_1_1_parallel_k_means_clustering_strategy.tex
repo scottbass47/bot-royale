@@ -1,0 +1,113 @@
+\hypertarget{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}{}\doxysection{Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy$<$ T\+Genome $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}\index{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}}
+
+
+An I\+Speciation\+Strategy that speciates genomes using the k-\/means clustering method. k-\/means requires a distance metric and as such this class requires am I\+Distance\+Metric to be provided at construction time. Different distance metrics can be used including Neat\+Distance\+Metric which is equivalent to the metric used in the standard N\+E\+AT method albeit with a different clustering/speciation algorithm (Standard N\+E\+AT does not use k-\/means).  
+
+
+Inheritance diagram for Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy$<$ T\+Genome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_aa59dd45d396d738c5c701ef7c600725f}{Parallel\+K\+Means\+Clustering\+Strategy}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric}{I\+Distance\+Metric}} distance\+Metric)
+\begin{DoxyCompactList}\small\item\em Constructor that accepts an I\+Distance\+Metric to be used for the k-\/means method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_ac6ea91bde220a826e84eb79dd6403819}{Parallel\+K\+Means\+Clustering\+Strategy}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric}{I\+Distance\+Metric}} distance\+Metric, Parallel\+Options options)
+\begin{DoxyCompactList}\small\item\em Constructor that accepts an I\+Distance\+Metric to be used for the k-\/means method and Parallel\+Options. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_a82095b54b1fee3218d8c54cab8a6565b}{Initialize\+Speciation}} (I\+List$<$ T\+Genome $>$ genome\+List, int specie\+Count)
+\begin{DoxyCompactList}\small\item\em Speciates the genomes in genome\+List into the number of species specified by specie\+Count and returns a newly constructed list of Specie objects containing the speciated genomes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_abcede60c7e77a148139d364aa2e7e828}{Speciate\+Genomes}} (I\+List$<$ T\+Genome $>$ genome\+List, I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$$>$ specie\+List)
+\begin{DoxyCompactList}\small\item\em Speciates the genomes in genome\+List into the provided specie\+List. It is assumed that the genome\+List represents all of the required genomes and that the species are currently empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_a0c5047e334ba4541db3e41a5d3a602ea}{Speciate\+Offspring}} (I\+List$<$ T\+Genome $>$ offspring\+List, I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$$>$ specie\+List)
+\begin{DoxyCompactList}\small\item\em Speciates the offspring genomes in offspring\+List into the provided specie\+List. In contrast to \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_abcede60c7e77a148139d364aa2e7e828}{Speciate\+Genomes()}} offspring\+List is taken to be a list of new genomes (offspring) that should be added to existing species. That is, the species contain genomes that are not in offspring\+List that we wish to keep; typically these would be elite genomes that are the parents of the offspring. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An I\+Speciation\+Strategy that speciates genomes using the k-\/means clustering method. k-\/means requires a distance metric and as such this class requires am I\+Distance\+Metric to be provided at construction time. Different distance metrics can be used including Neat\+Distance\+Metric which is equivalent to the metric used in the standard N\+E\+AT method albeit with a different clustering/speciation algorithm (Standard N\+E\+AT does not use k-\/means). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Genome} & The genome type to apply clustering to.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em class}]\item[{\em T\+Genome} : {\em I\+Genome$<$T\+Genome$>$}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_aa59dd45d396d738c5c701ef7c600725f}\label{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_aa59dd45d396d738c5c701ef7c600725f}} 
+\index{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}!ParallelKMeansClusteringStrategy@{ParallelKMeansClusteringStrategy}}
+\index{ParallelKMeansClusteringStrategy@{ParallelKMeansClusteringStrategy}!SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{ParallelKMeansClusteringStrategy()}{ParallelKMeansClusteringStrategy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}{Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy}}$<$ T\+Genome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}{Parallel\+K\+Means\+Clustering\+Strategy}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric}{I\+Distance\+Metric}}}]{distance\+Metric }\end{DoxyParamCaption})}
+
+
+
+Constructor that accepts an I\+Distance\+Metric to be used for the k-\/means method. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_ac6ea91bde220a826e84eb79dd6403819}\label{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_ac6ea91bde220a826e84eb79dd6403819}} 
+\index{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}!ParallelKMeansClusteringStrategy@{ParallelKMeansClusteringStrategy}}
+\index{ParallelKMeansClusteringStrategy@{ParallelKMeansClusteringStrategy}!SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{ParallelKMeansClusteringStrategy()}{ParallelKMeansClusteringStrategy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}{Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy}}$<$ T\+Genome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}{Parallel\+K\+Means\+Clustering\+Strategy}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric}{I\+Distance\+Metric}}}]{distance\+Metric,  }\item[{Parallel\+Options}]{options }\end{DoxyParamCaption})}
+
+
+
+Constructor that accepts an I\+Distance\+Metric to be used for the k-\/means method and Parallel\+Options. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_a82095b54b1fee3218d8c54cab8a6565b}\label{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_a82095b54b1fee3218d8c54cab8a6565b}} 
+\index{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}!InitializeSpeciation@{InitializeSpeciation}}
+\index{InitializeSpeciation@{InitializeSpeciation}!SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{InitializeSpeciation()}{InitializeSpeciation()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$T\+Genome$>$ $>$ \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}{Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy}}$<$ T\+Genome $>$.Initialize\+Speciation (\begin{DoxyParamCaption}\item[{I\+List$<$ T\+Genome $>$}]{genome\+List,  }\item[{int}]{specie\+Count }\end{DoxyParamCaption})}
+
+
+
+Speciates the genomes in genome\+List into the number of species specified by specie\+Count and returns a newly constructed list of Specie objects containing the speciated genomes. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_aa45848dcb55ab4f14377b3fda8026888}{Sharp\+Neat.\+Core.\+I\+Speciation\+Strategy$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_abcede60c7e77a148139d364aa2e7e828}\label{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_abcede60c7e77a148139d364aa2e7e828}} 
+\index{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}!SpeciateGenomes@{SpeciateGenomes}}
+\index{SpeciateGenomes@{SpeciateGenomes}!SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{SpeciateGenomes()}{SpeciateGenomes()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}{Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy}}$<$ T\+Genome $>$.Speciate\+Genomes (\begin{DoxyParamCaption}\item[{I\+List$<$ T\+Genome $>$}]{genome\+List,  }\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$$>$}]{specie\+List }\end{DoxyParamCaption})}
+
+
+
+Speciates the genomes in genome\+List into the provided specie\+List. It is assumed that the genome\+List represents all of the required genomes and that the species are currently empty. 
+
+This method can be used for initialization or completely re-\/speciating an existing genome population.
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_accf33587b0ef0339a388228cbe5cefa0}{Sharp\+Neat.\+Core.\+I\+Speciation\+Strategy$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_a0c5047e334ba4541db3e41a5d3a602ea}\label{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_a0c5047e334ba4541db3e41a5d3a602ea}} 
+\index{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}!SpeciateOffspring@{SpeciateOffspring}}
+\index{SpeciateOffspring@{SpeciateOffspring}!SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$@{SharpNeat.SpeciationStrategies.ParallelKMeansClusteringStrategy$<$ TGenome $>$}}
+\doxysubsubsection{\texorpdfstring{SpeciateOffspring()}{SpeciateOffspring()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy}{Sharp\+Neat.\+Speciation\+Strategies.\+Parallel\+K\+Means\+Clustering\+Strategy}}$<$ T\+Genome $>$.Speciate\+Offspring (\begin{DoxyParamCaption}\item[{I\+List$<$ T\+Genome $>$}]{offspring\+List,  }\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_specie}{Specie}}$<$ T\+Genome $>$$>$}]{specie\+List }\end{DoxyParamCaption})}
+
+
+
+Speciates the offspring genomes in offspring\+List into the provided specie\+List. In contrast to \mbox{\hyperlink{class_sharp_neat_1_1_speciation_strategies_1_1_parallel_k_means_clustering_strategy_abcede60c7e77a148139d364aa2e7e828}{Speciate\+Genomes()}} offspring\+List is taken to be a list of new genomes (offspring) that should be added to existing species. That is, the species contain genomes that are not in offspring\+List that we wish to keep; typically these would be elite genomes that are the parents of the offspring. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_speciation_strategy_a36e42694aaf454d9d5ee7161ad24a9a4}{Sharp\+Neat.\+Core.\+I\+Speciation\+Strategy$<$ T\+Genome $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Speciation\+Strategies/Parallel\+K\+Means\+Clustering\+Strategy.\+cs\end{DoxyCompactItemize}

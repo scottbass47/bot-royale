@@ -1,0 +1,77 @@
+\hypertarget{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric}{}\doxysection{Sharp\+Neat.\+Distance\+Metrics.\+Euclidean\+Distance\+Metric Class Reference}
+\label{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric}\index{SharpNeat.DistanceMetrics.EuclideanDistanceMetric@{SharpNeat.DistanceMetrics.EuclideanDistanceMetric}}
+
+
+Euclidean distance metric.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Distance\+Metrics.\+Euclidean\+Distance\+Metric\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_af1687cc3b763c00cca9674239ae9fd43}{Test\+Distance}} (\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} p1, \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} p2, double threshold)
+\begin{DoxyCompactList}\small\item\em Tests if the distance between two positions is less than some threshold. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_ab4a70f2545d99fbd9458bc89cea9e086}{Get\+Distance}} (\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} p1, \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} p2)
+\begin{DoxyCompactList}\small\item\em Gets the distance between two positions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} \mbox{\hyperlink{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_a894a7e17fdb722a1814bc73b7a9d1250}{Calculate\+Centroid}} (I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} $>$ coord\+List)
+\begin{DoxyCompactList}\small\item\em Calculates the centroid for the given set of points. For the Euclidean distance metric the centroid is given by calculating the componentwise mean over the set of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Euclidean distance metric. 
+
+The Euclidean distance is given by sqrt(sum(delta$^\wedge$2)) Where \mbox{[}delta\mbox{]} is the absolute position difference in a given dimension (on a given axis).
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_a894a7e17fdb722a1814bc73b7a9d1250}\label{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_a894a7e17fdb722a1814bc73b7a9d1250}} 
+\index{SharpNeat.DistanceMetrics.EuclideanDistanceMetric@{SharpNeat.DistanceMetrics.EuclideanDistanceMetric}!CalculateCentroid@{CalculateCentroid}}
+\index{CalculateCentroid@{CalculateCentroid}!SharpNeat.DistanceMetrics.EuclideanDistanceMetric@{SharpNeat.DistanceMetrics.EuclideanDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{CalculateCentroid()}{CalculateCentroid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} Sharp\+Neat.\+Distance\+Metrics.\+Euclidean\+Distance\+Metric.\+Calculate\+Centroid (\begin{DoxyParamCaption}\item[{I\+List$<$ \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}} $>$}]{coord\+List }\end{DoxyParamCaption})}
+
+
+
+Calculates the centroid for the given set of points. For the Euclidean distance metric the centroid is given by calculating the componentwise mean over the set of points. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric_a9805a811de29befeda581d883777563b}{Sharp\+Neat.\+Core.\+I\+Distance\+Metric}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_ab4a70f2545d99fbd9458bc89cea9e086}\label{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_ab4a70f2545d99fbd9458bc89cea9e086}} 
+\index{SharpNeat.DistanceMetrics.EuclideanDistanceMetric@{SharpNeat.DistanceMetrics.EuclideanDistanceMetric}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!SharpNeat.DistanceMetrics.EuclideanDistanceMetric@{SharpNeat.DistanceMetrics.EuclideanDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Distance\+Metrics.\+Euclidean\+Distance\+Metric.\+Get\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}}}]{p1,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}}}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Gets the distance between two positions. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric_aadd233f05f07c6bef78c3318f9f5b60f}{Sharp\+Neat.\+Core.\+I\+Distance\+Metric}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_af1687cc3b763c00cca9674239ae9fd43}\label{class_sharp_neat_1_1_distance_metrics_1_1_euclidean_distance_metric_af1687cc3b763c00cca9674239ae9fd43}} 
+\index{SharpNeat.DistanceMetrics.EuclideanDistanceMetric@{SharpNeat.DistanceMetrics.EuclideanDistanceMetric}!TestDistance@{TestDistance}}
+\index{TestDistance@{TestDistance}!SharpNeat.DistanceMetrics.EuclideanDistanceMetric@{SharpNeat.DistanceMetrics.EuclideanDistanceMetric}}
+\doxysubsubsection{\texorpdfstring{TestDistance()}{TestDistance()}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Distance\+Metrics.\+Euclidean\+Distance\+Metric.\+Test\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}}}]{p1,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_coordinate_vector}{Coordinate\+Vector}}}]{p2,  }\item[{double}]{threshold }\end{DoxyParamCaption})}
+
+
+
+Tests if the distance between two positions is less than some threshold. 
+
+A simple way of implementing this method would be to calculate the distance between the two coordinates and test if it is less than the threshold. However, that approach requires that all of the elements in both Coordinate\+Vectors be fully compared. We can improve performance in the general case by testing if the threshold has been passed after each vector element comparison thus allowing an early exit from the method for many calls. Further to this, we can begin comparing from the ends of the vectors where differences are most likely to occur.
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_distance_metric_aef3a5ef9b4f8f206b3f23aa97fd2ccde}{Sharp\+Neat.\+Core.\+I\+Distance\+Metric}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Distance\+Metrics/Euclidean\+Distance\+Metric.\+cs\end{DoxyCompactItemize}

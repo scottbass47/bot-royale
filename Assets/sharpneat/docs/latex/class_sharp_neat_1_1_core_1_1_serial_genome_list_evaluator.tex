@@ -1,0 +1,133 @@
+\hypertarget{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{}\doxysection{Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator$<$ T\+Genome, T\+Phenome $>$ Class Template Reference}
+\label{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}\index{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+
+
+A concrete implementation of \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} that evaluates genomes independently of each other and in series on a single thread.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator$<$ T\+Genome, T\+Phenome $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_af3cc6b58bb310dadf1e431d43caabcc5}{Serial\+Genome\+List\+Evaluator}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}}$<$ T\+Genome, T\+Phenome $>$ genome\+Decoder, \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$ phenome\+Evaluator)
+\begin{DoxyCompactList}\small\item\em Construct with the provided \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}} and \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}. Phenome caching is enabled by default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_abb37277989d38c759be0faeaaabd9d36}{Serial\+Genome\+List\+Evaluator}} (\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}}$<$ T\+Genome, T\+Phenome $>$ genome\+Decoder, \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$ phenome\+Evaluator, bool enable\+Phenome\+Caching)
+\begin{DoxyCompactList}\small\item\em Construct with the provided \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}}, \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}} and enable\+Phenome\+Caching flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a23979aba65c51066413514dce0c39c8a}{Evaluate}} (I\+List$<$ T\+Genome $>$ genome\+List)
+\begin{DoxyCompactList}\small\item\em Evaluates a list of genomes. Here we decode each genome in series using the contained \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}} and evaluate the resulting T\+Phenome using the contained \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a859c401c83c3f11cd2004555022d1f63}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the internal state of the evaluation scheme if any exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ulong \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a539362dbd00500a622b9ea810b720f60}{Evaluation\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the total number of individual genome evaluations that have been performed by this evaluator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a3e844294413b016cbbe5cb1e21703c9a}{Stop\+Condition\+Satisfied}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether some goal fitness has been achieved and that the evolutionary algorithm/search should stop. This property\textquotesingle{}s value can remain false to allow the algorithm to run indefinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A concrete implementation of \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator}{I\+Genome\+List\+Evaluator}} that evaluates genomes independently of each other and in series on a single thread. 
+
+Genome decoding is performed by a provided \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}}. Phenome evaluation is performed by a provided \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}.
+
+This class evaluates on a single thread only, and therefore is a good choice when debugging code.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Genome} & The genome type that is decoded.\\
+\hline
+{\em T\+Phenome} & The phenome type that is decoded to and then evaluated.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T\+Genome} : {\em class}]\item[{\em T\+Genome} : {\em \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome}{I\+Genome}}$<$T\+Genome$>$}]\item[{\em T\+Phenome} : {\em class}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_af3cc6b58bb310dadf1e431d43caabcc5}\label{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_af3cc6b58bb310dadf1e431d43caabcc5}} 
+\index{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!SerialGenomeListEvaluator@{SerialGenomeListEvaluator}}
+\index{SerialGenomeListEvaluator@{SerialGenomeListEvaluator}!SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{SerialGenomeListEvaluator()}{SerialGenomeListEvaluator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{Serial\+Genome\+List\+Evaluator}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}}$<$ T\+Genome, T\+Phenome $>$}]{genome\+Decoder,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$}]{phenome\+Evaluator }\end{DoxyParamCaption})}
+
+
+
+Construct with the provided \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}} and \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}. Phenome caching is enabled by default. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_abb37277989d38c759be0faeaaabd9d36}\label{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_abb37277989d38c759be0faeaaabd9d36}} 
+\index{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!SerialGenomeListEvaluator@{SerialGenomeListEvaluator}}
+\index{SerialGenomeListEvaluator@{SerialGenomeListEvaluator}!SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{SerialGenomeListEvaluator()}{SerialGenomeListEvaluator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.\mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{Serial\+Genome\+List\+Evaluator}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}}$<$ T\+Genome, T\+Phenome $>$}]{genome\+Decoder,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}$<$ T\+Phenome $>$}]{phenome\+Evaluator,  }\item[{bool}]{enable\+Phenome\+Caching }\end{DoxyParamCaption})}
+
+
+
+Construct with the provided \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}}, \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}} and enable\+Phenome\+Caching flag. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a23979aba65c51066413514dce0c39c8a}\label{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a23979aba65c51066413514dce0c39c8a}} 
+\index{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.Evaluate (\begin{DoxyParamCaption}\item[{I\+List$<$ T\+Genome $>$}]{genome\+List }\end{DoxyParamCaption})}
+
+
+
+Evaluates a list of genomes. Here we decode each genome in series using the contained \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_decoder}{I\+Genome\+Decoder}} and evaluate the resulting T\+Phenome using the contained \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_phenome_evaluator}{I\+Phenome\+Evaluator}}. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_a2d061264497e40fbef704da262737ed1}{Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a859c401c83c3f11cd2004555022d1f63}\label{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a859c401c83c3f11cd2004555022d1f63}} 
+\index{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!Reset@{Reset}}
+\index{Reset@{Reset}!SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the internal state of the evaluation scheme if any exists. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_core_1_1_i_genome_list_evaluator_ac1cd42924f02115179297f17a9069aa1}{Sharp\+Neat.\+Core.\+I\+Genome\+List\+Evaluator$<$ T\+Genome $>$}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a539362dbd00500a622b9ea810b720f60}\label{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a539362dbd00500a622b9ea810b720f60}} 
+\index{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!EvaluationCount@{EvaluationCount}}
+\index{EvaluationCount@{EvaluationCount}!SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluationCount}{EvaluationCount}}
+{\footnotesize\ttfamily ulong \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.Evaluation\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the total number of individual genome evaluations that have been performed by this evaluator. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a3e844294413b016cbbe5cb1e21703c9a}\label{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator_a3e844294413b016cbbe5cb1e21703c9a}} 
+\index{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}!StopConditionSatisfied@{StopConditionSatisfied}}
+\index{StopConditionSatisfied@{StopConditionSatisfied}!SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$@{SharpNeat.Core.SerialGenomeListEvaluator$<$ TGenome, TPhenome $>$}}
+\doxysubsubsection{\texorpdfstring{StopConditionSatisfied}{StopConditionSatisfied}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_sharp_neat_1_1_core_1_1_serial_genome_list_evaluator}{Sharp\+Neat.\+Core.\+Serial\+Genome\+List\+Evaluator}}$<$ T\+Genome, T\+Phenome $>$.Stop\+Condition\+Satisfied\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether some goal fitness has been achieved and that the evolutionary algorithm/search should stop. This property\textquotesingle{}s value can remain false to allow the algorithm to run indefinitely. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Core/Serial\+Genome\+List\+Evaluator.\+cs\end{DoxyCompactItemize}

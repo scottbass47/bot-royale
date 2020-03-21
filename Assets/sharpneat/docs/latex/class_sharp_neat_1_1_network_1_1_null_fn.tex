@@ -1,0 +1,165 @@
+\hypertarget{class_sharp_neat_1_1_network_1_1_null_fn}{}\doxysection{Sharp\+Neat.\+Network.\+Null\+Fn Class Reference}
+\label{class_sharp_neat_1_1_network_1_1_null_fn}\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+
+
+Null activation function. Returns zero regardless of input.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Network.\+Null\+Fn\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sharp_neat_1_1_network_1_1_null_fn}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_a672a5eea83267fbe1274a1539c314cb1}{Calculate}} (double x, double\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_ae98b24a71b707decef667eecceb24264}{Calculate}} (float x, float\mbox{[}$\,$\mbox{]} aux\+Args)
+\begin{DoxyCompactList}\small\item\em Calculates the output value for the specified input value with float/single precision. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_a672a5eea83267fbe1274a1539c314cb1}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_ab13ca5ada9eda755df8146808f6c5d4b}{Get\+Random\+Aux\+Args}} (I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_a989dbc2df6885ee8f461251439d31f93}{Mutate\+Aux\+Args}} (double\mbox{[}$\,$\mbox{]} aux\+Args, I\+Random\+Source rng, double connection\+Weight\+Range)
+\begin{DoxyCompactList}\small\item\em Genetic mutation for auxiliary argument data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_a12812b53df8126d6b30361e5390b2ce5}{\+\_\+\+\_\+\+Default\+Instance}} = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn}{Null\+Fn}}()
+\begin{DoxyCompactList}\small\item\em Default instance provided as a public static field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_a4a6c5821186666e11268ccd8286f11ac}{Function\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_a3b0f2a0674330aa8cdb182520df628d9}{Function\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_a2c2be3120b6e18331c4f03878f13a655}{Function\+Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a human readable verbose description of the activation function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_ac9086865a6adf0a80d079d6c6e9718a0}{Accepts\+Aux\+Args}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a flag that indicates if the activation function accepts auxiliary arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Null activation function. Returns zero regardless of input. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_null_fn_a672a5eea83267fbe1274a1539c314cb1}\label{class_sharp_neat_1_1_network_1_1_null_fn_a672a5eea83267fbe1274a1539c314cb1}} 
+\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Sharp\+Neat.\+Network.\+Null\+Fn.\+Calculate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6230550f91b00cf7ac384e8a885dd11a}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_null_fn_ae98b24a71b707decef667eecceb24264}\label{class_sharp_neat_1_1_network_1_1_null_fn_ae98b24a71b707decef667eecceb24264}} 
+\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Sharp\+Neat.\+Network.\+Null\+Fn.\+Calculate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float\mbox{[}$\,$\mbox{]}}]{aux\+Args }\end{DoxyParamCaption})}
+
+
+
+Calculates the output value for the specified input value with float/single precision. This single precision overload of \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn_a672a5eea83267fbe1274a1539c314cb1}{Calculate()}} will be used in neural network code that has been specifically written to use floats instead of doubles. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a17e6d971ff650f3f9ab7863ce0e555c3}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_null_fn_ab13ca5ada9eda755df8146808f6c5d4b}\label{class_sharp_neat_1_1_network_1_1_null_fn_ab13ca5ada9eda755df8146808f6c5d4b}} 
+\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}!GetRandomAuxArgs@{GetRandomAuxArgs}}
+\index{GetRandomAuxArgs@{GetRandomAuxArgs}!SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+\doxysubsubsection{\texorpdfstring{GetRandomAuxArgs()}{GetRandomAuxArgs()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Sharp\+Neat.\+Network.\+Null\+Fn.\+Get\+Random\+Aux\+Args (\begin{DoxyParamCaption}\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+For activation functions that accept auxiliary arguments; generates random initial values for aux arguments for newly added nodes (from an \textquotesingle{}add neuron\textquotesingle{} mutation). 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a6bf5c2eb7a6b09deb280a6e3653700db}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_null_fn_a989dbc2df6885ee8f461251439d31f93}\label{class_sharp_neat_1_1_network_1_1_null_fn_a989dbc2df6885ee8f461251439d31f93}} 
+\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}!MutateAuxArgs@{MutateAuxArgs}}
+\index{MutateAuxArgs@{MutateAuxArgs}!SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+\doxysubsubsection{\texorpdfstring{MutateAuxArgs()}{MutateAuxArgs()}}
+{\footnotesize\ttfamily void Sharp\+Neat.\+Network.\+Null\+Fn.\+Mutate\+Aux\+Args (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{aux\+Args,  }\item[{I\+Random\+Source}]{rng,  }\item[{double}]{connection\+Weight\+Range }\end{DoxyParamCaption})}
+
+
+
+Genetic mutation for auxiliary argument data. 
+
+
+
+Implements \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_a2943116b401f4dff51448228ec9a6b71}{Sharp\+Neat.\+Network.\+I\+Activation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_null_fn_a12812b53df8126d6b30361e5390b2ce5}\label{class_sharp_neat_1_1_network_1_1_null_fn_a12812b53df8126d6b30361e5390b2ce5}} 
+\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}!\_\_DefaultInstance@{\_\_DefaultInstance}}
+\index{\_\_DefaultInstance@{\_\_DefaultInstance}!SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+\doxysubsubsection{\texorpdfstring{\_\_DefaultInstance}{\_\_DefaultInstance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function}{I\+Activation\+Function}} Sharp\+Neat.\+Network.\+Null\+Fn.\+\_\+\+\_\+\+Default\+Instance = new \mbox{\hyperlink{class_sharp_neat_1_1_network_1_1_null_fn}{Null\+Fn}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default instance provided as a public static field. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_null_fn_ac9086865a6adf0a80d079d6c6e9718a0}\label{class_sharp_neat_1_1_network_1_1_null_fn_ac9086865a6adf0a80d079d6c6e9718a0}} 
+\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}!AcceptsAuxArgs@{AcceptsAuxArgs}}
+\index{AcceptsAuxArgs@{AcceptsAuxArgs}!SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+\doxysubsubsection{\texorpdfstring{AcceptsAuxArgs}{AcceptsAuxArgs}}
+{\footnotesize\ttfamily bool Sharp\+Neat.\+Network.\+Null\+Fn.\+Accepts\+Aux\+Args\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a flag that indicates if the activation function accepts auxiliary arguments. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_null_fn_a2c2be3120b6e18331c4f03878f13a655}\label{class_sharp_neat_1_1_network_1_1_null_fn_a2c2be3120b6e18331c4f03878f13a655}} 
+\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}!FunctionDescription@{FunctionDescription}}
+\index{FunctionDescription@{FunctionDescription}!SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+\doxysubsubsection{\texorpdfstring{FunctionDescription}{FunctionDescription}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Null\+Fn.\+Function\+Description\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable verbose description of the activation function. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_null_fn_a4a6c5821186666e11268ccd8286f11ac}\label{class_sharp_neat_1_1_network_1_1_null_fn_a4a6c5821186666e11268ccd8286f11ac}} 
+\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}!FunctionId@{FunctionId}}
+\index{FunctionId@{FunctionId}!SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+\doxysubsubsection{\texorpdfstring{FunctionId}{FunctionId}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Null\+Fn.\+Function\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the unique ID of the function. Stored in network X\+ML to identify which function a network or neuron is using. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_network_1_1_null_fn_a3b0f2a0674330aa8cdb182520df628d9}\label{class_sharp_neat_1_1_network_1_1_null_fn_a3b0f2a0674330aa8cdb182520df628d9}} 
+\index{SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}!FunctionString@{FunctionString}}
+\index{FunctionString@{FunctionString}!SharpNeat.Network.NullFn@{SharpNeat.Network.NullFn}}
+\doxysubsubsection{\texorpdfstring{FunctionString}{FunctionString}}
+{\footnotesize\ttfamily string Sharp\+Neat.\+Network.\+Null\+Fn.\+Function\+String\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a human readable string representation of the function. E.\+g \textquotesingle{}y=1/x\textquotesingle{}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Network/\+Activation\+Functions/Null\+Fn.\+cs\end{DoxyCompactItemize}

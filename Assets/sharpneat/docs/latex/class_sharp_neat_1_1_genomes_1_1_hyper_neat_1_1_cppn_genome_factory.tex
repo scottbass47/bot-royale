@@ -1,0 +1,97 @@
+\hypertarget{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory}{}\doxysection{Sharp\+Neat.\+Genomes.\+Hyper\+Neat.\+Cppn\+Genome\+Factory Class Reference}
+\label{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory}\index{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}}
+
+
+A sub-\/class of Neat\+Genome\+Factory for creating C\+P\+PN genomes.  
+
+
+Inheritance diagram for Sharp\+Neat.\+Genomes.\+Hyper\+Neat.\+Cppn\+Genome\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a53c96a4eefeaf4667894c3270a73581d}{Cppn\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count)
+\begin{DoxyCompactList}\small\item\em Constructs with default Neat\+Genome\+Parameters, ID generators initialized to zero and a default I\+Activation\+Function\+Library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a7c6997dfa9a8487ce8909d3bb45a8221}{Cppn\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library)
+\begin{DoxyCompactList}\small\item\em Constructs with default Neat\+Genome\+Parameters, ID generators initialized to zero and the provided I\+Activation\+Function\+Library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a69c288f143b40428be60d674d82bc30d}{Cppn\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} neat\+Genome\+Params)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided I\+Activation\+Function\+Library and Neat\+Genome\+Parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a15d6584d4870803a90b825f84cc50215}{Cppn\+Genome\+Factory}} (int input\+Neuron\+Count, int output\+Neuron\+Count, \mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}} activation\+Fn\+Library, \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}} neat\+Genome\+Params, \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} genome\+Id\+Generator, \mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}} innovation\+Id\+Generator)
+\begin{DoxyCompactList}\small\item\em Constructs with the provided I\+Activation\+Function\+Library, Neat\+Genome\+Parameters and ID generators. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a75ad5a2ea73b7f649150c205113a208d}{Create\+Neuron\+Gene}} (uint innovation\+Id, \mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}} neuron\+Type)
+\begin{DoxyCompactList}\small\item\em Override that randomly assigns activation functions to neuron\textquotesingle{}s from an activation function library based on each library item\textquotesingle{}s selection probability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A sub-\/class of Neat\+Genome\+Factory for creating C\+P\+PN genomes. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a53c96a4eefeaf4667894c3270a73581d}\label{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a53c96a4eefeaf4667894c3270a73581d}} 
+\index{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}!CppnGenomeFactory@{CppnGenomeFactory}}
+\index{CppnGenomeFactory@{CppnGenomeFactory}!SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CppnGenomeFactory()}{CppnGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Hyper\+Neat.\+Cppn\+Genome\+Factory.\+Cppn\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count }\end{DoxyParamCaption})}
+
+
+
+Constructs with default Neat\+Genome\+Parameters, ID generators initialized to zero and a default I\+Activation\+Function\+Library. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a7c6997dfa9a8487ce8909d3bb45a8221}\label{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a7c6997dfa9a8487ce8909d3bb45a8221}} 
+\index{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}!CppnGenomeFactory@{CppnGenomeFactory}}
+\index{CppnGenomeFactory@{CppnGenomeFactory}!SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CppnGenomeFactory()}{CppnGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Hyper\+Neat.\+Cppn\+Genome\+Factory.\+Cppn\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library }\end{DoxyParamCaption})}
+
+
+
+Constructs with default Neat\+Genome\+Parameters, ID generators initialized to zero and the provided I\+Activation\+Function\+Library. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a69c288f143b40428be60d674d82bc30d}\label{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a69c288f143b40428be60d674d82bc30d}} 
+\index{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}!CppnGenomeFactory@{CppnGenomeFactory}}
+\index{CppnGenomeFactory@{CppnGenomeFactory}!SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CppnGenomeFactory()}{CppnGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Hyper\+Neat.\+Cppn\+Genome\+Factory.\+Cppn\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{neat\+Genome\+Params }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided I\+Activation\+Function\+Library and Neat\+Genome\+Parameters. 
+
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a15d6584d4870803a90b825f84cc50215}\label{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a15d6584d4870803a90b825f84cc50215}} 
+\index{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}!CppnGenomeFactory@{CppnGenomeFactory}}
+\index{CppnGenomeFactory@{CppnGenomeFactory}!SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CppnGenomeFactory()}{CppnGenomeFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Sharp\+Neat.\+Genomes.\+Hyper\+Neat.\+Cppn\+Genome\+Factory.\+Cppn\+Genome\+Factory (\begin{DoxyParamCaption}\item[{int}]{input\+Neuron\+Count,  }\item[{int}]{output\+Neuron\+Count,  }\item[{\mbox{\hyperlink{interface_sharp_neat_1_1_network_1_1_i_activation_function_library}{I\+Activation\+Function\+Library}}}]{activation\+Fn\+Library,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_parameters}{Neat\+Genome\+Parameters}}}]{neat\+Genome\+Params,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}}}]{genome\+Id\+Generator,  }\item[{\mbox{\hyperlink{class_sharp_neat_1_1_utility_1_1_u_int32_id_generator}{U\+Int32\+Id\+Generator}}}]{innovation\+Id\+Generator }\end{DoxyParamCaption})}
+
+
+
+Constructs with the provided I\+Activation\+Function\+Library, Neat\+Genome\+Parameters and ID generators. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a75ad5a2ea73b7f649150c205113a208d}\label{class_sharp_neat_1_1_genomes_1_1_hyper_neat_1_1_cppn_genome_factory_a75ad5a2ea73b7f649150c205113a208d}} 
+\index{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}!CreateNeuronGene@{CreateNeuronGene}}
+\index{CreateNeuronGene@{CreateNeuronGene}!SharpNeat.Genomes.HyperNeat.CppnGenomeFactory@{SharpNeat.Genomes.HyperNeat.CppnGenomeFactory}}
+\doxysubsubsection{\texorpdfstring{CreateNeuronGene()}{CreateNeuronGene()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neuron_gene}{Neuron\+Gene}} Sharp\+Neat.\+Genomes.\+Hyper\+Neat.\+Cppn\+Genome\+Factory.\+Create\+Neuron\+Gene (\begin{DoxyParamCaption}\item[{uint}]{innovation\+Id,  }\item[{\mbox{\hyperlink{namespace_sharp_neat_1_1_network_acaa4974b805e718f7c42267f1513e3cc}{Node\+Type}}}]{neuron\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Override that randomly assigns activation functions to neuron\textquotesingle{}s from an activation function library based on each library item\textquotesingle{}s selection probability. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_sharp_neat_1_1_genomes_1_1_neat_1_1_neat_genome_factory_ab9ae6cf300c9650b639ddbc07c748838}{Sharp\+Neat.\+Genomes.\+Neat.\+Neat\+Genome\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sharp\+Neat\+Lib/\+Genomes/\+Hyper\+Neat/Cppn\+Genome\+Factory.\+cs\end{DoxyCompactItemize}
