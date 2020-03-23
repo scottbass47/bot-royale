@@ -15,6 +15,8 @@ using SharpNeat.Phenomes;
 
 public class XORExperiment : MonoBehaviour
 {
+    [SerializeField] private NeuralNetworkMesh nnMesh;
+
     private void Start()
     {
         int populationSize = 50;
@@ -30,33 +32,39 @@ public class XORExperiment : MonoBehaviour
         List<NeatGenome> genomeList = neatFactory.CreateGenomeList(populationSize, 0);
         XOREvaluator evaluator = new XOREvaluator();
 
-        ParallelOptions parallelOptions = new ParallelOptions();
         IDistanceMetric distanceMetric = new ManhattanDistanceMetric(1.0, 0.0, 10.0);
 
         // Evolution parameters
         NeatEvolutionAlgorithmParameters neatEvolutionParams = new NeatEvolutionAlgorithmParameters();
         neatEvolutionParams.SpecieCount = 10;
-        ISpeciationStrategy<NeatGenome> speciationStrategy = new ParallelKMeansClusteringStrategy<NeatGenome>(distanceMetric, parallelOptions);
-        IComplexityRegulationStrategy complexityRegulationStrategy = new DefaultComplexityRegulationStrategy(ComplexityCeilingType.Absolute, 50);
+        ISpeciationStrategy<NeatGenome> speciationStrategy = new KMeansClusteringStrategy<NeatGenome>(distanceMetric);
+        IComplexityRegulationStrategy complexityRegulationStrategy = new DefaultComplexityRegulationStrategy(ComplexityCeilingType.Absolute, 10);
 
-        NeatEvolutionAlgorithm<NeatGenome> ea = new NeatEvolutionAlgorithm<NeatGenome>(neatEvolutionParams, speciationStrategy, complexityRegulationStrategy);
-        ea.UpdateScheme = new UpdateScheme(1);
+        IGenomeListEvaluator<NeatGenome> genomeListEvaluator = new SimpleGenomeListEvaluator<NeatGenome, IBlackBox>(neatDecoder, evaluator);
 
-        IGenomeListEvaluator<NeatGenome> innerEvaluator = new ParallelGenomeListEvaluator<NeatGenome, IBlackBox>(neatDecoder, evaluator, parallelOptions);
-        IGenomeListEvaluator<NeatGenome> selectiveEvaluator = new SelectiveGenomeListEvaluator<NeatGenome>
-            (innerEvaluator, SelectiveGenomeListEvaluator<NeatGenome>.CreatePredicate_OnceOnly());
+        NeatEvolutionAlgorithm<NeatGenome> ea = GetComponent<UnityEvolutionAlgorithm>();
+        ea.Construct(neatEvolutionParams, speciationStrategy, complexityRegulationStrategy);
+        ea.Initialize(genomeListEvaluator, neatFactory, genomeList);
+        ea.UpdateScheme = new UpdateScheme(1); // This needs to be set AFTER Initialize is called
 
-        ea.Initialize(selectiveEvaluator, neatFactory, genomeList);
-        ea.UpdateEvent += (sender, e) =>
-        {
-            //Debug.Log("UPDATE");
-            //Debug.Log(ea.CurrentGeneration);
-        };
         ea.PausedEvent += (sender, e) =>
         {
-            //Debug.Log("PAUSED");
-            Debug.Log($"Finished on generation {ea.CurrentGeneration}");
+            //ea.StartContinue();
         };
+        ea.GenerationEvent += (sender, gen) =>
+        {
+            Debug.Log($"Generation {gen}");
+            nnMesh.GenerateMesh(ea.CurrentChampGenome);
+            ea.RequestPause();
+            StartCoroutine(PauseRoutine(ea));
+        };
+
+        ea.StartContinue();
+    }
+
+    private IEnumerator PauseRoutine(IEvolutionAlgorithm<NeatGenome> ea)
+    {
+        yield return new WaitForSeconds(0.1f);
         ea.StartContinue();
     }
 }

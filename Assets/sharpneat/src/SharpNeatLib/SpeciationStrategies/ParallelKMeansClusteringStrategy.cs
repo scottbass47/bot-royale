@@ -9,6 +9,7 @@
  * You should have received a copy of the MIT License
  * along with SharpNEAT; if not, see https://opensource.org/licenses/MIT.
  */
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -30,6 +31,7 @@ namespace SharpNeat.SpeciationStrategies
     /// algorithm (Standard NEAT does not use k-means).
     /// </summary>
     /// <typeparam name="TGenome">The genome type to apply clustering to.</typeparam>
+    [Obsolete("Can't use Parallel.For with Unity need to use Job system instead")]
     public class ParallelKMeansClusteringStrategy<TGenome> : ISpeciationStrategy<TGenome>
         where TGenome : class, IGenome<TGenome>
     {

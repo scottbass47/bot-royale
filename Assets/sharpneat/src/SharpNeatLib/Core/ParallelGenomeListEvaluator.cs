@@ -9,6 +9,7 @@
  * You should have received a copy of the MIT License
  * along with SharpNEAT; if not, see https://opensource.org/licenses/MIT.
  */
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -21,6 +22,7 @@ namespace SharpNeat.Core
     /// Genome decoding is performed by a provided IGenomeDecoder.
     /// Phenome evaluation is performed by a provided IPhenomeEvaluator.
     /// </summary>
+    [Obsolete("Can't use Parallel.For in Unity use Job System instead.")]
     public class ParallelGenomeListEvaluator<TGenome,TPhenome> : IGenomeListEvaluator<TGenome>
         where TGenome : class, IGenome<TGenome>
         where TPhenome : class

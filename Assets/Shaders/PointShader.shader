@@ -1,9 +1,9 @@
-﻿Shader "Hidden/LineShader"
+﻿Shader "Hidden/PointShader"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-		_Width ("Width", Range(0, 0.1)) = 0.025
+		_Size ("Size", Range(0, 1)) = 0.5 
     }
     SubShader
     {
@@ -15,7 +15,7 @@
         {
             CGPROGRAM
             #pragma vertex vert
-            #pragma geometry geo
+			#pragma geometry geo
             #pragma fragment frag
 
             #include "UnityCG.cginc"
@@ -38,43 +38,46 @@
             {
                 v2f o;
                 o.vertex = v.vertex;
-				o.color = v.color;
                 o.uv = v.uv;
+				o.color = v.color;
                 return o;
             }
 
-			v2f VertexOutput(float3 wpos, v2f input) {
+			v2f VertexOutput(float2 pos, float2 uv, v2f input) 
+			{
 				v2f o = input;
-				o.vertex = UnityObjectToClipPos(float4(wpos, 1.0));
+				o.uv = uv;
+				o.vertex = UnityObjectToClipPos(float4(pos, 0.0, 0.0));
 				return o;
 			}
 
-			float _Width;
+			float _Size;
 
 			[maxvertexcount(6)]
-			void geo(line v2f input[2], inout TriangleStream<v2f> outStream)
+			void geo(point v2f input[1], inout TriangleStream<v2f> outStream)
 			{
-				float4 wp0 = input[0].vertex;
-				float4 wp1 = input[1].vertex;
+				float2 wp = input[0].vertex.xy;
+				float2 wp1 = float2(wp.x - _Size, wp.y - _Size);
+				float2 wp2 = float2(wp.x - _Size, wp.y + _Size);
+				float2 wp3 = float2(wp.x + _Size, wp.y + _Size);
+				float2 wp4 = float2(wp.x + _Size, wp.y - _Size);
 
-				float2 lineVec = normalize(wp1.xy - wp0.xy);
-				float2 normalVec = normalize(lineVec.yx * float2(1.0, -1.0));
-
-				outStream.Append(VertexOutput(wp0 + _Width * float3(normalVec, 0.0), input[0]));
-				outStream.Append(VertexOutput(wp1 + _Width * float3(normalVec, 0.0), input[1]));
-				outStream.Append(VertexOutput(wp1 - _Width * float3(normalVec, 0.0), input[1]));
+				outStream.Append(VertexOutput(wp1, float2(0,0), input[0]));
+				outStream.Append(VertexOutput(wp2, float2(0,1), input[0]));
+				outStream.Append(VertexOutput(wp3, float2(1,1), input[0]));
 				outStream.RestartStrip();
 
-				outStream.Append(VertexOutput(wp0 + _Width * float3(normalVec, 0.0), input[0]));
-				outStream.Append(VertexOutput(wp1 - _Width * float3(normalVec, 0.0), input[1]));
-				outStream.Append(VertexOutput(wp0 - _Width * float3(normalVec, 0.0), input[0]));
+				outStream.Append(VertexOutput(wp1, float2(0,0), input[0]));
+				outStream.Append(VertexOutput(wp3, float2(1,1), input[0]));
+				outStream.Append(VertexOutput(wp4, float2(1,0), input[0]));
 				outStream.RestartStrip();
 			}
-			
+
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = i.color;
-                return col;
+				float2 dist = i.uv - float2(0.5, 0.5);
+				clip(dot(dist,dist) < _Size * _Size ? 1.0 : -1.0);
+                return i.color;
             }
             ENDCG
         }

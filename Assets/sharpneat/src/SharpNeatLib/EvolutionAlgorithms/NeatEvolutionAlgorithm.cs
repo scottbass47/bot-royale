@@ -35,18 +35,18 @@ namespace SharpNeat.EvolutionAlgorithms
         where TGenome : class, IGenome<TGenome>
     {
         NeatEvolutionAlgorithmParameters _eaParams;
-        readonly NeatEvolutionAlgorithmParameters _eaParamsComplexifying;
-        readonly NeatEvolutionAlgorithmParameters _eaParamsSimplifying;
+        NeatEvolutionAlgorithmParameters _eaParamsComplexifying;
+        NeatEvolutionAlgorithmParameters _eaParamsSimplifying;
 
-        readonly ISpeciationStrategy<TGenome> _speciationStrategy;
+        ISpeciationStrategy<TGenome> _speciationStrategy;
         IList<Specie<TGenome>> _specieList;
         /// <summary>Index of the specie that contains _currentBestGenome.</summary>
         int _bestSpecieIdx;
-        readonly IRandomSource _rng = RandomDefaults.CreateRandomSource();
-        readonly NeatAlgorithmStats _stats;
+        IRandomSource _rng = RandomDefaults.CreateRandomSource();
+        NeatAlgorithmStats _stats;
 
         ComplexityRegulationMode _complexityRegulationMode;
-        readonly IComplexityRegulationStrategy _complexityRegulationStrategy;
+        IComplexityRegulationStrategy _complexityRegulationStrategy;
 
         #region Constructors
 
@@ -54,6 +54,7 @@ namespace SharpNeat.EvolutionAlgorithms
         /// Constructs with the default NeatEvolutionAlgorithmParameters and speciation strategy 
         /// (KMeansClusteringStrategy with ManhattanDistanceMetric).
         /// </summary>
+        /*
         public NeatEvolutionAlgorithm()
         {
             _eaParams = new NeatEvolutionAlgorithmParameters();
@@ -65,11 +66,27 @@ namespace SharpNeat.EvolutionAlgorithms
             _complexityRegulationMode = ComplexityRegulationMode.Complexifying;
             _complexityRegulationStrategy = new NullComplexityRegulationStrategy();
         }
+        */
 
         /// <summary>
         /// Constructs with the provided NeatEvolutionAlgorithmParameters and ISpeciationStrategy.
         /// </summary>
+/*
         public NeatEvolutionAlgorithm(NeatEvolutionAlgorithmParameters eaParams,
+                                      ISpeciationStrategy<TGenome> speciationStrategy,
+                                      IComplexityRegulationStrategy complexityRegulationStrategy)
+        {
+            _eaParams = eaParams;
+            _eaParamsComplexifying = _eaParams;
+            _eaParamsSimplifying = _eaParams.CreateSimplifyingParameters();
+            _stats = new NeatAlgorithmStats(_eaParams);
+            _speciationStrategy = speciationStrategy;
+
+            _complexityRegulationMode = ComplexityRegulationMode.Complexifying;
+            _complexityRegulationStrategy = complexityRegulationStrategy;
+        }
+*/
+        public void Construct(NeatEvolutionAlgorithmParameters eaParams,
                                       ISpeciationStrategy<TGenome> speciationStrategy,
                                       IComplexityRegulationStrategy complexityRegulationStrategy)
         {
