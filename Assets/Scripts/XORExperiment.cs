@@ -19,7 +19,7 @@ public class XORExperiment : MonoBehaviour
 
     private void Start()
     {
-        int populationSize = 50;
+        int populationSize = 100;
         NetworkActivationScheme activationScheme = NetworkActivationScheme.CreateAcyclicScheme();
 
         NeatGenomeParameters neatParams = new NeatGenomeParameters();
@@ -64,7 +64,7 @@ public class XORExperiment : MonoBehaviour
 
     private IEnumerator PauseRoutine(IEvolutionAlgorithm<NeatGenome> ea)
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return null;
         ea.StartContinue();
     }
 }

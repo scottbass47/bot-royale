@@ -10,22 +10,11 @@ public class NeuralNetworkMesh : MonoBehaviour
     [SerializeField] [Range(0.0f, 10.0f)] private float verticalSpacing = 1.0f;
     [SerializeField] [Range(0.0f, 10.0f)] private float horizontalSpacing = 1.0f;
 
+    [SerializeField] private GameObject neuronObject;
+    [SerializeField] private GameObject connectionObject;
+
     public void GenerateMesh(NeatGenome genome)
     {
-        var meshFilter = GetComponent<MeshFilter>();
-        var meshRenderer = GetComponent<MeshRenderer>();
-
-        Mesh mesh = new Mesh();
-        mesh.subMeshCount = 2;
-        mesh.Clear();
-
-        var bottomLeft = Vector2.zero;
-
-        List<Vector3> vertices = new List<Vector3>();
-        List<Color> colors = new List<Color>();
-        List<int> lineIndices = new List<int>();
-        List<int> pointIndices = new List<int>();
-
         // Perform analysis
         AcyclicNetworkDepthAnalysis depthAnalysis = new AcyclicNetworkDepthAnalysis();
         NetworkDepthInfo depthInfo = depthAnalysis.CalculateNodeDepths(genome);
@@ -48,6 +37,36 @@ public class NeuralNetworkMesh : MonoBehaviour
             mostNodesPerLayer = Mathf.Max(++nodesPerDepthLevel[depth], mostNodesPerLayer);
         }
 
+        List<Vector3> vertices;
+        var neuronsMesh = GenerateNeuronsMesh(genome, nodeIdxById, maxDepth, mostNodesPerLayer, nodesByDepth, out vertices);
+        neuronObject.GetComponent<MeshFilter>().mesh = neuronsMesh;
+
+        var connectionMesh = GenerateConnectionsMesh(genome, nodeIdxById, vertices);
+        connectionObject.GetComponent<MeshFilter>().mesh = connectionMesh;
+    }
+
+    private Mesh GenerateNeuronsMesh(
+        NeatGenome genome, 
+        Dictionary<uint, int> nodeIdxById, 
+        int maxDepth, 
+        int mostNodesPerLayer, 
+        Dictionary<int, List<int>> nodesByDepth, 
+        out List<Vector3> vertices
+    )
+    {
+        Mesh mesh = new Mesh();
+
+        vertices = new List<Vector3>();
+        List<Color> colors = new List<Color>();
+        List<int> pointIndices = new List<int>();
+
+        // Nodes
+        for(int i = 0; i < genome.NodeList.Count; i++)
+        {
+            nodeIdxById.Add(genome.NodeList[i].Id, i);
+            pointIndices.Add(i);
+        }
+
         float width = maxDepth * horizontalSpacing;
         float height = mostNodesPerLayer * verticalSpacing;
 
@@ -58,31 +77,50 @@ public class NeuralNetworkMesh : MonoBehaviour
             for(int i = 0; i < nodes.Count; i++)
             {
                 float y = GetY(i, nodes.Count);
+                float perturb = 0.25f;
+                y += Random.Range(-perturb, perturb);
                 vertices.Add(CreateVertex(x, y));
             }
         }
 
-        // Nodes
-        for(int i = 0; i < genome.NodeList.Count; i++)
-        {
-            nodeIdxById.Add(genome.NodeList[i].Id, i);
-            pointIndices.Add(i);
-        }
-
-        // Connections
-        foreach(var connection in genome.ConnectionList)
-        {
-            lineIndices.Add(nodeIdxById[connection.SourceNodeId]);
-            lineIndices.Add(nodeIdxById[connection.TargetNodeId]);
-        }
-
         // Finalize mesh
-        mesh.subMeshCount = 2;
+        mesh.subMeshCount = 1;
         mesh.SetVertices(vertices);
         mesh.SetColors(colors);
-        mesh.SetIndices(lineIndices.ToArray(), MeshTopology.Lines, 0);
-        mesh.SetIndices(pointIndices.ToArray(), MeshTopology.Points, 1);
-        meshFilter.mesh = mesh;
+        mesh.SetIndices(pointIndices.ToArray(), MeshTopology.Points, 0);
+
+        return mesh;
+    }
+
+    private Mesh GenerateConnectionsMesh(NeatGenome genome, Dictionary<uint, int> nodeIdxById, List<Vector3> nodeVertices)
+    {
+        Mesh mesh = new Mesh();
+        List<Vector3> vertices = new List<Vector3>();
+        List<Color> colors = new List<Color>();
+        List<int> pointIndices = new List<int>();
+
+        // Connections
+        int idx = 0;
+        foreach(var connection in genome.ConnectionList)
+        {
+            int sourceIdx = nodeIdxById[connection.SourceNodeId];
+            int targetIdx = nodeIdxById[connection.TargetNodeId];
+
+            var sourcePos = nodeVertices[sourceIdx];
+            var targetPos = nodeVertices[targetIdx];
+
+            vertices.Add(new Vector3((float)connection.Weight, 0, 0));
+            colors.Add(new Color(sourcePos.x, sourcePos.y, targetPos.x, targetPos.y));
+            pointIndices.Add(idx++);
+
+            Debug.Log($"[{genome.Id}] {connection.SourceNodeId} - {connection.TargetNodeId}: {connection.Weight}");
+        }
+
+        mesh.subMeshCount = 1;
+        mesh.SetVertices(vertices);
+        mesh.SetColors(colors);
+        mesh.SetIndices(pointIndices.ToArray(), MeshTopology.Points, 0);
+        return mesh;
     }
 
     private float GetX(int depth, int maxDepth, float width)
