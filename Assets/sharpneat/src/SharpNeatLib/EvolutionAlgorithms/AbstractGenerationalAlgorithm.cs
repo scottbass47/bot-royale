@@ -256,7 +256,7 @@ namespace SharpNeat.EvolutionAlgorithms
             for(;;)
             {
                 _currentGeneration++;
-                PerformOneGeneration();
+                yield return StartCoroutine(PerformOneGeneration());
                 OnGenerationEvent();
 
                 if(UpdateTest())
@@ -341,7 +341,7 @@ namespace SharpNeat.EvolutionAlgorithms
         /// <summary>
         /// Progress forward by one generation. Perform one generation/cycle of the evolution algorithm.
         /// </summary>
-        protected abstract void PerformOneGeneration();
+        protected abstract IEnumerator PerformOneGeneration();
 
         #endregion
     }

@@ -9,6 +9,7 @@ public class NeuralNetworkMesh : MonoBehaviour
 {
     [SerializeField] [Range(0.0f, 10.0f)] private float verticalSpacing = 1.0f;
     [SerializeField] [Range(0.0f, 10.0f)] private float horizontalSpacing = 1.0f;
+    [SerializeField] [Range(0.0f, 1.0f)] private float verticalPerturb = 0.25f;
 
     [SerializeField] private GameObject neuronObject;
     [SerializeField] private GameObject connectionObject;
@@ -77,8 +78,7 @@ public class NeuralNetworkMesh : MonoBehaviour
             for(int i = 0; i < nodes.Count; i++)
             {
                 float y = GetY(i, nodes.Count);
-                float perturb = 0.25f;
-                y += Random.Range(-perturb, perturb);
+                y += Random.Range(-verticalPerturb, verticalPerturb);
                 vertices.Add(CreateVertex(x, y));
             }
         }
@@ -113,7 +113,7 @@ public class NeuralNetworkMesh : MonoBehaviour
             colors.Add(new Color(sourcePos.x, sourcePos.y, targetPos.x, targetPos.y));
             pointIndices.Add(idx++);
 
-            Debug.Log($"[{genome.Id}] {connection.SourceNodeId} - {connection.TargetNodeId}: {connection.Weight}");
+            //Debug.Log($"[{genome.Id}] {connection.SourceNodeId} - {connection.TargetNodeId}: {connection.Weight}");
         }
 
         mesh.subMeshCount = 1;

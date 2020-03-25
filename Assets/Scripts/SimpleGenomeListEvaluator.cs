@@ -21,7 +21,7 @@ public class SimpleGenomeListEvaluator<TGenome, TPhenome> : IGenomeListEvaluator
 
     public void Reset() => phenomeEvaluator.Reset();
 
-    public void Evaluate(IList<TGenome> genomeList)
+    public IEnumerator Evaluate(IList<TGenome> genomeList)
     {
         foreach(TGenome genome in genomeList)
         {
@@ -38,5 +38,6 @@ public class SimpleGenomeListEvaluator<TGenome, TPhenome> : IGenomeListEvaluator
                 genome.EvaluationInfo.AuxFitnessArr = fitnessInfo._auxFitnessArr;
             }
         }
+        yield break;
     }
 }

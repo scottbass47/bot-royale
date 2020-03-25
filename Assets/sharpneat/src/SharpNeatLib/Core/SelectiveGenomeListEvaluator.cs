@@ -10,6 +10,7 @@
  * along with SharpNEAT; if not, see https://opensource.org/licenses/MIT.
  */
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace SharpNeat.Core
@@ -71,7 +72,7 @@ namespace SharpNeat.Core
         /// Evaluates a list of genomes. Here we select the genomes to be evaluated before invoking
         /// _innerEvaluator to evaluate them.
         /// </summary>
-        public void Evaluate(IList<TGenome> genomeList)
+        public IEnumerator Evaluate(IList<TGenome> genomeList)
         {
             // Select the genomes to be evaluated. Place them in a temporary list of genomes to be 
             // evaluated after the genome selection loop. The selection is not performed in series
@@ -90,7 +91,7 @@ namespace SharpNeat.Core
             }
 
             // Evaluate selected genomes.
-            _innerEvaluator.Evaluate(filteredList);
+            yield return _innerEvaluator.Evaluate(filteredList);
         }
 
         /// <summary>

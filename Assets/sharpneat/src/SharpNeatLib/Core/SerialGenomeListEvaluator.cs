@@ -9,6 +9,7 @@
  * You should have received a copy of the MIT License
  * along with SharpNEAT; if not, see https://opensource.org/licenses/MIT.
  */
+using System.Collections;
 using System.Collections.Generic;
 
 namespace SharpNeat.Core
@@ -33,7 +34,7 @@ namespace SharpNeat.Core
         readonly IPhenomeEvaluator<TPhenome> _phenomeEvaluator;
         readonly bool _enablePhenomeCaching;
 
-        delegate void EvaluationMethod(IList<TGenome> genomeList);
+        delegate IEnumerator EvaluationMethod(IList<TGenome> genomeList);
 
         #region Constructor
 
@@ -94,9 +95,9 @@ namespace SharpNeat.Core
         /// Evaluates a list of genomes. Here we decode each genome in series using the contained
         /// IGenomeDecoder and evaluate the resulting TPhenome using the contained IPhenomeEvaluator.
         /// </summary>
-        public void Evaluate(IList<TGenome> genomeList)
+        public IEnumerator Evaluate(IList<TGenome> genomeList)
         {
-            _evaluationMethod(genomeList);
+            yield return _evaluationMethod(genomeList);
         }
 
         /// <summary>
@@ -111,7 +112,7 @@ namespace SharpNeat.Core
 
         #region Private Methods
 
-        private void Evaluate_NonCaching(IList<TGenome> genomeList)
+        private IEnumerator Evaluate_NonCaching(IList<TGenome> genomeList)
         {
             // Decode and evaluate each genome in turn.
             foreach(TGenome genome in genomeList)
@@ -129,9 +130,10 @@ namespace SharpNeat.Core
                     genome.EvaluationInfo.AuxFitnessArr = fitnessInfo._auxFitnessArr;
                 }
             }
+            yield break;
         }
 
-        private void Evaluate_Caching(IList<TGenome> genomeList)
+        private IEnumerator Evaluate_Caching(IList<TGenome> genomeList)
         {
             // Decode and evaluate each genome in turn.
             foreach(TGenome genome in genomeList)
@@ -155,6 +157,7 @@ namespace SharpNeat.Core
                     genome.EvaluationInfo.AuxFitnessArr = fitnessInfo._auxFitnessArr;
                 }
             }
+            yield break;
         }
 
         #endregion

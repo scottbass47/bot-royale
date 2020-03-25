@@ -9,6 +9,7 @@
  * You should have received a copy of the MIT License
  * along with SharpNEAT; if not, see https://opensource.org/licenses/MIT.
  */
+using System.Collections;
 using System.Collections.Generic;
 
 namespace SharpNeat.Core
@@ -37,7 +38,7 @@ namespace SharpNeat.Core
         /// <summary>
         /// Evaluates a list of genomes.
         /// </summary>
-        void Evaluate(IList<TGenome> genomeList);  
+        IEnumerator Evaluate(IList<TGenome> genomeList);  
 
         /// <summary>
         /// Reset the internal state of the evaluation scheme if any exists.

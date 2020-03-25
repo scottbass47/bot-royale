@@ -10,6 +10,7 @@
  * along with SharpNEAT; if not, see https://opensource.org/licenses/MIT.
  */
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -117,9 +118,10 @@ namespace SharpNeat.Core
         /// Evaluates a list of genomes. Here we decode each genome in using the contained IGenomeDecoder
         /// and evaluate the resulting TPhenome using the contained IPhenomeEvaluator.
         /// </summary>
-        public void Evaluate(IList<TGenome> genomeList)
+        public IEnumerator Evaluate(IList<TGenome> genomeList)
         {
             _evalMethod(genomeList);
+            yield break;
         }
 
         #endregion

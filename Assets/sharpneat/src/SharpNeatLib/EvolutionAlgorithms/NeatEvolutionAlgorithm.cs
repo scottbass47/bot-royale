@@ -11,6 +11,7 @@
  */
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Redzen.Numerics;
@@ -47,6 +48,8 @@ namespace SharpNeat.EvolutionAlgorithms
 
         ComplexityRegulationMode _complexityRegulationMode;
         IComplexityRegulationStrategy _complexityRegulationStrategy;
+
+        IGenomeListEvaluator<TGenome> _initialGenomeListEvaluator;
 
         #region Constructors
 
@@ -88,7 +91,8 @@ namespace SharpNeat.EvolutionAlgorithms
 */
         public void Construct(NeatEvolutionAlgorithmParameters eaParams,
                                       ISpeciationStrategy<TGenome> speciationStrategy,
-                                      IComplexityRegulationStrategy complexityRegulationStrategy)
+                                      IComplexityRegulationStrategy complexityRegulationStrategy,
+                                      IGenomeListEvaluator<TGenome> initialGenomeListEvaluator)
         {
             _eaParams = eaParams;
             _eaParamsComplexifying = _eaParams;
@@ -98,6 +102,8 @@ namespace SharpNeat.EvolutionAlgorithms
 
             _complexityRegulationMode = ComplexityRegulationMode.Complexifying;
             _complexityRegulationStrategy = complexityRegulationStrategy;
+
+            _initialGenomeListEvaluator = initialGenomeListEvaluator;
         }
 
         #endregion
@@ -178,7 +184,7 @@ namespace SharpNeat.EvolutionAlgorithms
         private void Initialize()
         {
             // Evaluate the genomes.
-            _genomeListEvaluator.Evaluate(_genomeList);
+            _initialGenomeListEvaluator.Evaluate(_genomeList);
 
             // Speciate the genomes.
             _specieList = _speciationStrategy.InitializeSpeciation(_genomeList, _eaParams.SpecieCount);
@@ -198,7 +204,7 @@ namespace SharpNeat.EvolutionAlgorithms
         /// <summary>
         /// Progress forward by one generation. Perform one generation/iteration of the evolution algorithm.
         /// </summary>
-        protected override void PerformOneGeneration()
+        protected override IEnumerator PerformOneGeneration()
         {
             // Calculate statistics for each specie (mean fitness, target size, number of offspring to produce etc.)
             int offspringCount;
@@ -219,7 +225,7 @@ namespace SharpNeat.EvolutionAlgorithms
             _genomeList.AddRange(offspringList);
 
             // Evaluate genomes.
-            _genomeListEvaluator.Evaluate(_genomeList);
+            yield return StartCoroutine(_genomeListEvaluator.Evaluate(_genomeList));
 
             // Integrate offspring into species.
             if(emptySpeciesFlag)
